@@ -3,10 +3,18 @@
 document.addEventListener('DOMContentLoaded', function () {
     const currentFolder = window.location.pathname.split('/').slice(-2, -1)[0];
     const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+    
     sidebarLinks.forEach(link => {
         const linkFolder = link.getAttribute('href').split('/').slice(-2, -1)[0];
+        const parent = link.closest('.dropdown');
+
         if (linkFolder === currentFolder) {
-            link.parentElement.classList.add('active');
+            // Add 'active' class to the parent sidebar item
+            if (parent) {
+                parent.classList.add('active');
+            } else {
+                link.parentElement.classList.add('active');
+            }
         }
     });
 
@@ -343,7 +351,7 @@ function createCandidateTableRow(data) {
 
     tr.innerHTML = `
         <td><input type="checkbox" class="checkbox"></td>
-        <td class="caret-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg></td>
+        <td class="caret-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z"/></svg></td>
         <td>
             <img src="${data['display picture']}" alt="${data.name}" class="candidate-image">
             ${data.id}

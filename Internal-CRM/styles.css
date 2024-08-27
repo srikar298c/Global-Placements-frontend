@@ -213,7 +213,7 @@ select,input,button{
   top: 0;
   width: auto;
   padding: 10px;
-  background-color: white;
+  /* background-color: #ffffff; */
 }
 
 .header {
@@ -229,11 +229,13 @@ select,input,button{
   z-index: 1000;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 .header-title{
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .header-title h2 {
   margin: 0;
@@ -242,13 +244,13 @@ select,input,button{
 }
 .header-title select{
   width: 200px;
-  margin-left: 10px;
-   padding: 8px 16px;
+  margin-left:5px;
+   padding: 8px ;
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #fbf9f9;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   color: #005F6B;
   font-weight: bold;
 }
@@ -281,7 +283,7 @@ select,input,button{
   margin: 10px auto;
   border-radius: 10px;
   padding:0px 5px 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -289,6 +291,20 @@ select,input,button{
   width: auto;
   z-index: 1000;
   background-color: white;
+}
+
+.main-content-global-database {
+  position: relative;
+  /* margin: 10px auto; */
+  border-radius: 10px;
+  padding:0px 5px 20px;
+  /* box-shadow: 0 0px 2px rgba(0, 0, 0, 0.5); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  z-index: 1000;
 }
 
 .marquee-container {
@@ -976,30 +992,29 @@ h1 {
 }
 /* ************************ Global Database ***************************/
 .filter-section {
-  display: flex;
- padding: 10px 5px;
- border-radius: 5px;
+ display: flex;
+ padding: 5px 0px ;
+ border-radius: 10px;
 align-items: center;
 justify-content: center;
- box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+ box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
  width: 100%;
  margin: 10px 0px 20px;
+ background-color: white;
 }
-.filter-section:hover {
- box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
+
 
 /* .filter-button, */
 .filter-select  {
-  background-color: #f0f0f0;
-  color: #333;
-  border: 1px solid #333;
+  background-color: #f8f8f8;
+  color: #000;
+  border: 0.25px solid #c7c7c7;
   padding: 8px 10px;
-  border-radius: 4px;
+  border-radius: 6px;
   width: 120px;
   font-size: 10px;
 margin: 0px 2px;
-  font-weight:bolder;
+  font-weight: 500;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .search-input {
@@ -1007,7 +1022,7 @@ margin: 0px 2px;
   color: #333;
   border: 1px solid #333;
   padding: 10px 10px;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 10px;
   font-weight:bolder;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -1018,7 +1033,7 @@ margin: 0px 2px;
   color: var(--primary-color);
   border: 1px solid var(--boxshadow-edge);
   padding: 6px 8px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease, border 0.3s ease;
   font-weight: bold;
@@ -1260,7 +1275,7 @@ input[type="radio"] {
   width: 100%;
   border-collapse: collapse;
   background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
 
@@ -1370,7 +1385,7 @@ input[type="radio"] {
 .info-group {
 
   color: #333; /* White text for the info labels */
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .info-label {
