@@ -299,6 +299,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+// Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the button and popup elements
+    const addCandidateButton = document.getElementById("addCandidate");
+    const popupOverlay = document.getElementById("addACandidatePopupOverlay");
+    const closePopupButton = document.querySelector(".closeAddACandidate");
+
+    // Function to open the popup
+    function openPopup() {
+        popupOverlay.style.display = "block";
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        popupOverlay.style.display = "none";
+    }
+
+    // Add event listener to the "Add Candidate" button
+    addCandidateButton.addEventListener("click", openPopup);
+
+    // Add event listener to the close button inside the popup
+    closePopupButton.addEventListener("click", closePopup);
+
+    // Optional: Close the popup when clicking outside the popup content
+    popupOverlay.addEventListener("click", function(event) {
+        if (event.target === popupOverlay) {
+            closePopup();
+        }
+    });
+});
+
 document.querySelectorAll('#projectTable th').forEach(headerCell => {
     headerCell.addEventListener('click', () => {
         const columnIndex = headerCell.cellIndex;
@@ -382,6 +413,7 @@ function createCandidateTableRow(data) {
     additionalInfoRow.innerHTML = `
     <td colspan="11">
     <div class = 'additional-info-row'>
+
             <div class="info-group"><span class="info-label">Gender:</span>${data.gender}</div>
             <div class="info-group"><span class="info-label">Passport:</span>${data.passportNumber || 'Not Available'}</div>
             <div class="info-group"><span class="info-label">Client Label:</span>${data.clients.label}</div>
@@ -390,6 +422,7 @@ function createCandidateTableRow(data) {
                <button class="icon-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
                     <path fill="currentColor" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z"/>
                         </svg></button>
+                <button class="icon-button assign-client-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20"><rect width="20" height="20" fill="none"/><path fill="currentColor" d="M9.467 0c3.184 0 5.765 2.566 5.765 5.732a5.7 5.7 0 0 1-2.02 4.358q.405.2.738.403q.716.435 1.49 1.079a.685.685 0 0 1 .086.969a.694.694 0 0 1-.975.086a11 11 0 0 0-1.322-.96a11 11 0 0 0-1.405-.703a5.8 5.8 0 0 1-2.357.5a5.8 5.8 0 0 1-2.58-.605l-.042.02c-1.95.756-3.373 1.874-4.292 3.358c-.922 1.489-1.299 3.153-1.13 5.014a.69.69 0 0 1-.628.746a.69.69 0 0 1-.75-.623c-.195-2.152.249-4.113 1.33-5.858c.95-1.536 2.347-2.73 4.174-3.582a5.7 5.7 0 0 1-1.846-4.202C3.703 2.566 6.283 0 9.467 0m7.401 12.693c.38 0 .688.31.688.691v1.752h1.752a.69.69 0 0 1 .692.689a.69.69 0 0 1-.692.687h-1.752v1.753a.69.69 0 0 1-.688.691a.69.69 0 0 1-.688-.691v-1.753h-1.752a.69.69 0 0 1-.692-.687c0-.38.31-.688.692-.688l1.752-.001v-1.752a.69.69 0 0 1 .688-.691m-7.4-11.317c-2.42 0-4.382 1.95-4.382 4.356s1.962 4.357 4.381 4.357s4.381-1.95 4.381-4.357s-1.961-4.356-4.38-4.356"/></svg></button>
                 <button class="icon-button graph-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
                 <path fill="currentColor" d="M46.05 60.163H31.923c-.836 0-1.513.677-1.513 1.513V83.61c0 .836.677 1.513 1.513 1.513H46.05c.836 0 1.512-.677 1.512-1.513V61.675c0-.836-.677-1.512-1.512-1.512m22.027-45.285H53.95c-.836 0-1.513.677-1.513 1.513v67.218c0 .836.677 1.513 1.513 1.513h14.127c.836 0 1.513-.677 1.513-1.513V16.391c0-.836-.677-1.513-1.513-1.513m22.14 20.421H76.09c-.836 0-1.513.677-1.513 1.513v46.797c0 .836.677 1.513 1.513 1.513h14.126c.836 0 1.513-.677 1.513-1.513V36.812c0-.835-.677-1.513-1.512-1.513m-66.307 0H9.783c-.836 0-1.513.677-1.513 1.513v46.797c0 .836.677 1.513 1.513 1.513H23.91c.836 0 1.513-.677 1.513-1.513V36.812c0-.835-.677-1.513-1.513-1.513"/>
                 </svg></button>
@@ -527,6 +560,8 @@ function updateFilterCount(count) {
 }
 
 function setupPopups() {
+    const assignAClientPopup = document.getElementById('assignAClientPopupOverlay');
+const assignAClientCloseButton = document.getElementById('closeAssignAClientPopup');
     const graphPopup = document.getElementById('graphPopupOverlay');
     const graphCloseButton = document.getElementById('closeGraphPopup');
     
@@ -538,6 +573,23 @@ function setupPopups() {
     const addNewTaskCloseButton = document.getElementById('closeAddNewTaskPopup');
     const addNewReminderPopup = document.getElementById('addNewReminderPopupOverlay');
     const addNewReminderCloseButton = document.getElementById('closeAddNewReminderPopup');
+
+    if (assignAClientPopup && assignAClientCloseButton) {
+    // Use event delegation for assign-a-client buttons
+    document.addEventListener('click', function(event) {
+        if (event.target.closest('.assign-client-button')) {
+            assignAClientPopup.style.display = 'block';
+        }
+    });
+
+    assignAClientCloseButton.addEventListener('click', () => assignAClientPopup.style.display = 'none');
+    
+    assignAClientPopup.addEventListener('click', (event) => {
+        if (event.target === assignAClientPopup) assignAClientPopup.style.display = 'none';
+    });
+} else {
+    console.error('Assign-a-client popup elements not found');
+    }
     
     if (graphPopup && graphCloseButton) {
         // Use event delegation for graph buttons
