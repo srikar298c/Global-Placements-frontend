@@ -619,7 +619,8 @@ h1 {
 }
 
 .btn-add-candidate,
-.btn-submissions {
+.btn-submissions,
+.btn-post-selection {
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
@@ -637,7 +638,8 @@ h1 {
 
 }
 
-.btn-submissions {
+.btn-submissions,
+.btn-post-selection {
   background-color: #006064;
   color: white;
 }
@@ -775,7 +777,7 @@ h1 {
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   width: 90%;
-  max-width: 70vw;
+  max-width: 50vw;
   min-width: 800px;
   min-height: 90vh;
   max-height: 100vh;
@@ -1833,7 +1835,7 @@ left: 92%;
   margin-top: 50px;
 }
 .popup-body.profile-popup-body{
-  width: 80%;
+  width: 0%;
   
 }
 /* Form group with label and input alignment */
@@ -2479,6 +2481,14 @@ select:focus {
   border-radius: 4px;
   resize: vertical;
 }
+.date-inputs {
+    display: flex;
+    gap: 10px; /* Adjust the gap as needed */
+}
+
+.date-inputs input[type="date"] {
+    flex: 1; /* This makes both inputs take equal space */
+}
 
 @media (max-width: 768px) {
   .form-grid {
@@ -2488,6 +2498,50 @@ select:focus {
   .button-group,
   .scores-group,
   .date-inputs {
-    flex-direction: column;
+    flex-direction: row;
   }
 } 
+/* Styles for the container holding the country labels */
+.country-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+/* Styles for individual country labels */
+.country-label {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.country-label span {
+    margin-right: 8px;
+}
+
+.country-label button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Styles for the input box */
+#countryInput {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}

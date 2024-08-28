@@ -329,6 +329,51 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+document.getElementById('sameAddress').addEventListener('change', function() {
+    if (this.checked) {
+        document.getElementById('permanentAddress').value = document.getElementById('presentAddress').value;
+        document.getElementById('permanentCity').value = document.getElementById('presentCity').value;
+        document.getElementById('permanentState').value = document.getElementById('presentState').value;
+        document.getElementById('permanentCountry').value = document.getElementById('presentCountry').value;
+        document.getElementById('permanentPincode').value = document.getElementById('presentPincode').value;
+    } else {
+        document.getElementById('permanentAddress').value = '';
+        document.getElementById('permanentCity').value = '';
+        document.getElementById('permanentState').value = '';
+        document.getElementById('permanentCountry').value = '';
+        document.getElementById('permanentPincode').value = '';
+    }
+});
+// Get references to the elements
+const countryContainer = document.getElementById('countryContainer');
+const countryInput = document.getElementById('countryInput');
+
+// Function to create a new label
+function addCountryLabel(countryName) {
+    const label = document.createElement('div');
+    label.className = 'country-label';
+    
+    const span = document.createElement('span');
+    span.textContent = countryName;
+    
+    const removeButton = document.createElement('button');
+    removeButton.textContent = '×';
+    removeButton.addEventListener('click', () => {
+        countryContainer.removeChild(label);
+    });
+
+    label.appendChild(span);
+    label.appendChild(removeButton);
+    countryContainer.appendChild(label);
+}
+
+// Event listener for adding a country on pressing Enter
+countryInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' && countryInput.value.trim() !== '') {
+        addCountryLabel(countryInput.value.trim());
+        countryInput.value = '';
+    }
+});
 
 document.querySelectorAll('#projectTable th').forEach(headerCell => {
     headerCell.addEventListener('click', () => {
