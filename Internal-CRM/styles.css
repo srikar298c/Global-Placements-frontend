@@ -1920,7 +1920,7 @@ left: 92%;
   cursor: pointer;
   transition: background-color 0.3s;
   position: absolute;
-  bottom: 20px;
+  bottom: 8px;
   left: 35%;
 }
 
@@ -2462,7 +2462,7 @@ select:focus {
   border-radius: 4px;
 }
 
-.profile .checkbox-group {
+.profile-popup .checkbox-group {
   display: flex;
   align-items: center;
   gap: 10px;
