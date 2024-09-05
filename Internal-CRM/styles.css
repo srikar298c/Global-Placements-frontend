@@ -1713,6 +1713,7 @@ align-items: center;
   margin-bottom: 7px;
     margin-top: 10px;
     width: 50%;
+    /* padding: 2px; */
 }
 #candidateSubmissionTable .timestamp{
  position: relative;
@@ -1755,9 +1756,6 @@ left: 92%;
   z-index: 1000;
 }
 
-.popup-content {
-
-}
 
 .popup-header {
   display: flex;
