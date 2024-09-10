@@ -222,7 +222,7 @@
                             <th class="sortable">Label </i></th>
                             <th class="sortable">Active Members</th>
                             <th class="sortable">Created by</th>
-                            <th>Details</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -265,7 +265,7 @@
                     </svg>
                     ADD A CANDIDATE
                 </h2>
-                <button class="closeAddACandidate">&#10005;</button>
+                <button class="closeAddACandidate popup-close">&#10005;</button>
 
             </div>
 
@@ -379,7 +379,7 @@
                             </div>
                             <div class="form-container">
                                 <div class="form-grid">
-                                   
+
                                     <div class="form-group full-width">
                                         <label for="passportNumber">Passport Number</label>
                                         <input type="text" id="passportNumber" name="passportNumber"
@@ -393,7 +393,7 @@
                                         <label for="expiryDate">Date Of Expiry</label>
                                         <input type="date" id="expiryDate" name="expiryDate" placeholder="Expiry Date">
                                     </div>
-                                
+
                                     <div class="form-group">
                                         <label>International Experience</label>
                                         <div class="button-group">
@@ -407,8 +407,8 @@
                                             <option value="">Choose the Country</option>
                                         </select>
                                     </div>
-                           
-                                 
+
+
                                 </div>
                             </div>
                         </section>
@@ -431,7 +431,7 @@
                                             <input type="date" id="toDate" name="toDate" placeholder="To">
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <label for="designation">Designation</label>
                                         <select id="designation" name="designation">
@@ -444,7 +444,7 @@
                                             <option value="">Choose the Department</option>
                                         </select>
                                     </div>
-                                   
+
                                 </div>
                             </div>
                         </section>
@@ -467,12 +467,12 @@
                                             <input type="text" id="registrationNumber" name="registrationNumber"
                                                 placeholder="Enter the Registered Number">
                                         </div>
-                                            <div class="form-group ">
-                                                <label for="registrationCouncil">Registration Council</label>
-                                                <select id="registrationCouncil" name="registrationCouncil">
-                                                    <option value="">Choose the Registration Council</option>
-                                                </select>
-                                            </div>
+                                        <div class="form-group ">
+                                            <label for="registrationCouncil">Registration Council</label>
+                                            <select id="registrationCouncil" name="registrationCouncil">
+                                                <option value="">Choose the Registration Council</option>
+                                            </select>
+                                        </div>
                                         <div class="form-group ">
                                             <label>Duration</label>
                                             <div class="date-inputs">
@@ -504,45 +504,88 @@
                                                 <option value=""></option>
                                             </select>
                                         </div>
-                                        
+
                                         <!-- Add more form groups as needed -->
                                     </div>
                                 </div>
                             </div>
                         </section>
-                    <section id="preferences">
-    <div class="form-section preferences">
-        <div class="form-title-header">
-            <h2>Preferences</h2>
-        </div>
-        <div class="form-container">
-            <div class="form-grid">
-                <div class="form-group full-width">
-                    <label for="preferredCountry">Country</label>
-                    <div id="countryContainer" class="country-container">
-                        <!-- Labels will appear here -->
+                        <section id="preferences">
+                            <div class="form-section preferences">
+                                <div class="form-title-header">
+                                    <h2>Preferences</h2>
+                                </div>
+                                <div class="form-container">
+                                    <div class="form-grid">
+                                        <div class="form-group full-width">
+                                            <label for="preferredCountry">Country</label>
+                                            <div id="countryContainer" class="country-container">
+                                                <!-- Labels will appear here -->
+                                            </div>
+                                            <input type="text" id="countryInput" placeholder="Add a country">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="form-section ">
+                                <div class="form-group">
+                                    <button class="confirm-button">Add Candidate</button>
+                                </div>
+                            </div>
+                        </section>
+
+
                     </div>
-                    <input type="text" id="countryInput" placeholder="Add a country">
                 </div>
             </div>
         </div>
     </div>
-                        </section>
 
-                        <section>
-                        <div class="form-section ">
-                        <div class="form-group">
-                            <button class="confirm-button">Add Candidate</button>
-                        </div>
-                        </div>
-                        </section>
-
-
-</div>
-</div>
+<div class="popup-overlay" id="uploadPopupOverlay">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h2 class="popup-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11 16V7.85L8.4 10.45L7 9L12 4L17 9L15.6 10.45L13 7.85V16H11ZM6 20C5.45 20 4.97933 19.8043 4.588 19.413C4.19667 19.0217 4.00067 18.5507 4 18V15H6V18H18V15H20V18C20 18.55 19.8043 19.021 19.413 19.413C19.0217 19.805 18.5507 20.0007 18 20H6Z"
+                        fill="#005F6B" />
+                </svg>
+                UPLOAD
+            </h2>
+            <button class="closeUploadPopup popup-close">&#10005;</button>
+        </div>
+        <div class="popup-body">
+            <div class="form-group label-input">
+                <label for="categoryName">Category Name</label>
+                <input type="text" id="categoryName" value="">
+            </div>
+            <div class="form-group label-input">
+                <label for="country">Country</label>
+                <input type="text" id="country" value="01 Singapore (by default)">
+            </div>
+            <div class="form-group label-input">
+                <label for="projectName">Project Name</label>
+                <input type="text" id="projectName" value="Project Name (by default)">
+            </div>
+        <div class="form-group label-input">
+            <label for="uploadFile">Upload File</label>
+            <div class="file-input-wrapper">
+                <input type="file" id="uploadFile" class="custom-file-input" style="display: none;">
+                <label for="uploadFile" class="custom-file-label">Choose File</label>
+                <p id="fileNameDisplay" style="margin-top: 10px; color: #005F6B; display: inline;"></p>
+                <button id="removeFileButton" class="remove-file-button" style="display: none;">&#10005;</button>
             </div>
         </div>
+        <div class="form-group">
+            <button class="confirm-button" id="addButton">Upload</button>
+        </div>
+        </div>
     </div>
+</div>
+
     <script src="../../../../Internal-CRM/scripts.js"></script>
     <script>//Projects folder
         let projectData = [];
@@ -585,12 +628,17 @@
                 <span class="member-phone">${project.createdBy.phone}</span>
             </td>
             <td>
-                <span class="icon stats-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
-                        <path fill="currentColor" d="M1.75 13.25V1.5H.5v12a1.24 1.24 0 0 0 1.22 1H15.5v-1.25z"/>
-                        <path fill="currentColor" d="M3.15 8H4.4v3.9H3.15zm3.26-4h1.26v7.9H6.41zm3.27 2h1.25v5.9H9.68zm3.27-3.5h1.25v9.4h-1.25z"/>
-                    </svg>
-                </span>
+            <span class="icon" id="uploadButtonIcon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 16V7.85L8.4 10.45L7 9L12 4L17 9L15.6 10.45L13 7.85V16H11ZM6 20C5.45 20 4.97933 19.8043 4.588 19.413C4.19667 19.0217 4.00067 18.5507 4 18V15H6V18H18V15H20V18C20 18.55 19.8043 19.021 19.413 19.413C19.0217 19.805 18.5507 20.0007 18 20H6Z" fill="#005F6B"/>
+</svg>
+</span>
+            <span class="icon ">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.5 17.4985L18.3333 17.4974V19.9974L0 19.9985V1.66519L2.5 1.66406V17.4985ZM5.625 16.2485C5.37156 16.249 5.12064 16.1981 4.88741 16.099C4.65419 15.9998 4.44349 15.8543 4.26806 15.6714C4.09262 15.4885 3.95609 15.2719 3.86671 15.0347C3.77734 14.7976 3.73697 14.5448 3.74805 14.2916C3.75912 14.0384 3.82142 13.79 3.93117 13.5616C4.04092 13.3331 4.19585 13.1293 4.38659 12.9624C4.57733 12.7955 4.79992 12.669 5.04092 12.5906C5.28192 12.5122 5.53632 12.4834 5.78875 12.506L7.80375 9.14727C7.6195 8.86432 7.51508 8.53686 7.50151 8.19948C7.48795 7.8621 7.56574 7.52732 7.72667 7.23048C7.8876 6.93365 8.1257 6.68578 8.41583 6.51305C8.70596 6.34032 9.03735 6.24914 9.375 6.24914C9.71265 6.24914 10.044 6.34032 10.3342 6.51305C10.6243 6.68578 10.8624 6.93365 11.0233 7.23048C11.1843 7.52732 11.2621 7.8621 11.2485 8.19948C11.2349 8.53686 11.1305 8.86432 10.9462 9.14727L12.9613 12.506C13.0569 12.4973 13.153 12.4965 13.2487 12.5035L16.5762 6.68102C16.3371 6.33076 16.2238 5.90977 16.2548 5.4868C16.2858 5.06383 16.4593 4.66387 16.7469 4.3522C17.0346 4.04054 17.4193 3.8356 17.8385 3.77084C18.2576 3.70608 18.6863 3.78532 19.0546 3.99563C19.4229 4.20594 19.709 4.53489 19.8662 4.92878C20.0234 5.32267 20.0425 5.75822 19.9202 6.16432C19.798 6.57043 19.5417 6.92309 19.1931 7.16473C18.8446 7.40637 18.4244 7.52272 18.0012 7.49477L14.6738 13.3173C14.8649 13.5977 14.9764 13.9247 14.9964 14.2635C15.0163 14.6023 14.9439 14.9401 14.7869 15.241C14.6298 15.5419 14.3941 15.7945 14.1048 15.9719C13.8155 16.1493 13.4835 16.2449 13.1441 16.2484C12.8048 16.252 12.4708 16.1633 12.1779 15.992C11.8849 15.8206 11.644 15.573 11.4807 15.2754C11.3175 14.9779 11.2381 14.6416 11.2509 14.3025C11.2638 13.9634 11.3684 13.6341 11.5538 13.3498L9.53875 9.99102C9.42982 10.0013 9.32018 10.0013 9.21125 9.99102L7.19625 13.3498C7.38066 13.6327 7.48522 13.9603 7.49887 14.2977C7.51252 14.6352 7.43477 14.9701 7.27381 15.267C7.11286 15.564 6.87469 15.8119 6.58447 15.9847C6.29425 16.1574 5.96275 16.2486 5.625 16.2485Z" fill="#005F6B"/>
+</svg>
+
+</span>
                 <span class="icon details-icon" data-country="${project.country}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32">
                         <g fill="currentColor">
@@ -791,6 +839,89 @@
                 }
             });
         });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const popupOverlay = document.getElementById("uploadPopupOverlay");
+        const closePopupButton = document.querySelector(".closeUploadPopup");
+
+        // Function to open the popup
+        function openPopup() {
+            popupOverlay.style.display = "block";
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            popupOverlay.style.display = "none";
+        }
+
+        // Event delegation for dynamically loaded upload button icon
+        document.addEventListener("click", function (event) {
+            if (event.target.closest("#uploadButtonIcon")) {
+                openPopup();
+            }
+        });
+
+        // Add event listener to the close button inside the popup
+        closePopupButton.addEventListener("click", closePopup);
+
+        // Optional: Close the popup when clicking outside the popup content
+        popupOverlay.addEventListener("click", function (event) {
+            if (event.target === popupOverlay) {
+                closePopup();
+            }
+        });
+    });
+
+   document.addEventListener("DOMContentLoaded", function () {
+        const uploadFileInput = document.getElementById("uploadFile");
+        const fileNameDisplay = document.getElementById("fileNameDisplay");
+        const addButton = document.getElementById("addButton");
+        const removeFileButton = document.getElementById("removeFileButton");
+        const customFileLabel = document.querySelector(".custom-file-label");
+
+        // Function to handle file upload functionality
+        function handleUpload() {
+            const file = uploadFileInput.files[0]; // Get the selected file
+
+            if (file) {
+                fileNameDisplay.textContent = `Selected File: ${file.name}`; // Display file name
+                removeFileButton.style.display = "inline"; // Show remove button
+            } else {
+                fileNameDisplay.textContent = "No file selected"; // If no file is selected
+                removeFileButton.style.display = "none"; // Hide remove button
+            }
+        }
+
+        // Function to remove the selected file
+        function removeSelectedFile() {
+            uploadFileInput.value = ""; // Clear the file input
+            fileNameDisplay.textContent = ""; // Clear the file name display
+            removeFileButton.style.display = "none"; // Hide the remove button
+        }
+
+        // Add event listener to the "Add" button
+        addButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default form submission behavior
+            handleUpload(); // Call the file upload function
+        });
+
+        // Add event listener to the "Choose File" button
+        customFileLabel.addEventListener("click", function () {
+            uploadFileInput.click(); // Trigger the hidden file input
+        });
+
+        // Add event listener to the remove button
+        removeFileButton.addEventListener("click", function () {
+            removeSelectedFile(); // Call the remove function
+        });
+
+        // Automatically display file name when a file is selected
+        uploadFileInput.addEventListener("change", function () {
+            handleUpload(); // Handle file upload when a file is chosen
+        });
+    });
+
+
         document.getElementById('sameAddress').addEventListener('change', function () {
             if (this.checked) {
                 document.getElementById('permanentAddress').value = document.getElementById('presentAddress').value;
@@ -868,8 +999,8 @@
             document.querySelector(`#projectTable th:nth-child(${columnIndex + 1})`).classList.toggle('th-sort-asc', ascending);
             document.querySelector(`#projectTable th:nth-child(${columnIndex + 1})`).classList.toggle('th-sort-desc', !ascending);
         }
-    
-</script>
+
+    </script>
 </body>
 
 </html>

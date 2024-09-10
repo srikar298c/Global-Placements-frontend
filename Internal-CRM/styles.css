@@ -458,8 +458,7 @@ select,input,button{
 .dashboard-nav-button:hover:not(.active) {
   background-color: #d0d0d0;
 }
-
-.projects-container {
+projects-container {
   width: 95%;
   margin: 0 auto;
   background-color: #fff;
@@ -664,11 +663,14 @@ h1 {
   border-bottom-right-radius: 10px;
 }
 
-.projects-table th:nth-child(n+2):nth-child(-n+6) {
+.projects-table th:nth-child(n+3):nth-child(-n+6) {
   width: 250px;
 }
+.projects-table th:nth-child(2) {
+  width: 150px;
+}
 .projects-table th:nth-child(7) {
-  width: 80px;
+  width: 150px;
 }
 .projects-table tbody tr {
   height: 80px;
@@ -727,6 +729,33 @@ h1 {
   padding: 3px 8px;
   border-radius: 12px;
   font-size: 0.8em;
+}
+/* Beautify the file input button */
+.custom-file-label {
+    padding: 8px 16px;
+    /* background-color: #005F6B; */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid black;
+    width: 150px;
+}
+
+
+/* Style for the remove file button */
+.remove-file-button {
+    color: red;
+    background: none;
+    border: none;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.remove-file-button:hover {
+    color: darkred;
 }
 
 .icon {
