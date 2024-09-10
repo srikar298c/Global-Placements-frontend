@@ -574,7 +574,7 @@
             <label for="uploadFile">Upload File</label>
             <div class="file-input-wrapper">
                 <input type="file" id="uploadFile" class="custom-file-input" style="display: none;">
-                <label for="uploadFile" class="custom-file-label">Choose File</label>
+                <label for="uploadFile" class="custom-file-label" style="color: white;">Choose File</label>
                 <p id="fileNameDisplay" style="margin-top: 10px; color: #005F6B; display: inline;"></p>
                 <button id="removeFileButton" class="remove-file-button" style="display: none;">&#10005;</button>
             </div>
@@ -840,9 +840,14 @@
             });
         });
 
-    document.addEventListener("DOMContentLoaded", function () {
+   document.addEventListener("DOMContentLoaded", function () {
         const popupOverlay = document.getElementById("uploadPopupOverlay");
         const closePopupButton = document.querySelector(".closeUploadPopup");
+        const uploadFileInput = document.getElementById("uploadFile");
+        const fileNameDisplay = document.getElementById("fileNameDisplay");
+        const addButton = document.getElementById("addButton");
+        const removeFileButton = document.getElementById("removeFileButton");
+        const customFileLabel = document.querySelector(".custom-file-label");
 
         // Function to open the popup
         function openPopup() {
@@ -853,31 +858,6 @@
         function closePopup() {
             popupOverlay.style.display = "none";
         }
-
-        // Event delegation for dynamically loaded upload button icon
-        document.addEventListener("click", function (event) {
-            if (event.target.closest("#uploadButtonIcon")) {
-                openPopup();
-            }
-        });
-
-        // Add event listener to the close button inside the popup
-        closePopupButton.addEventListener("click", closePopup);
-
-        // Optional: Close the popup when clicking outside the popup content
-        popupOverlay.addEventListener("click", function (event) {
-            if (event.target === popupOverlay) {
-                closePopup();
-            }
-        });
-    });
-
-   document.addEventListener("DOMContentLoaded", function () {
-        const uploadFileInput = document.getElementById("uploadFile");
-        const fileNameDisplay = document.getElementById("fileNameDisplay");
-        const addButton = document.getElementById("addButton");
-        const removeFileButton = document.getElementById("removeFileButton");
-        const customFileLabel = document.querySelector(".custom-file-label");
 
         // Function to handle file upload functionality
         function handleUpload() {
@@ -899,28 +879,40 @@
             removeFileButton.style.display = "none"; // Hide the remove button
         }
 
+        // Event delegation for dynamically loaded upload button icon
+        document.addEventListener("click", function (event) {
+            if (event.target.closest("#uploadButtonIcon")) {
+                openPopup();
+            }
+        });
+
+        // Add event listener to the close button inside the popup
+        closePopupButton.addEventListener("click", closePopup);
+
+        // Close the popup when clicking outside the popup content
+        popupOverlay.addEventListener("click", function (event) {
+            if (event.target === popupOverlay) {
+                closePopup();
+            }
+        });
+
         // Add event listener to the "Add" button
         addButton.addEventListener("click", function (event) {
             event.preventDefault(); // Prevent default form submission behavior
             handleUpload(); // Call the file upload function
         });
 
-        // Add event listener to the "Choose File" button
+        // Trigger file selection dialog when custom file label is clicked
         customFileLabel.addEventListener("click", function () {
             uploadFileInput.click(); // Trigger the hidden file input
         });
 
-        // Add event listener to the remove button
-        removeFileButton.addEventListener("click", function () {
-            removeSelectedFile(); // Call the remove function
-        });
-
         // Automatically display file name when a file is selected
-        uploadFileInput.addEventListener("change", function () {
-            handleUpload(); // Handle file upload when a file is chosen
-        });
-    });
+        uploadFileInput.addEventListener("change", handleUpload);
 
+        // Add event listener to the remove button
+        removeFileButton.addEventListener("click", removeSelectedFile);
+    });
 
         document.getElementById('sameAddress').addEventListener('change', function () {
             if (this.checked) {

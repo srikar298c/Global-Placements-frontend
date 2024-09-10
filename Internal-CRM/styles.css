@@ -733,13 +733,13 @@ h1 {
 /* Beautify the file input button */
 .custom-file-label {
     padding: 8px 16px;
-    /* background-color: #005F6B; */
-    color: white;
+    background-color: #005F6B;
+    color: pink;
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
     border: 1px solid black;
-    width: 150px;
+  
 }
 
 
