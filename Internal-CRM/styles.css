@@ -2577,3 +2577,99 @@ select:focus {
     width: 100%;
     box-sizing: border-box;
 }
+
+/* __________________________________Approvals____________________________________ */
+/* Main container */
+.approvals-filter {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 10px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Container layout */
+.approvals-filter__container {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+     /* Aligns items from the top */
+}
+
+/* Form group */
+.approvals-filter__group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 170px; /* Ensure a consistent minimum width for inputs */
+}
+
+/* Labels */
+.approvals-filter__label {
+    font-size: 10px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Select inputs */
+.approvals-filter__select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 12px;
+    color: #333;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+}
+
+/* Date range container */
+.approvals-filter__date-range {
+    display: flex;
+    gap: 10px;
+}
+
+/* Date inputs */
+.approvals-filter__input[type="date"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Button group */
+.approvals-filter__group.approve-button-group {
+    flex: 0; /* Do not expand */
+    align-self: flex-end; /* Align button to the right */
+}
+
+/* Approve button */
+.approvals-filter__button {
+    padding: 10px 20px;
+    background-color: #006666;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    height: 42px; /* Match the height of the form elements */
+    min-width: 120px;
+    display: block;
+
+}
+
+.approvals-filter__button:hover {
+    background-color: #005555;
+}

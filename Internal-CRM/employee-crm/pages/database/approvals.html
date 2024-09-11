@@ -246,42 +246,181 @@
             </div>
         </div>
         <div class="main-content-global-database">
-        <div class="submissions filter-section">
-            <div class="submissions base-filters">
-                <select class="submissions-filter-select" id="projectNameFilter">
-                    <option value="">Choose the Category</option>
-                    <option>Project 1</option>
-                </select>
-                <select class="submissions-filter-select" id="clientNameFilter">
-                    <option value="">Choose the Project</option>
-                </select>
-                <select class="submissions-filter-select" id="clientStatusFilter">
-                    <option value="">Choose the Agency Name</option>
-                </select>
-                
-                
+<div class="approvals-filter">
+    <div class="approvals-filter__container">
+        <!-- Category Filter -->
+        <div class="approvals-filter__group">
+            <label for="categoryFilter" class="approvals-filter__label">Category</label>
+            <select class="approvals-filter__select" id="categoryFilter">
+                <option value="">Nurses</option>
+                <option>Doctors</option>
+                <option>Technicians</option>
+            </select>
+        </div>
+
+        <!-- Project Filter -->
+        <div class="approvals-filter__group">
+            <label for="projectNameFilter" class="approvals-filter__label">Project</label>
+            <select class="approvals-filter__select" id="projectNameFilter">
+                <option value="">Choose the Project</option>
+                <option>Project 1</option>
+                <option>Project 2</option>
+                <option>Project 3</option>
+            </select>
+        </div>
+
+        <!-- Agency Filter -->
+        <div class="approvals-filter__group">
+            <label for="agencyNameFilter" class="approvals-filter__label">Agency</label>
+            <select class="approvals-filter__select" id="agencyNameFilter">
+                <option value="">Choose the Agency Name</option>
+                <option>Agency 1</option>
+                <option>Agency 2</option>
+                <option>Agency 3</option>
+            </select>
+        </div>
+
+        <!-- Submitted From Date Range -->
+        <div class="approvals-filter__group">
+            <label class="approvals-filter__label">Submitted From</label>
+            <div class="approvals-filter__date-range">
+                <input type="date" class="approvals-filter__input" placeholder="From">
+                <input type="date" class="approvals-filter__input" placeholder="To">
             </div>
         </div>
-            <div class="candidate-table">
-                <table id="candidateTable">
-                    <thead>
-                        <tr>
-                            <th><input type="checkbox" id="selectAll"></th>
-                            <th>Name of the Candidate</th>
-                            <th>Contact No</th>
-                            <th>Mail ID</th>
-                            <th>Experience</th>
-                            <th>Department</th>
-                            <th>Project Name</th>
-                            <th>Agent Name</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Table rows will be inserted here -->
-                    </tbody>
-                </table>
-            </div>
+
+        <!-- Approve Button -->
+    </div>
+    <div class="approvals-filter__group approve-button-group">
+        <button class="approvals-filter__button" id="approveButton">Approve</button>
+    </div>
+</div>
+
+        <div class="candidate-table">
+            <table id="candidateTable">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="selectAll"></th>
+                        <th>Name of the Candidate</th>
+                        <th>Contact No</th>
+                        <th>Mail ID</th>
+                        <th>Experience</th>
+                        <th>Department</th>
+                        <th>Project Name</th>
+                        <th>Agent Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>NameNameNameName</td>
+                        <td>999-999-9999</td>
+                        <td>NameNameNameName</td>
+                        <td>00 YY - 00 MM</td>
+                        <td>Dept 1</td>
+                        <td>Project 1</td>
+                        <td>Agent 1</td>
+                        <td>
+                            <!-- Placeholder for SVG icons -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23 11.9991L20.56 9.21906L20.9 5.53906L17.29 4.71906L15.4 1.53906L12 2.99906L8.6 1.53906L6.71 4.71906L3.1 5.52906L3.44 9.20906L1 11.9991L3.44 14.7791L3.1 18.4691L6.71 19.2891L8.6 22.4691L12 20.9991L15.4 22.4591L17.29 19.2791L20.9 18.4591L20.56 14.7791L23 11.9991ZM10 16.9991L6 12.9991L7.41 11.5891L10 14.1691L16.59 7.57906L18 8.99906L10 16.9991Z" fill="#005F6B"/>
+</svg>
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20ZM10 18C10.9 18 11.7667 17.8543 12.6 17.563C13.4333 17.2717 14.2 16.8507 14.9 16.3L3.7 5.1C3.15 5.8 2.729 6.56667 2.437 7.4C2.145 8.23333 1.99933 9.1 2 10C2 12.2333 2.775 14.125 4.325 15.675C5.875 17.225 7.76667 18 10 18ZM16.3 14.9C16.85 14.2 17.271 13.4333 17.563 12.6C17.855 11.7667 18.0007 10.9 18 10C18 7.76667 17.225 5.875 15.675 4.325C14.125 2.775 12.2333 2 10 2C9.1 2 8.23333 2.14567 7.4 2.437C6.56667 2.72833 5.8 3.14933 5.1 3.7L16.3 14.9Z" fill="#FF0000"/>
+</svg>
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>NameNameNameName</td>
+                        <td>999-999-9999</td>
+                        <td>NameNameNameName</td>
+                        <td>00 YY - 00 MM</td>
+                        <td>Dept 1</td>
+                        <td>Project 1</td>
+                        <td>Agent 2</td>
+                        <td>
+                            <!-- Placeholder for SVG icons -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23 11.9991L20.56 9.21906L20.9 5.53906L17.29 4.71906L15.4 1.53906L12 2.99906L8.6 1.53906L6.71 4.71906L3.1 5.52906L3.44 9.20906L1 11.9991L3.44 14.7791L3.1 18.4691L6.71 19.2891L8.6 22.4691L12 20.9991L15.4 22.4591L17.29 19.2791L20.9 18.4591L20.56 14.7791L23 11.9991ZM10 16.9991L6 12.9991L7.41 11.5891L10 14.1691L16.59 7.57906L18 8.99906L10 16.9991Z" fill="#005F6B"/>
+</svg>
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20ZM10 18C10.9 18 11.7667 17.8543 12.6 17.563C13.4333 17.2717 14.2 16.8507 14.9 16.3L3.7 5.1C3.15 5.8 2.729 6.56667 2.437 7.4C2.145 8.23333 1.99933 9.1 2 10C2 12.2333 2.775 14.125 4.325 15.675C5.875 17.225 7.76667 18 10 18ZM16.3 14.9C16.85 14.2 17.271 13.4333 17.563 12.6C17.855 11.7667 18.0007 10.9 18 10C18 7.76667 17.225 5.875 15.675 4.325C14.125 2.775 12.2333 2 10 2C9.1 2 8.23333 2.14567 7.4 2.437C6.56667 2.72833 5.8 3.14933 5.1 3.7L16.3 14.9Z" fill="#FF0000"/>
+</svg>
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>NameNameNameName</td>
+                        <td>999-999-9999</td>
+                        <td>NameNameNameName</td>
+                        <td>00 YY - 00 MM</td>
+                        <td>Dept 1</td>
+                        <td>Project 1</td>
+                        <td>Agent 3</td>
+                        <td>
+                            <!-- Placeholder for SVG icons -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23 11.9991L20.56 9.21906L20.9 5.53906L17.29 4.71906L15.4 1.53906L12 2.99906L8.6 1.53906L6.71 4.71906L3.1 5.52906L3.44 9.20906L1 11.9991L3.44 14.7791L3.1 18.4691L6.71 19.2891L8.6 22.4691L12 20.9991L15.4 22.4591L17.29 19.2791L20.9 18.4591L20.56 14.7791L23 11.9991ZM10 16.9991L6 12.9991L7.41 11.5891L10 14.1691L16.59 7.57906L18 8.99906L10 16.9991Z" fill="#005F6B"/>
+</svg>
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20ZM10 18C10.9 18 11.7667 17.8543 12.6 17.563C13.4333 17.2717 14.2 16.8507 14.9 16.3L3.7 5.1C3.15 5.8 2.729 6.56667 2.437 7.4C2.145 8.23333 1.99933 9.1 2 10C2 12.2333 2.775 14.125 4.325 15.675C5.875 17.225 7.76667 18 10 18ZM16.3 14.9C16.85 14.2 17.271 13.4333 17.563 12.6C17.855 11.7667 18.0007 10.9 18 10C18 7.76667 17.225 5.875 15.675 4.325C14.125 2.775 12.2333 2 10 2C9.1 2 8.23333 2.14567 7.4 2.437C6.56667 2.72833 5.8 3.14933 5.1 3.7L16.3 14.9Z" fill="#FF0000"/>
+</svg>
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>NameNameNameName</td>
+                        <td>999-999-9999</td>
+                        <td>NameNameNameName</td>
+                        <td>00 YY - 00 MM</td>
+                        <td>Dept 1</td>
+                        <td>Project 1</td>
+                        <td>Agent 4</td>
+                        <td>
+                            <!-- Placeholder for SVG icons -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23 11.9991L20.56 9.21906L20.9 5.53906L17.29 4.71906L15.4 1.53906L12 2.99906L8.6 1.53906L6.71 4.71906L3.1 5.52906L3.44 9.20906L1 11.9991L3.44 14.7791L3.1 18.4691L6.71 19.2891L8.6 22.4691L12 20.9991L15.4 22.4591L17.29 19.2791L20.9 18.4591L20.56 14.7791L23 11.9991ZM10 16.9991L6 12.9991L7.41 11.5891L10 14.1691L16.59 7.57906L18 8.99906L10 16.9991Z" fill="#005F6B"/>
+</svg>
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20ZM10 18C10.9 18 11.7667 17.8543 12.6 17.563C13.4333 17.2717 14.2 16.8507 14.9 16.3L3.7 5.1C3.15 5.8 2.729 6.56667 2.437 7.4C2.145 8.23333 1.99933 9.1 2 10C2 12.2333 2.775 14.125 4.325 15.675C5.875 17.225 7.76667 18 10 18ZM16.3 14.9C16.85 14.2 17.271 13.4333 17.563 12.6C17.855 11.7667 18.0007 10.9 18 10C18 7.76667 17.225 5.875 15.675 4.325C14.125 2.775 12.2333 2 10 2C9.1 2 8.23333 2.14567 7.4 2.437C6.56667 2.72833 5.8 3.14933 5.1 3.7L16.3 14.9Z" fill="#FF0000"/>
+</svg>
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>NameNameNameName</td>
+                        <td>999-999-9999</td>
+                        <td>NameNameNameName</td>
+                        <td>00 YY - 00 MM</td>
+                        <td>Dept 1</td>
+                        <td>Project 1</td>
+                        <td>Agent 4</td>
+                        <td>
+                            <!-- Placeholder for SVG icons -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23 11.9991L20.56 9.21906L20.9 5.53906L17.29 4.71906L15.4 1.53906L12 2.99906L8.6 1.53906L6.71 4.71906L3.1 5.52906L3.44 9.20906L1 11.9991L3.44 14.7791L3.1 18.4691L6.71 19.2891L8.6 22.4691L12 20.9991L15.4 22.4591L17.29 19.2791L20.9 18.4591L20.56 14.7791L23 11.9991ZM10 16.9991L6 12.9991L7.41 11.5891L10 14.1691L16.59 7.57906L18 8.99906L10 16.9991Z" fill="#005F6B"/>
+</svg>
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88334 18.6867 3.825 17.9743 2.925 17.075C2.025 16.1757 1.31267 15.1173 0.788001 13.9C0.263335 12.6827 0.000667933 11.3827 1.26582e-06 10C-0.000665401 8.61733 0.262001 7.31733 0.788001 6.1C1.314 4.88267 2.02633 3.82433 2.925 2.925C3.82367 2.02567 4.882 1.31333 6.1 0.788C7.318 0.262667 8.618 0 10 0C11.382 0 12.682 0.262667 13.9 0.788C15.118 1.31333 16.1763 2.02567 17.075 2.925C17.9737 3.82433 18.6863 4.88267 19.213 6.1C19.7397 7.31733 20.002 8.61733 20 10C19.998 11.3827 19.7353 12.6827 19.212 13.9C18.6887 15.1173 17.9763 16.1757 17.075 17.075C16.1737 17.9743 15.1153 18.687 13.9 19.213C12.6847 19.739 11.3847 20.0013 10 20ZM10 18C10.9 18 11.7667 17.8543 12.6 17.563C13.4333 17.2717 14.2 16.8507 14.9 16.3L3.7 5.1C3.15 5.8 2.729 6.56667 2.437 7.4C2.145 8.23333 1.99933 9.1 2 10C2 12.2333 2.775 14.125 4.325 15.675C5.875 17.225 7.76667 18 10 18ZM16.3 14.9C16.85 14.2 17.271 13.4333 17.563 12.6C17.855 11.7667 18.0007 10.9 18 10C18 7.76667 17.225 5.875 15.675 4.325C14.125 2.775 12.2333 2 10 2C9.1 2 8.23333 2.14567 7.4 2.437C6.56667 2.72833 5.8 3.14933 5.1 3.7L16.3 14.9Z" fill="#FF0000"/>
+</svg>
+
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
             <div id="candidateTablePagination" class="pagination-container">
                 <div class="pagination">
                     <button class="pagination-btn prev">‹ Back</button>
@@ -306,76 +445,7 @@
     </div>
     </div>
     <script src="../../../../Internal-CRM/scripts.js"></script>
-    <script>let candidatesData = [];
 
-        async function fetchData() {
-            try {
-                const response = await fetch('../../../../Internal-CRM/global-data.json');
-                candidatesData = await response.json();
-                populateFilterOptions();
-                populateGlobalDatabaseTable(candidatesData);
-                setupFiltersAndSearch();
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        }
-
-        function createCandidateTableRow(data) {
-            const tr = document.createElement('tr');
-            tr.className = 'leads-candidate-data';
-
-            tr.innerHTML = `
-        <td><input type="checkbox" class="checkbox"></td>
-     
-        <td>${data.name}</td>
-        <td>${data.mobileNumber}</td>
-        <td>${data.email}</td>
-        <td>${data.experience}</td>
-        <td>${data.department}</td>
-        <td>${data.qualification}</td>
-        <td>
-            <div class="action-dots"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 4C14.787 4 17.263 5.257 19.026 6.813C19.911 7.594 20.64 8.471 21.154 9.344C21.659 10.201 22 11.13 22 12C22 12.87 21.66 13.799 21.154 14.656C20.64 15.529 19.911 16.406 19.026 17.187C17.263 18.743 14.786 20 12 20C9.213 20 6.737 18.743 4.974 17.187C4.089 16.406 3.36 15.529 2.846 14.656C2.34 13.799 2 12.87 2 12C2 11.13 2.34 10.201 2.846 9.344C3.36 8.471 4.089 7.594 4.974 6.813C6.737 5.257 9.214 4 12 4ZM12 6C9.816 6 7.792 6.993 6.298 8.312C5.554 8.968 4.966 9.685 4.569 10.359C4.163 11.049 4 11.62 4 12C4 12.38 4.163 12.951 4.569 13.641C4.966 14.315 5.554 15.031 6.298 15.688C7.792 17.007 9.816 18 12 18C14.184 18 16.208 17.007 17.702 15.688C18.446 15.031 19.034 14.315 19.431 13.641C19.837 12.951 20 12.38 20 12C20 11.62 19.837 11.049 19.431 10.359C19.034 9.685 18.446 8.969 17.702 8.312C16.208 6.993 14.184 6 12 6ZM12 9C12.088 9 12.175 9.00367 12.261 9.011C12.0439 9.39185 11.9579 9.8335 12.0163 10.268C12.0747 10.7025 12.2743 11.1057 12.5843 11.4157C12.8943 11.7257 13.2975 11.9253 13.732 11.9837C14.1665 12.0421 14.6081 11.9561 14.989 11.739C15.0416 12.3412 14.911 12.9452 14.6145 13.4719C14.3179 13.9986 13.8692 14.4234 13.327 14.6907C12.7849 14.958 12.1746 15.0553 11.5762 14.9699C10.9778 14.8844 10.4192 14.6202 9.97357 14.2118C9.52792 13.8034 9.21603 13.27 9.07876 12.6813C8.94149 12.0926 8.98524 11.4762 9.20429 10.9128C9.42334 10.3495 9.80746 9.8654 10.3063 9.52407C10.8052 9.18274 11.3955 9.00008 12 9Z" fill="#005F6B"/>
-</svg>
-</div>
-        </td>
-    `;
-        }
-
-        function populateGlobalDatabaseTable(candidatesData) {
-            const table = document.getElementById('candidateTable');
-            const tbody = table.querySelector('tbody') || table.createTBody();
-
-            tbody.innerHTML = ''; // Clear existing rows
-
-            candidatesData.forEach(data => {
-                const [candidateRow, additionalInfoRow] = createCandidateTableRow(data);
-                tbody.appendChild(candidateRow);
-                tbody.appendChild(additionalInfoRow);
-            });
-
-            const selectAllCheckbox = document.getElementById('selectAll');
-            selectAllCheckbox.addEventListener('change', function () {
-                const checkboxes = tbody.querySelectorAll('.checkbox');
-                checkboxes.forEach(checkbox => {
-                    checkbox.checked = this.checked;
-                });
-            });
-        }
-
-        function initializeApp() {
-            fetchData().then(() => {
-                populateGlobalDatabaseTable(candidatesData);
-                setupPopups();
-                setupFiltersAndSearch();
-                updateSelectAllCheckbox();
-            });
-        }
-
-
-        document.addEventListener('DOMContentLoaded', initializeApp);
-
-    </script>
 </body>
 
 </html>
