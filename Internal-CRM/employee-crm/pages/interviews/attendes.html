@@ -232,7 +232,7 @@
                     <option>Paramedics</option>
                     <option>Doctors</option>
                 </select>
-                <h2>/Interviews</h2>
+                <h2>/Interviews/Project Name/Client Name</h2>
             </div>
             <div class="header-lastitem">
                 <div class="profilename">
@@ -250,34 +250,27 @@
                 <div class="rejected-filter__container">
                     <!-- Category Filter -->
                     <div class="rejected-filter__group">
-                        <label for="categoryFilter" class="rejected-filter__label">Category</label>
+                        <label for="categoryFilter" class="rejected-filter__label">status</label>
                         <select class="rejected-filter__select" id="categoryFilter">
-                            <option value="">Nurses</option>
-                            <option>Doctors</option>
-                            <option>Technicians</option>
+                            <option value="">Selected</option>
+                            <option>Rejected</option>
+                            <option>On Hold</option>
+                            <option>Reschedule</option>
                         </select>
                     </div>
 
                     <!-- Project Filter -->
-                    <div class="rejected-filter__group">
-                        <label for="projectNameFilter" class="rejected-filter__label">Status</label>
-                        <select class="rejected-filter__select" id="projectNameFilter">
-                            <option value="">Choose the status</option>
-                            <option>Ongoing</option>
-                            <option>Held</option>
-                            <option>Scheduled</option>
-                        </select>
-                    </div>
+                  
 
                     <!-- Agency Filter -->
 
 
-                    <!-- Submitted From Date Range -->
+                
                     <div class="rejected-filter__group ">
-                        <label class="rejected-filter__label">Choose From</label>
+                        <label class="rejected-filter__label">Attended</label>
                         <div class="rejected-button-group">
-                            <button class="rejectedButton">Rejected</button>
-                            <button class="blacklistedButton">Blacklisted</button>
+                            <button class="rejectedButton">Yes</button>
+                            <button class="blacklistedButton">NO</button>
                         </div>
                     </div>
                 </div>
@@ -287,147 +280,124 @@
                 <table id="candidateTable">
                     <thead>
                         <tr>
-                            <th>Name of the Project</th>
-                            <th>Client</th>
-                            <th>Label</th>
-                            <th>Delegate</th>
-                            <th>Host</th>
-                            <th>Platform</th>
-                            <th>Status</th>
+                            <th>Name of the Candidate</th>
+                            <th>Contact No</th>
+                            <th>Mail ID</th>
+                            <th>Qualification</th>
                             <th>Date</th>
-                            <th>Attendes</th>
+                            <th>Time Slot</th>
+                            <th>Attended</th>
+                            <th>Status</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
 
                             <td>NameNameNameName</td>
-                            <td>lorem</td>
-                            <td>June 2024</td>
+                            <td>358-476-2589</td>
+                            <td>Ottis.osnik@gmail.com</td>
                             <td>Ipsum</td>
-                            <td>Jhon Doe</td>
+                            <td>sept 11 2024</td>
+                            <td>Time Slot</td>
                             <td>Zoom</td>
                             <td>Scheduled</td>
-                            <td>sept 11 2024</td>
                             <td>
                                 <!-- Placeholder for SVG icons -->
 
-                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M1.5 3L3 4.5L6 1.5M1.5 10L3 11.5L6 8.5M1.5 17L3 18.5L6 15.5M9.5 10H20.5M9.5 17H20.5M9.5 3H20.5"
-                                        stroke="#005F6B" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
+                                        d="M12 1H19V8M19 12.737V17.5C19 17.8978 18.842 18.2794 18.5607 18.5607C18.2794 18.842 17.8978 19 17.5 19H2.5C2.10218 19 1.72064 18.842 1.43934 18.5607C1.15804 18.2794 1 17.8978 1 17.5V2.5C1 2.10218 1.15804 1.72064 1.43934 1.43934C1.72064 1.15804 2.10218 1 2.5 1H7M10.9 9.1L18.55 1.45"
+                                        stroke="#005F6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+
                             </td>
                         </tr>
                         <tr>
 
                             <td>NameNameNameName</td>
-                            <td>lorem</td>
-                            <td>June 2024</td>
+                            <td>358-476-2589</td>
+                            <td>Ottis.osnik@gmail.com</td>
                             <td>Ipsum</td>
-                            <td>Jhon Doe</td>
+                            <td>sept 11 2024</td>
+                            <td>Time Slot</td>
                             <td>Zoom</td>
                             <td>Scheduled</td>
-                            <td>sept 11 2024</td>
                             <td>
                                 <!-- Placeholder for SVG icons -->
-                                <a href="../../../../Internal-CRM/employee-crm/pages/interviews/attendes.html"></a>
-                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M1.5 3L3 4.5L6 1.5M1.5 10L3 11.5L6 8.5M1.5 17L3 18.5L6 15.5M9.5 10H20.5M9.5 17H20.5M9.5 3H20.5"
-                                        stroke="#005F6B" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
+                                        d="M12 1H19V8M19 12.737V17.5C19 17.8978 18.842 18.2794 18.5607 18.5607C18.2794 18.842 17.8978 19 17.5 19H2.5C2.10218 19 1.72064 18.842 1.43934 18.5607C1.15804 18.2794 1 17.8978 1 17.5V2.5C1 2.10218 1.15804 1.72064 1.43934 1.43934C1.72064 1.15804 2.10218 1 2.5 1H7M10.9 9.1L18.55 1.45"
+                                        stroke="#005F6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+
                             </td>
                         </tr>
                         <tr>
 
                             <td>NameNameNameName</td>
-                            <td>lorem</td>
-                            <td>June 2024</td>
+                            <td>358-476-2589</td>
+                            <td>Ottis.osnik@gmail.com</td>
                             <td>Ipsum</td>
-                            <td>Jhon Doe</td>
+                            <td>sept 11 2024</td>
+                            <td>Time Slot</td>
                             <td>Zoom</td>
                             <td>Scheduled</td>
-                            <td>sept 11 2024</td>
                             <td>
                                 <!-- Placeholder for SVG icons -->
-                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M1.5 3L3 4.5L6 1.5M1.5 10L3 11.5L6 8.5M1.5 17L3 18.5L6 15.5M9.5 10H20.5M9.5 17H20.5M9.5 3H20.5"
-                                        stroke="#005F6B" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
+                                        d="M12 1H19V8M19 12.737V17.5C19 17.8978 18.842 18.2794 18.5607 18.5607C18.2794 18.842 17.8978 19 17.5 19H2.5C2.10218 19 1.72064 18.842 1.43934 18.5607C1.15804 18.2794 1 17.8978 1 17.5V2.5C1 2.10218 1.15804 1.72064 1.43934 1.43934C1.72064 1.15804 2.10218 1 2.5 1H7M10.9 9.1L18.55 1.45"
+                                        stroke="#005F6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+
                             </td>
                         </tr>
                         <tr>
 
                             <td>NameNameNameName</td>
-                            <td>lorem</td>
-                            <td>June 2024</td>
+                            <td>358-476-2589</td>
+                            <td>Ottis.osnik@gmail.com</td>
                             <td>Ipsum</td>
-                            <td>Jhon Doe</td>
+                            <td>sept 11 2024</td>
+                            <td>Time Slot</td>
                             <td>Zoom</td>
                             <td>Scheduled</td>
-                            <td>sept 11 2024</td>
                             <td>
                                 <!-- Placeholder for SVG icons -->
-                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M1.5 3L3 4.5L6 1.5M1.5 10L3 11.5L6 8.5M1.5 17L3 18.5L6 15.5M9.5 10H20.5M9.5 17H20.5M9.5 3H20.5"
-                                        stroke="#005F6B" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
+                                        d="M12 1H19V8M19 12.737V17.5C19 17.8978 18.842 18.2794 18.5607 18.5607C18.2794 18.842 17.8978 19 17.5 19H2.5C2.10218 19 1.72064 18.842 1.43934 18.5607C1.15804 18.2794 1 17.8978 1 17.5V2.5C1 2.10218 1.15804 1.72064 1.43934 1.43934C1.72064 1.15804 2.10218 1 2.5 1H7M10.9 9.1L18.55 1.45"
+                                        stroke="#005F6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+
                             </td>
                         </tr>
                         <tr>
 
                             <td>NameNameNameName</td>
-                            <td>lorem</td>
-                            <td>June 2024</td>
+                            <td>358-476-2589</td>
+                            <td>Ottis.osnik@gmail.com</td>
                             <td>Ipsum</td>
-                            <td>Jhon Doe</td>
+                            <td>sept 11 2024</td>
+                            <td>Time Slot</td>
                             <td>Zoom</td>
                             <td>Scheduled</td>
-                            <td>sept 11 2024</td>
                             <td>
                                 <!-- Placeholder for SVG icons -->
-                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M1.5 3L3 4.5L6 1.5M1.5 10L3 11.5L6 8.5M1.5 17L3 18.5L6 15.5M9.5 10H20.5M9.5 17H20.5M9.5 3H20.5"
-                                        stroke="#005F6B" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
+                                        d="M12 1H19V8M19 12.737V17.5C19 17.8978 18.842 18.2794 18.5607 18.5607C18.2794 18.842 17.8978 19 17.5 19H2.5C2.10218 19 1.72064 18.842 1.43934 18.5607C1.15804 18.2794 1 17.8978 1 17.5V2.5C1 2.10218 1.15804 1.72064 1.43934 1.43934C1.72064 1.15804 2.10218 1 2.5 1H7M10.9 9.1L18.55 1.45"
+                                        stroke="#005F6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
+
                             </td>
                         </tr>
-                        <tr>
-
-                            <td>NameNameNameName</td>
-                            <td>lorem</td>
-                            <td>June 2024</td>
-                            <td>Ipsum</td>
-                            <td>Jhon Doe</td>
-                            <td>Zoom</td>
-                            <td>Scheduled</td>
-                            <td>sept 11 2024</td>
-                            <td>
-                                <!-- Placeholder for SVG icons -->
-                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M1.5 3L3 4.5L6 1.5M1.5 10L3 11.5L6 8.5M1.5 17L3 18.5L6 15.5M9.5 10H20.5M9.5 17H20.5M9.5 3H20.5"
-                                        stroke="#005F6B" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </td>
-                        </tr>
-
+                       
                     </tbody>
                 </table>
             </div>
