@@ -1309,7 +1309,6 @@ input[type="radio"] {
 }
 
 #candidateTable {
-  
   width: 100%;
   border-collapse: collapse;
   background-color: white;
@@ -1339,8 +1338,12 @@ input[type="radio"] {
 #candidateTable th,
 #candidateTable td {
      padding: 12px;
-  text-align: left;
+  text-align: center;
   border-bottom: 1px solid #e0e0e0;
+}
+#candidateTable th,
+#candidateTable td{
+  text-align: center;
 }
 #candidateTable td input[type=checkbox],
 #candidateTable th input[type=checkbox]
