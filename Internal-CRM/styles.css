@@ -1054,6 +1054,45 @@ margin: 0px 2px;
   font-weight: 500;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+.filter-select  {
+  background-color: #f8f8f8;
+  color: #000;
+  border: 0.25px solid #c7c7c7;
+  padding: 8px 10px;
+  border-radius: 6px;
+  width: 120px;
+  font-size: 10px;
+margin: 0px 2px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.search-bar {
+  background-color: #f8f8f8;
+  color: #000;
+  border: 0.25px solid #c7c7c7;
+  
+    height: auto;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+.search-bar svg {
+   margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    fill: #262262; 
+}
+.search-bar > input {
+    width: 100%;
+    padding: 8px ;
+    margin: 0;
+    border-radius: 5px;
+    border: none;
+}
+.search-bar > input:focus {
+    
+    border: none;
+}
 .search-input {
   background-color: #f0f0f0;
   color: #333;
