@@ -237,7 +237,7 @@ select,input,button{
   flex-direction: row;
   align-items: center;
 }
-.header-title h3 {
+.header-title h2 {
   margin: 0;
   color: #005F6B;
 }
