@@ -237,9 +237,8 @@ select,input,button{
   flex-direction: row;
   align-items: center;
 }
-.header-title h2 {
+.header-title h3 {
   margin: 0;
-  font-size: 24px;
   color: #005F6B;
 }
 .header-title select{
