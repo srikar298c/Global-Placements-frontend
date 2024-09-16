@@ -2942,3 +2942,79 @@ background-color: #dcdbdb;
   border-radius: 4px;
   cursor: pointer;
 }
+.notification-container {
+width: 100%;
+  margin: 0 auto;
+   min-width: 1240px;
+   background-color: white;
+   border-radius: 8px;
+   padding: 10px;
+}
+
+.notification-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.notification-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.notification-content {
+  flex-grow: 1;
+  margin-right: 15px;
+}
+
+.notification-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between title and label */
+}
+
+.notification-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.notification-label {
+    background-color: #007bff;
+    color: white;
+    padding: 3px 6px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.notification-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.notification-description {
+  font-size: 14px;
+  margin: 0 0 5px 0;
+  color: #666;
+  line-height: 1.4;
+}
+
+.notification-admin {
+  font-size: 12px;
+  margin: 0;
+  color: #888;
+}
+
+.notification-timestamp {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: #888;
+  align-self: flex-start;
+  margin-top: 3px;
+}
