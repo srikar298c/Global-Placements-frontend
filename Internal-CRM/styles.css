@@ -48,7 +48,9 @@ select,input,button{
 ::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-thumb-hover);
 }
-
+.button{
+  cursor: pointer;
+}
 .sidebar-container {
   width: 250px;
   height: 100%;
@@ -2670,6 +2672,17 @@ select:focus {
     background-repeat: no-repeat;
     background-position: right 10px center;
     cursor: pointer;
+}
+
+.approvals-filter__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 12px;
+    color: #333;
+    appearance: none;
 }
 
 /* Date range container */
