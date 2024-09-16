@@ -2847,3 +2847,85 @@ background-color: #dcdbdb;
         flex-basis: 100%;
     }
 }
+
+.popup-overlay .admin-info{
+ display: inline-block;
+  color: #999;
+  font-size: 0.9em;
+}
+.popup-overlay .task-description {
+  margin-bottom: 20px;
+}
+.popup-overlay .candidate-section {
+  margin-bottom: 20px;
+}
+
+.popup-overlay .candidate-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.popup-overlay .candidate-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.popup-overlay .add-more-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.popup-overlay .timestamp {
+  display: inline-block;
+  color: #999;
+  font-size: 0.9em;
+}
+.popup-overlay .candidate-item:last-child {
+  border-bottom: none;
+}
+.popup-overlay .candidate-id {
+  flex: 1;
+  margin-right: 10px;
+  color: #008080;
+}
+.popup-overlay .candidate-status {
+  flex: 2;
+  margin-right: 10px;
+}
+.popup-overlay .admin-name {
+  flex: 1;
+  text-align: right;
+  color: #666;
+}
+.popup-overlay .last-update {
+  display: inline-block;
+  color: #999;
+  font-size: 0.9em;
+}
+.popup-overlay .candidate-header {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.popup-overlay .popup-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:20px;
+}
+
+.popup-overlay .close-button {
+  width: 30%;
+  padding: 10px;
+  background-color: #008080;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
