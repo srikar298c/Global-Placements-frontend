@@ -1503,11 +1503,15 @@ input[type="radio"] {
   display: flex;
   align-items: center;
   margin-top: 16px;
+  justify-content: space-between;
 }
-
+.comments-section svg{
+height: 16px;
+width: 16px;
+}
 .comments-input {
-  flex-grow: 1;
-  padding: 6px 8px;
+  width: 85%;
+  padding: 8px 16px;
   font-size: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -2375,6 +2379,7 @@ font-size:14px ;
   border-radius: 4px;
   font-size: 16px;
   width: 100%;
+  gap:4px;
   background-color: #fafafa;
   transition: border-color 0.3s;
 } 
@@ -2586,11 +2591,21 @@ select:focus {
   cursor: pointer;
 }
 
+.scores-group  {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .scores-group input {
-  flex: 1;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 4px;
+  margin-left: 5px;
+}
+.scores-group input:focus {
+
+  border: 1px solid #006b77;
+
 }
 
 .profile-popup .checkbox-group {
