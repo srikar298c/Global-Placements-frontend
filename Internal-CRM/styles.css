@@ -2426,6 +2426,13 @@ select:focus {
     justify-content: space-between;
     align-items: center;
 }
+.form-row input[type="text"],
+.form-row input[type="tel"],
+.form-row input[type="email"],
+.form-row input[type="date"],
+.form-row select{
+   width: 98%;
+}
 .measurement-options {
     display: flex;
     gap: 5px;
