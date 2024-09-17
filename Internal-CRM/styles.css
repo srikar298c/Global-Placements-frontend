@@ -215,7 +215,7 @@ select,input,button{
   top: 0;
   width: auto;
   padding: 10px;
-  /* background-color: #ffffff; */
+  background-color: #ffffff;
 }
 
 .header {
@@ -1265,7 +1265,7 @@ margin: 0px 2px;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .advanced-filter-content .form-group input[type="date"],
@@ -1480,6 +1480,7 @@ input[type="radio"] {
 .button-group {
     display: flex;
     gap: 10px;
+    background-color: #fafafa;
 }
 .icon-button {
  padding: 5px;
@@ -2136,6 +2137,7 @@ position: relative;
   position: relative;
   left: 220px;
  max-width: 650px;
+ margin: 25px 0px 0px 0px;
 }
  .profile-popup {
   display: flex;
@@ -2143,35 +2145,37 @@ position: relative;
   position: relative;
   
 }
-
+.profile .form-sections{
+  padding: 10px;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+   border-radius: 10px;
+   background-color: #fff}
 .quick-links {
   width: 200px;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #fff;
   border-radius: 10px ;
   border: 1px solid #004957;
-  height: 80vh;
+  height: 60vh;
   position:fixed;
   top: 100px;
 }
 .quick-links h2{
  color:#004957;
  text-align: center;
-
 }
-.quick-links  a{
+.quick-links  li{
+  list-style: none;
+  margin: 10px 0;
+  font-size: 12px;
+  border-bottom: 2px  #cfcfcf;
+  font-weight: 500;
+  cursor: pointer;
+}
+.quick-links a{
 text-decoration: none;
 color: #005F6B;
 }
-.quick-links  li{
-list-style: none;
-margin: 10px 0;
-font-size: 12px;
-border-bottom: 2px  #cfcfcf;
-font-weight: 500;
-}
-
-
 
 section {
   margin-bottom: 30px;
@@ -2290,22 +2294,41 @@ section {
 
 
 
+ .form-title-header  {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
  .form-title-header h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #333;
+  color: #006b77;
+}
+ .form-title-header button {
+ border: none;
+ cursor: pointer;
+ padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+font-size:14px ;
+}
+ .form-title-header svg {
+ margin-right: 5px;
 }
 
 .form-container {
   background-color: #ffffff;
-  padding: 30px;
+  padding: 30px
+  15px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 330px);
   gap: 20px;
 }
 
@@ -2330,6 +2353,11 @@ section {
 }
 .form-group-left-max label,.form-group-left-max input{
   width: 200px;
+}
+.profile label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000000;
 }
 .profile-popup label {
   margin-bottom: 5px;
@@ -2386,8 +2414,7 @@ select:focus {
 .marital-status-options,
 .measurement-options {
   display: flex;
-  gap: 10px;
-  flex: 1;
+  gap: 5px;
 }
 .form-row {
     display: flex;
@@ -2401,7 +2428,7 @@ select:focus {
 .gender-option,
 .status-option,
 .measure-option {
-  padding: 10px 15px;
+  padding: 6px 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
@@ -2431,9 +2458,38 @@ select:focus {
   display: flex;
 }
 
+
+
+
 .star {
-  font-size: 24px;
-  background-color: #005F6B;
+    cursor: pointer;
+    display: inline-block;
+      font-size: 24px;
+    transition: background-color 0.3s ease;
+}
+
+.star svg {
+    transition: fill 0.3s ease;
+     margin-right: 5px;
+}
+
+ 
+.star .star-filled {
+    display: none;
+    
+    color:#00798c;/* Set the color of filled stars to yellow */
+}
+
+.star .star-light {
+    fill: gray;
+}
+
+.star.active .star-light {
+    display: none;
+}
+
+.star.active .star-filled {
+    display: inline-block;
 }
 
 .checkbox-wrapper {
