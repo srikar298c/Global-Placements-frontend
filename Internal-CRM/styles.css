@@ -1251,6 +1251,15 @@ margin: 0px 2px;
 .advanced-filter-content-section.active {
   display: block;
 }
+.advanced-filter-content-section .checkbox-group {
+    display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.advanced-filter-content-section .checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
 
 .advanced-filter-content label {
   display: block;

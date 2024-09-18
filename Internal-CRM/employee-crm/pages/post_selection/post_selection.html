@@ -63,17 +63,12 @@
     color: #666;
 }
 
-.comments .comment {
+.comments {
     margin-bottom: 10px;
 }
 
-.comments .comment p {
-    margin: 0;
-}
-
-.comments .comment .admin {
-    font-size: 0.8em;
-    color: #666;
+.comments p {
+    margin: 0 0 10px 0;
 }
 
 .add-comment {
@@ -85,6 +80,20 @@
     flex-grow: 1;
     margin-right: 10px;
 }
+
+.add-comment button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.add-comment button:hover {
+    background-color: #0056b3;
+}
+
     </style>
     <div class="sidebar-container ">
         <div class="logo-container">
@@ -374,17 +383,16 @@
             </div>
 
             <div class="candidate-table">
-                <table id="candidateTable">
-                    <thead>
-                        <tr>
-                            <th>Details of the Candidate</th>
-                            <th>Documents</th>
-                            <th>Important Dates</th>
-                            <th>Comments</th>
-                            <th>Status</th>
-                           
-                        </tr>
-                    </thead>
+            <table id="candidateTable">
+                <thead>
+                    <tr>
+                        <th>Details of the Candidate</th>
+                        <th>Documents</th>
+                        <th>Important Dates</th>
+                        <th>Comments</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
                         <td class="candidate-details">
@@ -399,31 +407,31 @@
                         </td>
                         <td class="documents">
                             <span class="document green">Document 1</span>
-                            <span class="document yellow">Document 1</span>
-                            <span class="document yellow">Document 1</span>
-                            <span class="document red">Document 1</span>
-                            <span class="document red">Document 1</span>
-                            <span class="document red">Document 1</span>
-                            <span class="document red">Document 1</span>
-                            <span class="document gray">Document 1</span>
-                            <span class="document gray">Document 1</span>
+                            <span class="document yellow">Document 2</span>
+                            <span class="document yellow">Document 3</span>
+                            <span class="document red">Document 4</span>
+                            <span class="document red">Document 5</span>
+                            <span class="document red">Document 6</span>
+                            <span class="document red">Document 7</span>
+                            <span class="document gray">Document 8</span>
+                            <span class="document gray">Document 9</span>
                         </td>
                         <td class="important-dates">
                             <div>
-                                <label>Tentative Date</label>
-                                <input type="date" placeholder="DD-MM-YYYY">
+                                <label for="tentativeDate">Tentative Date</label>
+                                <input type="date" id="tentativeDate">
                             </div>
                             <div>
-                                <label>Final Date</label>
-                                <input type="date" placeholder="DD-MM-YYYY">
+                                <label for="finalDate">Final Date</label>
+                                <input type="date" id="finalDate">
                             </div>
                             <div>
-                                <label>Joining Date</label>
-                                <input type="date" placeholder="DD-MM-YYYY">
+                                <label for="joiningDate">Joining Date</label>
+                                <input type="date" id="joiningDate">
                             </div>
                             <div>
-                                <label>Return Date</label>
-                                <input type="date" placeholder="DD-MM-YYYY">
+                                <label for="returnDate">Return Date</label>
+                                <input type="date" id="returnDate">
                             </div>
                         </td>
                         <td class="comments">
@@ -437,12 +445,14 @@
                         </td>
                         <td class="status">
                             <select>
-                                <option>Successful/In Progress/Returned</option>
+                                <option value="successful">Successful</option>
+                                <option value="in-progress">In Progress</option>
+                                <option value="returned">Returned</option>
                             </select>
                         </td>
                     </tr>
                 </tbody>
-                </table>
+            </table>
             </div>
 
             <div id="candidateTablePagination" class="pagination-container">
