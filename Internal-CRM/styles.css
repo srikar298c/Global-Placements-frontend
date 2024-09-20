@@ -964,7 +964,12 @@ h1 {
   color: #333;
   margin-bottom: 1rem;
 }
-
+.tab-pane {
+            display: none;
+        }
+        .tab-pane.active {
+            display: block;
+        }
 
 .content-table {
   width: 100%;

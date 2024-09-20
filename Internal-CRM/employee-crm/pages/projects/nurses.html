@@ -251,8 +251,8 @@
                     <td>Dubai</td>
                     <td>007</td>
                     <td>
-                        <div class="project-label-container">
-                                  <span class="icon details-icon" data-country="${project.country}">
+        
+                                  <span class="icon details-icon" data-popup="popup-dubai-007">
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32">
                                 <g fill="currentColor">
                                     <path
@@ -261,18 +261,21 @@
                                     <path d="M10 13h12v2H10zm0 5h12v2H10zm0 5h12v2H10z" class="ouiIcon__fillSecondary" />
                                 </g>
                             </svg>
-                        </span>zzzzzzzzzzzzz
-                        </div>
+                        </span>
+                        
                     </td>
                     <td>
-                        ${project.activeMembers.map(member =>
-                        `<span class="member-name">${member.name}</span>
-                        <span class="member-phone">${member.phone}</span>`
-                        ).join('<br>')}
+                     
+                        <span class="member-name">Virat Kohli</span>
+                        <span class="member-phone">984872631</span>
+                     
+                        <span class="member-name">Virat Kohli</span>
+                        <span class="member-phone">984872631</span>
+                
                     </td>
                     <td>
-                        <span class="member-name">${project.createdBy.name}</span>
-                        <span class="member-phone">${project.createdBy.phone}</span>
+                        <span class="member-name">Anushka sharma</span>
+                        <span class="member-phone">989472632</span>
                     </td>
                     <td>
                         <span class="icon" id="uploadButtonIcon">
@@ -302,23 +305,126 @@
 
 
         </div>
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <button class="close-btn project-popup-close">&times;</button>
-                <div class="popup-header project-popup-header">
-                    <h2 class="country"></h2>
-                    <h3 class="project-name"></h3>
-                    <div class="project-status"></div>
+    <div id="popup-dubai-007" class="popup">
+        <div class="popup-content">
+            <button class="close-btn project-popup-close">&times;</button>
+            <div class="popup-header project-popup-header">
+                <h2 class="country">📍Dubai</h2>
+                <h3 class="project-name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36">
+                        <path fill="currentColor"
+                            d="M29.29 5H27v2h2v25H7V7h2V5H7a1.75 1.75 0 0 0-2 1.69v25.62A1.7 1.7 0 0 0 6.71 34h22.58A1.7 1.7 0 0 0 31 32.31V6.69A1.7 1.7 0 0 0 29.29 5"
+                            class="clr-i-outline clr-i-outline-path-1" />
+                        <path fill="currentColor"
+                            d="M26 7.33A2.34 2.34 0 0 0 23.67 5h-1.8a4 4 0 0 0-7.75 0h-1.79A2.34 2.34 0 0 0 10 7.33V11h16ZM24 9H12V7.33a.33.33 0 0 1 .33-.33H16V6a2 2 0 0 1 4 0v1h3.67a.33.33 0 0 1 .33.33Z"
+                            class="clr-i-outline clr-i-outline-path-2" />
+                        <path fill="currentColor" d="M11 14h14v2H11z" class="clr-i-outline clr-i-outline-path-3" />
+                        <path fill="currentColor" d="M11 18h14v2H11z" class="clr-i-outline clr-i-outline-path-4" />
+                        <path fill="currentColor" d="M11 22h14v2H11z" class="clr-i-outline clr-i-outline-path-5" />
+                        <path fill="currentColor" d="M11 26h14v2H11z" class="clr-i-outline clr-i-outline-path-6" />
+                        <path fill="none" d="M0 0h36v36H0z" />
+                    </svg>
+                    007 Project
+                </h3>
+                <div class="project-status">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m20 12l-3.58 5.073q-.314.439-.79.683T14.616 18h-9q-.672 0-1.144-.472T4 16.385v-8.77q0-.67.472-1.143Q4.944 6 5.616 6h9q.557 0 1.024.264q.466.263.78.701zm-1.22 0l-3.203-4.5q-.154-.212-.413-.356Q14.904 7 14.616 7h-9q-.231 0-.424.192T5 7.616v8.769q0 .23.192.423t.423.192h9q.289 0 .549-.144q.259-.144.413-.356zM5 12v5V7z" />
+                    </svg>
+                    Project Label <span class="label-active">Active</span>
                 </div>
-                <div class="popup-tabs project-popup-tabs">
-                    <button class="project-popup-tab active" data-tab="eligibility">Eligibility Criteria</button>
-                    <button class="project-popup-tab" data-tab="perks">Perks & Salary</button>
-                    <button class="project-popup-tab" data-tab="procedure">Standard Procedure</button>
-                    <button class="project-popup-tab" data-tab="charges">Service Charges</button>
+            </div>
+        <div class="popup-tabs project-popup-tabs">
+            <button class="project-popup-tab active" data-tab="eligibility-dubai-007">Eligibility Criteria</button>
+            <button class="project-popup-tab" data-tab="perks-dubai-007">Perks & Salary</button>
+            <button class="project-popup-tab" data-tab="procedure-dubai-007">Standard Procedure</button>
+            <button class="project-popup-tab" data-tab="charges-dubai-007">Service Charges</button>
+        </div>
+
+            <div id="tabContent-dubai-007" class="tab-content">
+                <div id="eligibility-dubai-007" class="tab-pane active">
+                    <h3>Eligibility Criteria</h3>
+                    <table class="content-table">
+                        <tbody>
+                            <tr>
+                                <td><strong>Age</strong></td>
+                                <td>21-45 years</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Education</strong></td>
+                                <td>Bachelor's degree or equivalent</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Experience</strong></td>
+                                <td>Minimum 2 years in related field</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div id="tabContent" class="tab-content"></div>
+                <div id="perks-dubai-007" class="tab-pane">
+                    <h3>Perks & Salary</h3>
+                    <table class="content-table">
+                        <tbody>
+                            <tr>
+                                <td><strong>Salary Range</strong></td>
+                                <td>$50,000 - $80,000 per annum</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Benefits</strong></td>
+                                <td>Health insurance, 401(k), paid time off</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Work Environment</strong></td>
+                                <td>Flexible hours, remote work options</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="procedure-dubai-007" class="tab-pane">
+                    <h3>Standard Procedure</h3>
+                    <table class="content-table">
+                        <tbody>
+                            <tr>
+                                <td><strong>1</strong></td>
+                                <td>Submit application online</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2</strong></td>
+                                <td>Initial screening interview</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3</strong></td>
+                                <td>Technical assessment</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4</strong></td>
+                                <td>Final interview with hiring manager</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="charges-dubai-007" class="tab-pane">
+                    <h3>Service Charges</h3>
+                    <table class="content-table">
+                        <tbody>
+                            <tr>
+                                <td><strong>Application Fee</strong></td>
+                                <td>$50</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Processing Fee</strong></td>
+                                <td>$100</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Placement Fee</strong></td>
+                                <td>10% of first year's salary</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
+    </div>
 
     </div>
     <div class="popup-overlay" id="addACandidatePopupOverlay">
@@ -655,162 +761,77 @@
     <script src="../../../../Internal-CRM/scripts.js"></script>
     <script>//Projects folder
        
-        function showPopup(country) {
-            const project = projectData.find(p => p.country === country);
-            if (!project) return;
-
-            const popup = document.getElementById('popup');
-            const popupHeader = popup.querySelector('.project-popup-header');
-
-            popupHeader.querySelector('.country').innerHTML = ` 📍${project.country}`;
-            popupHeader.querySelector('.project-name').innerHTML = `
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M29.29 5H27v2h2v25H7V7h2V5H7a1.75 1.75 0 0 0-2 1.69v25.62A1.7 1.7 0 0 0 6.71 34h22.58A1.7 1.7 0 0 0 31 32.31V6.69A1.7 1.7 0 0 0 29.29 5" class="clr-i-outline clr-i-outline-path-1"/><path fill="currentColor" d="M26 7.33A2.34 2.34 0 0 0 23.67 5h-1.8a4 4 0 0 0-7.75 0h-1.79A2.34 2.34 0 0 0 10 7.33V11h16ZM24 9H12V7.33a.33.33 0 0 1 .33-.33H16V6a2 2 0 0 1 4 0v1h3.67a.33.33 0 0 1 .33.33Z" class="clr-i-outline clr-i-outline-path-2"/><path fill="currentColor" d="M11 14h14v2H11z" class="clr-i-outline clr-i-outline-path-3"/><path fill="currentColor" d="M11 18h14v2H11z" class="clr-i-outline clr-i-outline-path-4"/><path fill="currentColor" d="M11 22h14v2H11z" class="clr-i-outline clr-i-outline-path-5"/><path fill="currentColor" d="M11 26h14v2H11z" class="clr-i-outline clr-i-outline-path-6"/><path fill="none" d="M0 0h36v36H0z"/></svg> ${project.projectName}`;
-            popupHeader.querySelector('.project-status').innerHTML = `
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m20 12l-3.58 5.073q-.314.439-.79.683T14.616 18h-9q-.672 0-1.144-.472T4 16.385v-8.77q0-.67.472-1.143Q4.944 6 5.616 6h9q.557 0 1.024.264q.466.263.78.701zm-1.22 0l-3.203-4.5q-.154-.212-.413-.356Q14.904 7 14.616 7h-9q-.231 0-.424.192T5 7.616v8.769q0 .23.192.423t.423.192h9q.289 0 .549-.144q.259-.144.413-.356zM5 12v5V7z"/></svg> ${project.label} <span class="label-${project.status.toLowerCase()}">${project.status}</span>`;
-
-            popup.classList.add('active');
-            showTabContent('eligibility', project);
-        }
-
-        // Show content for the selected tab in popup
-        function showTabContent(tab, project) {
-            const tabContent = document.getElementById('tabContent');
-            let content = '';
-
-            switch (tab) {
-                case 'eligibility':
-                    content = `
-                <h3>Eligibility Criteria</h3>
-                <table class="content-table">
-                    <tbody>
-                        ${Object.entries(project.eligibilityCriteria).map(([key, value]) => `
-                            <tr>
-                                <td><strong>${key}</strong></td>
-                                <td>${value}</td>
-                            </tr>
-                        `).join('')}
-                    </tbody>
-                </table>
-            `;
-                    break;
-                case 'perks':
-                    content = `
-                <h3>Perks & Salary</h3>
-                <table class="content-table">
-                    <tbody>
-                        ${Object.entries(project.perksAndSalary).map(([key, value]) => `
-                            <tr>
-                                <td><strong>${key}</strong></td>
-                                <td>${value}</td>
-                            </tr>
-                        `).join('')}
-                    </tbody>
-                </table>
-            `;
-                    break;
-                case 'procedure':
-                    content = `
-                <h3>Standard Procedure</h3>
-                <table class="content-table">
-                    <tbody>
-                        ${project.standardProcedure.map((step, index) => `
-                            <tr>
-                                <td><strong>${index + 1}</strong></td>
-                                <td>${step}</td>
-                            </tr>
-                        `).join('')}
-                    </tbody>
-                </table>
-            `;
-                    break;
-                case 'charges':
-                    content = `
-                <h3>Service Charges</h3>
-                <table class="content-table">
-                    <tbody>
-                        ${Object.entries(project.serviceCharges).map(([key, value]) => `
-                            <tr>
-                                <td><strong>${key}</strong></td>
-                                <td>${value}</td>
-                            </tr>
-                        `).join('')}
-                    </tbody>
-                </table>
-            `;
-                    break;
+     document.addEventListener("DOMContentLoaded", () => {
+            // Function to show a popup
+            function showPopup(popupId) {
+                const popup = document.getElementById(popupId);
+                if (popup) {
+                    popup.classList.add('active');
+                }
             }
 
-            tabContent.innerHTML = content;
-        }
-
-        // Event listeners for the projects page
-        document.addEventListener('DOMContentLoaded', () => {
-            const popup = document.getElementById('popup');
-
-            // Show popup on clicking the project details icon
-            document.querySelector('#projectTable tbody').addEventListener('click', (e) => {
-                const detailsIcon = e.target.closest('.details-icon');
-                if (detailsIcon) {
-                    const country = detailsIcon.dataset.country;
-                    showPopup(country);
-                }
-            });
-
-            // Close popup when clicking the close button
-            popup.querySelector('.project-popup-close').addEventListener('click', () => {
-                popup.classList.remove('active');
-            });
-
-            // Handle tab switching
-            popup.querySelector('.project-popup-tabs').addEventListener('click', (e) => {
-                const tabBtn = e.target.closest('.project-popup-tab');
-                if (tabBtn) {
-                    document.querySelectorAll('.project-popup-tab').forEach(btn => btn.classList.remove('active'));
-                    tabBtn.classList.add('active');
-                    const tab = tabBtn.dataset.tab;
-                    const country = popup.querySelector('.country').textContent.trim().slice(2); // Remove the 📍 emoji
-                    const project = projectData.find(p => p.country === country);
-                    showTabContent(tab, project);
-                }
-            });
-
-            // Close popup when clicking outside the popup content
-            window.addEventListener('click', (e) => {
-                if (e.target === popup) {
+            // Function to close a popup
+            function closePopup(popup) {
+                if (popup) {
                     popup.classList.remove('active');
                 }
-            });
-        });
-        // Wait for the DOM to be fully loaded
-        document.addEventListener("DOMContentLoaded", function () {
-            // Get the button and popup elements
-            const addCandidateButton = document.getElementById("addCandidate");
-            const popupOverlay = document.getElementById("addACandidatePopupOverlay");
-            const closePopupButton = document.querySelector(".closeAddACandidate");
-
-            // Function to open the popup
-            function openPopup() {
-                popupOverlay.style.display = "block";
             }
 
-            // Function to close the popup
-            function closePopup() {
-                popupOverlay.style.display = "none";
-            }
-
-            // Add event listener to the "Add Candidate" button
-            addCandidateButton.addEventListener("click", openPopup);
-
-            // Add event listener to the close button inside the popup
-            closePopupButton.addEventListener("click", closePopup);
-
-            // Optional: Close the popup when clicking outside the popup content
-            popupOverlay.addEventListener("click", function (event) {
-                if (event.target === popupOverlay) {
-                    closePopup();
-                }
+            // Event Listener for opening popups
+            document.querySelectorAll('.details-icon').forEach(icon => {
+                icon.addEventListener('click', () => {
+                    const popupId = icon.getAttribute('data-popup');
+                    showPopup(popupId);
+                });
             });
-        });
+
+            // Event Listener for closing popups
+            document.querySelectorAll('.project-popup-close').forEach(closeBtn => {
+                closeBtn.addEventListener('click', () => {
+                    const popup = closeBtn.closest('.popup');
+                    closePopup(popup);
+                });
+            });
+
+             document.querySelectorAll('.popup-tabs').forEach(tabContainer => {
+             tabContainer.addEventListener('click', (e) => {
+                 const tabBtn = e.target.closest('.project-popup-tab');
+                 if (tabBtn) {
+                     const tabName = tabBtn.getAttribute('data-tab');
+                     const popup = tabBtn.closest('.popup');
+                     const tabContent = popup.querySelector('.tab-content');
+
+                     // Remove active classes from all tab panes and buttons
+                     popup.querySelectorAll('.tab-pane').forEach(tabPane => {
+                         tabPane.classList.remove('active');
+                     });
+                     popup.querySelectorAll('.project-popup-tab').forEach(btn => {
+                         btn.classList.remove('active');
+                     });
+
+                     // Add active class to the selected tab button
+                     tabBtn.classList.add('active');
+
+                     // Add active class to the corresponding tab pane
+                     const activeTabPane = popup.querySelector(`#${tabName}`);
+                     if (activeTabPane) {
+                         activeTabPane.classList.add('active');
+                     }
+                 }
+             });
+         });
+
+         // Event Listener for clicking outside the popup to close it
+         window.addEventListener('click', (e) => {
+             document.querySelectorAll('.popup.active').forEach(popup => {
+                 if (e.target === popup) {
+                     closePopup(popup);
+                 }
+             });
+         });
+     });
+
+            
 
    document.addEventListener("DOMContentLoaded", function () {
         const popupOverlay = document.getElementById("uploadPopupOverlay");
