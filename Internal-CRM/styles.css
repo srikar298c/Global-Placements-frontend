@@ -2448,6 +2448,9 @@ select:focus {
 .form-row select{
    width: 98%;
 }
+.form-row input[type="date"]{
+  cursor: pointer;
+}
 .measurement-options {
     display: flex;
     gap: 5px;
