@@ -236,17 +236,63 @@
                 <table id="projectTable" class="projects-table">
                     <thead>
                         <tr>
-                            <th><input type="checkbox" id="selectAll"></th>
+                            <th></th>
                             <th class="sortable">Country</th>
                             <th class="sortable">Name Of the Project </th>
-                            <th class="sortable">Label </i></th>
+                            <th class="sortable">Client </i></th>
                             <th class="sortable">Active Members</th>
                             <th class="sortable">Created by</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Table rows will be dynamically added here -->
+                   <tr>
+                    <td><input type="checkbox" class="checkbox"></td>
+                    <td>Dubai</td>
+                    <td>007</td>
+                    <td>
+                        <div class="project-label-container">
+                                  <span class="icon details-icon" data-country="${project.country}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32">
+                                <g fill="currentColor">
+                                    <path
+                                        d="M25 5h-.17v2H25a1 1 0 0 1 1 1v20a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h.17V5H7a3 3 0 0 0-3 3v20a3 3 0 0 0 3 3h18a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3" />
+                                    <path d="M23 3h-3V0h-8v3H9v6h14zm-2 4H11V5h3V2h4v3h3z" />
+                                    <path d="M10 13h12v2H10zm0 5h12v2H10zm0 5h12v2H10z" class="ouiIcon__fillSecondary" />
+                                </g>
+                            </svg>
+                        </span>zzzzzzzzzzzzz
+                        </div>
+                    </td>
+                    <td>
+                        ${project.activeMembers.map(member =>
+                        `<span class="member-name">${member.name}</span>
+                        <span class="member-phone">${member.phone}</span>`
+                        ).join('<br>')}
+                    </td>
+                    <td>
+                        <span class="member-name">${project.createdBy.name}</span>
+                        <span class="member-phone">${project.createdBy.phone}</span>
+                    </td>
+                    <td>
+                        <span class="icon" id="uploadButtonIcon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11 16V7.85L8.4 10.45L7 9L12 4L17 9L15.6 10.45L13 7.85V16H11ZM6 20C5.45 20 4.97933 19.8043 4.588 19.413C4.19667 19.0217 4.00067 18.5507 4 18V15H6V18H18V15H20V18C20 18.55 19.8043 19.021 19.413 19.413C19.0217 19.805 18.5507 20.0007 18 20H6Z"
+                                    fill="#005F6B" />
+                            </svg>
+                        </span>
+                        <span class="icon ">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.5 17.4985L18.3333 17.4974V19.9974L0 19.9985V1.66519L2.5 1.66406V17.4985ZM5.625 16.2485C5.37156 16.249 5.12064 16.1981 4.88741 16.099C4.65419 15.9998 4.44349 15.8543 4.26806 15.6714C4.09262 15.4885 3.95609 15.2719 3.86671 15.0347C3.77734 14.7976 3.73697 14.5448 3.74805 14.2916C3.75912 14.0384 3.82142 13.79 3.93117 13.5616C4.04092 13.3331 4.19585 13.1293 4.38659 12.9624C4.57733 12.7955 4.79992 12.669 5.04092 12.5906C5.28192 12.5122 5.53632 12.4834 5.78875 12.506L7.80375 9.14727C7.6195 8.86432 7.51508 8.53686 7.50151 8.19948C7.48795 7.8621 7.56574 7.52732 7.72667 7.23048C7.8876 6.93365 8.1257 6.68578 8.41583 6.51305C8.70596 6.34032 9.03735 6.24914 9.375 6.24914C9.71265 6.24914 10.044 6.34032 10.3342 6.51305C10.6243 6.68578 10.8624 6.93365 11.0233 7.23048C11.1843 7.52732 11.2621 7.8621 11.2485 8.19948C11.2349 8.53686 11.1305 8.86432 10.9462 9.14727L12.9613 12.506C13.0569 12.4973 13.153 12.4965 13.2487 12.5035L16.5762 6.68102C16.3371 6.33076 16.2238 5.90977 16.2548 5.4868C16.2858 5.06383 16.4593 4.66387 16.7469 4.3522C17.0346 4.04054 17.4193 3.8356 17.8385 3.77084C18.2576 3.70608 18.6863 3.78532 19.0546 3.99563C19.4229 4.20594 19.709 4.53489 19.8662 4.92878C20.0234 5.32267 20.0425 5.75822 19.9202 6.16432C19.798 6.57043 19.5417 6.92309 19.1931 7.16473C18.8446 7.40637 18.4244 7.52272 18.0012 7.49477L14.6738 13.3173C14.8649 13.5977 14.9764 13.9247 14.9964 14.2635C15.0163 14.6023 14.9439 14.9401 14.7869 15.241C14.6298 15.5419 14.3941 15.7945 14.1048 15.9719C13.8155 16.1493 13.4835 16.2449 13.1441 16.2484C12.8048 16.252 12.4708 16.1633 12.1779 15.992C11.8849 15.8206 11.644 15.573 11.4807 15.2754C11.3175 14.9779 11.2381 14.6416 11.2509 14.3025C11.2638 13.9634 11.3684 13.6341 11.5538 13.3498L9.53875 9.99102C9.42982 10.0013 9.32018 10.0013 9.21125 9.99102L7.19625 13.3498C7.38066 13.6327 7.48522 13.9603 7.49887 14.2977C7.51252 14.6352 7.43477 14.9701 7.27381 15.267C7.11286 15.564 6.87469 15.8119 6.58447 15.9847C6.29425 16.1574 5.96275 16.2486 5.625 16.2485Z"
+                                    fill="#005F6B" />
+                            </svg>
+                    
+                        </span>
+                 
+                    </td>
+                   </tr>
                     </tbody>
                 </table>
             </div>
@@ -608,101 +654,7 @@
 
     <script src="../../../../Internal-CRM/scripts.js"></script>
     <script>//Projects folder
-        let projectData = [];
-
-        // Fetch project data
-        fetch('../../../../Internal-CRM/project_data.json')
-            .then(response => response.json())
-            .then(data => {
-                projectData = data;
-                populateProjectTable(projectData);
-                populateCountryFilter(projectData);
-            })
-            .catch(error => console.error('Error loading project data:', error));
-
-        // Populate the table with project data
-        function populateProjectTable(data) {
-            const tableBody = document.querySelector('#projectTable tbody');
-            tableBody.innerHTML = '';
-
-            data.forEach(project => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-            <td><input type="checkbox" class="checkbox"></td>
-            <td>${project.country}</td>
-            <td>${project.projectName}</td>
-            <td>
-                <div class="project-label-container">
-                    <span class="label-date">${project.label}</span>
-                    <span class="label-${project.status.toLowerCase()}">${project.status}</span>
-                </div>
-            </td>
-            <td>
-                ${project.activeMembers.map(member =>
-                    `<span class="member-name">${member.name}</span>
-                    <span class="member-phone">${member.phone}</span>`
-                ).join('<br>')}
-            </td>
-            <td>
-                <span class="member-name">${project.createdBy.name}</span>
-                <span class="member-phone">${project.createdBy.phone}</span>
-            </td>
-            <td>
-            <span class="icon" id="uploadButtonIcon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11 16V7.85L8.4 10.45L7 9L12 4L17 9L15.6 10.45L13 7.85V16H11ZM6 20C5.45 20 4.97933 19.8043 4.588 19.413C4.19667 19.0217 4.00067 18.5507 4 18V15H6V18H18V15H20V18C20 18.55 19.8043 19.021 19.413 19.413C19.0217 19.805 18.5507 20.0007 18 20H6Z" fill="#005F6B"/>
-</svg>
-</span>
-            <span class="icon ">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.5 17.4985L18.3333 17.4974V19.9974L0 19.9985V1.66519L2.5 1.66406V17.4985ZM5.625 16.2485C5.37156 16.249 5.12064 16.1981 4.88741 16.099C4.65419 15.9998 4.44349 15.8543 4.26806 15.6714C4.09262 15.4885 3.95609 15.2719 3.86671 15.0347C3.77734 14.7976 3.73697 14.5448 3.74805 14.2916C3.75912 14.0384 3.82142 13.79 3.93117 13.5616C4.04092 13.3331 4.19585 13.1293 4.38659 12.9624C4.57733 12.7955 4.79992 12.669 5.04092 12.5906C5.28192 12.5122 5.53632 12.4834 5.78875 12.506L7.80375 9.14727C7.6195 8.86432 7.51508 8.53686 7.50151 8.19948C7.48795 7.8621 7.56574 7.52732 7.72667 7.23048C7.8876 6.93365 8.1257 6.68578 8.41583 6.51305C8.70596 6.34032 9.03735 6.24914 9.375 6.24914C9.71265 6.24914 10.044 6.34032 10.3342 6.51305C10.6243 6.68578 10.8624 6.93365 11.0233 7.23048C11.1843 7.52732 11.2621 7.8621 11.2485 8.19948C11.2349 8.53686 11.1305 8.86432 10.9462 9.14727L12.9613 12.506C13.0569 12.4973 13.153 12.4965 13.2487 12.5035L16.5762 6.68102C16.3371 6.33076 16.2238 5.90977 16.2548 5.4868C16.2858 5.06383 16.4593 4.66387 16.7469 4.3522C17.0346 4.04054 17.4193 3.8356 17.8385 3.77084C18.2576 3.70608 18.6863 3.78532 19.0546 3.99563C19.4229 4.20594 19.709 4.53489 19.8662 4.92878C20.0234 5.32267 20.0425 5.75822 19.9202 6.16432C19.798 6.57043 19.5417 6.92309 19.1931 7.16473C18.8446 7.40637 18.4244 7.52272 18.0012 7.49477L14.6738 13.3173C14.8649 13.5977 14.9764 13.9247 14.9964 14.2635C15.0163 14.6023 14.9439 14.9401 14.7869 15.241C14.6298 15.5419 14.3941 15.7945 14.1048 15.9719C13.8155 16.1493 13.4835 16.2449 13.1441 16.2484C12.8048 16.252 12.4708 16.1633 12.1779 15.992C11.8849 15.8206 11.644 15.573 11.4807 15.2754C11.3175 14.9779 11.2381 14.6416 11.2509 14.3025C11.2638 13.9634 11.3684 13.6341 11.5538 13.3498L9.53875 9.99102C9.42982 10.0013 9.32018 10.0013 9.21125 9.99102L7.19625 13.3498C7.38066 13.6327 7.48522 13.9603 7.49887 14.2977C7.51252 14.6352 7.43477 14.9701 7.27381 15.267C7.11286 15.564 6.87469 15.8119 6.58447 15.9847C6.29425 16.1574 5.96275 16.2486 5.625 16.2485Z" fill="#005F6B"/>
-</svg>
-
-</span>
-                <span class="icon details-icon" data-country="${project.country}">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32">
-                        <g fill="currentColor">
-                            <path d="M25 5h-.17v2H25a1 1 0 0 1 1 1v20a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h.17V5H7a3 3 0 0 0-3 3v20a3 3 0 0 0 3 3h18a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3"/>
-                            <path d="M23 3h-3V0h-8v3H9v6h14zm-2 4H11V5h3V2h4v3h3z"/>
-                            <path d="M10 13h12v2H10zm0 5h12v2H10zm0 5h12v2H10z" class="ouiIcon__fillSecondary"/>
-                        </g>
-                    </svg>
-                </span>
-            </td>
-        `;
-                tableBody.appendChild(row);
-            });
-
-
-        }
-
-
-
-
-        // Populate the country filter dropdown
-        function populateCountryFilter(data) {
-            const countryFilter = document.getElementById('countryFilter');
-            const countries = [...new Set(data.map(project => project.country))];
-            countries.forEach(country => {
-                const option = document.createElement('option');
-                option.value = country;
-                option.textContent = country;
-                countryFilter.appendChild(option);
-            });
-        }
-        // Add an event listener to the country filter dropdown
-        document.getElementById('countryFilter').addEventListener('change', filterTable);
-
-        // Filter the table based on selected country
-        function filterTable() {
-            const selectedCountry = document.getElementById('countryFilter').value;
-            const filteredData = selectedCountry
-                ? projectData.filter(project => project.country === selectedCountry)
-                : projectData;
-            populateProjectTable(filteredData);
-        }
-        // Show popup with project details
-        // Show popup with project details
+       
         function showPopup(country) {
             const project = projectData.find(p => p.country === country);
             if (!project) return;
