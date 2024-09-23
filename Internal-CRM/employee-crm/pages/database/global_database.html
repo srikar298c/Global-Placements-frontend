@@ -381,7 +381,7 @@
         <select class="filter-select" id="experienceFilter">
           <option>Experience</option>
         </select>
-        <button id="" class="btn-submissions">Submit</button>
+        <button id="" class="btn-submissions">Search</button>
 
         </div>
       </div>
@@ -1095,7 +1095,43 @@
         });
       });
 
-    
+    document.addEventListener('DOMContentLoaded', function () {
+        // Select all flag buttons
+        const flagButtons = document.querySelectorAll('.flag-button');
+
+        flagButtons.forEach(flagButton => {
+          flagButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent any default action
+
+            // Find the closest table row
+            const tr = this.closest('tr.leads-candidate-data');
+
+            if (tr) {
+              // Find the first <td> that contains the checkbox
+              const checkboxTd = tr.querySelector('td input[type="checkbox"]');
+
+              if (checkboxTd) {
+                // Create a new flag icon button
+                const newFlagButton = document.createElement('button');
+                newFlagButton.classList.add('icon-button', 'flag-button-replaced');
+                newFlagButton.innerHTML = `
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+                <path fill="currentColor"
+                  d="M42.76 50A8 8 0 0 0 40 56v168a8 8 0 0 0 16 0v-44.23c26.79-21.16 49.87-9.75 76.45 3.41c16.4 8.11 34.06 16.85 53 16.85c13.93 0 28.54-4.75 43.82-18a8 8 0 0 0 2.76-6V56a8 8 0 0 0-13.27-6c-28 24.23-51.72 12.49-79.21-1.12C111.07 34.76 78.78 18.79 42.76 50Z"/>
+              </svg>
+            `;
+                newFlagButton.title = "Flagged";
+
+                // Optionally, disable the new flag button to prevent further clicks
+                newFlagButton.disabled = true;
+
+                // Replace the checkbox with the new flag button
+                checkboxTd.parentNode.replaceChild(newFlagButton, checkboxTd);
+              }
+            }
+          });
+        });
+      });
       
   </script>
   <script>
