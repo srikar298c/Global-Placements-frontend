@@ -1059,7 +1059,7 @@ margin-bottom: 5px;
 /* ************************ Global Database ***************************/
 .filter-section {
  display: flex;
- padding: 5px 0px ;
+ padding: 5px  ;
  border-radius: 10px;
 align-items: center;
 justify-content: center;
@@ -1078,7 +1078,7 @@ justify-content: center;
   border: 0.25px solid #c7c7c7;
   padding: 8px 10px;
   border-radius: 6px;
-  width: 140px;
+  width: 133px;
   font-size: 10px;
 margin: 0px 2px;
   font-weight: 500;
