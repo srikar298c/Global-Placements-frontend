@@ -1457,7 +1457,18 @@ input[type="radio"] {
   color: #999;
   text-align: center;
 }
-
+.flag-outline{
+  font-size: 20px;
+   cursor: pointer;
+  margin-left: 1px;
+  color: #006d77;
+}
+.flag-filled{
+  font-size: 20px;
+   cursor: pointer;
+  margin-left: 1px;
+    color: #006d77;
+}
 #candidateTable .caret-icon {
   font-size: 1em;
   transition: transform 0.3s ease;
