@@ -289,7 +289,7 @@
 </div>
 </div>
     </div>
-    <div class="popup-overlay" id="scheduleInterviewPopupOverlay">
+    <div class="popup-overlay" id="scheduleInterviewPopupOverlay"  style="display: none;">
   <div class="popup-content">
     <div class="popup-header">
       <h2 class="popup-title">Schedule Interview</h2>
@@ -387,7 +387,7 @@
     </div>
   </div>
 </div> 
-  <div class="popup-overlay" id="assignAClientPopupOverlay">
+  <div class="popup-overlay" id="assignAClientPopupOverlay" >
     <div class="popup-content">
       <div class="popup-header">
         <h2 class="popup-title">
@@ -791,7 +791,7 @@ const bufferPopup = document.getElementById('bufferPopupOverlay');
   if (scheduleInterviewPopup && scheduleInterviewCloseButton) {
     document.addEventListener('click', function (event) {
       if (event.target.closest('.schedule-interview-button')) {
-        scheduleInterviewPopup.style.display = 'none';
+        scheduleInterviewPopup.style.display = 'block';
       }
     });
 
