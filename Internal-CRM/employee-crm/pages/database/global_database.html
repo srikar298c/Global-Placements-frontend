@@ -11,76 +11,6 @@
 </head>
 
 <body>
-  <style>
-    .advanced-filter-content-section .others-section .checkbox-group {
-      margin-bottom: 10px;
-    }
-
-    .advanced-filter-content-section .others-section .checkbox-group label {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-    }
-.history-details {
-            display: none;
-            padding: 0.75rem;
-        }
-        .history-details.active {
-            display: block;
-        }
-          .tab-buttons {
-            display: flex;
-            margin-bottom: 1rem;
-        }
-        .tab-button {
-            flex: 1;
-            padding: 0.5rem;
-            border: none;
-            background-color: #f3f4f6;
-            cursor: pointer;
-        }
-        .tab-button.active {
-            background-color: #e5e7eb;
-        }
-            .history-content {
-            display: none;
-        }
-        .history-content.active {
-            display: block;
-        }
-        .history-item {
-            border: 1px solid #e5e5e5;
-            border-radius: 4px;
-            margin-bottom: 0.5rem;
-        }
-    .advanced-filter-content-section .others-section .checkbox-group input[type="checkbox"] {
-      appearance: none;
-      -webkit-appearance: none;
-      width: 18px;
-      height: 18px;
-      border: 2px solid #008080;
-      border-radius: 3px;
-      margin-right: 10px;
-      position: relative;
-      cursor: pointer;
-    }
-
-    .advanced-filter-content-section .others-section .checkbox-group input[type="checkbox"]:checked::before {
-      content: "\2713";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #008080;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .advanced-filter-content-section .others-section .checkbox-group span {
-      font-size: 14px;
-      color: #333;
-    }
-  </style>
   <div class="sidebar-container ">
     <div class="logo-container">
       <img class="logo" src="../../../../Internal-CRM/images/global_placements_logo.png" alt="Global Placements">
@@ -443,7 +373,7 @@
             </td>
           </tr>
           <tr class="additional-info" style="display: none;">
-            <td colspan="11">
+            <td colspan="12">
               <div class="additional-info-row">
                 <div class="info-group"><span class="info-label">Gender:</span>Male</div>
                 <div class="info-group"><span class="info-label">Passport:</span>P123456789</div>
@@ -531,7 +461,7 @@
                   </div>
                   <div class="comments-section">
                     <input type="text" class="comments-input" placeholder="Comments">
-                    <button class="submit-button" ><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <button class="save-comment-button" ><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                       <rect width="24" height="24" fill="none" />
                       <path fill="currentColor"
                         d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4zM20 4v13.17L18.83 16H4V4zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z" />
@@ -933,7 +863,7 @@
         </h2>
         <button class="popup-close" id="closeFlagPopup">&#10005;</button>
       </div>
-      <div class="popup-body flag-popup">
+      <div class="popup-body ">
         <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
           <rect width="24" height="24" fill="none" />
           <path fill="currentColor" fill-rule="evenodd" d="M6.5 1.75a.75.75 0 0 0-1.5 0v20a.75.75 0 0 0 1.5 0z"
@@ -1063,7 +993,52 @@
       </div>
     </div>
     </div>
-  </div>
+  <div class="popup-overlay" id="submitPopupOverlay">
+    <div class="popup-content">
+      <div class="popup-header">
+        <h2 class="popup-title">
+        </h2>
+        <button class="popup-close" id="closeSubmitPopup">&#10005;</button>
+      </div>
+      <div class="popup-body">
+    <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 24 24">
+      <rect width="24" height="24" fill="none" />
+      <path fill="currentColor"
+        d="m23 12l-2.44-2.78l.34-3.68l-3.61-.82l-1.89-3.18L12 3L8.6 1.54L6.71 4.72l-3.61.81l.34 3.68L1 12l2.44 2.78l-.34 3.69l3.61.82l1.89 3.18L12 21l3.4 1.46l1.89-3.18l3.61-.82l-.34-3.68zm-13 5l-4-4l1.41-1.41L10 14.17l6.59-6.59L18 9z" />
+    </svg>
+    <div class="form-group label-input">
+      <label for="">Passport Number</label>
+      <input type="text" id="" value="">
+    </div>
+    <div class="form-group label-input">
+      <label for="">Name of the Passport </label>
+      <input type="text" id="" value="">
+    </div>
+        <div class="form-group">
+          <button class="confirm-button">Confirm</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  <div class="popup-overlay" id="congratulationsPopupOverlay">
+    <div class="popup-content">
+      <div class="popup-header">
+        <h2 class="popup-title">
+        </h2>
+        <button class="popup-close" id="closeCongraturlationsPopup">&#10005;</button>
+      </div>
+      <div class="popup-body">
+    <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 24 24">
+      <rect width="24" height="24" fill="none" />
+      <path fill="currentColor"
+        d="m23 12l-2.44-2.78l.34-3.68l-3.61-.82l-1.89-3.18L12 3L8.6 1.54L6.71 4.72l-3.61.81l.34 3.68L1 12l2.44 2.78l-.34 3.69l3.61.82l1.89 3.18L12 21l3.4 1.46l1.89-3.18l3.61-.82l-.34-3.68zm-13 5l-4-4l1.41-1.41L10 14.17l6.59-6.59L18 9z" />
+    </svg>
+    <p> <strong>Congratulations</strong>.</p>
+    <p>You have sucessfully submitted the Candidate</p>
+      </div>
+    </div>
+    </div>
+
   
   <script src="../../../../Internal-CRM/scripts.js"></script>
  
@@ -1245,7 +1220,10 @@
       const addNewTaskCloseButton = document.getElementById('closeAddNewTaskPopup');
       const addNewReminderPopup = document.getElementById('addNewReminderPopupOverlay');
       const addNewReminderCloseButton = document.getElementById('closeAddNewReminderPopup');
-
+      const submitPopUp =document.getElementById("submitPopupOverlay");
+      const submitCloseButton = document.getElementById("closeSubmitPopup");
+      const congratulationsPopUp =document.getElementById("congratulationsPopupOverlay");
+      const congratulationsCloseButton = document.getElementById("closeCongraturlationsPopup");
       if (assignAClientPopup && assignAClientCloseButton) {
         // Use event delegation for assign-a-client buttons
         document.addEventListener('click', function (event) {
@@ -1342,6 +1320,36 @@
       } else {
         console.error('Add new reminder popup elements not found');
       }
+      if (submitPopUp && submitCloseButton) {
+        // Use event delegation for add new reminder buttons
+        document.addEventListener('click', function (event) {
+          if (event.target.closest('.submit-button')) {
+            submitPopUp.style.display = 'block';
+          }
+        });
+
+        submitCloseButton.addEventListener('click', () => submitPopUp.style.display = 'none');
+        submitPopUp.addEventListener('click', (event) => {
+          if (event.target === submitPopUp) submitPopUp.style.display = 'none';
+        });
+      } else {
+        console.error('Submit popup elements not found');
+      }
+      if (congratulationsPopUp && congratulationsCloseButton) {
+        // Use event delegation for add new reminder buttons
+        document.addEventListener('click', function (event) {
+          if (event.target.closest('.confirm-button')) {
+            congratulationsPopUp.style.display = 'block';
+          }
+        });
+
+        congratulationsCloseButton.addEventListener('click', () => congratulationsPopUp.style.display = 'none');
+        congratulationsPopUp.addEventListener('click', (event) => {
+          if (event.target === congratulationsPopUp) congratulationsPopUp.style.display = 'none';
+        });
+      } else {
+        console.error('Submit popup elements not found');
+      }
 
       const advancedFilterBtn = document.getElementById('advancedFilterBtn');
       const advancedPopup = document.querySelector('.advanced-popup-overlay');
@@ -1415,39 +1423,33 @@
 
 
     document.addEventListener('DOMContentLoaded', initializeApp);
-  
-</script>
-<script>
- document.addEventListener('DOMContentLoaded', function () {
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const historyContents = document.querySelectorAll('.history-content');
-    const closeButton = document.querySelector('#closeGraphPopup');
-    const popupOverlay = document.querySelector('#graphPopupOverlay');
+   document.addEventListener('DOMContentLoaded', function () {
+      const tabButtons = document.querySelectorAll('.tab-button');
+      const historyContents = document.querySelectorAll('.history-content');
+      const closeButton = document.querySelector('#closeGraphPopup');
+      const popupOverlay = document.querySelector('#graphPopupOverlay');
 
-    tabButtons.forEach(button => {
-      button.addEventListener('click', function (event) {
-        event.stopPropagation(); // Prevent the event from closing the popup
-        const tabName = this.getAttribute('data-tab');
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        historyContents.forEach(content => content.classList.remove('active'));
-        this.classList.add('active');
-        document.getElementById(tabName + 'History').classList.add('active');
+      tabButtons.forEach(button => {
+        button.addEventListener('click', function (event) {
+          event.stopPropagation(); // Prevent the event from closing the popup
+          const tabName = this.getAttribute('data-tab');
+          tabButtons.forEach(btn => btn.classList.remove('active'));
+          historyContents.forEach(content => content.classList.remove('active'));
+          this.classList.add('active');
+          document.getElementById(tabName + 'History').classList.add('active');
+        });
       });
-    });
 
-    // Close button event
-    closeButton.addEventListener('click', function () {
-      popupOverlay.style.display = 'none'; // Hide the popup
-    });
+      // Close button event
+      closeButton.addEventListener('click', function () {
+        popupOverlay.style.display = 'none'; // Hide the popup
+      });
 
-    // Optional: Re-open popup for testing purpose (remove or adjust as needed)
-    document.querySelector('.popup-header').addEventListener('click', function () {
-      popupOverlay.style.display = 'block';
+     
     });
-  });
-
 
 </script>
+
 </body>
 
 </html>
