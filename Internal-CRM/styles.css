@@ -632,10 +632,10 @@ h1 {
 .btn-add-candidate {
   border: none;
   /* Remove default borders */
-  border-bottom: 1px solid #4CAF50;
+  border-bottom: 1px solid #005F6B;
   padding-bottom: 0px;
   background-color: white;
-  color: #4CAF50;
+  color: #005F6B;
 
 }
 
@@ -2832,7 +2832,7 @@ select:focus {
 /* Select inputs */
 .approvals-filter__select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
@@ -2864,7 +2864,6 @@ select:focus {
 
 /* Date inputs */
 .approvals-filter__input[type="date"] {
-    flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -2880,7 +2879,7 @@ select:focus {
 
 /* Approve button */
 .approvals-filter__button {
-    padding: 10px 20px;
+    padding: 8px 20px;
     background-color: #006666;
     color: white;
     border: none;

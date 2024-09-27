@@ -196,7 +196,7 @@
     <div class="container">
         <div class="header">
             <div class="header-title">
-                <select name="" id="">
+                <!-- <select name="" id="">
                   <option>Nurses</option>
                   <option>Teachers</option>
                   <option>Lecturers</option>
@@ -213,8 +213,8 @@
                 <h2>/</h2>
                 <select name="" id="">
                   <option>Project 1</option>
-                </select>
-                <h3>/Submissions</h3>
+                </select> -->
+                <h3>Nurses/country/project 1/Submissions/</h3>
             </div>
             <div class="header-lastitem">
                 <div class="profilename">
@@ -227,22 +227,31 @@
                 
             </div>
         </div>
-       <div class="main-content">
+       <div class="main-content-global-database">
   <div class="submissions filter-section">
     <div class="submissions base-filters">
-      <select class="submissions-filter-select" id="projectNameFilter">
+      <div class="approvals-filter__group">
+        <label for="" class="approvals-filter__label">Project Name</label>
+        <select class="submissions-filter-select" id="">
         <option value="">Choose the Project Name</option>
         <option>Project 1</option>
       </select>
+    </div>
+    <div class="approvals-filter__group">
+      <label for="" class="approvals-filter__label">Client Name</label>
       <select class="submissions-filter-select" id="clientNameFilter">
         <option value="">Choose the Client Name</option>
-      </select>
+      </select></div>
+      <div class="approvals-filter__group">
+        <label for="" class="approvals-filter__label">Client</label>
       <select class="submissions-filter-select" id="clientStatusFilter">
         <option value="">Choose the Client Status</option>
-      </select>
+      </select></div>
+      <div class="approvals-filter__group">
+        <label for="" class="approvals-filter__label">Project Name</label>
       <select class="submissions-filter-select" id="submittedByFilter">
         <option value="">Choose Submitted By</option>
-      </select>
+      </select></div>
       <button class="submissions schedule-interview schedule-interview-button">Schedule Interview</button>
     </div>
   </div>

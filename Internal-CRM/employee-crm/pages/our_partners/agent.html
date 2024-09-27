@@ -204,41 +204,21 @@
         <div class="quick-links">
             <h2>Quick Links</h2>
             <ul>
-                <li><a href="#profile-description">Profile Description</a></li>
-                <li><a href="#personal-information">Personal Information</a></li>
-                <li><a href="#additional-details">Additional Details</a></li>
-                <li><a href="#dataflow-details">Dataflow Details</a></li>
-                <li><a href="#educational-details">Educational Details</a></li>
-                <li><a href="#registration-details">Registration Details</a></li>
-                <li><a href="#work-experience">Work Experience</a></li>
-                <li><a href="#skills-recoginition">Skills & Recogntion</a></li>
-                <li><a href="#documents">Documents</a></li>
-                <li><a href="#preferences">Preferences</a></li>
-                <li><a href="#interview-history">Interview History</a></li>
+              
+                <li><a href="#personal-information">Organization Details</a></li>
+                <li><a href="#additional-details">Point of Contact</a></li>
+                <li><a href="#dataflow-details">Requests</a></li>
+         
             </ul>
         </div>
         <div class="profile">
             <div class="form-sections">
-                <section id="profile-description">
-                    <div class="form-title-header">
-                        <div class="">
-                            <h2>Profile Description</h2>
-                        </div>
-                        <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                    viewBox="0 0 24 24">
-                                    <rect width="24" height="24" fill="none" />
-                                    <path fill="currentColor"
-                                        d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                </svg> Edit</button></div>
-
-                    </div>
-                    <textarea placeholder="Enter a Short Summary"></textarea>
-                </section>
+            
                 <section id="personal-information">
                     <div class="form-section">
                         <div class="form-title-header">
                             <div class="">
-                                <h2>Personal Information</h2>
+                                <h2>Organization Details</h2>
                             </div>
                             <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                         viewBox="0 0 24 24">
@@ -251,8 +231,30 @@
                         <div class="form-container">
                             <div class="form-grid">
                                 <div class="form-group full-width">
-                                    <label for="fullName">Name of the Candidate</label>
-                                    <input type="text" id="fullName" name="fullName" placeholder="Enter the Full Name">
+                                    <label for="fullName">Name of the Organization</label>
+                                    <input type="text" id="fullName" name="fullName" placeholder="Organization Name">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="fullName">Name of the Director</label>
+                                    <input type="text" id="fullName" name="fullName" placeholder="Director Name">
+                                </div>
+
+                                <div class="form-group full-width ">
+                                    <label for="emailAddress">Email Address</label>
+                                    <input type="email" id="emailAddress" name="emailAddress"
+                                        placeholder="Enter the mail Id">
+                                </div>
+                                <div class="form-group">
+                                    <label>Registered Company</label>
+                                    <div class="button-group">
+                                        <button type="button" class="gender-option">Yes</button>
+                                        <button type="button" class="gender-option">NO</button>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="contactNumber">Liscense Number</label>
+                                    <input type="text" id="contactNumber" name="contactNumber"
+                                        placeholder="Enter their License number">
                                 </div>
 
                                 <div class="form-group ">
@@ -260,188 +262,12 @@
                                     <input type="tel" id="contactNumber" name="contactNumber"
                                         placeholder="Enter their Mobile number">
                                 </div>
-                                <div class="form-group">
-                                    <label>Gender</label>
-                                    <div class="button-group">
-                                        <button type="button" class="gender-option">Female</button>
-                                        <button type="button" class="gender-option">Male</button>
-                                    </div>
-                                </div>
-                                <div class="form-group full-width ">
-                                    <label for="emailAddress">Email Address</label>
-                                    <input type="email" id="emailAddress" name="emailAddress"
-                                        placeholder="Enter the mail Id">
-                                </div>
+<div class="form-group ">
+    <label for="contactNumber">Website URL</label>
+    <input type="text" id="contactNumber" name="contactNumber" placeholder="">
+</div>
 
-
-                                <div class="form-group">
-                                    <label for="dateOfBirth">Date of Birth</label>
-                                    <input type="date" id="dateOfBirth" name="dateOfBirth"
-                                        placeholder="Choose the Date">
-                                </div>
-                                <div class="form-group">
-                                    <label for="placeOfBirth">Place of Birth</label>
-                                    <input type="text" id="placeOfBirth" name="placeOfBirth"
-                                        placeholder="Enter the Place of Birth">
-                                </div>
-                                <div class="form-group">
-                                    <label>Soft Skills</label>
-                                    <div class="soft-skills-rating">
-                                        <span class="skill-score">8/10</span>
-                                        <div class="star-rating">
-                                            <div><span class="star" data-value="1">
-                                                    <svg class="star-light" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="M237.28 97.87A14.18 14.18 0 0 0 224.76 88l-60.25-4.87l-23.22-56.2a14.37 14.37 0 0 0-26.58 0L91.49 83.11L31.24 88a14.18 14.18 0 0 0-12.52 9.89A14.43 14.43 0 0 0 23 113.32l46 39.61l-14 59.25a14.4 14.4 0 0 0 5.59 15a14.1 14.1 0 0 0 15.91.6l51.5-31.66l51.58 31.71a14.1 14.1 0 0 0 15.91-.6a14.4 14.4 0 0 0 5.59-15l-14-59.25L233 113.32a14.43 14.43 0 0 0 4.28-15.45m-12.14 6.37l-48.69 42a6 6 0 0 0-1.92 5.92l14.88 62.79a2.35 2.35 0 0 1-.95 2.57a2.24 2.24 0 0 1-2.6.1L131.14 184a6 6 0 0 0-6.28 0l-54.72 33.61a2.24 2.24 0 0 1-2.6-.1a2.35 2.35 0 0 1-1-2.57l14.88-62.79a6 6 0 0 0-1.92-5.92l-48.69-42a2.37 2.37 0 0 1-.73-2.65a2.28 2.28 0 0 1 2.07-1.65l63.92-5.16a6 6 0 0 0 5.06-3.69l24.63-59.6a2.35 2.35 0 0 1 4.38 0l24.63 59.6a6 6 0 0 0 5.06 3.69l63.92 5.16a2.28 2.28 0 0 1 2.07 1.65a2.37 2.37 0 0 1-.68 2.66" />
-                                                    </svg>
-                                                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="m234.29 114.85l-45 38.83L203 211.75a16.4 16.4 0 0 1-24.5 17.82L128 198.49l-50.53 31.08A16.4 16.4 0 0 1 53 211.75l13.76-58.07l-45-38.83A16.46 16.46 0 0 1 31.08 86l59-4.76l22.76-55.08a16.36 16.36 0 0 1 30.27 0l22.75 55.08l59 4.76a16.46 16.46 0 0 1 9.37 28.86Z" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div><span class="star" data-value="2">
-                                                    <svg class="star-light" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="M237.28 97.87A14.18 14.18 0 0 0 224.76 88l-60.25-4.87l-23.22-56.2a14.37 14.37 0 0 0-26.58 0L91.49 83.11L31.24 88a14.18 14.18 0 0 0-12.52 9.89A14.43 14.43 0 0 0 23 113.32l46 39.61l-14 59.25a14.4 14.4 0 0 0 5.59 15a14.1 14.1 0 0 0 15.91.6l51.5-31.66l51.58 31.71a14.1 14.1 0 0 0 15.91-.6a14.4 14.4 0 0 0 5.59-15l-14-59.25L233 113.32a14.43 14.43 0 0 0 4.28-15.45m-12.14 6.37l-48.69 42a6 6 0 0 0-1.92 5.92l14.88 62.79a2.35 2.35 0 0 1-.95 2.57a2.24 2.24 0 0 1-2.6.1L131.14 184a6 6 0 0 0-6.28 0l-54.72 33.61a2.24 2.24 0 0 1-2.6-.1a2.35 2.35 0 0 1-1-2.57l14.88-62.79a6 6 0 0 0-1.92-5.92l-48.69-42a2.37 2.37 0 0 1-.73-2.65a2.28 2.28 0 0 1 2.07-1.65l63.92-5.16a6 6 0 0 0 5.06-3.69l24.63-59.6a2.35 2.35 0 0 1 4.38 0l24.63 59.6a6 6 0 0 0 5.06 3.69l63.92 5.16a2.28 2.28 0 0 1 2.07 1.65a2.37 2.37 0 0 1-.68 2.66" />
-                                                    </svg>
-                                                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="m234.29 114.85l-45 38.83L203 211.75a16.4 16.4 0 0 1-24.5 17.82L128 198.49l-50.53 31.08A16.4 16.4 0 0 1 53 211.75l13.76-58.07l-45-38.83A16.46 16.46 0 0 1 31.08 86l59-4.76l22.76-55.08a16.36 16.36 0 0 1 30.27 0l22.75 55.08l59 4.76a16.46 16.46 0 0 1 9.37 28.86Z" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div><span class="star" data-value="3">
-                                                    <svg class="star-light" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="M237.28 97.87A14.18 14.18 0 0 0 224.76 88l-60.25-4.87l-23.22-56.2a14.37 14.37 0 0 0-26.58 0L91.49 83.11L31.24 88a14.18 14.18 0 0 0-12.52 9.89A14.43 14.43 0 0 0 23 113.32l46 39.61l-14 59.25a14.4 14.4 0 0 0 5.59 15a14.1 14.1 0 0 0 15.91.6l51.5-31.66l51.58 31.71a14.1 14.1 0 0 0 15.91-.6a14.4 14.4 0 0 0 5.59-15l-14-59.25L233 113.32a14.43 14.43 0 0 0 4.28-15.45m-12.14 6.37l-48.69 42a6 6 0 0 0-1.92 5.92l14.88 62.79a2.35 2.35 0 0 1-.95 2.57a2.24 2.24 0 0 1-2.6.1L131.14 184a6 6 0 0 0-6.28 0l-54.72 33.61a2.24 2.24 0 0 1-2.6-.1a2.35 2.35 0 0 1-1-2.57l14.88-62.79a6 6 0 0 0-1.92-5.92l-48.69-42a2.37 2.37 0 0 1-.73-2.65a2.28 2.28 0 0 1 2.07-1.65l63.92-5.16a6 6 0 0 0 5.06-3.69l24.63-59.6a2.35 2.35 0 0 1 4.38 0l24.63 59.6a6 6 0 0 0 5.06 3.69l63.92 5.16a2.28 2.28 0 0 1 2.07 1.65a2.37 2.37 0 0 1-.68 2.66" />
-                                                    </svg>
-                                                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="m234.29 114.85l-45 38.83L203 211.75a16.4 16.4 0 0 1-24.5 17.82L128 198.49l-50.53 31.08A16.4 16.4 0 0 1 53 211.75l13.76-58.07l-45-38.83A16.46 16.46 0 0 1 31.08 86l59-4.76l22.76-55.08a16.36 16.36 0 0 1 30.27 0l22.75 55.08l59 4.76a16.46 16.46 0 0 1 9.37 28.86Z" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div><span class="star" data-value="4">
-                                                    <svg class="star-light" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="M237.28 97.87A14.18 14.18 0 0 0 224.76 88l-60.25-4.87l-23.22-56.2a14.37 14.37 0 0 0-26.58 0L91.49 83.11L31.24 88a14.18 14.18 0 0 0-12.52 9.89A14.43 14.43 0 0 0 23 113.32l46 39.61l-14 59.25a14.4 14.4 0 0 0 5.59 15a14.1 14.1 0 0 0 15.91.6l51.5-31.66l51.58 31.71a14.1 14.1 0 0 0 15.91-.6a14.4 14.4 0 0 0 5.59-15l-14-59.25L233 113.32a14.43 14.43 0 0 0 4.28-15.45m-12.14 6.37l-48.69 42a6 6 0 0 0-1.92 5.92l14.88 62.79a2.35 2.35 0 0 1-.95 2.57a2.24 2.24 0 0 1-2.6.1L131.14 184a6 6 0 0 0-6.28 0l-54.72 33.61a2.24 2.24 0 0 1-2.6-.1a2.35 2.35 0 0 1-1-2.57l14.88-62.79a6 6 0 0 0-1.92-5.92l-48.69-42a2.37 2.37 0 0 1-.73-2.65a2.28 2.28 0 0 1 2.07-1.65l63.92-5.16a6 6 0 0 0 5.06-3.69l24.63-59.6a2.35 2.35 0 0 1 4.38 0l24.63 59.6a6 6 0 0 0 5.06 3.69l63.92 5.16a2.28 2.28 0 0 1 2.07 1.65a2.37 2.37 0 0 1-.68 2.66" />
-                                                    </svg>
-                                                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="m234.29 114.85l-45 38.83L203 211.75a16.4 16.4 0 0 1-24.5 17.82L128 198.49l-50.53 31.08A16.4 16.4 0 0 1 53 211.75l13.76-58.07l-45-38.83A16.46 16.46 0 0 1 31.08 86l59-4.76l22.76-55.08a16.36 16.36 0 0 1 30.27 0l22.75 55.08l59 4.76a16.46 16.46 0 0 1 9.37 28.86Z" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div><span class="star" data-value="5">
-                                                    <svg class="star-light" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="M237.28 97.87A14.18 14.18 0 0 0 224.76 88l-60.25-4.87l-23.22-56.2a14.37 14.37 0 0 0-26.58 0L91.49 83.11L31.24 88a14.18 14.18 0 0 0-12.52 9.89A14.43 14.43 0 0 0 23 113.32l46 39.61l-14 59.25a14.4 14.4 0 0 0 5.59 15a14.1 14.1 0 0 0 15.91.6l51.5-31.66l51.58 31.71a14.1 14.1 0 0 0 15.91-.6a14.4 14.4 0 0 0 5.59-15l-14-59.25L233 113.32a14.43 14.43 0 0 0 4.28-15.45m-12.14 6.37l-48.69 42a6 6 0 0 0-1.92 5.92l14.88 62.79a2.35 2.35 0 0 1-.95 2.57a2.24 2.24 0 0 1-2.6.1L131.14 184a6 6 0 0 0-6.28 0l-54.72 33.61a2.24 2.24 0 0 1-2.6-.1a2.35 2.35 0 0 1-1-2.57l14.88-62.79a6 6 0 0 0-1.92-5.92l-48.69-42a2.37 2.37 0 0 1-.73-2.65a2.28 2.28 0 0 1 2.07-1.65l63.92-5.16a6 6 0 0 0 5.06-3.69l24.63-59.6a2.35 2.35 0 0 1 4.38 0l24.63 59.6a6 6 0 0 0 5.06 3.69l63.92 5.16a2.28 2.28 0 0 1 2.07 1.65a2.37 2.37 0 0 1-.68 2.66" />
-                                                    </svg>
-                                                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="m234.29 114.85l-45 38.83L203 211.75a16.4 16.4 0 0 1-24.5 17.82L128 198.49l-50.53 31.08A16.4 16.4 0 0 1 53 211.75l13.76-58.07l-45-38.83A16.46 16.46 0 0 1 31.08 86l59-4.76l22.76-55.08a16.36 16.36 0 0 1 30.27 0l22.75 55.08l59 4.76a16.46 16.46 0 0 1 9.37 28.86Z" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div><span class="star" data-value="6">
-                                                    <svg class="star-light" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="M237.28 97.87A14.18 14.18 0 0 0 224.76 88l-60.25-4.87l-23.22-56.2a14.37 14.37 0 0 0-26.58 0L91.49 83.11L31.24 88a14.18 14.18 0 0 0-12.52 9.89A14.43 14.43 0 0 0 23 113.32l46 39.61l-14 59.25a14.4 14.4 0 0 0 5.59 15a14.1 14.1 0 0 0 15.91.6l51.5-31.66l51.58 31.71a14.1 14.1 0 0 0 15.91-.6a14.4 14.4 0 0 0 5.59-15l-14-59.25L233 113.32a14.43 14.43 0 0 0 4.28-15.45m-12.14 6.37l-48.69 42a6 6 0 0 0-1.92 5.92l14.88 62.79a2.35 2.35 0 0 1-.95 2.57a2.24 2.24 0 0 1-2.6.1L131.14 184a6 6 0 0 0-6.28 0l-54.72 33.61a2.24 2.24 0 0 1-2.6-.1a2.35 2.35 0 0 1-1-2.57l14.88-62.79a6 6 0 0 0-1.92-5.92l-48.69-42a2.37 2.37 0 0 1-.73-2.65a2.28 2.28 0 0 1 2.07-1.65l63.92-5.16a6 6 0 0 0 5.06-3.69l24.63-59.6a2.35 2.35 0 0 1 4.38 0l24.63 59.6a6 6 0 0 0 5.06 3.69l63.92 5.16a2.28 2.28 0 0 1 2.07 1.65a2.37 2.37 0 0 1-.68 2.66" />
-                                                    </svg>
-                                                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="m234.29 114.85l-45 38.83L203 211.75a16.4 16.4 0 0 1-24.5 17.82L128 198.49l-50.53 31.08A16.4 16.4 0 0 1 53 211.75l13.76-58.07l-45-38.83A16.46 16.46 0 0 1 31.08 86l59-4.76l22.76-55.08a16.36 16.36 0 0 1 30.27 0l22.75 55.08l59 4.76a16.46 16.46 0 0 1 9.37 28.86Z" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div><span class="star" data-value="7">
-                                                    <svg class="star-light" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="M237.28 97.87A14.18 14.18 0 0 0 224.76 88l-60.25-4.87l-23.22-56.2a14.37 14.37 0 0 0-26.58 0L91.49 83.11L31.24 88a14.18 14.18 0 0 0-12.52 9.89A14.43 14.43 0 0 0 23 113.32l46 39.61l-14 59.25a14.4 14.4 0 0 0 5.59 15a14.1 14.1 0 0 0 15.91.6l51.5-31.66l51.58 31.71a14.1 14.1 0 0 0 15.91-.6a14.4 14.4 0 0 0 5.59-15l-14-59.25L233 113.32a14.43 14.43 0 0 0 4.28-15.45m-12.14 6.37l-48.69 42a6 6 0 0 0-1.92 5.92l14.88 62.79a2.35 2.35 0 0 1-.95 2.57a2.24 2.24 0 0 1-2.6.1L131.14 184a6 6 0 0 0-6.28 0l-54.72 33.61a2.24 2.24 0 0 1-2.6-.1a2.35 2.35 0 0 1-1-2.57l14.88-62.79a6 6 0 0 0-1.92-5.92l-48.69-42a2.37 2.37 0 0 1-.73-2.65a2.28 2.28 0 0 1 2.07-1.65l63.92-5.16a6 6 0 0 0 5.06-3.69l24.63-59.6a2.35 2.35 0 0 1 4.38 0l24.63 59.6a6 6 0 0 0 5.06 3.69l63.92 5.16a2.28 2.28 0 0 1 2.07 1.65a2.37 2.37 0 0 1-.68 2.66" />
-                                                    </svg>
-                                                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="m234.29 114.85l-45 38.83L203 211.75a16.4 16.4 0 0 1-24.5 17.82L128 198.49l-50.53 31.08A16.4 16.4 0 0 1 53 211.75l13.76-58.07l-45-38.83A16.46 16.46 0 0 1 31.08 86l59-4.76l22.76-55.08a16.36 16.36 0 0 1 30.27 0l22.75 55.08l59 4.76a16.46 16.46 0 0 1 9.37 28.86Z" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div><span class="star" data-value="8">
-                                                    <svg class="star-light" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="M237.28 97.87A14.18 14.18 0 0 0 224.76 88l-60.25-4.87l-23.22-56.2a14.37 14.37 0 0 0-26.58 0L91.49 83.11L31.24 88a14.18 14.18 0 0 0-12.52 9.89A14.43 14.43 0 0 0 23 113.32l46 39.61l-14 59.25a14.4 14.4 0 0 0 5.59 15a14.1 14.1 0 0 0 15.91.6l51.5-31.66l51.58 31.71a14.1 14.1 0 0 0 15.91-.6a14.4 14.4 0 0 0 5.59-15l-14-59.25L233 113.32a14.43 14.43 0 0 0 4.28-15.45m-12.14 6.37l-48.69 42a6 6 0 0 0-1.92 5.92l14.88 62.79a2.35 2.35 0 0 1-.95 2.57a2.24 2.24 0 0 1-2.6.1L131.14 184a6 6 0 0 0-6.28 0l-54.72 33.61a2.24 2.24 0 0 1-2.6-.1a2.35 2.35 0 0 1-1-2.57l14.88-62.79a6 6 0 0 0-1.92-5.92l-48.69-42a2.37 2.37 0 0 1-.73-2.65a2.28 2.28 0 0 1 2.07-1.65l63.92-5.16a6 6 0 0 0 5.06-3.69l24.63-59.6a2.35 2.35 0 0 1 4.38 0l24.63 59.6a6 6 0 0 0 5.06 3.69l63.92 5.16a2.28 2.28 0 0 1 2.07 1.65a2.37 2.37 0 0 1-.68 2.66" />
-                                                    </svg>
-                                                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="m234.29 114.85l-45 38.83L203 211.75a16.4 16.4 0 0 1-24.5 17.82L128 198.49l-50.53 31.08A16.4 16.4 0 0 1 53 211.75l13.76-58.07l-45-38.83A16.46 16.46 0 0 1 31.08 86l59-4.76l22.76-55.08a16.36 16.36 0 0 1 30.27 0l22.75 55.08l59 4.76a16.46 16.46 0 0 1 9.37 28.86Z" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div><span class="star" data-value="9">
-                                                    <svg class="star-light" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="M237.28 97.87A14.18 14.18 0 0 0 224.76 88l-60.25-4.87l-23.22-56.2a14.37 14.37 0 0 0-26.58 0L91.49 83.11L31.24 88a14.18 14.18 0 0 0-12.52 9.89A14.43 14.43 0 0 0 23 113.32l46 39.61l-14 59.25a14.4 14.4 0 0 0 5.59 15a14.1 14.1 0 0 0 15.91.6l51.5-31.66l51.58 31.71a14.1 14.1 0 0 0 15.91-.6a14.4 14.4 0 0 0 5.59-15l-14-59.25L233 113.32a14.43 14.43 0 0 0 4.28-15.45m-12.14 6.37l-48.69 42a6 6 0 0 0-1.92 5.92l14.88 62.79a2.35 2.35 0 0 1-.95 2.57a2.24 2.24 0 0 1-2.6.1L131.14 184a6 6 0 0 0-6.28 0l-54.72 33.61a2.24 2.24 0 0 1-2.6-.1a2.35 2.35 0 0 1-1-2.57l14.88-62.79a6 6 0 0 0-1.92-5.92l-48.69-42a2.37 2.37 0 0 1-.73-2.65a2.28 2.28 0 0 1 2.07-1.65l63.92-5.16a6 6 0 0 0 5.06-3.69l24.63-59.6a2.35 2.35 0 0 1 4.38 0l24.63 59.6a6 6 0 0 0 5.06 3.69l63.92 5.16a2.28 2.28 0 0 1 2.07 1.65a2.37 2.37 0 0 1-.68 2.66" />
-                                                    </svg>
-                                                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="m234.29 114.85l-45 38.83L203 211.75a16.4 16.4 0 0 1-24.5 17.82L128 198.49l-50.53 31.08A16.4 16.4 0 0 1 53 211.75l13.76-58.07l-45-38.83A16.46 16.46 0 0 1 31.08 86l59-4.76l22.76-55.08a16.36 16.36 0 0 1 30.27 0l22.75 55.08l59 4.76a16.46 16.46 0 0 1 9.37 28.86Z" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div><span class="star" data-value="10">
-                                                    <svg class="star-light" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="M237.28 97.87A14.18 14.18 0 0 0 224.76 88l-60.25-4.87l-23.22-56.2a14.37 14.37 0 0 0-26.58 0L91.49 83.11L31.24 88a14.18 14.18 0 0 0-12.52 9.89A14.43 14.43 0 0 0 23 113.32l46 39.61l-14 59.25a14.4 14.4 0 0 0 5.59 15a14.1 14.1 0 0 0 15.91.6l51.5-31.66l51.58 31.71a14.1 14.1 0 0 0 15.91-.6a14.4 14.4 0 0 0 5.59-15l-14-59.25L233 113.32a14.43 14.43 0 0 0 4.28-15.45m-12.14 6.37l-48.69 42a6 6 0 0 0-1.92 5.92l14.88 62.79a2.35 2.35 0 0 1-.95 2.57a2.24 2.24 0 0 1-2.6.1L131.14 184a6 6 0 0 0-6.28 0l-54.72 33.61a2.24 2.24 0 0 1-2.6-.1a2.35 2.35 0 0 1-1-2.57l14.88-62.79a6 6 0 0 0-1.92-5.92l-48.69-42a2.37 2.37 0 0 1-.73-2.65a2.28 2.28 0 0 1 2.07-1.65l63.92-5.16a6 6 0 0 0 5.06-3.69l24.63-59.6a2.35 2.35 0 0 1 4.38 0l24.63 59.6a6 6 0 0 0 5.06 3.69l63.92 5.16a2.28 2.28 0 0 1 2.07 1.65a2.37 2.37 0 0 1-.68 2.66" />
-                                                    </svg>
-                                                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg"
-                                                        width="1em" height="1em" viewBox="0 0 256 256">
-                                                        <rect width="256" height="256" fill="none" />
-                                                        <path fill="currentColor"
-                                                            d="m234.29 114.85l-45 38.83L203 211.75a16.4 16.4 0 0 1-24.5 17.82L128 198.49l-50.53 31.08A16.4 16.4 0 0 1 53 211.75l13.76-58.07l-45-38.83A16.46 16.46 0 0 1 31.08 86l59-4.76l22.76-55.08a16.36 16.36 0 0 1 30.27 0l22.75 55.08l59 4.76a16.46 16.46 0 0 1 9.37 28.86Z" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div class="form-group">
                                     <label>Marital Status</label>
                                     <div class="marital-status-options">
@@ -537,7 +363,7 @@
                 <section id="additional-details" class="form-section">
                     <div class="form-title-header">
                         <div class="">
-                            <h2>Additional Details</h2>
+                            <h2>Point of Contact</h2>
                         </div>
                         <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                     viewBox="0 0 24 24">
@@ -662,7 +488,7 @@
                 <section id="dataflow-details">
                     <div class="form-title-header">
                         <div class="">
-                            <h2>Dataflow Details</h2>
+                            <h2>Requests</h2>
                         </div>
                         <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                     viewBox="0 0 24 24">
@@ -711,403 +537,7 @@
                         </div>
                     </div>
                 </section>
-                <section id="educational-details">
-                    <div class="form-title-header">
-                        <div class="">
-                            <h2>Educational Details</h2>
-                        </div>
-                        <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                    viewBox="0 0 24 24">
-                                    <rect width="24" height="24" fill="none" />
-                                    <path fill="currentColor"
-                                        d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                </svg> Edit</button></div>
-
-                    </div>
-                    <div class="form-container">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="">Education</label>
-                                <select id="" name="">
-                                    <option value="">Graduation</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Degree</label>
-                                <select id="" name="">
-                                    <option value="">BSc</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="">College</label>
-                                <select id="" name="">
-                                    <option value="">Lorem ipsum</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="">University</label>
-                                <select id="" name="">
-                                    <option value="">Lorem ipsum</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Type of Course</label>
-                                <select id="" name="">
-                                    <option value="">Correspondence</option>
-                                </select>
-                            </div>
-                            <div class="form-group duration-group">
-                                <label>Duration</label>
-                                <div class="date-inputs">
-                                    <input type="date" id="fromDate" name="fromDate" placeholder="From">
-                                    <input type="date" id="toDate" name="toDate" placeholder="To">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="registration-details">
-                    <div class="form-section registration-details">
-                        <div class="form-title-header">
-                            <div class="">
-                                <h2>Registration Details</h2>
-                            </div>
-                            <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                        viewBox="0 0 24 24">
-                                        <rect width="24" height="24" fill="none" />
-                                        <path fill="currentColor"
-                                            d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                    </svg> Edit</button></div>
-
-                        </div>
-                        <div class="form-container">
-                            <div class="form-grid">
-                                <div class="form-group">
-                                    <label for="registrationType">Registration Type</label>
-                                    <select id="registrationType" name="registrationType">
-                                        <option value="">Choose the Registration Type</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="registrationNumber">Registration Number</label>
-                                    <input type="text" id="registrationNumber" name="registrationNumber"
-                                        placeholder="Enter the Registered Number">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Registration Council</label>
-                                    <input type="text" id="" name="" placeholder="Enter the Registered Number">
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="">Duration From</label>
-                                        <input type="date" id="" name="" placeholder="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">To</label>
-                                        <input type="date" id="" name="" placeholder="">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="work-experience" class="form-section">
-                    <div class="form-title-header">
-                        <div class="">
-                            <h2>Work Experience</h2>
-                        </div>
-                        <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                    viewBox="0 0 24 24">
-                                    <rect width="24" height="24" fill="none" />
-                                    <path fill="currentColor"
-                                        d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                </svg> Edit</button></div>
-
-                    </div>
-                    <div class="form-container">
-                        <div class="form-grid">
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="currentEmployment" name="currentEmployment">
-                                <label for="currentEmployment">Current Employment</label>
-                            </div>
-                            <div class="form-group duration-group">
-                                <label>Duration</label>
-                                <div class="date-inputs">
-                                    <input type="date" id="fromDate" name="fromDate" placeholder="From">
-                                    <input type="date" id="toDate" name="toDate" placeholder="To">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="organization">Organization</label>
-                                <select id="organization" name="organization">
-                                    <option value="">Choose the Organization Name</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="designation">Designation</label>
-                                <select id="designation" name="designation">
-                                    <option value="">Choose the Job Role</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="department">Department</label>
-                                <select id="department" name="department">
-                                    <option value="">Choose the Department</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="bedCapacity">Bed Capacity</label>
-                                <input type="text" id="bedCapacity" name="bedCapacity"
-                                    placeholder="Enter the Bed capacity">
-                            </div>
-                            <div class="form-group full-width">
-                                <label for="address">Address</label>
-                                <input type="text" id="address" name="address"
-                                    placeholder="Enter the Organization Address">
-                            </div>
-                            <div class="form-group full-width">
-                                <label for="workSummary">Work Summary</label>
-                                <textarea id="workSummary" name="workSummary"
-                                    placeholder="Enter Work Summary"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="skills-recoginition">
-                    <div class="form-title-header">
-                        <div class="">
-                            <h2>Skills & Recogntion</h2>
-                        </div>
-                        <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                    viewBox="0 0 24 24">
-                                    <rect width="24" height="24" fill="none" />
-                                    <path fill="currentColor"
-                                        d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                </svg> Edit</button></div>
-
-                    </div>
-                    <div class="form-container">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="">Recogntion</label>
-                                <input type="date" id="" name="" placeholder="">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Name of the Acheivement</label>
-                                <input type="text" id="" name="" placeholder="Lorem ipsum">
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-                <section id="documents">
-                    <div class="form-section">
-                        <div class="form-title-header">
-                            <div class="">
-                                <h2>Documents</h2>
-                            </div>
-                            <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                        viewBox="0 0 24 24">
-                                        <rect width="24" height="24" fill="none" />
-                                        <path fill="currentColor"
-                                            d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                    </svg> Edit</button></div>
-
-                        </div>
-                        <div class="form-container">
-                            <table class="documents-table">
-                                <thead>
-                                    <tr>
-                                        <th>Document Name</th>
-                                        <th>Upload Documents</th>
-                                        <th>Received</th>
-                                        <th>Verified</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Document Name</td>
-                                        <td>
-                                            <div class="upload-button">
-                                                <span>Document Name</span>
-                                                <input type="file" id="doc1" name="doc1">
-                                                <label for="doc1" class="upload-icon">&#8593;</label>
-                                            </div>
-                                        </td>
-                                        <td><input type="checkbox" id="received1" name="received1"></td>
-                                        <td><input type="checkbox" id="verified1" name="verified1"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Document Name</td>
-                                        <td>
-                                            <div class="upload-button">
-                                                <span>Document Name</span>
-                                                <input type="file" id="doc2" name="doc2">
-                                                <label for="doc2" class="upload-icon">&#8593;</label>
-                                            </div>
-                                        </td>
-                                        <td><input type="checkbox" id="received2" name="received2"></td>
-                                        <td><input type="checkbox" id="verified2" name="verified2"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Document Name</td>
-                                        <td>
-                                            <div class="upload-button">
-                                                <span>Document Name</span>
-                                                <input type="file" id="doc3" name="doc3">
-                                                <label for="doc3" class="upload-icon">&#8593;</label>
-                                            </div>
-                                        </td>
-                                        <td><input type="checkbox" id="received3" name="received3"></td>
-                                        <td><input type="checkbox" id="verified3" name="verified3"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Document Name</td>
-                                        <td>
-                                            <div class="upload-button">
-                                                <span>Document Name</span>
-                                                <input type="file" id="doc4" name="doc4">
-                                                <label for="doc4" class="upload-icon">&#8593;</label>
-                                            </div>
-                                        </td>
-                                        <td><input type="checkbox" id="received4" name="received4"></td>
-                                        <td><input type="checkbox" id="verified4" name="verified4"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Document Name</td>
-                                        <td>
-                                            <div class="upload-button">
-                                                <span>Document Name</span>
-                                                <input type="file" id="doc5" name="doc5">
-                                                <label for="doc5" class="upload-icon">&#8593;</label>
-                                            </div>
-                                        </td>
-                                        <td><input type="checkbox" id="received5" name="received5"></td>
-                                        <td><input type="checkbox" id="verified5" name="verified5"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </section>
-                <section id="preferences">
-                    <div class="form-title-header">
-                        <div class="">
-                            <h2>Preferences</h2>
-                        </div>
-                        <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                    viewBox="0 0 24 24">
-                                    <rect width="24" height="24" fill="none" />
-                                    <path fill="currentColor"
-                                        d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                </svg> Edit</button></div>
-
-                    </div>
-                    <div class="form-container">
-                        <div class="form-grid">
-
-                            <div class="form-group">
-                                <label for="">Applied For</label>
-                                <input type="text" id="" name="" placeholder="xxxxxxxx">
-                            </div>
-                            <div class="form-group">
-                                <label for="department">Client</label>
-                                <select id="department" name="department">
-                                    <option value="">Lorem ipsum dolor sit amet.</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="department">Status</label>
-                                <select id="department" name="department">
-                                    <option value="">Rejected</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Comments</label>
-                                <input type="text" id="" name="" placeholder="Enter your comments">
-                            </div>
-                            <div class="form-group">
-                                <label for="department">preferred Country</label>
-                                <select id="department" name="department">
-                                    <option value="">Singapore</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="department">Client</label>
-                                <select id="department" name="department">
-                                    <option value="">Client Name</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="department">Status</label>
-                                <select id="department" name="department">
-                                    <option value="">Choose the Status</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Comments</label>
-                                <input type="text" id="" name="" placeholder="Enter your comments">
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-                <section id="interview-history">
-                    <div class="form-title-header">
-                        <div class="">
-                            <h2>Interview History</h2>
-                        </div>
-                        <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                    viewBox="0 0 24 24">
-                                    <rect width="24" height="24" fill="none" />
-                                    <path fill="currentColor"
-                                        d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                </svg> Edit</button></div>
-
-                    </div>
-                    <div class="form-container">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="">Project Name</label>
-                                <input type="text" id="" name="" placeholder="Oman-Nurses-2022">
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="examDate">Details</label>
-                                    <input type="date" id="" name="" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="nationality">Status</label>
-                                    <select id="nationality" name="nationality">
-                                        <option value="">Not Selected</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Project Name</label>
-                                <input type="text" id="" name="" placeholder="Oman-Nurses-2022">
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="examDate">Details</label>
-                                    <input type="date" id="" name="" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="nationality">Status</label>
-                                    <select id="nationality" name="nationality">
-                                        <option value="">Not Selected</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
+           
             </div>
         </div>
         <div class="candidate-profile-card">
@@ -1133,23 +563,7 @@
                         </svg>
                     </span>
                 </div>
-                <div class="detail-item">
-                    <span class="detail-text">Department</span>
-                    <span class="icon department-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_2118_2012)">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M15 6.00084C15.0002 6.62146 14.808 7.22687 14.4498 7.73369C14.0916 8.24052 13.5851 8.62383 13 8.83084V11.0008H16C16.7957 11.0008 17.5587 11.3169 18.1214 11.8795C18.684 12.4421 19 13.2052 19 14.0008V15.1708C19.6675 15.4067 20.2301 15.871 20.5884 16.4816C20.9467 17.0923 21.0775 17.8099 20.9578 18.5076C20.8382 19.2054 20.4757 19.8384 19.9344 20.2947C19.3931 20.751 18.708 21.0013 18 21.0013C17.2921 21.0013 16.6069 20.751 16.0657 20.2947C15.5244 19.8384 15.1619 19.2054 15.0422 18.5076C14.9225 17.8099 15.0534 17.0923 15.4117 16.4816C15.7699 15.871 16.3325 15.4067 17 15.1708V14.0008C17 13.7356 16.8947 13.4813 16.7071 13.2937C16.5196 13.1062 16.2652 13.0008 16 13.0008H8.00003C7.73481 13.0008 7.48046 13.1062 7.29292 13.2937C7.10539 13.4813 7.00003 13.7356 7.00003 14.0008V15.1708C7.66752 15.4067 8.23012 15.871 8.58839 16.4816C8.94666 17.0923 9.07752 17.8099 8.95784 18.5076C8.83817 19.2054 8.47566 19.8384 7.9344 20.2947C7.39314 20.751 6.70798 21.0013 6.00003 21.0013C5.29208 21.0013 4.60692 20.751 4.06566 20.2947C3.5244 19.8384 3.16189 19.2054 3.04222 18.5076C2.92254 17.8099 3.0534 17.0923 3.41167 16.4816C3.76994 15.871 4.33254 15.4067 5.00003 15.1708V14.0008C5.00003 13.2052 5.3161 12.4421 5.87871 11.8795C6.44132 11.3169 7.20438 11.0008 8.00003 11.0008H11V8.83084C10.4812 8.64768 10.0227 8.32539 9.67464 7.89921C9.3266 7.47303 9.10243 6.95937 9.02664 6.41438C8.95084 5.8694 9.02634 5.31406 9.24488 4.80909C9.46342 4.30412 9.81658 3.86894 10.2658 3.55115C10.7149 3.23335 11.2428 3.04517 11.7918 3.00717C12.3407 2.96916 12.8895 3.08281 13.3782 3.33567C13.8669 3.58854 14.2766 3.97089 14.5627 4.44093C14.8487 4.91098 15 5.45061 15 6.00084ZM12 5.00084C11.7348 5.00084 11.4805 5.1062 11.2929 5.29374C11.1054 5.48127 11 5.73563 11 6.00084C11 6.26606 11.1054 6.52041 11.2929 6.70795C11.4805 6.89549 11.7348 7.00084 12 7.00084C12.2652 7.00084 12.5196 6.89549 12.7071 6.70795C12.8947 6.52041 13 6.26606 13 6.00084C13 5.73563 12.8947 5.48127 12.7071 5.29374C12.5196 5.1062 12.2652 5.00084 12 5.00084ZM6.00003 17.0008C5.73481 17.0008 5.48046 17.1062 5.29292 17.2937C5.10539 17.4813 5.00003 17.7356 5.00003 18.0008C5.00003 18.2661 5.10539 18.5204 5.29292 18.7079C5.48046 18.8955 5.73481 19.0008 6.00003 19.0008C6.26525 19.0008 6.5196 18.8955 6.70714 18.7079C6.89467 18.5204 7.00003 18.2661 7.00003 18.0008C7.00003 17.7356 6.89467 17.4813 6.70714 17.2937C6.5196 17.1062 6.26525 17.0008 6.00003 17.0008ZM18 17.0008C17.7348 17.0008 17.4805 17.1062 17.2929 17.2937C17.1054 17.4813 17 17.7356 17 18.0008C17 18.2661 17.1054 18.5204 17.2929 18.7079C17.4805 18.8955 17.7348 19.0008 18 19.0008C18.2652 19.0008 18.5196 18.8955 18.7071 18.7079C18.8947 18.5204 19 18.2661 19 18.0008C19 17.7356 18.8947 17.4813 18.7071 17.2937C18.5196 17.1062 18.2652 17.0008 18 17.0008Z"
-                                    fill="#005F6B" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_2118_2012">
-                                    <rect width="24" height="24" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </span>
-                </div>
+                
                 <div class="detail-item">
                     <span class="detail-text">Namenamename@gmail.com</span>
                     <span class="icon email-icon"><svg width="20" height="16" viewBox="0 0 20 16" fill="none"
@@ -1161,7 +575,7 @@
                     </span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-text">Degree</span>
+                    <span class="detail-text">Submissions</span>
                     <span class="icon degree-icon"><svg width="24" height="18" viewBox="0 0 24 18" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 5.7L11.511 1.5L22.022 5.7L11.511 9.9L1 5.7Z" stroke="#005F6B" stroke-width="2"
@@ -1172,7 +586,7 @@
                         </svg></span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-text">Hyderabad, Telangana, India</span>
+                    <span class="detail-text">Requests</span>
                     <span class="icon location-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -1183,7 +597,7 @@
                     </span>
                 </div>
                 <div class="detail-item">
-                    <span class="detail-text">00 Yrs 00 Months</span>
+                    <span class="detail-text">Colloaborated Since</span>
                     <span class="icon experience-icon"><svg width="21" height="20" viewBox="0 0 21 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -1194,43 +608,8 @@
                 </div>
             </div>
 
-            <div class="admin-info">
-                <p>Created by Admin 1 at 00:00hrs</p>
-                <p>Profile last updated by Admin 1 <span class="icon more-icon"></span></p>
-            </div>
 
-            <div class="quick-actions">
-                <p>Quick Actions</p>
-                <div class="action-icons">
-                    <span class="icon action-icon-1"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            viewBox="0 0 16 16">
-                            <path fill="currentColor"
-                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z" />
-                        </svg></span>
-                    <span class="icon action-icon-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            viewBox="0 0 100 100">
-                            <path fill="currentColor"
-                                d="M46.05 60.163H31.923c-.836 0-1.513.677-1.513 1.513V83.61c0 .836.677 1.513 1.513 1.513H46.05c.836 0 1.512-.677 1.512-1.513V61.675c0-.836-.677-1.512-1.512-1.512m22.027-45.285H53.95c-.836 0-1.513.677-1.513 1.513v67.218c0 .836.677 1.513 1.513 1.513h14.127c.836 0 1.513-.677 1.513-1.513V16.391c0-.836-.677-1.513-1.513-1.513m22.14 20.421H76.09c-.836 0-1.513.677-1.513 1.513v46.797c0 .836.677 1.513 1.513 1.513h14.126c.836 0 1.513-.677 1.513-1.513V36.812c0-.835-.677-1.513-1.512-1.513m-66.307 0H9.783c-.836 0-1.513.677-1.513 1.513v46.797c0 .836.677 1.513 1.513 1.513H23.91c.836 0 1.513-.677 1.513-1.513V36.812c0-.835-.677-1.513-1.513-1.513" />
-                        </svg></span>
-                    <span class="icon action-icon-3"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M17.03 11.03a.75.75 0 1 0-1.06-1.06L11 14.94l-1.97-1.97a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0zm-1.036-6.946A2.25 2.25 0 0 0 13.75 2h-3.5a2.25 2.25 0 0 0-2.236 2H6.25A2.25 2.25 0 0 0 4 6.25v13.5A2.25 2.25 0 0 0 6.25 22h11.5A2.25 2.25 0 0 0 20 19.75V6.25A2.25 2.25 0 0 0 17.75 4h-1.764zm0 .012L16 4.25q0-.078-.005-.154M10.25 6.5h3.5c.78 0 1.467-.397 1.871-1h2.129a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H6.25a.75.75 0 0 1-.75-.75V6.25a.75.75 0 0 1 .75-.75h2.129c.404.603 1.091 1 1.871 1m0-3h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1 0-1.5" />
-                        </svg></span>
-                    <span class="icon action-icon-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M15 13h1.5v2.82l2.44 1.41l-.75 1.3L15 16.69zm8 3c0 3.87-3.13 7-7 7c-1.91 0-3.64-.76-4.9-2H8c-1.1 0-2-.9-2-2V7h12v2.29c2.89.86 5 3.54 5 6.71M9 16c0-3.87 3.13-7 7-7H8v10h1.67c-.43-.91-.67-1.93-.67-3m7-5c-2.76 0-5 2.24-5 5s2.24 5 5 5s5-2.24 5-5s-2.24-5-5-5m-.5-7H19v2H5V4h3.5l1-1h5z" />
-                        </svg></span>
-                    <span class="icon action-icon-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z" />
-                        </svg></span>
-                </div>
-            </div>
-
-            <button class="save-button">Save</button>
+            <button class="save-button">Notify</button>
         </div>
     </div>
     <script src="../../../../Internal-CRM/scripts.js"></script>
