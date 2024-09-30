@@ -11,45 +11,7 @@
 </head>
 
 <body>
-    <style>
-        .advanced-filter-content-section .others-section .checkbox-group {
-            margin-bottom: 10px;
-        }
-
-        .advanced-filter-content-section .others-section .checkbox-group label {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .advanced-filter-content-section .others-section .checkbox-group input[type="checkbox"] {
-            appearance: none;
-            -webkit-appearance: none;
-            width: 18px;
-            height: 18px;
-            border: 2px solid #008080;
-            border-radius: 3px;
-            margin-right: 10px;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .advanced-filter-content-section .others-section .checkbox-group input[type="checkbox"]:checked::before {
-            content: "\2713";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #008080;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .advanced-filter-content-section .others-section .checkbox-group span {
-            font-size: 14px;
-            color: #333;
-        }
-    </style>
+   
     <div class="sidebar-container ">
         <div class="logo-container">
             <img class="logo" src="../../../../Internal-CRM/images/global_placements_logo.png" alt="Global Placements">
@@ -318,7 +280,7 @@
                     <!-- Approve Button -->
                 </div>
                 <div class="projects-actions">
-                    <button id="addCandidate" class="btn-add-candidate">+ Create Task</button>
+                    <button id="addCandidate" class="btn-add-candidate add-task-button">+ Create Task</button>
                     <button id="submissions" class="btn-submissions">Archived</button>
                   
                 </div>
@@ -529,8 +491,7 @@
             </div>
         </div>
     </div>
-    </div>
-</div>
+  
 <div class="popup-overlay" id="commentsPopupOverlay">
     <div class="popup-content">
         <div class="popup-header">
@@ -594,53 +555,50 @@
     <div class="popup-content">
         <div class="popup-header">
             <h2 class="popup-title">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M17.03 11.03a.75.75 0 1 0-1.06-1.06L11 14.94l-1.97-1.97a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0zm-1.036-6.946A2.25 2.25 0 0 0 13.75 2h-3.5a2.25 2.25 0 0 0-2.236 2H6.25A2.25 2.25 0 0 0 4 6.25v13.5A2.25 2.25 0 0 0 6.25 22h11.5A2.25 2.25 0 0 0 20 19.75V6.25A2.25 2.25 0 0 0 17.75 4h-1.764zm0 .012L16 4.25q0-.078-.005-.154M10.25 6.5h3.5c.78 0 1.467-.397 1.871-1h2.129a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H6.25a.75.75 0 0 1-.75-.75V6.25a.75.75 0 0 1 .75-.75h2.129c.404.603 1.091 1 1.871 1m0-3h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1 0-1.5" />
                 </svg>
                 ADD NEW TASK
             </h2>
             <button class="popup-close" id="closeAddNewTaskPopup">&#10005;</button>
         </div>
         <div class="popup-body">
-            <div class="form-group">
+            <div class="form-group label-input">
                 <label for="candidateName">Name of the Candidate</label>
-                <input type="text" id="candidateName" placeholder="Name">
+                <input type="text" id="candidateName" value="">
             </div>
-            <div class="form-group">
+            <div class="form-group label-input">
                 <label for="taskAssignee">Assign this task to</label>
                 <select id="taskAssignee">
-                    <option value="">Choose the Employees</option>
+                    <option>Choose the Employees</option>
                     <!-- Add other options here -->
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group label-input">
                 <label for="taskDescription">Task Description</label>
-                <textarea id="taskDescription" placeholder="Status"></textarea>
+                <input type="text" id="taskDescription" value="Status">
+            </div>
+            <div class="form-group label-input">
+                <label for="dueDate">Due Date</label>
+                <input type="date">
             </div>
             <div class="form-group">
-                <label for="dueDate">Due Date</label>
-                <input type="text" id="dueDate" placeholder="Choose the Date" readonly>
-                <span class="date-picker-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z" />
-                    </svg>
-                </span>
+                <button class="confirm-button">Confirm</button>
             </div>
-            <button class="confirm-button">Confirm</button>
         </div>
+
     </div>
 </div>
     <script src="../../../../Internal-CRM/scripts.js"></script>
     <script>
-        function setupPopups() {
+       
                 const commentsPopup = document.getElementById('commentsPopupOverlay');
                 const commentsCloseButton = document.getElementById('closeCommentsPopup');
                 const addNewTaskPopup = document.getElementById('addNewTaskPopupOverlay');
             const closeAddNewTaskPopup = document.getElementById('closeAddNewTaskPopup');
             const confirmButton = addNewTaskPopup.querySelector('.confirm-button');
-            const dueDateInput = document.getElementById('dueDate');
-
+           
                 if (commentsPopup && commentsCloseButton) {
                     // Use event delegation for opening the comments popup
                     document.addEventListener('click', function (event) {
@@ -697,10 +655,9 @@
                 closePopup();
             });
 
-            }
+            
 
-            // Call the setup function when the DOM is fully loaded
-            document.addEventListener('DOMContentLoaded', setupPopups);
+           
     </script>
 </body>
 
