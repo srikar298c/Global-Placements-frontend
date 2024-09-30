@@ -276,12 +276,12 @@
             </div>
         </div>
         <div class="main-content-global-database">
-            <div class="approvals-filter">
-                <div class="approvals-filter__container">
-                    <!-- Category Filter -->
-                    <div class="approvals-filter__group">
-                        <label for="categoryFilter" class="approvals-filter__label">Type of Notifications</label>
-                        <select class="approvals-filter__select">
+        <div class="rejected-filter">
+            <div class="rejected-filter__container">
+                <!-- Category Filter -->
+                <div class="rejected-filter__group">
+                    <label for="" class="rejected-filter__label">Type of Notifications</label>
+                        <select class="rejected-filter__select" >
                             <option value="">All</option>
                             <option>...</option>
                             <option>...</option>
@@ -289,9 +289,9 @@
                     </div>
 
                     <!-- Project Filter -->
-                    <div class="approvals-filter__group">
-                        <label for="projectNameFilter" class="approvals-filter__label">Notified By</label>
-                        <select class="approvals-filter__select">
+                                <div class="rejected-filter__group">
+                                    <label for="" class="rejected-filter__label">Notified By</label>
+                        <select class="rejected-filter__select">
                             <option value="">All</option>
                             <option>...</option>
                             <option>...</option>
@@ -299,13 +299,22 @@
                         </select>
                     </div>
 
-                   
+                     
 
                     <!-- Approve Button -->
                 </div>
                 <div class="projects-actions">
                     <button id="submissions" class="btn-submissions">Archived</button>
 
+                </div>
+            </div>
+            <div class="notifications-filter__group">
+             
+                <div class="notifications-button-group">
+                    <button type="button" class="notification-tab-button">All</button>
+                    <button type="button" class="notification-tab-button">Global</button>
+                    <button type="button" class="notification-tab-button">Client</button>
+                    <button type="button" class="notification-tab-button">Agent</button>
                 </div>
             </div>
 

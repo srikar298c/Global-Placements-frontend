@@ -2507,7 +2507,7 @@ select:focus {
 .status-option:hover,
 .measure-option:hover {
   background-color: #e6e6e6;
-  border-color: #007BFF;
+  border-color: #005f6b;
 }
 
 .soft-skills-rating {
@@ -3154,7 +3154,7 @@ width: 100%;
 }
 
 .notification-label {
-    background-color: #007bff;
+    background-color: #006b77;
     color: white;
     padding: 3px 6px;
     font-size: 12px;
@@ -3269,3 +3269,33 @@ width: 100%;
       background-color:#FFEBEA ;
     }
 
+.notifications-filter__group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+  padding:0 20px;
+}
+.notifications-button-group{
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+  gap:10px;
+}
+
+.notification-tab-button{
+  padding: 10px 12px;
+  width:100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.notification-tab-button:hover{
+  background-color: #e6e6e6;
+  border-color: #005f6b;
+}
