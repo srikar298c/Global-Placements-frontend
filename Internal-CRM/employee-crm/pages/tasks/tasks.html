@@ -505,9 +505,12 @@
             <button class="popup-close" id="closeCommentsPopup">&#10005;</button>
         </div>
         <div class="popup-body">
-            <h3 class="task-title">Title of the Task</h3>
+            <div class="comment-created-by">
+                <h3 class="task-title">Title of the Task</h3>
+                <h5 class="last-update">09:30 AM, Aug 04 2024</h5>
+            </div>
             <h5 class="candidate-header">Admin 1</h5>
-            <p class="last-update">09:30 AM, Aug 04 2024</p>
+            
             <p class="task-description">
                 Iusto minima molestias nisi beatae maxime officia quo
                 cumque doloremque. Repellendus delectus harum
@@ -516,35 +519,17 @@
             <div class="candidate-section">
                 <h4 class="candidate-header">Candidate ID</h4>
                 <p class="last-update">few hours ago</p>
-                <div class="candidate-list">
-                    <div class="candidate-item">
-                        <span class="candidate-id">Jan 12 2013 : 22:59</span>
-                        <span class="candidate-status">Has been submitted to "new project"</span>
-                        <span class="admin-name">Admin 2</span>
-                    </div>
-                    <div class="candidate-item">
-                        <span class="candidate-id">Jan 12 2013 : 22:59</span>
-                        <span class="candidate-status">Marked as interested</span>
-                        <span class="admin-name">Admin 2</span>
-                    </div>
-                    <div class="candidate-item">
-                        <span class="candidate-id">Jan 12 2013 : 22:59</span>
-                        <span class="candidate-status">Attended the interview held by Admin1</span>
-                        <span class="admin-name">Admin 3</span>
-                    </div>
-                    <div class="candidate-item">
-                        <span class="candidate-id">Jan 12 2013 : 22:59</span>
-                        <span class="candidate-status">Shortlisted by Client</span>
-                        <span class="admin-name">Admin 2</span>
-                    </div>
-                    <div class="candidate-item">
-                        <span class="candidate-id">Jan 12 2013 : 22:59</span>
-                        <span class="candidate-status">Marked as Not answering the calls</span>
-                        <span class="admin-name">Admin 6</span>
-                    </div>
+                <div class="candidate-list" id="candidateList">
+                    <!-- Existing candidate items will be here -->
                 </div>
             </div>
-            <button class="add-more-button">Add More</button>
+            <div class="add-more-section">
+                <button class="add-more-button" id="addMoreButton">Add More</button>
+                <div class="input-section" id="inputSection" style="display: none;">
+                    <input type="text" id="newStatusInput" placeholder="Enter new status">
+                    <button id="submitNewStatus">Submit</button>
+                </div>
+            </div>
         </div>
         <div class="popup-footer">
             <button class="close-button">Close</button>
@@ -655,7 +640,69 @@
                 closePopup();
             });
 
-            
+            document.addEventListener('DOMContentLoaded', function () {
+                    const candidateList = document.getElementById('candidateList');
+                    const addMoreButton = document.getElementById('addMoreButton');
+                    const inputSection = document.getElementById('inputSection');
+                    const newStatusInput = document.getElementById('newStatusInput');
+                    const submitNewStatus = document.getElementById('submitNewStatus');
+
+                    // Initial candidate items
+                    const initialCandidates = [
+                        { id: '9/30/2024, 7:22:49 PM', status: 'Has been submitted to "new project"', admin: 'Admin 2' },
+                        { id: '9/30/2024, 7:22:49 PM', status: 'Marked as interested', admin: 'Admin 2' },
+                        { id: '9/30/2024, 7:22:49 PM9', status: 'Attended the interview held by Admin1', admin: 'Admin 3' }
+                    ];
+
+                    // Function to render candidate items
+                    function renderCandidateItems(candidates) {
+                        candidateList.innerHTML = '';
+                        candidates.forEach(candidate => {
+                            const candidateItem = document.createElement('div');
+                            candidateItem.className = 'candidate-item';
+                            candidateItem.innerHTML = `
+                <span class="candidate-id">${candidate.id}</span>
+                <span class="candidate-status">${candidate.status}</span>
+                <span class="admin-name">${candidate.admin}</span>
+            `;
+                            candidateList.appendChild(candidateItem);
+                        });
+                    }
+
+                    // Render initial candidate items
+                    renderCandidateItems(initialCandidates);
+
+                    // Show input section when "Add More" is clicked
+                    addMoreButton.addEventListener('click', function () {
+                        inputSection.style.display = 'flex';
+                        addMoreButton.style.display = 'none';
+                    });
+
+                    // Handle submission of new status
+                    submitNewStatus.addEventListener('click', function () {
+                        const newStatus = newStatusInput.value.trim();
+                        if (newStatus) {
+                            const newCandidate = {
+                                id: new Date().toLocaleString(),
+                                status: newStatus,
+                                admin: 'Current Admin' // Replace with actual admin name if available
+                            };
+                            initialCandidates.push(newCandidate);
+                            renderCandidateItems(initialCandidates);
+                            newStatusInput.value = '';
+                            inputSection.style.display = 'none';
+                            addMoreButton.style.display = 'block';
+                        }
+                    });
+
+                    // Close popup functionality
+                    const closeButtons = document.querySelectorAll('.popup-close, .close-button');
+                    closeButtons.forEach(button => {
+                        button.addEventListener('click', function () {
+                            document.getElementById('commentsPopupOverlay').style.display = 'none';
+                        });
+                    });
+                });
 
            
     </script>

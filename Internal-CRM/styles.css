@@ -3030,7 +3030,12 @@ background-color: #dcdbdb;
         flex-basis: 100%;
     }
 }
-
+.comment-created-by{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 .popup-overlay .admin-info{
  display: inline-block;
   color: #999;
@@ -3062,6 +3067,31 @@ background-color: #dcdbdb;
   border: 1px solid #ddd;
   border-radius: 4px;
   cursor: pointer;
+}
+
+
+.input-section {
+    margin-top: 10px;
+    display: flex;
+}
+
+#newStatusInput {
+    flex-grow: 1;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+#submitNewStatus {
+    background-color: #006b77;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#submitNewStatus:hover {
+    background-color: #005555;
+   
 }
 .popup-overlay .timestamp {
   display: inline-block;
