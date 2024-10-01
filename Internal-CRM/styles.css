@@ -2062,10 +2062,27 @@ left: 92%;
   bottom: 8px;
   left: 35%;
 }
-
+.form-group .view-button{
+ width: 30%;
+ padding: 8px 12px;
+ color:#000;
+ border: 1px solid #00798c; 
+  border-radius: 8px;
+  font-size: 12px;
+   cursor: pointer;
+  transition: background-color 0.3s;
+   position: absolute;
+  bottom: 6px;
+  left: 35%;
+}
+.form-group .view-button:hover{
+  border: 1px solid #005F6B;
+  color: black;
+}
 .form-group .confirm-button:hover,
 .form-group .download-button:hover {
   background-color: #004d4d;
+
 }
 #taskDescription {
   height: 80px;
@@ -3174,9 +3191,14 @@ width: 100%;
 .notification-header {
     display: flex;
     align-items: center;
+    justify-content:  space-between;
     gap: 10px; /* Space between title and label */
 }
-
+.notification-details-area{
+   display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .notification-title {
     font-size: 16px;
     font-weight: bold;
@@ -3189,6 +3211,17 @@ width: 100%;
     padding: 3px 6px;
     font-size: 12px;
     border-radius: 3px;
+}
+.request-label{
+  color:black;
+  border: 1px solid #006d77;
+  padding: 3px 6px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+.request-label:hover{
+background-color: #d0d0d0;
+border:1.5px solid #005555;
 }
 
 .notification-title {
@@ -3206,17 +3239,20 @@ width: 100%;
 }
 
 .notification-admin {
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
-  color: #888;
+  color: #000;
 }
 
 .notification-timestamp {
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
   font-size: 12px;
   color: #888;
-  align-self: flex-start;
-  margin-top: 3px;
+}
+.notification-timestamp svg {
+ margin-right: 5px;
+ margin-bottom: 2px;
 }
 .filter1{
   margin-top: 10px;
@@ -3226,6 +3262,24 @@ width: 100%;
   align-items: center;
 
 }
+.request-row{
+    padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.request-content {
+  flex-grow: 1;
+  margin-right: 15px;
+}
+
+
+.request-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between title and label */
+}
+.request
+.request
+.request
 .advanced-filter-content-section .others-section .checkbox-group {
       margin-bottom: 10px;
     }
