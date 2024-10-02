@@ -864,9 +864,10 @@
                     </div>
                     <div class="form-container">
                         <div class="form-grid">
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="currentEmployment" name="currentEmployment">
-                                <label for="currentEmployment">Current Employment</label>
+                            <div class="form-group ">
+                            <label for="sameAddress">
+                                <input type="checkbox" id="sameAddress"> Current Employement
+                            </label>
                             </div>
                             <div class="form-group duration-group">
                                 <label>Duration</label>
@@ -1149,12 +1150,9 @@
             <div class="profile-header">
                 <div class="profile-image-container">
                     <div class="profile-image"></div>
-                    <svg class="progress-ring" width="120" height="120">
-                        <circle class="progress-ring__circle" stroke="#4CAF50" stroke-width="4" fill="transparent"
-                            r="58" cx="60" cy="60" />
-                    </svg>
+                    
                 </div>
-                <h2 class="candidate-name">Name of the Candidate</h2>
+                <h4 class="candidate-name">Name of the Candidate</h4>
             </div>
 
             <div class="candidate-details">
@@ -1224,41 +1222,40 @@
 
             <div class="admin-info">
                 <p>Created by Admin 1 at 00:00hrs</p>
-                <p>Profile last updated by Admin 1 <span class="icon more-icon"></span></p>
+                <p>Profile last updated by Admin 1<span class="icon more-icon"></span></p>
             </div>
 
-            <div class="quick-actions">
-                <p>Quick Actions</p>
-                <div class="action-icons">
-                    <span class="icon action-icon-1"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            viewBox="0 0 16 16">
-                            <path fill="currentColor"
-                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z" />
-                        </svg></span>
-                    <span class="icon action-icon-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            viewBox="0 0 100 100">
-                            <path fill="currentColor"
-                                d="M46.05 60.163H31.923c-.836 0-1.513.677-1.513 1.513V83.61c0 .836.677 1.513 1.513 1.513H46.05c.836 0 1.512-.677 1.512-1.513V61.675c0-.836-.677-1.512-1.512-1.512m22.027-45.285H53.95c-.836 0-1.513.677-1.513 1.513v67.218c0 .836.677 1.513 1.513 1.513h14.127c.836 0 1.513-.677 1.513-1.513V16.391c0-.836-.677-1.513-1.513-1.513m22.14 20.421H76.09c-.836 0-1.513.677-1.513 1.513v46.797c0 .836.677 1.513 1.513 1.513h14.126c.836 0 1.513-.677 1.513-1.513V36.812c0-.835-.677-1.513-1.512-1.513m-66.307 0H9.783c-.836 0-1.513.677-1.513 1.513v46.797c0 .836.677 1.513 1.513 1.513H23.91c.836 0 1.513-.677 1.513-1.513V36.812c0-.835-.677-1.513-1.513-1.513" />
-                        </svg></span>
-                    <span class="icon action-icon-3"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M17.03 11.03a.75.75 0 1 0-1.06-1.06L11 14.94l-1.97-1.97a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0zm-1.036-6.946A2.25 2.25 0 0 0 13.75 2h-3.5a2.25 2.25 0 0 0-2.236 2H6.25A2.25 2.25 0 0 0 4 6.25v13.5A2.25 2.25 0 0 0 6.25 22h11.5A2.25 2.25 0 0 0 20 19.75V6.25A2.25 2.25 0 0 0 17.75 4h-1.764zm0 .012L16 4.25q0-.078-.005-.154M10.25 6.5h3.5c.78 0 1.467-.397 1.871-1h2.129a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H6.25a.75.75 0 0 1-.75-.75V6.25a.75.75 0 0 1 .75-.75h2.129c.404.603 1.091 1 1.871 1m0-3h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1 0-1.5" />
-                        </svg></span>
-                    <span class="icon action-icon-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M15 13h1.5v2.82l2.44 1.41l-.75 1.3L15 16.69zm8 3c0 3.87-3.13 7-7 7c-1.91 0-3.64-.76-4.9-2H8c-1.1 0-2-.9-2-2V7h12v2.29c2.89.86 5 3.54 5 6.71M9 16c0-3.87 3.13-7 7-7H8v10h1.67c-.43-.91-.67-1.93-.67-3m7-5c-2.76 0-5 2.24-5 5s2.24 5 5 5s5-2.24 5-5s-2.24-5-5-5m-.5-7H19v2H5V4h3.5l1-1h5z" />
-                        </svg></span>
-                    <span class="icon action-icon-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                            viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z" />
-                        </svg></span>
-                </div>
+         <div class="profile-feedbacks">
+            <div class="feedbackname-value overall">
+                <span>Overall Feedback</span>
+                <span class="value">GOOD</span>
             </div>
-
-            <button class="save-button">Save</button>
+            <div class="feedbackname-value">
+                <span>Subject Knowledge</span>
+                <span>GOOD</span>
+            </div>
+            <div class="feedbackname-value">
+                <span>Teaching Skills</span>
+                <span>GOOD</span>
+            </div>
+            <div class="feedbackname-value">
+                <span>Posture & Confidence Level</span>
+                <span>GOOD</span>
+            </div>
+            <div class="feedbackname-value">
+                <span>Publications/Research</span>
+                <span>GOOD</span>
+            </div>
+            <div class="feedbackname-value">
+                <span>Listening Skills</span>
+                <span>GOOD</span>
+            </div>
+         </div>
+         <div class="form-group input-feedback">
+            <label for="">Feedback</label>
+            <br>
+            <input type="text" name="" id="" placeholder="">
+         </div>
         </div>
     </div>
     <script src="../../../../Internal-CRM/scripts.js"></script>
