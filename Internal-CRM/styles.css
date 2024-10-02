@@ -2325,7 +2325,7 @@ section {
 .admin-info {
   font-size: 12px;
   color: #666;
-  margin: 20px 0;
+margin: 20px 0;
 }
 
 .quick-actions {
@@ -2360,9 +2360,11 @@ section {
 
 .icon {
   display: inline-block;
-  width: 16px;
-  height: 16px;
  color:#005F6B ;
+}
+.icon svg{
+  width: 20px;
+  height: 20px;
 }
 
 
