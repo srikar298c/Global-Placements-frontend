@@ -308,7 +308,7 @@
                             <td>Delhi</td>
                             <td>900</td>
                             <td>Admin 1</td>
-                            <td><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            <td><svg class="notify-agent-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_2742_13503)">
                                         <path
@@ -357,17 +357,39 @@
     </div>
     </div>
     </div>
+    <div class="popup-overlay" id="notifyAgentPopOverlay">
+        <div class="popup-content ">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    NOTIFY AGENT
+                </h2>
+                <button class="popup-close" id="notifyAgentClosePopup">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em">
+                        <path fill="currentColor"
+                            d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="popup-body">
+                <div class="form-group label-input">
+                    <label for="">Agent/Organization Name</label>
+                    <input type="text" id="" placeholder="Group Name">
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Enter the Message</label>
+                    <input type="text" id="" placeholder="">
+                </div>
+                <div class="form-group">
+                    <button class="confirm-button">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="popup-overlay" id="notifyGroupPopOverlay">
         <div class="popup-content ">
             <div class="popup-header">
                 <h2 class="popup-title">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C7.522 2 3.774 4.943 2.5 9H5"
-                            stroke="#005F6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M12 8V12L14 14M2 12C2 12.3367 2.015 12.67 2.045 13M9 22C8.65988 21.8873 8.32607 21.7565 8 21.608M3.21 17C3.01636 16.6255 2.84441 16.2402 2.695 15.846M4.831 19.306C5.13767 19.636 5.46333 19.9437 5.808 20.229"
-                            stroke="#005F6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
                     NOTIFY GROUP
                 </h2>
                 <button class="popup-close" id="notifyGroupClosePopup">
@@ -393,53 +415,17 @@
             </div>
         </div>
     </div>
-    <div class="popup-overlay" id="notifyGroupPopOverlay">
-        <div class="popup-content ">
-            <div class="popup-header">
-                <h2 class="popup-title">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C7.522 2 3.774 4.943 2.5 9H5"
-                            stroke="#005F6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M12 8V12L14 14M2 12C2 12.3367 2.015 12.67 2.045 13M9 22C8.65988 21.8873 8.32607 21.7565 8 21.608M3.21 17C3.01636 16.6255 2.84441 16.2402 2.695 15.846M4.831 19.306C5.13767 19.636 5.46333 19.9437 5.808 20.229"
-                            stroke="#005F6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    NOTIFY GROUP
-                </h2>
-                <button class="popup-close" id="notifyGroupClosePopup">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em">
-                        <path fill="currentColor"
-                            d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z" />
-                    </svg>
-                </button>
-            </div>
 
-            <div class="popup-body">
-                <div class="form-group label-input">
-                    <label for="">Group Name</label>
-                    <input type="text" id="" placeholder="Group Name">
-                </div>
-                <div class="form-group label-input">
-                    <label for="">Enter the Message</label>
-                    <input type="text" id="" placeholder="">
-                </div>
-                <div class="form-group">
-                    <button class="confirm-button">Send</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+  
 
     <script src="../../../../Internal-CRM/scripts.js"></script>
     <script>
         function setupPopups() {
             const notifyGroupPop = document.getElementById('notifyGroupPopOverlay');
             const closeNotifyGroupPopupButton = document.getElementById('notifyGroupClosePopup');
-            const addNewTaskPopup = document.getElementById('addNewTaskPopupOverlay');
-            const closeAddNewTaskPopup = document.getElementById('closeAddNewTaskPopup');
-            const confirmButton = addNewTaskPopup.querySelector('.confirm-button');
+            const notifyAgentPop = document.getElementById('notifyAgentPopOverlay');
+            const closeNotifyAgentPopupButton = document.getElementById('notifyAgentClosePopup');
+    
 
             if (notifyGroupPop && closeNotifyGroupPopupButton) {
                 // Use event delegation for opening the comments popup
@@ -459,32 +445,29 @@
 
 
             } else {
-                console.error('Comments popup elements not found');
+                console.error('Notify Group popup elements not found');
             }
-            if (addNewTaskPopup && closeAddNewTaskPopup) {
-                // Use event delegation for opening the add new task popup
+            if (notifyAgentPop && closeNotifyAgentPopupButton) {
+                // Use event delegation for opening the comments popup
                 document.addEventListener('click', function (event) {
-                    if (event.target.closest('.add-task-button')) {
-                        addNewTaskPopup.style.display = 'block';
+                    if (event.target.closest('.notify-agent-button')) {
+                        notifyAgentPop.style.display = 'block';
                     }
                 });
 
                 // Close button functionality
-                closeAddNewTaskPopup.addEventListener('click', () => addNewTaskPopup.style.display = 'none');
+                closeNotifyAgentPopupButton.addEventListener('click', () => notifyAgentPop.style.display = 'none');
 
                 // Close popup when clicking outside
-                addNewTaskPopup.addEventListener('click', (event) => {
-                    if (event.target === addNewTaskPopup) addNewTaskPopup.style.display = 'none';
+                notifyAgentPop.addEventListener('click', (event) => {
+                    if (event.target === notifyAgentPop) notifyAgentPop.style.display = 'none';
                 });
 
-                // Close popup when clicking the "Close" button in the footer
-                const footerCloseButton = addNewTaskPopup.querySelector('.footer-close-button');
-                if (footerCloseButton) {
-                    footerCloseButton.addEventListener('click', () => addNewTaskPopup.style.display = 'none');
-                }
+
             } else {
-                console.error('Add new task popup elements not found');
+                console.error('Notify Agent popup elements not found');
             }
+         
 
         }
 
