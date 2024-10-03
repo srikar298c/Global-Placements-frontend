@@ -100,7 +100,7 @@ select,input,button{
 }
 
 .sidebar-nav ul li {
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 .sidebar-nav-item{
   width: 130px;
@@ -2260,7 +2260,7 @@ section {
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
   position: fixed;
   right: 0;
   top: 100px;
@@ -2306,19 +2306,19 @@ section {
 }
 
 .detail-text {
-  font-size: 12px;
+  font-size: 14px;
 }
 .detail-text-sm {
-  font-size: 8px;
+  font-size: 12px;
   color: #005f6b;
 }
-
+.detail-text-admin{
+  font-size: 12px;
+}
 
 .admin-info {
-  font-size: 8px;
-  color: #666;
-margin: 10px 0 0px 145px;
-
+  font-size: 10px;
+  color: #555;
 }
 
 .quick-actions {
@@ -2356,23 +2356,26 @@ margin: 10px 0 0px 145px;
  color:#005F6B ;
 }
 .icon svg{
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
+}
+.profile-feedbacks{
+  margin-top: 10px;
 }
 .profile-feedbacks .feedbackname-value{
    display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
- font-size: 12px;
+ font-size: 14px;
 }
 .feedbackname-value.overall{
-font-size: 14px;
+font-size: 16px;
 color: #000;
 font-weight: 500;
 }
 .feedbackname-value.overall .value{
-font-size: 14px;
+font-size: 16px;
 color: #005F6B;
 }
 .form-group.input-feedback label{
@@ -2381,7 +2384,7 @@ color: #005F6B;
 
 .form-group.input-feedback input[type="text"]{
   width: 100%;
-  height: 90px;
+  height: 80px;
   border-radius: 8px;
   margin-top: 5px;
   border: 0.5px solid #888;
