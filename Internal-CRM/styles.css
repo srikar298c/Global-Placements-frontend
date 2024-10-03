@@ -3407,3 +3407,38 @@ border:1.5px solid #005555;
 .notify-agent-button{
   cursor: pointer;
 }
+.config-main-content{
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  top:20px;
+}
+.config-table{
+margin-left: 10px;
+width:85%;
+outline: 1px solid black;
+border-radius: 10px;
+padding:10px;
+height:82vh;
+}
+.config-sidebar{
+width:10%;
+outline: 1px solid black;
+border-radius: 10px;
+padding: 8px 10px;
+}
+.config-sidebar ul li{
+list-style: none;
+padding: 10px 16px;
+margin-bottom: 10px;
+cursor:pointer;
+border:1px solid #6A6A6A;
+border-radius: 10px;
+font-weight: 500;
+color: #555;
+}
+.config-sidebar ul li a{
+text-decoration: none;
+color: #555;
+}
