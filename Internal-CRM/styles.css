@@ -3420,13 +3420,14 @@ width:85%;
 outline: 1px solid black;
 border-radius: 10px;
 padding:10px;
-height:82vh;
+min-height:85vh;
 }
 .config-sidebar{
 width:10%;
 outline: 1px solid black;
 border-radius: 10px;
 padding: 8px 10px;
+min-height: 85vh;
 }
 .config-sidebar ul li{
 list-style: none;
