@@ -3441,7 +3441,7 @@ max-height: 85vh;
 .config-main-section-tab{
 margin-left: 10px;
 width:85%;
-outline: 1px solid black;
+/* outline: 1px solid black; */
 border-radius: 10px;
 padding:10px;
 min-height:80vh;
@@ -3462,5 +3462,49 @@ min-height: 85vh;
 .config-tabs li{
   padding: 10px;
   width: 100%;
+}
+.config-table-nurses{
+    width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.config-table-nurses th{
+ font-size: 12px;
+  background-color:  #e8e7e7;
+}
+.config-table-nurses th:first-child{
+  border-radius: 10px 0px 0px ;
+}
+.config-table-nurses th:last-child{
+  border-radius: 0px 10px 0px 0px ;
+}
+.config-table-nurses th:nth-child(n+5):nth-child(-n+7) {
+  font-size: 12px;
+   max-width: 180px;
+}
+.config-table-nursestd {
+  font-size: 10px;
+}
+.config-table-nurses th,
+.config-table-nurses td {
+     padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+.config-table-nurses th,
+.config-table-nurses td {
+  text-align: center;
+}
+.config-table-nursestd input[type=checkbox],
+.config-table-nurses th input[type=checkbox]{
+  width: 12px;
+  height: 12px;
+}
+.config-table-nurses thead {
+  background-color: #f8f8f8;
+  color: #333;
+  font-weight: bold;
 }
 
