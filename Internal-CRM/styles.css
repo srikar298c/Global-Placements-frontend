@@ -3414,6 +3414,13 @@ border:1.5px solid #005555;
   position: relative;
   top:20px;
 }
+.config-main-section-sidebar{
+width:10%;
+outline: 1px solid black;
+border-radius: 10px;
+padding: 8px 10px;
+min-height: 85vh;
+}
 .config-main-section-sidebar ul li{
 list-style: none;
 padding: 10px 16px;
@@ -3431,28 +3438,11 @@ color: #555;
 .config-main-section{
 margin-left: 10px;
 width:85%;
-outline: 1px solid black;
 border-radius: 10px;
-padding:10px;
-min-height:85vh;
-max-height: 85vh;
+
 }
 
 .config-main-section-tab{
-margin-left: 10px;
-width:85%;
-/* outline: 1px solid black; */
-border-radius: 10px;
-padding:10px;
-min-height:80vh;
-max-height: 80vh;
-}
-.config-main-section-sidebar{
-width:10%;
-outline: 1px solid black;
-border-radius: 10px;
-padding: 8px 10px;
-min-height: 85vh;
 }
 .config-tabs{
   display: flex;
@@ -3462,6 +3452,13 @@ min-height: 85vh;
 .config-tabs li{
   padding: 10px;
   width: 100%;
+}
+.config-table-section-nurses{
+  outline: 1px solid black;
+  padding:10px;
+min-height:80vh;
+max-height: 80vh;
+  border-radius: 10px;
 }
 .config-table-nurses{
     width: 100%;
