@@ -3447,9 +3447,8 @@ border-radius: 10px;
 .config-tabs{
   display: flex;
   flex-direction: row;
-  list-style: none;
 }
-.config-tabs li{
+.config-tabs .tab-button{
   padding: 10px;
   width: 100%;
 }
