@@ -3414,22 +3414,7 @@ border:1.5px solid #005555;
   position: relative;
   top:20px;
 }
-.config-table{
-margin-left: 10px;
-width:85%;
-outline: 1px solid black;
-border-radius: 10px;
-padding:10px;
-min-height:85vh;
-}
-.config-sidebar{
-width:10%;
-outline: 1px solid black;
-border-radius: 10px;
-padding: 8px 10px;
-min-height: 85vh;
-}
-.config-sidebar ul li{
+.config-main-section-sidebar ul li{
 list-style: none;
 padding: 10px 16px;
 margin-bottom: 10px;
@@ -3439,7 +3424,43 @@ border-radius: 10px;
 font-weight: 500;
 color: #555;
 }
-.config-sidebar ul li a{
+.config-main-section-sidebar ul li a{
 text-decoration: none;
 color: #555;
 }
+.config-main-section{
+margin-left: 10px;
+width:85%;
+outline: 1px solid black;
+border-radius: 10px;
+padding:10px;
+min-height:85vh;
+max-height: 85vh;
+}
+
+.config-main-section-tab{
+margin-left: 10px;
+width:85%;
+outline: 1px solid black;
+border-radius: 10px;
+padding:10px;
+min-height:80vh;
+max-height: 80vh;
+}
+.config-main-section-sidebar{
+width:10%;
+outline: 1px solid black;
+border-radius: 10px;
+padding: 8px 10px;
+min-height: 85vh;
+}
+.config-tabs{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.config-tabs li{
+  padding: 10px;
+  width: 100%;
+}
+
