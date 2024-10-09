@@ -416,14 +416,26 @@
             <div class="form-container">
                 <div class="form-grid">
                     <div class="form-group full-width">
-                        <label for="preferredCountry">Country</label>
-                        <div id="countryContainer" class="country-container">
+                        <label for="preferredStatus">Status</label>
+                        <div id="statusContainer" class="country-container">
                             <!-- Labels will appear here -->
                         </div>
-                        <input type="text" id="countryInput" placeholder="Add a country">
+                        <input type="text" id="statusInput" placeholder="Status">
                     </div>
                 </div>
-            </div>
+            </div> 
+            <div class="form-container">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="preferredStatus">Registration Council</label>
+                        <div id="statusContainer" class="country-container">
+                            <!-- Labels will appear here -->
+                        </div>
+                        <input type="text" id="statusInput" placeholder="Registration Council">
+                    </div>
+                </div>
+            </div> 
+            <div class="form-group">
                     <button class="confirm-button">Add</button>
                 </div>
             </div>
@@ -482,6 +494,36 @@
         } else {
             console.error('Add new country popup elements not found');
         }
+
+              const statusContainer = document.getElementById('statusContainer');
+                const statusInput = document.getElementById('statusInput');
+
+                // Function to create a new label
+                function addCountryLabel(countryName) {
+                    const label = document.createElement('div');
+                    label.className = 'country-label';
+
+                    const span = document.createElement('span');
+                    span.textContent = countryName;
+
+                    const removeButton = document.createElement('button');
+                    removeButton.textContent = '×';
+                    removeButton.addEventListener('click', () => {
+                        statusContainer.removeChild(label);
+                    });
+
+                    label.appendChild(span);
+                    label.appendChild(removeButton);
+                    statusContainer.appendChild(label);
+                }
+
+                // Event listener for adding a country on pressing Enter
+                statusInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' && statusInput.value.trim() !== '') {
+                        addCountryLabel(statusInput.value.trim());
+                        statusInput.value = '';
+                    }
+                });
     </script>
 </body>
 
