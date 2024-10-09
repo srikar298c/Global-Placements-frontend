@@ -270,23 +270,28 @@
                     </li>
                     <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/config-agents.html">Agents</a></li>
                     <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/config-status.html">Status</a></li>
-                    <li>Create</li>
+                    <button class="create-button create-new-category-button"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="1em" height="1em" viewBox="0 0 24 24">
+                            <rect width="24" height="24" fill="none" />
+                            <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
+                        </svg>Create</button>
                 </ul>
             </div>
-            <div class="config-table">
-                <table id="candidateTable">
-                    <thead>
-                        <tr>
-                            <th>Country</th>
-                            <th>Name of the Country</th>
-                            <th>Registration Council</th>
-                            <th>Status</th>
-                            <th>Created On</th>
-                            <th>Created By</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            <div class="config-main-section">
+                <div class="config-table-section-nurses">
+                    <table class="config-table-nurses ">
+                        <thead>
+                            <tr>
+                                <th>Country</th>
+                                <th>Name of the Country</th>
+                                <th>Registration Council</th>
+                                <th>Status</th>
+                                <th>Created On</th>
+                                <th>Created By</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td>01</td>
                                 <td>Singapore</td>
@@ -296,29 +301,223 @@
                                 <td>Tracy Kemmer</td>
                                 <td>
                                     <!-- Placeholder for SVG icons -->
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 12.998H13V18.998H11V12.998H5V10.998H11V4.99805H13V10.998H19V12.998Z" fill="black" />
-                                </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 12.998H13V18.998H11V12.998H5V10.998H11V4.99805H13V10.998H19V12.998Z"
+                                            fill="black" />
+                                    </svg>
 
-                            
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z"
-                                    fill="#FF0000" />
-                            </svg>
+
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z"
+                                            fill="#FF0000" />
+                                    </svg>
 
 
                                 </td>
                             </tr>
+                        </tbody>
+                    </table>
+                    <button class="add-button add-new-country-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <rect width="24" height="24" fill="none" />
+                            <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
+                        </svg>Add a Country</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="popup-overlay" id="addNewCountryPopupOverlay">
+        <div class="popup-content add-new-reminder-content">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    ADD A NEW Country
+                </h2>
+                <button class="popup-close" id="closeAddNewCountryPopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+                <div class="form-group label-input">
+                    <label for="">Country Code</label>
+                    <input type="text" id="" value="">
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Name of the Country</label>
+                    <input type="text" id="" value="">
+                </div>
+                <div class="form-container">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="preferredStatus">Status</label>
+                            <div id="statusContainer" class="country-container">
+                                <!-- Labels will appear here -->
+                            </div>
+                            <input type="text" id="statusInput" placeholder="Status">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="preferredStatus">Registration Council</label>
+                            <div id="statusContainer" class="country-container">
+                                <!-- Labels will appear here -->
+                            </div>
+                            <input type="text" id="statusInput" placeholder="Registration Council">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="confirm-button">Add</button>
+                </div>
             </div>
         </div>
     </div>
-
-
+    <div class="popup-overlay" id="addNewCountryPopupOverlay">
+        <div class="popup-content add-new-reminder-content">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    ADD A NEW Country
+                </h2>
+                <button class="popup-close" id="closeAddNewCountryPopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+                <div class="form-group label-input">
+                    <label for="">Country Code</label>
+                    <input type="text" id="" value="">
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Name of the Country</label>
+                    <input type="text" id="" value="">
+                </div>
+                <div class="form-container">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="preferredStatus">Status</label>
+                            <div id="statusContainer" class="country-container">
+                                <!-- Labels will appear here -->
+                            </div>
+                            <input type="text" id="statusInput" placeholder="Status">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="preferredStatus">Registration Council</label>
+                            <div id="statusContainer" class="country-container">
+                                <!-- Labels will appear here -->
+                            </div>
+                            <input type="text" id="statusInput" placeholder="Registration Council">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="confirm-button">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-overlay" id="createNewCategoryPopupOverlay">
+        <div class="popup-content add-new-reminder-content">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                   CREATE A NEW CATEGORY
+                </h2>
+                <button class="popup-close" id="closeCreateNewCategoryPopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+                <div class="form-group label-input">
+                    <label for="">Doctors</label>
+                    <input type="text" id="" value="">
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Choose the Sections</label>
+                    <select id="">
+                        <option>options</option>
+                        <!-- Add other options here -->
+                    </select>
+                </div>
+             
+                <div class="form-group">
+                    <button class="confirm-button">Add</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="../../../../Internal-CRM/scripts.js"></script>
     <script>
 
+    const addNewCountryPopup = document.getElementById('addNewCountryPopupOverlay');
+    const addNewCountryCloseButton = document.getElementById('closeAddNewCountryPopup');
+    const createNewCategoryPopup = document.getElementById('createNewCategoryPopupOverlay');
+    const createNewCategoryCloseButton = document.getElementById('closeCreateNewCategoryPopup');
+
+    if (addNewCountryPopup && addNewCountryCloseButton) {
+        // Use event delegation for add new country buttons
+        document.addEventListener('click', function (event) {
+            if (event.target.closest('.add-new-country-button')) {
+                addNewCountryPopup.style.display = 'block';
+            }
+        });
+
+        addNewCountryCloseButton.addEventListener('click', () => addNewCountryPopup.style.display = 'none');
+        addNewCountryPopup.addEventListener('click', (event) => {
+            if (event.target === addNewCountryPopup) addNewCountryPopup.style.display = 'none';
+        });
+    } else {
+        console.error('Add new country popup elements not found');
+    }
+    if (createNewCategoryPopup && createNewCategoryCloseButton) {
+        // Use event delegation for create new category buttons
+        document.addEventListener('click', function (event) {
+            if (event.target.closest('.create-new-category-button')) {
+                createNewCategoryPopup.style.display = 'block';
+            }
+        });
+
+        createNewCategoryCloseButton.addEventListener('click', () => createNewCategoryPopup.style.display = 'none');
+        createNewCategoryPopup.addEventListener('click', (event) => {
+            if (event.target === createNewCategoryPopup) createNewCategoryPopup.style.display = 'none';
+        });
+    } else {
+        console.error('Create new category popup elements not found');
+    }
+
+
+
+    const statusContainer = document.getElementById('statusContainer');
+    const statusInput = document.getElementById('statusInput');
+
+    // Function to create a new label
+    function addCountryLabel(countryName) {
+        const label = document.createElement('div');
+        label.className = 'country-label';
+
+        const span = document.createElement('span');
+        span.textContent = countryName;
+
+        const removeButton = document.createElement('button');
+        removeButton.textContent = '×';
+        removeButton.addEventListener('click', () => {
+            statusContainer.removeChild(label);
+        });
+
+        label.appendChild(span);
+        label.appendChild(removeButton);
+        statusContainer.appendChild(label);
+    }
+
+    // Event listener for adding a country on pressing Enter
+    statusInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' && statusInput.value.trim() !== '') {
+            addCountryLabel(statusInput.value.trim());
+            statusInput.value = '';
+        }
+    });
     </script>
 </body>
 
