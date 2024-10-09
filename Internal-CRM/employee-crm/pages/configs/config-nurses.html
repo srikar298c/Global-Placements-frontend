@@ -270,7 +270,11 @@
                     </li>
                     <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/config-agents.html">Agents</a></li>
                     <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/config-status.html">Status</a></li>
-                    <li>Create</li>
+
+                    <button class="create-button add-new-country-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <rect width="24" height="24" fill="none" />
+                        <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
+                    </svg>Create</button>
                 </ul>
             </div>
             <div class="config-main-section">
@@ -307,7 +311,10 @@
                                     <td>Label</td>
                                     <td>DD-MM-YYYY </td>
                                     <td>Tracy Kemmer</td>
-                                    <td>SVG</td>
+                                    <td><label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label></td>
                                     <td>
                                         <!-- Placeholder for SVG icons -->
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -330,6 +337,10 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <button class="add-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <rect width="24" height="24" fill="none" />
+                            <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
+                        </svg>Add a Client</button>
                     </div>
                 </section>
                 <section id="delegates" class="tab-section" style="display: none;"
@@ -385,6 +396,39 @@
         </div>
     </div>
     </div>
+    <div class="popup-overlay" id="addNewCountryPopupOverlay">
+        <div class="popup-content add-new-reminder-content">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    ADD A NEW Country
+                </h2>
+                <button class="popup-close" id="closeAddNewCountryPopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+                <div class="form-group label-input">
+                    <label for="">Country Code</label>
+                    <input type="text" id="" value="">
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Name of the Country</label>
+                    <input type="text" id="" value="">
+                </div>
+            <div class="form-container">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="preferredCountry">Country</label>
+                        <div id="countryContainer" class="country-container">
+                            <!-- Labels will appear here -->
+                        </div>
+                        <input type="text" id="countryInput" placeholder="Add a country">
+                    </div>
+                </div>
+            </div>
+                    <button class="confirm-button">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="../../../../Internal-CRM/scripts.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
@@ -420,6 +464,24 @@
             // Initialize the first tab
             tabButtons[0].click();
         });
+    const addNewCountryPopup = document.getElementById('addNewCountryPopupOverlay');
+    const addNewCountryCloseButton = document.getElementById('closeAddNewCountryPopup');
+
+        if (addNewCountryPopup && addNewCountryCloseButton) {
+            // Use event delegation for add new country buttons
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.add-new-country-button')) {
+                    addNewCountryPopup.style.display = 'block';
+                }
+            });
+
+            addNewCountryCloseButton.addEventListener('click', () => addNewCountryPopup.style.display = 'none');
+            addNewCountryPopup.addEventListener('click', (event) => {
+                if (event.target === addNewCountryPopup) addNewCountryPopup.style.display = 'none';
+            });
+        } else {
+            console.error('Add new country popup elements not found');
+        }
     </script>
 </body>
 
