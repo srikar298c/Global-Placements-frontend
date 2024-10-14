@@ -368,7 +368,10 @@
                                     <td>Label</td>
                                     <td>DD-MM-YYYY </td>
                                     <td>Tracy Kemmer</td>
-                                    <td>SVG</td>
+                                    <td><label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label></td>
                                     <td>
                                         <!-- Placeholder for SVG icons -->
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -418,31 +421,22 @@
                                     <td>Clients</td>
                                     <td>Label</td>
                                     <td>DD-MM-YYYY </td>
-                                    <td>Tracy Kemmer</td>
-                                    <td>SVG</td>
+                                    <td><label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                        </label></td>
                                     <td>
                                         <!-- Placeholder for SVG icons -->
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M19 12.998H13V18.998H11V12.998H5V10.998H11V4.99805H13V10.998H19V12.998Z"
-                                                fill="black" />
-                                        </svg>
-
-
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z"
-                                                fill="#FF0000" />
-                                        </svg>
+                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.776 10.5932L11.5373 3.83182L10.5947 2.88915L3.83333 9.65049V10.5932H4.776ZM5.32867 11.9265H2.5V9.09782L10.1233 1.47449C10.2484 1.34951 10.4179 1.2793 10.5947 1.2793C10.7714 1.2793 10.941 1.34951 11.066 1.47449L12.952 3.36049C13.077 3.48551 13.1472 3.65505 13.1472 3.83182C13.1472 4.0086 13.077 4.17814 12.952 4.30315L5.32867 11.9265ZM2.5 13.2598H14.5V14.5932H2.5V13.2598Z" fill="black"/>
+</svg>
 
 
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-                        <button class="add-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <button class="add-button add-new-project-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                 <rect width="24" height="24" fill="none" />
                                 <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
                             </svg>Add a Project</button>
@@ -655,9 +649,9 @@
                 </div>
                   </div>
               
-                <div class="form-group full-width"></div>
-                
-                <label class="switch">
+                <div class="form-group label-input"></div>
+                <label for="">Internal CRM Access</label>
+                <label class="switch"> 
  <input type="checkbox" checked>
                                             <span class="slider round"></span>
                                         </label>
@@ -698,6 +692,102 @@
                 <div class="form-group">
                   <p class="extra-add"> + Add a Standard Procedure</p>
                 </div>
+                <div class="form-group">
+                    <button class="confirm-button">Add</button>
+                </div>
+            </div>
+        </div>
+ </div>
+ <div class="popup-overlay" id="addNewProjectPopupOverlay">
+        <div class="popup-content add-new-reminder-content">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    ADD NEW PROJECT
+                </h2>
+                <button class="popup-close" id="closeAddNewProjectPopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+                <div class="form-group label-input">
+                    <label for="">Category Name</label>
+                     <select id="">
+                         <option value="">Nurses</option>
+                       </select>
+                    </div>
+
+                    <div class="form-group label-input">
+                        <label for="">Name of the Project<span style="color: red;">*</span></label>
+                      <input type="text" placeholder="Nurses">
+                    </div>
+                 <div class="form-group label-input">
+                     <label for="">Add a Client Name</label>
+                     <select id="">
+                         <option value="">Client</option>
+                       </select>
+                    </div>
+                 <div class="form-group label-input">
+                     <label for="">Client Label</label>
+                     <select id="">
+                         <option value="">Label Name</option>
+                       </select>
+                    </div>
+                 <div class="form-group label-input">
+                     <label for="">Choose the Agents <span style="color: red;">*</span></label>
+                     <select id="">
+                         <option value="">All</option>
+                         <option value="">Agent 2</option>
+                         <option value="">Agent 3</option>
+                       </select>
+                    </div>
+               
+              
+                <div class="form-group">
+                    <button class="confirm-button">Add</button>
+                </div>
+            </div>
+        </div>
+ </div>
+ <div class="popup-overlay" id="editAProjectPopupOverlay">
+        <div class="popup-content add-new-reminder-content">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    ADD NEW PROJECT
+                </h2>
+                <button class="popup-close" id="closeEditAProjectPopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+                <div class="form-group label-input">
+                    <label for="">Category Name</label>
+                     <select id="">
+                         <option value="">Nurses</option>
+                       </select>
+                    </div>
+
+                    <div class="form-group label-input">
+                        <label for="">Name of the Project<span style="color: red;">*</span></label>
+                      <input type="text" placeholder="Nurses">
+                    </div>
+                 <div class="form-group label-input">
+                     <label for="">Add a Client Name</label>
+                     <select id="">
+                         <option value="">Client</option>
+                       </select>
+                    </div>
+                 <div class="form-group label-input">
+                     <label for="">Client Label</label>
+                     <select id="">
+                         <option value="">Label Name</option>
+                       </select>
+                    </div>
+                 <div class="form-group label-input">
+                     <label for="">Choose the Agents <span style="color: red;">*</span></label>
+                     <select id="">
+                         <option value="">All</option>
+                         <option value="">Agent 2</option>
+                         <option value="">Agent 3</option>
+                       </select>
+                    </div>
+               
+              
                 <div class="form-group">
                     <button class="confirm-button">Add</button>
                 </div>
@@ -748,7 +838,10 @@
 const addNewClientCloseButton = document.getElementById('closeAddNewClientPopup');
 const addNewDelegatePopup = document.getElementById('addNewDelegatePopupOverlay');
 const addNewDelegateCloseButton = document.getElementById('closeAddNewDelegatePopup');
-
+const addNewProjectPopup = document.getElementById('addNewProjectPopupOverlay');
+const addNewProjectCloseButton = document.getElementById('closeAddNewProjectPopup')
+const editAProjectPopup = document.getElementById('editAProjectPopupOverlay');
+const editAProjectCloseButton = document.getElementById('closeEditAProjectPopup');
 
       if (addNewCountryPopup && addNewCountryCloseButton) {
         // Use event delegation for add new country buttons
@@ -796,6 +889,37 @@ if (addNewDelegatePopup && addNewDelegateCloseButton) {
     });
 } else {
     console.error('Add new delegate popup elements not found');
+}
+
+if (addNewProjectPopup && addNewProjectCloseButton) {
+    // Use event delegation for add new project buttons
+    document.addEventListener('click', function (event) {
+        if (event.target.closest('.add-new-project-button')) {
+            addNewProjectPopup.style.display = 'block';
+        }
+    });
+
+    addNewProjectCloseButton.addEventListener('click', () => addNewProjectPopup.style.display = 'none');
+    addNewProjectPopup.addEventListener('click', (event) => {
+        if (event.target === addNewProjectPopup) addNewProjectPopup.style.display = 'none';
+    });
+} else {
+    console.error('Add new project popup elements not found');
+}
+if (editAProjectPopup && editAProjectCloseButton) {
+    // Use event delegation for edit a project buttons
+    document.addEventListener('click', function (event) {
+        if (event.target.closest('.edit-a-project-button')) {
+            editAProjectPopup.style.display = 'block';
+        }
+    });
+
+    editAProjectCloseButton.addEventListener('click', () => editAProjectPopup.style.display = 'none');
+    editAProjectPopup.addEventListener('click', (event) => {
+        if (event.target === editAProjectPopup) editAProjectPopup.style.display = 'none';
+    });
+} else {
+    console.error('Edit a project popup elements not found');
 }
     </script>
 </body>
