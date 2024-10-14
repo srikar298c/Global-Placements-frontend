@@ -473,7 +473,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button class="add-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <button class="add-button add-new-department-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                 <rect width="24" height="24" fill="none" />
                                 <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
                             </svg>Add a Department</button>
@@ -746,7 +746,36 @@
             </div>
         </div>
  </div>
- <div class="popup-overlay" id="editAProjectPopupOverlay">
+ <div class="popup-overlay" id="addNewDepartmentPopupOverlay">
+        <div class="popup-content add-new-reminder-content">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    ADD A NEW DEPARTMENT
+                </h2>
+                <button class="popup-close" id="closeNewDepartmentProjectPopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+                <div class="form-group label-input">
+                    <label for="">Category Name</label>
+                     <select id="">
+                         <option value="">Nurses</option>
+                       </select>
+                    </div>
+
+                    <div class="form-group label-input">
+                        <label for="">Add a Department</label>
+                      <input type="text" placeholder="">
+                    </div>
+         
+               
+              
+                <div class="form-group">
+                    <button class="confirm-button">Add</button>
+                </div>
+            </div>
+        </div>
+ </div>
+ <div class="popup-overlay" id="add">
         <div class="popup-content add-new-reminder-content">
             <div class="popup-header">
                 <h2 class="popup-title">
@@ -842,6 +871,8 @@ const addNewProjectPopup = document.getElementById('addNewProjectPopupOverlay');
 const addNewProjectCloseButton = document.getElementById('closeAddNewProjectPopup')
 const editAProjectPopup = document.getElementById('editAProjectPopupOverlay');
 const editAProjectCloseButton = document.getElementById('closeEditAProjectPopup');
+const addNewDepartmentPopup = document.getElementById('addNewDepartmentPopupOverlay');
+const closeNewDepartmentProjectPopup = document.getElementById('closeNewDepartmentProjectPopup');
 
       if (addNewCountryPopup && addNewCountryCloseButton) {
         // Use event delegation for add new country buttons
@@ -920,6 +951,22 @@ if (editAProjectPopup && editAProjectCloseButton) {
     });
 } else {
     console.error('Edit a project popup elements not found');
+}
+
+if (addNewDepartmentPopup && closeNewDepartmentProjectPopup) {
+    // Use event delegation for add new department buttons
+    document.addEventListener('click', function (event) {
+        if (event.target.closest('.add-new-department-button')) {
+            addNewDepartmentPopup.style.display = 'block';
+        }
+    });
+
+    closeNewDepartmentProjectPopup.addEventListener('click', () => addNewDepartmentPopup.style.display = 'none');
+    addNewDepartmentPopup.addEventListener('click', (event) => {
+        if (event.target === addNewDepartmentPopup) addNewDepartmentPopup.style.display = 'none';
+    });
+} else {
+    console.error('Add new department popup elements not found');
 }
     </script>
 </body>
