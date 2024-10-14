@@ -2062,6 +2062,12 @@ left: 92%;
   bottom: 8px;
   left: 35%;
 }
+.form-group.extra-add{
+position: absolute;
+  bottom: 30px;
+  left: 35%;
+   cursor: pointer;
+}
 .form-group .view-button{
  width: 30%;
  padding: 8px 12px;
@@ -3624,3 +3630,15 @@ input:focus + .slider {
   border-radius: 50%;
 } 
    
+.config-main-section-sidebar ul li.active {
+  background-color: #e0f7fa;
+  /* Light teal background */
+  font-weight: bold;
+  color: #005f6b;
+  /* Darker text color for contrast */
+}
+
+.config-main-section-sidebar ul li.active a {
+  color: #005f6b;
+  /* Darker text color for active link */
+}
