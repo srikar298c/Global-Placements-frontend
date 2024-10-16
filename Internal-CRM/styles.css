@@ -1825,8 +1825,34 @@ align-items: center;
 #candidateSubmissionTable .comments-section {
   margin-bottom: 7px;
     margin-top: 10px;
-    width: 50%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 70px;
     /* padding: 2px; */
+}
+#candidateSubmissionTable .comments-section input{
+margin-right: 10px;
+}
+#candidateSubmissionTable .comments-section .save-comment-button {
+  background-color: #005F6B;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  max-height: 70px;
+}
+
+#candidateSubmissionTable .comments-section .save-comment-button svg {
+  margin-right: 5px;
+}
+
+#candidateSubmissionTable .comments-section .save-comment-button:hover {
+  background-color: #004957;
 }
 #candidateSubmissionTable .timestamp{
  position: relative;
