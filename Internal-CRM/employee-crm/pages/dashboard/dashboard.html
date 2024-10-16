@@ -4,11 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Internal Global </title>
+    <title> Internal Global Placements - Dashboard </title>
     <link rel="stylesheet" href="../../../../Internal-CRM/styles.css">
     <link rel="icon" href="../../../../Internal-CRM/images/favicon.png" type="image/png">
 </head>
 <body>
+    <style>
+ .dashboard-notification-cards {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.dashboard-section-01 {
+    padding: 10px;
+    width: 70%;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.latest-news {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 20px;
+    color: #005F6B;
+    margin-right: 10px;
+}
+
+.carousel {
+    overflow: hidden;
+    width: calc(100% - 30px); /* Adjust based on your layout */
+    padding:10px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 10s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% + 100vw));
+    }
+}
+
+.dashboard-card {
+    background-color: #fff;
+    color: #005F6B;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 250px;
+    
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    text-align: center;
+}
+.card-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-title svg{
+    height: 16px;
+    width:  16px;
+    margin-right: 5px;
+}
+.dashboard-card h3 {
+    font-size: 20px;
+}
+
+.dashboard-card h2 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+
+
+.dashboard-card p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+justify-content: center;
+}
+
+.dashboard-card p .icon-client {
+    margin-right: 8px;
+    /* Custom icon styles here */
+}
+
+.dashboard-card .view-more {
+    background-color: #fff;
+    color: #031417;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #005F6B;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+}
+
+.dashboard-card:hover {
+    background: rgba(0, 95, 107, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dashboard-card .view-more:hover {
+    background-color: rgba(0, 95, 107, 0.1);
+    color: #005F6B;
+}
+
+/* Pause animation on hover */
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+.icon-achievement::before {
+    content: "🎉";
+     margin-right: 10px;
+}
+
+.icon-camera::before {
+    content: "📸";
+    margin-right: 10px;
+}
+
+
+    </style>
     <div class="sidebar-container ">
         <div class="logo-container">
             <img class="logo" src="../../../../Internal-CRM/images/global_placements_logo.png" alt="Global Placements">
@@ -22,132 +148,210 @@
                                     <path fill="currentColor"
                                         d="M13 9V3h8v6zM3 13V3h8v10zm10 8V11h8v10zM3 21v-6h8v6zm2-10h4V5H5zm10 8h4v-6h-4zm0-12h4V5h-4zM5 19h4v-2H5zm4-2" />
                                 </svg><span class="sidebar-nav-item">Dashboard</span></a>
-    
-                        </li>  
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                            <g fill="none" fill-rule="evenodd">
-                                <path
-                                    d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                                <path fill="currentColor"
-                                    d="M3 4a2 2 0 0 1 2-2h2c.364 0 .706.097 1 .268A2 2 0 0 1 9 2h2c.727 0 1.364.388 1.714.969c.21-.168.456-.296.732-.37l1.932-.517a2 2 0 0 1 2.45 1.414l4.14 15.455a2 2 0 0 1-1.414 2.45l-1.932.517a2 2 0 0 1-2.45-1.414L13 8.663V20a2 2 0 0 1-2 2H9a2 2 0 0 1-1-.268A2 2 0 0 1 7 22H5a2 2 0 0 1-2-2zm2 0h2v16H5zm6 16H9V4h2zm2.964-15.469l1.931-.517l4.142 15.455l-1.932.517z" />
-                            </g>
-                        </svg>
-                        <span class="sidebar-nav-item">Projects</span>
-                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd"
-                                d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/nurses.html"><span class="dropdown-menu-item">Nurses</span></a></li>
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/teachers.html"><span class="dropdown-menu-item">Teachers</span></a></li>
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/lecturers.html"><span class="dropdown-menu-item">Lecturers</span></a>
-                        </li>
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/doctors.html"><span class="dropdown-menu-item">Doctors</span></a></li>
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/paramedics.html"><span class="dropdown-menu-item">Paramedics</span></a>
-                        </li>
-                    </ul>
-                </li>
-                
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19" />
-                        </svg>
-                        <span class="sidebar-nav-item">Database</span>
-                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd"
-                                d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/database/global_database.html"><span class="sidebar-nav-item">Global
-                                    Database</span></a></li>
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/database/approvals.html"><span class="sidebar-nav-item">Approvals</span></a>
-                        </li>
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/database/rejected.html"><span class="sidebar-nav-item">Rejected</span></a></li>
-                    </ul>
-                </li>
 
-    
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/submissions/submissions.html"><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.06292 1.27705L2.06338 1.2773L13.1128 7.22324V7.24608L13.3731 7.38828C13.4873 7.45069 13.5826 7.5427 13.649 7.65464C13.7154 7.76659 13.7504 7.89435 13.7504 8.0245C13.7504 8.15466 13.7154 8.28242 13.649 8.39437C13.5828 8.50592 13.488 8.59768 13.3743 8.66008C13.3739 8.6603 13.3735 8.66051 13.3731 8.66073L2.06338 14.7467L2.06292 14.747C1.50336 15.0488 0.853648 14.5255 1.03064 13.9134L1.03108 13.9119L2.58108 8.48686L2.58109 8.48687L2.58207 8.48333C2.66889 8.17077 2.66889 7.85324 2.58207 7.54068L2.58209 7.54068L2.58108 7.53714L1.03108 2.11214L1.03108 2.11214L1.03064 2.11062C0.853648 1.49853 1.50336 0.975188 2.06292 1.27705Z" stroke="#F8F8F8"/>
-</svg>
-
-                            <path
-                                d="M2.06292 1.27705L2.06338 1.2773L13.1128 7.22324V7.24608L13.3731 7.38828C13.4873 7.45069 13.5826 7.5427 13.649 7.65464C13.7154 7.76659 13.7504 7.89435 13.7504 8.0245C13.7504 8.15466 13.7154 8.28242 13.649 8.39437C13.5828 8.50592 13.488 8.59768 13.3743 8.66008C13.3739 8.6603 13.3735 8.66051 13.3731 8.66073L2.06338 14.7467L2.06292 14.747C1.50336 15.0488 0.853648 14.5255 1.03064 13.9134L1.03108 13.9119L2.58108 8.48686L2.58109 8.48687L2.58207 8.48333C2.66889 8.17077 2.66889 7.85324 2.58207 7.54068L2.58209 7.54068L2.58108 7.53714L1.03108 2.11214L1.03108 2.11214L1.03064 2.11062C0.853648 1.49853 1.50336 0.975188 2.06292 1.27705Z"
-                                stroke="#F8F8F8" />
-                        </svg>
-<span class="sidebar-nav-item">Submissions</span></a>
                         </li>
-    
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/countries.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <rect width="24" height="24" fill="none" />
+                                    <path fill="currentColor"
+                                        d="m13.691 15.778l-.63-.49a2 2 0 0 0 .023-.288a1.6 1.6 0 0 0-.024-.289l.625-.49a.15.15 0 0 0 .036-.188l-.59-1.02a.15.15 0 0 0-.183-.065l-.73.295a2 2 0 0 0-.502-.289l-.112-.778a.14.14 0 0 0-.141-.124h-1.18a.15.15 0 0 0-.147.124l-.112.778a2.4 2.4 0 0 0-.5.29l-.732-.296a.154.154 0 0 0-.183.065l-.59 1.02a.146.146 0 0 0 .036.189l.625.49a2.4 2.4 0 0 0 0 .577l-.625.49a.15.15 0 0 0-.035.188l.59 1.02a.15.15 0 0 0 .182.065l.731-.295a2 2 0 0 0 .501.289l.112.778a.15.15 0 0 0 .148.124h1.179a.15.15 0 0 0 .147-.124l.112-.778a2.2 2.2 0 0 0 .495-.29l.737.296a.154.154 0 0 0 .183-.065l.59-1.02a.15.15 0 0 0-.036-.189m-2.818.106a.884.884 0 1 1 .885-.884a.883.883 0 0 1-.885.884" />
+                                    <path fill="currentColor"
+                                        d="M14 2H6a2.006 2.006 0 0 0-2 2v16a2.006 2.006 0 0 0 2 2h12a2.006 2.006 0 0 0 2-2V8Zm4 18H6V4h7v5h5Z" />
+                                </svg>
+                                <span class="sidebar-nav-item">Configs</span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path
+                                            d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                            <path fill="currentColor"
+                                            d="M3 4a2 2 0 0 1 2-2h2c.364 0 .706.097 1 .268A2 2 0 0 1 9 2h2c.727 0 1.364.388 1.714.969c.21-.168.456-.296.732-.37l1.932-.517a2 2 0 0 1 2.45 1.414l4.14 15.455a2 2 0 0 1-1.414 2.45l-1.932.517a2 2 0 0 1-2.45-1.414L13 8.663V20a2 2 0 0 1-2 2H9a2 2 0 0 1-1-.268A2 2 0 0 1 7 22H5a2 2 0 0 1-2-2zm2 0h2v16H5zm6 16H9V4h2zm2.964-15.469l1.931-.517l4.142 15.455l-1.932.517z" />
+                                        </g>
+                                    </svg>
+                                <span class="sidebar-nav-item">Projects</span>
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
+                                    viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/nurses.html"><span
+                                            class="dropdown-menu-item">Nurses</span></a></li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/teachers.html"><span
+                                            class="dropdown-menu-item">Teachers</span></a></li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/lecturers.html"><span
+                                            class="dropdown-menu-item">Lecturers</span></a>
+                                </li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/doctors.html"><span
+                                            class="dropdown-menu-item">Doctors</span></a></li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/paramedics.html"><span
+                                            class="dropdown-menu-item">Paramedics</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="../../../../Internal-CRM/employee-crm/pages/database/#" class="dropdown-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19" />
+                                </svg>
+                                <span class="sidebar-nav-item">Database</span>
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
+                                    viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/database/global_database.html"><span
+                                            class="sidebar-nav-item">Global
+                                            Database</span></a></li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/database/approvals.html"><span
+                                            class="sidebar-nav-item">Approvals</span></a>
+                                </li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/database/rejected.html"><span
+                                            class="sidebar-nav-item">Rejected</span></a></li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/database/students-data.html"><span
+                                            class="sidebar-nav-item">Students Data</span></a></li>
+                            </ul>
+                        </li>
+
+
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/submissions/submissions.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <rect width="24" height="24" fill="none" />
+                                    <path fill="none" stroke="currentColor" stroke-width="2"
+                                        d="m6.998 10.247l.435.76c.277.485.415.727.415.993s-.138.508-.415.992l-.435.761c-1.238 2.167-1.857 3.25-1.375 3.788c.483.537 1.627.037 3.913-.963l6.276-2.746c1.795-.785 2.693-1.178 2.693-1.832s-.898-1.047-2.693-1.832L9.536 7.422c-2.286-1-3.43-1.5-3.913-.963s.137 1.62 1.375 3.788Z" />
+                                </svg>
+                                <span class="sidebar-nav-item">Submissions</span>
+                            </a>
+                        </li>
+
                         <li><a href="../../../../Internal-CRM/employee-crm/pages/interviews/interviews.html"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <path fill="currentColor"
                                         d="M5.25 5A3.25 3.25 0 0 0 2 8.25v7.5A3.25 3.25 0 0 0 5.25 19h7.5A3.25 3.25 0 0 0 16 15.75v-.312l3.258 2.25c1.16.8 2.744-.03 2.744-1.44V7.751c0-1.41-1.584-2.242-2.744-1.44L16 8.562V8.25A3.25 3.25 0 0 0 12.75 5zM16 10.384l4.11-2.838a.25.25 0 0 1 .392.206v8.495a.25.25 0 0 1-.392.206L16 13.615zM3.5 8.25c0-.966.784-1.75 1.75-1.75h7.5c.966 0 1.75.784 1.75 1.75v7.5a1.75 1.75 0 0 1-1.75 1.75h-7.5a1.75 1.75 0 0 1-1.75-1.75z" />
                                 </svg><span class="sidebar-nav-item">Interviews</span></a>
                         </li>
-    
-                      
-                  
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/notifications/notifications.html"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd"
-                                d="M12 1.25A7.75 7.75 0 0 0 4.25 9v.704a3.53 3.53 0 0 1-.593 1.958L2.51 13.385c-1.334 2-.316 4.718 2.003 5.35q1.133.309 2.284.523l.002.005C7.567 21.315 9.622 22.75 12 22.75s4.433-1.435 5.202-3.487l.002-.005a29 29 0 0 0 2.284-.523c2.319-.632 3.337-3.35 2.003-5.35l-1.148-1.723a3.53 3.53 0 0 1-.593-1.958V9A7.75 7.75 0 0 0 12 1.25m3.376 18.287a28.5 28.5 0 0 1-6.753 0c.711 1.021 1.948 1.713 3.377 1.713s2.665-.692 3.376-1.713M5.75 9a6.25 6.25 0 1 1 12.5 0v.704c0 .993.294 1.964.845 2.79l1.148 1.723a2.02 2.02 0 0 1-1.15 3.071a26.96 26.96 0 0 1-14.187 0a2.02 2.02 0 0 1-1.15-3.07l1.15-1.724a5.03 5.03 0 0 0 .844-2.79z"
-                                clip-rule="evenodd" />
-                        </svg>
-                                <span class="sidebar-nav-item">Notifications</span></a></li>
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/global_search/global_search.html"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M14.5827 14.5827L18.3327 18.3327M16.666 9.16602C16.666 7.17689 15.8758 5.26924 14.4693 3.86271C13.0628 2.45619 11.1551 1.66602 9.16602 1.66602C7.17689 1.66602 5.26924 2.45619 3.86271 3.86271C2.45619 5.26924 1.66602 7.17689 1.66602 9.16602C1.66602 11.1551 2.45619 13.0628 3.86271 14.4693C5.26924 15.8758 7.17689 16.666 9.16602 16.666C11.1551 16.666 13.0628 15.8758 14.4693 14.4693C15.8758 13.0628 16.666 11.1551 16.666 9.16602Z"
-                                stroke="#F8F8F8" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/post_selection/post_selection.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <rect width="24" height="24" fill="none" />
+                                    <path fill="currentColor"
+                                        d="M15.28 9.03a.75.75 0 0 0-1.06-1.06L10 12.19l-1.97-1.97a.75.75 0 1 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0zM3 6.25A3.25 3.25 0 0 1 6.25 3h9.5A3.25 3.25 0 0 1 19 6.25v9.5A3.25 3.25 0 0 1 15.75 19h-9.5A3.25 3.25 0 0 1 3 15.75zM6.25 4.5A1.75 1.75 0 0 0 4.5 6.25v9.5c0 .966.784 1.75 1.75 1.75h9.5a1.75 1.75 0 0 0 1.75-1.75v-9.5a1.75 1.75 0 0 0-1.75-1.75zm2.991 17A3.25 3.25 0 0 1 6.5 19.999h9.746A3.753 3.753 0 0 0 20 16.246V6.5a3.25 3.25 0 0 1 1.5 2.741v7.005a5.254 5.254 0 0 1-5.254 5.254z" />
+                                </svg>
+                                </svg><span class="sidebar-nav-item">Post Selection</span></a>
+                        </li>
 
-                                <span class="sidebar-nav-item">Global Search</span></a></li>
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/statistics/statistics.html"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.1875 16.5625V1.875H0.625V16.875C0.69463 17.228 0.884868 17.5457 1.1631 17.7738C1.44134 18.0018 1.79024 18.126 2.15 18.125H19.375V16.5625H2.1875Z"
-                                fill="white" />
-                            <path
-                                d="M3.9375 10H5.5V14.875H3.9375V10ZM8.0125 5H9.5875V14.875H8.0125V5ZM12.1 7.5H13.6625V14.875H12.1V7.5ZM16.1875 3.125H17.75V14.875H16.1875V3.125Z"
-                                fill="white" />
-                        </svg>
+                        <li class="dropdown">
+                            <a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/#" class="dropdown-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19" />
+                                </svg>
+                                <span class="sidebar-nav-item">Feedbacks</span>
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
+                                    viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a
+                                        href="../../../../Internal-CRM/employee-crm/pages/feedbacks/client_feedback.html"><span
+                                            class="sidebar-nav-item">Client Feedback</span></a></li>
+                                <li><a
+                                        href="../../../../Internal-CRM/employee-crm/pages/feedbacks/subject_expert_feedback.html"><span
+                                            class="sidebar-nav-item">Subject Expert Feedback</span></a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/notifications/notifications.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M12 1.25A7.75 7.75 0 0 0 4.25 9v.704a3.53 3.53 0 0 1-.593 1.958L2.51 13.385c-1.334 2-.316 4.718 2.003 5.35q1.133.309 2.284.523l.002.005C7.567 21.315 9.622 22.75 12 22.75s4.433-1.435 5.202-3.487l.002-.005a29 29 0 0 0 2.284-.523c2.319-.632 3.337-3.35 2.003-5.35l-1.148-1.723a3.53 3.53 0 0 1-.593-1.958V9A7.75 7.75 0 0 0 12 1.25m3.376 18.287a28.5 28.5 0 0 1-6.753 0c.711 1.021 1.948 1.713 3.377 1.713s2.665-.692 3.376-1.713M5.75 9a6.25 6.25 0 1 1 12.5 0v.704c0 .993.294 1.964.845 2.79l1.148 1.723a2.02 2.02 0 0 1-1.15 3.071a26.96 26.96 0 0 1-14.187 0a2.02 2.02 0 0 1-1.15-3.07l1.15-1.724a5.03 5.03 0 0 0 .844-2.79z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="sidebar-nav-item">Notifications</span></a></li>
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/reminders/reminders.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <rect width="24" height="24" fill="none" />
+                                    <path fill="currentColor"
+                                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z" />
+                                </svg>
+                                <span class="sidebar-nav-item">Reminders</span></a></li>
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/tasks/tasks.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36">
+                                    <rect width="36" height="36" fill="none" />
+                                    <path fill="currentColor"
+                                        d="M29.29 34H6.71A1.7 1.7 0 0 1 5 32.31V6.69A1.75 1.75 0 0 1 7 5h2v2H7v25h22V7h-2V5h2.25A1.7 1.7 0 0 1 31 6.69v25.62A1.7 1.7 0 0 1 29.29 34"
+                                        class="clr-i-outline clr-i-outline-path-1" />
+                                    <path fill="currentColor"
+                                        d="M16.66 25.76L11.3 20.4a1 1 0 0 1 1.42-1.4l3.94 3.94l8.64-8.64a1 1 0 0 1 1.41 1.41Z"
+                                        class="clr-i-outline clr-i-outline-path-2" />
+                                    <path fill="currentColor"
+                                        d="M26 11H10V7.33A2.34 2.34 0 0 1 12.33 5h1.79a4 4 0 0 1 7.75 0h1.79A2.34 2.34 0 0 1 26 7.33ZM12 9h12V7.33a.33.33 0 0 0-.33-.33H20V6a2 2 0 0 0-4 0v1h-3.67a.33.33 0 0 0-.33.33Z"
+                                        class="clr-i-outline clr-i-outline-path-3" />
+                                    <path fill="none" d="M0 0h36v36H0z" />
+                                </svg>
+
+                                <span class="sidebar-nav-item">Tasks</span></a></li>
+
+
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/statistics/statistics.html"><svg
+                                    width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.1875 16.5625V1.875H0.625V16.875C0.69463 17.228 0.884868 17.5457 1.1631 17.7738C1.44134 18.0018 1.79024 18.126 2.15 18.125H19.375V16.5625H2.1875Z"
+                                        fill="white" />
+                                    <path
+                                        d="M3.9375 10H5.5V14.875H3.9375V10ZM8.0125 5H9.5875V14.875H8.0125V5ZM12.1 7.5H13.6625V14.875H12.1V7.5ZM16.1875 3.125H17.75V14.875H16.1875V3.125Z"
+                                        fill="white" />
+                                </svg>
 
                                 <span class="sidebar-nav-item">Statistics</span></a></li>
-                    </ul>
-                </div>
-                <div class=" section-2">
-                    <ul>
-    
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/profile/profile.html"><svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1885_1237)">
-<path d="M12.25 11.875C11.1289 11.875 10.5898 12.5 8.75 12.5C6.91016 12.5 6.375 11.875 5.25 11.875C2.35156 11.875 0 14.2266 0 17.125V18.125C0 19.1602 0.839844 20 1.875 20H15.625C16.6602 20 17.5 19.1602 17.5 18.125V17.125C17.5 14.2266 15.1484 11.875 12.25 11.875ZM15.625 18.125H1.875V17.125C1.875 15.2656 3.39062 13.75 5.25 13.75C5.82031 13.75 6.74609 14.375 8.75 14.375C10.7695 14.375 11.6758 13.75 12.25 13.75C14.1094 13.75 15.625 15.2656 15.625 17.125V18.125ZM8.75 11.25C11.8555 11.25 14.375 8.73047 14.375 5.625C14.375 2.51953 11.8555 0 8.75 0C5.64453 0 3.125 2.51953 3.125 5.625C3.125 8.73047 5.64453 11.25 8.75 11.25ZM8.75 1.875C10.8164 1.875 12.5 3.55859 12.5 5.625C12.5 7.69141 10.8164 9.375 8.75 9.375C6.68359 9.375 5 7.69141 5 5.625C5 3.55859 6.68359 1.875 8.75 1.875Z" fill="#F8F8F8"/>
-</g>
-<defs>
-<clipPath id="clip0_1885_1237">
-<rect width="17.5" height="20" fill="white"/>
-</clipPath>
-</defs>
-</svg>
+                        <li>
+                            <a href="../../../../Internal-CRM/employee-crm/pages/our_partners/our_partners.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
+                                    <rect width="14" height="14" fill="none" />
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="m.548 3.085l2.194 1.18l1.96-.338a2.23 2.23 0 0 1 1.844.515v0m4.736 4.84L8.18 11.486a2 2 0 0 1-2.285.022L.548 7.863" />
+                                        <path
+                                            d="m13.402 7.84l-2.195 1.5l-3.406-2.75l-1.253.911a1.17 1.17 0 0 1-1.609-.226v0a1.17 1.17 0 0 1 .169-1.613l1.305-1.097a3 3 0 0 1 2.25-.688l2.033.218l2.706-1.463" />
+                                        <path d="M7.801 6.597c.82.73 1.982.357 2.414-.239" />
+                                    </g>
+                                </svg>
+                                <span class="sidebar-nav-item">Our Partners</span></a>
+                        </li>
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/global_team/global_team.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
+                                    <rect width="14" height="14" fill="none" />
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M13.5 10.5v2a1 1 0 0 1-1 1h-2m0-13h2a1 1 0 0 1 1 1v2m-13 0v-2a1 1 0 0 1 1-1h2m0 13h-2a1 1 0 0 1-1-1v-2m6.5-4a2 2 0 1 0 0-4a2 2 0 0 0 0 4m3.803 4.5a3.994 3.994 0 0 0-7.606 0z" />
+                                </svg>
 
-                                <span class="sidebar-nav-item">Profile</span></a></li>
-                        <li><a href="../../../../Internal-CRM/employee-crm/signout"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1885_1241)">
-<path d="M2.28117 10.6184H13.1102C13.4559 10.6184 13.7352 10.3384 13.7352 9.99344C13.7352 9.64844 13.4559 9.36844 13.1102 9.36844H2.32023L4.58117 7.1075C4.82523 6.86344 4.82523 6.46781 4.58117 6.22375C4.33711 5.97969 3.94148 5.97969 3.69742 6.22375L0.00585938 10.0128L3.69742 13.8019C3.81961 13.9241 3.9793 13.985 4.1393 13.985C4.2993 13.985 4.45898 13.9241 4.58117 13.8019C4.82523 13.5578 4.82523 13.1622 4.58117 12.9181L2.28117 10.6184ZM18.7427 0H8.11771C7.42709 0 6.86771 0.559687 6.86771 1.25V6.875H8.12584V2.01219C8.12584 1.59469 8.46459 1.25594 8.88209 1.25594H17.9587C18.3764 1.25594 18.7149 1.59469 18.7149 2.01219L18.7346 17.9944C18.7346 18.4119 18.3961 18.7506 17.9783 18.7506H8.88242C8.46492 18.7506 8.12617 18.4119 8.12617 17.9944V13.1044L6.86805 13.1059V18.75C6.86805 19.4403 7.42742 20 8.11805 20H18.7427C19.4334 20 19.993 19.4403 19.993 18.75V1.25C19.9928 0.559687 19.433 0 18.7427 0Z" fill="#F8F8F8"/>
-</g>
-<defs>
-<clipPath id="clip0_1885_1241">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
-</svg>
+                                <span class="sidebar-nav-item">Global Team</span></a></li>
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/announcements/announcements.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <rect width="24" height="24" fill="none" />
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M13 15V7m0 8l5.504 3.145A1 1 0 0 0 20 17.277V4.723a1 1 0 0 0-1.496-.868L13 7m0 8h-3m3-8H7a4 4 0 0 0-4 4v0a4 4 0 0 0 4 4v0m0 0v4.5A1.5 1.5 0 0 0 8.5 21v0a1.5 1.5 0 0 0 1.5-1.5V15m-3 0h3" />
+                                </svg>
 
-                                <span class="sidebar-nav-item">Signout</span></a></li>
-    
+                                <span class="sidebar-nav-item">Announcements</span></a></li>
+
                     </ul>
                 </div>
             </div>
@@ -158,179 +362,182 @@
             <div class="header-title">
                 <h2>Dashboard</h2>
             </div>
-            <div class="header-lastitem">
-                <div class="profilename">
-                    <span>Welcome back</span>
-                    <span>Admin! </span>
-                </div>
-                <a href="../../../../Internal-CRM/employee-crm/pages/profile/profile.html">
-                    <img src="../../../../Internal-CRM/images/profile.png" alt="">
-                </a>
-                
-            </div>
+    <div class="header-lastitem">
+    <a href="../../../../Internal-CRM/employee-crm/pages/profile/profile.html">
+        <img src="../../../../Internal-CRM/images/profile.png" alt="Profile Picture" class="profile-icon">
+    </a>
+    <svg onclick="toggleProfileMenu()" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36" class="caret-icon">
+        <rect width="36" height="36" fill="none"/>
+        <path fill="currentColor" d="M29.52 22.52L18 10.6L6.48 22.52a1.7 1.7 0 0 0 2.45 2.36L18 15.49l9.08 9.39a1.7 1.7 0 0 0 2.45-2.36Z" class="clr-i-outline clr-i-outline-path-1"/>
+        <path fill="none" d="M0 0h36v36H0z"/>
+    </svg>
+</div>
+
+<!-- Profile Menu Dropdown -->
+<div class="profile-dropdown" id="profileDropdown">
+    <p>mailid@mail.com</p>
+    <img src="../../../../Internal-CRM/images/profile.png" alt="Profile Picture" class="profile-large-icon">
+    <p class="profile-greeting">Hi, Admin!</p>
+    <ul class="profile-options">
+        <li><a href="../../../../Internal-CRM/employee-crm/pages/profile/profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><g fill="none" stroke="currentColor" stroke-width="1"><path d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2s1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 5.638-4.239 8.375-6.899 9.536C13.38 21.842 13.02 22 12 22s-1.38-.158-2.101-.473C7.239 20.365 3 17.63 3 11.991z"/><circle cx="12" cy="9" r="2"/><path d="M16 15c0 1.105 0 2-4 2s-4-.895-4-2s1.79-2 4-2s4 .895 4 2Z"/></g></svg> View Profile</a></li>
+        <li><a href="../../../../Internal-CRM/employee-crm/pages/attendance/attendance.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" d="M5.616 21q-.691 0-1.153-.462T4 19.385V6.615q0-.69.463-1.152T5.616 5h1.769V2.77h1.077V5h7.154V2.77h1V5h1.769q.69 0 1.153.463T20 6.616v5h-1v-1H5v8.769q0 .23.192.423t.423.192h6.231v1zM5 9.615h14v-3q0-.23-.192-.423T18.384 6H5.616q-.231 0-.424.192T5 6.616zm0 0V6zM14.23 21v-2.21l5.334-5.307q.148-.148.307-.2q.16-.052.32-.052q.165 0 .334.064q.17.065.298.194l.925.944q.123.148.187.308q.065.159.065.319t-.061.322t-.191.31L16.44 21zm6.886-5.94l-.925-.945zm-6 5.056h.95l3.467-3.474l-.47-.475l-.455-.488l-3.492 3.486zm3.948-3.949l-.456-.488l.925.963z"/></svg> Attendance</a></li>
+        <li><a href="../../../../Internal-CRM/employee-crm/pages/settings/settings.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><g fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="3"/><path d="M13.765 2.152C13.398 2 12.932 2 12 2s-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083c-.092.223-.129.484-.143.863a1.62 1.62 0 0 1-.79 1.353a1.62 1.62 0 0 1-1.567.008c-.336-.178-.579-.276-.82-.308a2 2 0 0 0-1.478.396C4.04 5.79 3.806 6.193 3.34 7s-.7 1.21-.751 1.605a2 2 0 0 0 .396 1.479c.148.192.355.353.676.555c.473.297.777.803.777 1.361s-.304 1.064-.777 1.36c-.321.203-.529.364-.676.556a2 2 0 0 0-.396 1.479c.052.394.285.798.75 1.605c.467.807.7 1.21 1.015 1.453a2 2 0 0 0 1.479.396c.24-.032.483-.13.819-.308a1.62 1.62 0 0 1 1.567.008c.483.28.77.795.79 1.353c.014.38.05.64.143.863a2 2 0 0 0 1.083 1.083C10.602 22 11.068 22 12 22s1.398 0 1.765-.152a2 2 0 0 0 1.083-1.083c.092-.223.129-.483.143-.863c.02-.558.307-1.074.79-1.353a1.62 1.62 0 0 1 1.567-.008c.336.178.579.276.819.308a2 2 0 0 0 1.479-.396c.315-.242.548-.646 1.014-1.453s.7-1.21.751-1.605a2 2 0 0 0-.396-1.479c-.148-.192-.355-.353-.676-.555A1.62 1.62 0 0 1 19.562 12c0-.558.304-1.064.777-1.36c.321-.203.529-.364.676-.556a2 2 0 0 0 .396-1.479c-.052-.394-.285-.798-.75-1.605c-.467-.807-.7-1.21-1.015-1.453a2 2 0 0 0-1.479-.396c-.24.032-.483.13-.82.308a1.62 1.62 0 0 1-1.566-.008a1.62 1.62 0 0 1-.79-1.353c-.014-.38-.05-.64-.143-.863a2 2 0 0 0-1.083-1.083Z"/></g></svg> Settings</a></li>
+        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 1024 1024"><rect width="1024" height="1024" fill="none"/><path fill="currentColor" d="M116.832 543.664H671.28c17.696 0 32-14.336 32-32s-14.304-32-32-32H118.832l115.76-115.76c12.496-12.496 12.496-32.752 0-45.248s-32.752-12.496-45.248 0l-189.008 194l189.008 194c6.256 6.256 14.432 9.376 22.624 9.376s16.368-3.12 22.624-9.376c12.496-12.496 12.496-32.752 0-45.248zM959.664 0H415.663c-35.36 0-64 28.656-64 64v288h64.416V103.024c0-21.376 17.344-38.72 38.72-38.72h464.72c21.391 0 38.72 17.344 38.72 38.72l1.007 818.288c0 21.376-17.328 38.72-38.72 38.72h-465.71c-21.376 0-38.72-17.344-38.72-38.72V670.944l-64.416.08V960c0 35.344 28.64 64 64 64h543.984c35.36 0 64.016-28.656 64.016-64V64c-.015-35.344-28.671-64-64.015-64z"/></svg> Sign Out</a></li>
+    </ul>
+</div>
+
+
+<!-- Profile Menu Dropdown -->
+<div class="profile-dropdown" id="profileDropdown">
+    <img src="../../../../Internal-CRM/images/profile.png" alt="Profile Picture" class="profile-large-icon">
+    <p class="profile-greeting">Hi, Admin!</p>
+    <ul class="profile-options">
+        <li><a href="#"><svg width="16" height="16" class="icon"><!-- dummy svg icon --></svg> View Profile</a></li>
+        <li><a href="#"><svg width="16" height="16" class="icon"><!-- dummy svg icon --></svg> Attendance</a></li>
+        <li><a href="#"><svg width="16" height="16" class="icon"><!-- dummy svg icon --></svg> Settings</a></li>
+        <li><a href="#"><svg width="16" height="16" class="icon"><!-- dummy svg icon --></svg> Sign Out</a></li>
+    </ul>
+</div>
+
         </div>
         <div class="main-content">
-            <div class="latestupdate">
-        <div class="latestupdate-header">
-       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4.836l-6.207 6.207l1.414 1.414L12 7.664l4.793 4.793l1.414-1.414zm0 5.65l-6.207 6.207l1.414 1.414L12 13.314l4.793 4.793l1.414-1.414z"/></svg>
-            <h5>Today's News/ Update/ Any Celebration</h5>
-            <span>Subject</span>
-        </div>
-        <div class="latestupdate-details">
+         <div class="dashboard-flex">
+     <div class="dashboard-section-01">
+  <div class="dashboard-notification-cards">
+    <div class="latest-news">LATEST NEWS</div>
+    <div class="carousel">
+        <div class="carousel-track">
+            <!-- Original cards -->
+            <div class="dashboard-card">
+                <div class="card-title">
+                    <div class="icon-location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2">
+                                <path d="M6.4 4.76a7.92 7.92 0 0 1 11.2 11.2l-4.186 4.186a2 2 0 0 1-2.828 0L6.4 15.96a7.92 7.92 0 0 1 0-11.2Z"/>
+                                <circle cx="12" cy="10.36" r="3" stroke-linecap="round"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class=""><h3>Country Name</h3></div>
+                    
+                </div>
+                <h2>Project Code & Name</h2>
+              <p><svg class="icon-client" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" fill-rule="evenodd" d="M7.263 3.26A2.25 2.25 0 0 1 9.5 1.25h5a2.25 2.25 0 0 1 2.237 2.01c.764.016 1.423.055 1.987.159c.758.14 1.403.404 1.928.93c.602.601.86 1.36.982 2.26c.116.866.116 1.969.116 3.336v6.11c0 1.367 0 2.47-.116 3.337c-.122.9-.38 1.658-.982 2.26s-1.36.86-2.26.982c-.867.116-1.97.116-3.337.116h-6.11c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337v-6.11c0-1.367 0-2.47.117-3.337c.12-.9.38-1.658.981-2.26c.525-.525 1.17-.79 1.928-.929c.564-.104 1.224-.143 1.987-.159m.002 1.5c-.718.016-1.272.052-1.718.134c-.566.104-.895.272-1.138.515c-.277.277-.457.665-.556 1.4c-.101.754-.103 1.756-.103 3.191v6c0 1.435.002 2.436.103 3.192c.099.734.28 1.122.556 1.399c.277.277.665.457 1.4.556c.754.101 1.756.103 3.191.103h6c1.435 0 2.436-.002 3.192-.103c.734-.099 1.122-.28 1.399-.556c.277-.277.457-.665.556-1.4c.101-.755.103-1.756.103-3.191v-6c0-1.435-.002-2.437-.103-3.192c-.099-.734-.28-1.122-.556-1.399c-.244-.243-.572-.41-1.138-.515c-.446-.082-1-.118-1.718-.133A2.25 2.25 0 0 1 14.5 6.75h-5a2.25 2.25 0 0 1-2.235-1.99M9.5 2.75a.75.75 0 0 0-.75.75v1c0 .414.336.75.75.75h5a.75.75 0 0 0 .75-.75v-1a.75.75 0 0 0-.75-.75zM6.25 10.5A.75.75 0 0 1 7 9.75h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>Client 1</p>
+              <p><svg class="icon-client"  xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" fill-rule="evenodd" d="M7.263 3.26A2.25 2.25 0 0 1 9.5 1.25h5a2.25 2.25 0 0 1 2.237 2.01c.764.016 1.423.055 1.987.159c.758.14 1.403.404 1.928.93c.602.601.86 1.36.982 2.26c.116.866.116 1.969.116 3.336v6.11c0 1.367 0 2.47-.116 3.337c-.122.9-.38 1.658-.982 2.26s-1.36.86-2.26.982c-.867.116-1.97.116-3.337.116h-6.11c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337v-6.11c0-1.367 0-2.47.117-3.337c.12-.9.38-1.658.981-2.26c.525-.525 1.17-.79 1.928-.929c.564-.104 1.224-.143 1.987-.159m.002 1.5c-.718.016-1.272.052-1.718.134c-.566.104-.895.272-1.138.515c-.277.277-.457.665-.556 1.4c-.101.754-.103 1.756-.103 3.191v6c0 1.435.002 2.436.103 3.192c.099.734.28 1.122.556 1.399c.277.277.665.457 1.4.556c.754.101 1.756.103 3.191.103h6c1.435 0 2.436-.002 3.192-.103c.734-.099 1.122-.28 1.399-.556c.277-.277.457-.665.556-1.4c.101-.755.103-1.756.103-3.191v-6c0-1.435-.002-2.437-.103-3.192c-.099-.734-.28-1.122-.556-1.399c-.244-.243-.572-.41-1.138-.515c-.446-.082-1-.118-1.718-.133A2.25 2.25 0 0 1 14.5 6.75h-5a2.25 2.25 0 0 1-2.235-1.99M9.5 2.75a.75.75 0 0 0-.75.75v1c0 .414.336.75.75.75h5a.75.75 0 0 0 .75-.75v-1a.75.75 0 0 0-.75-.75zM6.25 10.5A.75.75 0 0 1 7 9.75h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>Client 2</p>
+                <button class="view-more">View More</button>
+            </div>
+            <div class="dashboard-card">
+                <div class="card-title">
+                    <div class="icon-location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2">
+                                <path d="M6.4 4.76a7.92 7.92 0 0 1 11.2 11.2l-4.186 4.186a2 2 0 0 1-2.828 0L6.4 15.96a7.92 7.92 0 0 1 0-11.2Z"/>
+                                <circle cx="12" cy="10.36" r="3" stroke-linecap="round"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class=""><h3>Country Name</h3></div>
+                </div>
+                <h2>Project Code & Name</h2>
+              <p><svg class="icon-client" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" fill-rule="evenodd" d="M7.263 3.26A2.25 2.25 0 0 1 9.5 1.25h5a2.25 2.25 0 0 1 2.237 2.01c.764.016 1.423.055 1.987.159c.758.14 1.403.404 1.928.93c.602.601.86 1.36.982 2.26c.116.866.116 1.969.116 3.336v6.11c0 1.367 0 2.47-.116 3.337c-.122.9-.38 1.658-.982 2.26s-1.36.86-2.26.982c-.867.116-1.97.116-3.337.116h-6.11c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337v-6.11c0-1.367 0-2.47.117-3.337c.12-.9.38-1.658.981-2.26c.525-.525 1.17-.79 1.928-.929c.564-.104 1.224-.143 1.987-.159m.002 1.5c-.718.016-1.272.052-1.718.134c-.566.104-.895.272-1.138.515c-.277.277-.457.665-.556 1.4c-.101.754-.103 1.756-.103 3.191v6c0 1.435.002 2.436.103 3.192c.099.734.28 1.122.556 1.399c.277.277.665.457 1.4.556c.754.101 1.756.103 3.191.103h6c1.435 0 2.436-.002 3.192-.103c.734-.099 1.122-.28 1.399-.556c.277-.277.457-.665.556-1.4c.101-.755.103-1.756.103-3.191v-6c0-1.435-.002-2.437-.103-3.192c-.099-.734-.28-1.122-.556-1.399c-.244-.243-.572-.41-1.138-.515c-.446-.082-1-.118-1.718-.133A2.25 2.25 0 0 1 14.5 6.75h-5a2.25 2.25 0 0 1-2.235-1.99M9.5 2.75a.75.75 0 0 0-.75.75v1c0 .414.336.75.75.75h5a.75.75 0 0 0 .75-.75v-1a.75.75 0 0 0-.75-.75zM6.25 10.5A.75.75 0 0 1 7 9.75h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>Client 1</p>
+              <p><svg class="icon-client"  xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" fill-rule="evenodd" d="M7.263 3.26A2.25 2.25 0 0 1 9.5 1.25h5a2.25 2.25 0 0 1 2.237 2.01c.764.016 1.423.055 1.987.159c.758.14 1.403.404 1.928.93c.602.601.86 1.36.982 2.26c.116.866.116 1.969.116 3.336v6.11c0 1.367 0 2.47-.116 3.337c-.122.9-.38 1.658-.982 2.26s-1.36.86-2.26.982c-.867.116-1.97.116-3.337.116h-6.11c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337v-6.11c0-1.367 0-2.47.117-3.337c.12-.9.38-1.658.981-2.26c.525-.525 1.17-.79 1.928-.929c.564-.104 1.224-.143 1.987-.159m.002 1.5c-.718.016-1.272.052-1.718.134c-.566.104-.895.272-1.138.515c-.277.277-.457.665-.556 1.4c-.101.754-.103 1.756-.103 3.191v6c0 1.435.002 2.436.103 3.192c.099.734.28 1.122.556 1.399c.277.277.665.457 1.4.556c.754.101 1.756.103 3.191.103h6c1.435 0 2.436-.002 3.192-.103c.734-.099 1.122-.28 1.399-.556c.277-.277.457-.665.556-1.4c.101-.755.103-1.756.103-3.191v-6c0-1.435-.002-2.437-.103-3.192c-.099-.734-.28-1.122-.556-1.399c-.244-.243-.572-.41-1.138-.515c-.446-.082-1-.118-1.718-.133A2.25 2.25 0 0 1 14.5 6.75h-5a2.25 2.25 0 0 1-2.235-1.99M9.5 2.75a.75.75 0 0 0-.75.75v1c0 .414.336.75.75.75h5a.75.75 0 0 0 .75-.75v-1a.75.75 0 0 0-.75-.75zM6.25 10.5A.75.75 0 0 1 7 9.75h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>Client 2</p>
+                <button class="view-more">View More</button>
+            </div>
+            <div class="dashboard-card">
+                <div class="card-title">
+                    <div class="icon-location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2">
+                                <path d="M6.4 4.76a7.92 7.92 0 0 1 11.2 11.2l-4.186 4.186a2 2 0 0 1-2.828 0L6.4 15.96a7.92 7.92 0 0 1 0-11.2Z"/>
+                                <circle cx="12" cy="10.36" r="3" stroke-linecap="round"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class=""><h3>Country Name</h3></div>
+                    
+                </div>
+                <h2>Project Code & Name</h2>
+              <p><svg class="icon-client" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" fill-rule="evenodd" d="M7.263 3.26A2.25 2.25 0 0 1 9.5 1.25h5a2.25 2.25 0 0 1 2.237 2.01c.764.016 1.423.055 1.987.159c.758.14 1.403.404 1.928.93c.602.601.86 1.36.982 2.26c.116.866.116 1.969.116 3.336v6.11c0 1.367 0 2.47-.116 3.337c-.122.9-.38 1.658-.982 2.26s-1.36.86-2.26.982c-.867.116-1.97.116-3.337.116h-6.11c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337v-6.11c0-1.367 0-2.47.117-3.337c.12-.9.38-1.658.981-2.26c.525-.525 1.17-.79 1.928-.929c.564-.104 1.224-.143 1.987-.159m.002 1.5c-.718.016-1.272.052-1.718.134c-.566.104-.895.272-1.138.515c-.277.277-.457.665-.556 1.4c-.101.754-.103 1.756-.103 3.191v6c0 1.435.002 2.436.103 3.192c.099.734.28 1.122.556 1.399c.277.277.665.457 1.4.556c.754.101 1.756.103 3.191.103h6c1.435 0 2.436-.002 3.192-.103c.734-.099 1.122-.28 1.399-.556c.277-.277.457-.665.556-1.4c.101-.755.103-1.756.103-3.191v-6c0-1.435-.002-2.437-.103-3.192c-.099-.734-.28-1.122-.556-1.399c-.244-.243-.572-.41-1.138-.515c-.446-.082-1-.118-1.718-.133A2.25 2.25 0 0 1 14.5 6.75h-5a2.25 2.25 0 0 1-2.235-1.99M9.5 2.75a.75.75 0 0 0-.75.75v1c0 .414.336.75.75.75h5a.75.75 0 0 0 .75-.75v-1a.75.75 0 0 0-.75-.75zM6.25 10.5A.75.75 0 0 1 7 9.75h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>Client 1</p>
+              <p><svg class="icon-client"  xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" fill-rule="evenodd" d="M7.263 3.26A2.25 2.25 0 0 1 9.5 1.25h5a2.25 2.25 0 0 1 2.237 2.01c.764.016 1.423.055 1.987.159c.758.14 1.403.404 1.928.93c.602.601.86 1.36.982 2.26c.116.866.116 1.969.116 3.336v6.11c0 1.367 0 2.47-.116 3.337c-.122.9-.38 1.658-.982 2.26s-1.36.86-2.26.982c-.867.116-1.97.116-3.337.116h-6.11c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337v-6.11c0-1.367 0-2.47.117-3.337c.12-.9.38-1.658.981-2.26c.525-.525 1.17-.79 1.928-.929c.564-.104 1.224-.143 1.987-.159m.002 1.5c-.718.016-1.272.052-1.718.134c-.566.104-.895.272-1.138.515c-.277.277-.457.665-.556 1.4c-.101.754-.103 1.756-.103 3.191v6c0 1.435.002 2.436.103 3.192c.099.734.28 1.122.556 1.399c.277.277.665.457 1.4.556c.754.101 1.756.103 3.191.103h6c1.435 0 2.436-.002 3.192-.103c.734-.099 1.122-.28 1.399-.556c.277-.277.457-.665.556-1.4c.101-.755.103-1.756.103-3.191v-6c0-1.435-.002-2.437-.103-3.192c-.099-.734-.28-1.122-.556-1.399c-.244-.243-.572-.41-1.138-.515c-.446-.082-1-.118-1.718-.133A2.25 2.25 0 0 1 14.5 6.75h-5a2.25 2.25 0 0 1-2.235-1.99M9.5 2.75a.75.75 0 0 0-.75.75v1c0 .414.336.75.75.75h5a.75.75 0 0 0 .75-.75v-1a.75.75 0 0 0-.75-.75zM6.25 10.5A.75.75 0 0 1 7 9.75h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>Client 2</p>
+                <button class="view-more">View More</button>
+            </div>
+         
+            <div class="dashboard-card">
+                 <div class="card-title">
+                    <div class="icon-achievement"></div>
+                    <div class=""><h3>Achievement</h3></div>
+                    
+                </div>
+                <h2>Name of the Employee</h2>
+               <p>Lorem ipsum dolor sit.</p>
+               <p>Lorem ipsum dolor sit.</p>
+               <p>Lorem ipsum dolor sit.</p>
+                <button class="view-more">View More</button>
+            </div>
+            <div class="dashboard-card">
+                 <div class="card-title">
+                    <div class="icon-achievement"></div>
+                    <div class=""><h3>Achievement</h3></div>
+                    
+                </div>
+                <h2>Name of the Employee</h2>
+               <p>Lorem ipsum dolor sit.</p>
+               <p>Lorem ipsum dolor sit.</p>
+               <p>Lorem ipsum dolor sit.</p>
+                <button class="view-more">View More</button>
+            </div>
+      
+            <div class="dashboard-card">
+                 <div class="card-title">
+                <div class="icon-achievement"></div>
             
-            <h3>Subject</h3>
-            <p>Lorem ipsum dolor sit amet consectetur. Suspendisse nunc commodo faucibus massa turpis egestas scelerisque amet blandit. Eget egestas vestibulum nisi id.</p>
-        </div>
-    </div>
-<div class="dashboard-nav">
-    <button class="dashboard-nav-button active" data-page="your_projects">
-        <a href="../../../../Internal-CRM/employee-crm/pages/dashboard/my_projects.html">
-            <div class="dashboard-nav-items "> 
-                <div class="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="M243 96a20.33 20.33 0 0 0-17.74-14l-56.59-4.57l-21.84-52.81a20.36 20.36 0 0 0-37.66 0L87.35 77.44L30.76 82a20.45 20.45 0 0 0-11.66 35.88l43.18 37.24l-13.2 55.7A20.37 20.37 0 0 0 79.57 233L128 203.19L176.43 233a20.39 20.39 0 0 0 30.49-22.15l-13.2-55.7l43.18-37.24A20.43 20.43 0 0 0 243 96m-70.47 45.7a12 12 0 0 0-3.84 11.86L181.58 208l-47.29-29.08a12 12 0 0 0-12.58 0L74.42 208l12.89-54.4a12 12 0 0 0-3.84-11.86l-42.27-36.5l55.4-4.47a12 12 0 0 0 10.13-7.38L128 41.89l21.27 51.5a12 12 0 0 0 10.13 7.38l55.4 4.47Z"/></svg>
-                </div>
-
-                <div class="title"> 
-             <span>My Projects</span>
-            <p>4</p>
-        </div>    
-        </div>
+            <div>    <h3>Celebration</h3></div>
+            
+            </div>
+                <h3>Celebration</h3>
+                <h2>Name of the Event</h2>
+                <p>Lorem ipsum dolor sit.</p>
+               <p>Lorem ipsum dolor sit.</p>
+               <p>Lorem ipsum dolor sit.</p>
+                <button class="view-more">View More</button>
+            </div>
+            <div class="dashboard-card">
+                 <div class="card-title">
+                <div class="icon-achievement"></div>
+            
+            <div>    <h3>Celebration</h3></div>
+            
+            </div>
+                <h3>Celebration</h3>
+                <h2>Name of the Event</h2>
+                <p>Lorem ipsum dolor sit.</p>
+               <p>Lorem ipsum dolor sit.</p>
+               <p>Lorem ipsum dolor sit.</p>
+                <button class="view-more">View More</button>
+            </div>
           
-        </a>
-    </button>
-
-    <button class="dashboard-nav-button" data-page="global_projects">
-        <a href="../../../../Internal-CRM/employee-crm/pages/dashboard/global_projects.html">
-           <div class="dashboard-nav-items "> 
-                <div class="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m6.8 9.5c0 .5-.7.66-2 1a11.68 11.68 0 0 0 .229-1.98l2.001-.02c0 .36-.08.5-.16 1zm-13.6 0c-.1-.5-.15-.64-.2-1h2c.024.723.106 1.411.244 2.079C1.9 10.16 1.2 10 1.2 9.5m0-3c0-.5.7-.66 2-1A11.835 11.835 0 0 0 3 7.489L1 7.5c0-.36.08-.5.16-1zM8.5 5c1.13.013 2.226.107 3.298.277c.047.643.165 1.41.201 2.199L8.5 7.501v-2.5zm0-1V1.06c1.17.27 2.2 1.47 2.84 3.15A24.21 24.21 0 0 0 8.523 4zm-1-2.94V4a25.617 25.617 0 0 0-2.968.214C5.3 2.53 6.33 1.33 7.5 1.06M7.5 5v2.5H4c.031-.806.142-1.571.326-2.307c.932-.08 2.035-.177 3.158-.193zM4 8.5h3.5V11a22.663 22.663 0 0 1-3.298-.277c-.047-.643-.165-1.41-.201-2.199zM7.5 12v2.94c-1.17-.27-2.2-1.47-2.84-3.15a24.21 24.21 0 0 0 2.817.21zm1 2.94V12a25.617 25.617 0 0 0 2.968-.214C10.7 13.47 9.67 14.67 8.5 14.94m0-3.94V8.5H12a11.247 11.247 0 0 1-.326 2.307c-.932.08-2.035.177-3.158.193zM15 7.5h-2a12.229 12.229 0 0 0-.244-2.079c1.354.399 2.014.559 2.014 1.079c.13.5.18.64.23 1m-.7-2.59a9.585 9.585 0 0 0-1.726-.5c-.361-1.019-.809-1.898-1.389-2.672c1.355.726 2.413 1.811 3.067 3.131zM4.84 1.76a8.24 8.24 0 0 0-1.305 2.581c-.699.189-1.299.365-1.874.593c.751-1.39 1.823-2.475 3.139-3.156zm-3.11 9.33c.506.204 1.106.38 1.726.5c.361 1.019.809 1.898 1.389 2.672c-1.367-.722-2.436-1.807-3.097-3.131zm9.44 3.15a8.25 8.25 0 0 0 1.295-2.581c.699-.189 1.299-.365 1.874-.593c-.751 1.39-1.823 2.475-3.139 3.156z"/></svg>
-                </div>
-
-                <div class="title"> 
-             <span>Global Projects</span>
-            <p>4</p>
-        </div>    
-        </div>
-        </a>
-    </button>
-
-    <button class="dashboard-nav-button" data-page="your_tasks">
-        <a href="../../../../Internal-CRM/employee-crm/pages/dashboard/my_tasks.html">
-     <div class="dashboard-nav-items "> 
-                <div class="">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M17.03 11.03a.75.75 0 1 0-1.06-1.06L11 14.94l-1.97-1.97a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0zm-1.036-6.946A2.25 2.25 0 0 0 13.75 2h-3.5a2.25 2.25 0 0 0-2.236 2H6.25A2.25 2.25 0 0 0 4 6.25v13.5A2.25 2.25 0 0 0 6.25 22h11.5A2.25 2.25 0 0 0 20 19.75V6.25A2.25 2.25 0 0 0 17.75 4h-1.764zm0 .012L16 4.25q0-.078-.005-.154M10.25 6.5h3.5c.78 0 1.467-.397 1.871-1h2.129a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H6.25a.75.75 0 0 1-.75-.75V6.25a.75.75 0 0 1 .75-.75h2.129c.404.603 1.091 1 1.871 1m0-3h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1 0-1.5"/></svg>
-                </div>
-
-                <div class="title"> 
-             <span>My Tasks</span>
-            <p>4</p>
-        </div>    
-        </div>
-        </a>
-    </button>
-
-    <button class="dashboard-nav-button" data-page="your_reminders">
-        <a href="../../../../Internal-CRM/employee-crm/my_reminders.html">
-          <div class="dashboard-nav-items "> 
-                <div class="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z"/></svg>
-                </div>
-
-                <div class="title"> 
-             <span>My Reminders</span>
-            <p>4</p>
-        </div>    
-        </div>
-        </a>
-    </button>
+          </div>
+    </div>
 </div>
-<div class="projects-container">
- <div class="project-title">
-    <div class=""></div>
-   
-    <div class=""> 
-         <h1>My Projects</h1>
-    </div> 
-
-   
-    </div>
-
-    <div class="project-card">
-        <div class="card-header">
-            <h2>Category</h2>
-            <h2>Country 1</h2>
-            <h2>Project 1</h2>
-          <a href="../../../Internal-CRM/pages/projects/projects.html"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-            <path fill="currentColor"
-                d="M10 3v2H5v14h14v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm7.586 2H13V3h8v8h-2V6.414l-7 7L10.586 12z" />
-        </svg></a>
-        </div>
-        <div class="card-content">
-            <div class="people">
-                <p><strong>Louise Reichel</strong></p>
-                <p>Mildred Lowe <span class="phone">201-370-8460</span></p>
-                <p>Al McKenzie <span class="phone">776-492-3976</span></p>
-            </div>
-            <p class="description">
-                Nemo excepturi ut maiores id quidem at fuga amet velit. Voluptatibus inventore perspiciatis debitis et
-                est eos temporibus non. Qui ut rerum id numquam quasi earum repudiandae et. Odit deserunt dignissimos
-                perspiciatis est ea totam...
-            </p>
-        </div>
-    </div>
-
-    <div class="project-card">
-        <div class="card-header">
-            <h2>Category</h2>
-            <h2>Country 2</h2>
-            <h2>Project 2</h2>
-            <a href="../../../Internal-CRM/pages/projects/projects.html"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
-                    height="1em" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                        d="M10 3v2H5v14h14v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm7.586 2H13V3h8v8h-2V6.414l-7 7L10.586 12z" />
-                </svg></a>
-        </div>
-        <div class="card-content">
-            <div class="people">
-                <p><strong>Louise Reichel</strong></p>
-                <p>Mildred Lowe <span class="phone">201-370-8460</span></p>
-                <p>Al McKenzie <span class="phone">776-492-3976</span></p>
-            </div>
-            <p class="description">
-                Nemo excepturi ut maiores id quidem at fuga amet velit. Voluptatibus inventore perspiciatis debitis et
-                est eos temporibus non. Qui ut rerum id numquam quasi earum repudiandae et. Odit deserunt dignissimos
-                perspiciatis est ea totam...
-            </p>
-        </div>
-    </div>
-    <div class="project-card">
-        <div class="card-header">
-            <h2>Category</h2>
-            <h2>Country 3</h2>
-            <h2>Project 3</h2>
-            <a href="../../../Internal-CRM/pages/projects/projects.html"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
-                    height="1em" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                        d="M10 3v2H5v14h14v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm7.586 2H13V3h8v8h-2V6.414l-7 7L10.586 12z" />
-                </svg></a>
-        </div>
-        <div class="card-content">
-            <div class="people">
-                <p><strong>Louise Reichel</strong></p>
-                <p>Mildred Lowe <span class="phone">201-370-8460</span></p>
-                <p>Al McKenzie <span class="phone">776-492-3976</span></p>
-            </div>
-            <p class="description">
-                Nemo excepturi ut maiores id quidem at fuga amet velit. Voluptatibus inventore perspiciatis debitis et
-                est eos temporibus non. Qui ut rerum id numquam quasi earum repudiandae et. Odit deserunt dignissimos
-                perspiciatis est ea totam...
-            </p>
-        </div>
+    <div class="dashboard-section-02">
+        <!-- Content for this section -->
     </div>
 </div>
         </div>
     </div>
 <script src="../../../../Internal-CRM/scripts.js"></script>
+<script>
+  const track = document.querySelector('.carousel-track');
+
+track.addEventListener('mouseover', () => {
+    track.style.animationPlayState = 'paused';
+});
+
+track.addEventListener('mouseout', () => {
+    track.style.animationPlayState = 'running';
+});
+  
+</script>
 </body>
 
 </html>
