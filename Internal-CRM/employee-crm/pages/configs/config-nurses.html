@@ -9,91 +9,6 @@
     <link rel="icon" href="../../../../Internal-CRM/images/favicon.png" type="image/png">
 </head>
 <style>
-/* Main Profile Icon and Caret Styling */
-.header-lastitem {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-}
-
-.header-lastitem .profile-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.header-lastitem .caret-icon {
-    margin-left: 12px;
-       width: 20px;
-    height: 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-/* Rotated state */
-.header-lastitem .caret-icon.rotate {
-    transform: rotate(180deg);
-}
-
-/* Profile Dropdown Styling */
-.profile-dropdown {
-    display: none;
-    position: absolute;
-    top: 45px;
-    right: 0;
-    width: 180px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    z-index: 100;
-}
-.profile-dropdown p{
-    text-align: center;
-    font-size: 12px;
-    margin-bottom: 10px;
-}
-.profile-dropdown .profile-large-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-}
-
-.profile-dropdown .profile-greeting {
-    text-align: center;
-    font-size: 16px;
-    margin-top: 8px;
-    margin-bottom: 12px;
-    color: #333;
-    font-weight: bold;
-}
-.profile-dropdown .profile-options {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.profile-dropdown .profile-options li {
-    margin-bottom: 10px;
-}
-
-.profile-dropdown .profile-options li a {
-    text-decoration: none;
-    color: #005F6B;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-   margin-left: 20px;
-}
-
-.profile-dropdown .profile-options li a svg {
-    margin-right: 10px;
-    color:#005F6B;
-}
 
 </style>
 <body>
@@ -112,16 +27,27 @@
                                 </svg><span class="sidebar-nav-item">Dashboard</span></a>
 
                         </li>
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/countries.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <rect width="24" height="24" fill="none" />
+                                    <path fill="currentColor"
+                                        d="m13.691 15.778l-.63-.49a2 2 0 0 0 .023-.288a1.6 1.6 0 0 0-.024-.289l.625-.49a.15.15 0 0 0 .036-.188l-.59-1.02a.15.15 0 0 0-.183-.065l-.73.295a2 2 0 0 0-.502-.289l-.112-.778a.14.14 0 0 0-.141-.124h-1.18a.15.15 0 0 0-.147.124l-.112.778a2.4 2.4 0 0 0-.5.29l-.732-.296a.154.154 0 0 0-.183.065l-.59 1.02a.146.146 0 0 0 .036.189l.625.49a2.4 2.4 0 0 0 0 .577l-.625.49a.15.15 0 0 0-.035.188l.59 1.02a.15.15 0 0 0 .182.065l.731-.295a2 2 0 0 0 .501.289l.112.778a.15.15 0 0 0 .148.124h1.179a.15.15 0 0 0 .147-.124l.112-.778a2.2 2.2 0 0 0 .495-.29l.737.296a.154.154 0 0 0 .183-.065l.59-1.02a.15.15 0 0 0-.036-.189m-2.818.106a.884.884 0 1 1 .885-.884a.883.883 0 0 1-.885.884" />
+                                    <path fill="currentColor"
+                                        d="M14 2H6a2.006 2.006 0 0 0-2 2v16a2.006 2.006 0 0 0 2 2h12a2.006 2.006 0 0 0 2-2V8Zm4 18H6V4h7v5h5Z" />
+                                </svg>
+                                <span class="sidebar-nav-item">Configs</span>
+                            </a>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <g fill="none" fill-rule="evenodd">
                                         <path
                                             d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                                        <path fill="currentColor"
+                                            <path fill="currentColor"
                                             d="M3 4a2 2 0 0 1 2-2h2c.364 0 .706.097 1 .268A2 2 0 0 1 9 2h2c.727 0 1.364.388 1.714.969c.21-.168.456-.296.732-.37l1.932-.517a2 2 0 0 1 2.45 1.414l4.14 15.455a2 2 0 0 1-1.414 2.45l-1.932.517a2 2 0 0 1-2.45-1.414L13 8.663V20a2 2 0 0 1-2 2H9a2 2 0 0 1-1-.268A2 2 0 0 1 7 22H5a2 2 0 0 1-2-2zm2 0h2v16H5zm6 16H9V4h2zm2.964-15.469l1.931-.517l4.142 15.455l-1.932.517z" />
-                                    </g>
-                                </svg>
+                                        </g>
+                                    </svg>
                                 <span class="sidebar-nav-item">Projects</span>
                                 <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
                                     viewBox="0 0 24 24">
@@ -182,17 +108,6 @@
                                         d="m6.998 10.247l.435.76c.277.485.415.727.415.993s-.138.508-.415.992l-.435.761c-1.238 2.167-1.857 3.25-1.375 3.788c.483.537 1.627.037 3.913-.963l6.276-2.746c1.795-.785 2.693-1.178 2.693-1.832s-.898-1.047-2.693-1.832L9.536 7.422c-2.286-1-3.43-1.5-3.913-.963s.137 1.62 1.375 3.788Z" />
                                 </svg>
                                 <span class="sidebar-nav-item">Submissions</span>
-                            </a>
-                        </li>
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/countries.html"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                                    <rect width="24" height="24" fill="none" />
-                                    <path fill="currentColor"
-                                        d="m13.691 15.778l-.63-.49a2 2 0 0 0 .023-.288a1.6 1.6 0 0 0-.024-.289l.625-.49a.15.15 0 0 0 .036-.188l-.59-1.02a.15.15 0 0 0-.183-.065l-.73.295a2 2 0 0 0-.502-.289l-.112-.778a.14.14 0 0 0-.141-.124h-1.18a.15.15 0 0 0-.147.124l-.112.778a2.4 2.4 0 0 0-.5.29l-.732-.296a.154.154 0 0 0-.183.065l-.59 1.02a.146.146 0 0 0 .036.189l.625.49a2.4 2.4 0 0 0 0 .577l-.625.49a.15.15 0 0 0-.035.188l.59 1.02a.15.15 0 0 0 .182.065l.731-.295a2 2 0 0 0 .501.289l.112.778a.15.15 0 0 0 .148.124h1.179a.15.15 0 0 0 .147-.124l.112-.778a2.2 2.2 0 0 0 .495-.29l.737.296a.154.154 0 0 0 .183-.065l.59-1.02a.15.15 0 0 0-.036-.189m-2.818.106a.884.884 0 1 1 .885-.884a.883.883 0 0 1-.885.884" />
-                                    <path fill="currentColor"
-                                        d="M14 2H6a2.006 2.006 0 0 0-2 2v16a2.006 2.006 0 0 0 2 2h12a2.006 2.006 0 0 0 2-2V8Zm4 18H6V4h7v5h5Z" />
-                                </svg>
-                                <span class="sidebar-nav-item">Configs</span>
                             </a>
                         </li>
 
