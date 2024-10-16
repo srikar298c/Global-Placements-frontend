@@ -87,3 +87,29 @@ document.querySelectorAll('.config-main-section-sidebar ul li a').forEach(link =
         link.parentElement.classList.add('active');
     }
 });
+
+function toggleProfileMenu() {
+    const profileDropdown = document.getElementById('profileDropdown');
+    const caretIcon = document.querySelector('.caret-icon');
+    
+    // Toggle the dropdown visibility
+    if (profileDropdown.style.display === 'none' || profileDropdown.style.display === '') {
+        profileDropdown.style.display = 'block';
+        caretIcon.classList.add('rotate'); // Rotate caret
+    } else {
+        profileDropdown.style.display = 'none';
+        caretIcon.classList.remove('rotate'); // Reset rotation
+    }
+}
+
+// Close the dropdown when clicking outside
+window.onclick = function(event) {
+    if (!event.target.closest('.header-lastitem')) {
+        const profileDropdown = document.getElementById('profileDropdown');
+        const caretIcon = document.querySelector('.caret-icon');
+        if (profileDropdown.style.display === 'block') {
+            profileDropdown.style.display = 'none';
+            caretIcon.classList.remove('rotate'); // Reset rotation
+        }
+    }
+}

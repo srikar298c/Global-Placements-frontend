@@ -305,7 +305,6 @@ select,input,button{
   align-items: center;
   justify-content: space-between;
   width: auto;
-  z-index: 1000;
   justify-content: flex-end;
 }
 
