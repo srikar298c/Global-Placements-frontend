@@ -850,12 +850,18 @@
 
     const graphPopup = document.getElementById('graphPopupOverlay');
     const graphCloseButton = document.getElementById('closeGraphPopup');
+
     const printChecklistPopup = document.getElementById('printChecklistPopupOverlay');
     const printChecklistCloseButton = document.getElementById('closePrintChecklistPopup');
+
     const bufferPopup = document.getElementById('bufferPopupOverlay');
     const bufferCloseButton = document.getElementById('closeBufferPopup');
+
     const addNewReminderPopup = document.getElementById('addNewReminderPopupOverlay');
     const addNewReminderCloseButton = document.getElementById('closeAddNewReminderPopup');
+
+
+
     if (scheduleInterviewPopup && scheduleInterviewCloseButton) {
       document.addEventListener('click', function (event) {
         if (event.target.closest('.schedule-interview-button')) {
@@ -969,33 +975,42 @@
     } else {
       console.error('Add new reminder popup elements not found');
     }
+  
+  document.querySelectorAll('.toggle-icon').forEach(toggleIcon => {
+  toggleIcon.addEventListener('click', function (event) {
+    event.stopPropagation();
+    
+    const historyHeader = this.closest('.history-header');
+    const historyDetails = historyHeader.nextElementSibling;
 
-
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const historyContents = document.querySelectorAll('.history-content');
-    const closeButton = document.querySelector('#closeGraphPopup');
-    const popupOverlay = document.querySelector('#graphPopupOverlay');
-
-    tabButtons.forEach(button => {
-      button.addEventListener('click', function (event) {
-        event.stopPropagation(); // Prevent the event from closing the popup
-        const tabName = this.getAttribute('data-tab');
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        historyContents.forEach(content => content.classList.remove('active'));
-        this.classList.add('active');
-        document.getElementById(tabName + 'History').classList.add('active');
-      });
-    });
-
-    // Close button event
-    closeButton.addEventListener('click', function () {
-      popupOverlay.style.display = 'none'; // Hide the popup
-    });
-
-
+    if (historyDetails) {
+      historyDetails.classList.toggle('active');  // Show/hide details
+      this.classList.toggle('open');  // Change the arrow direction
+    }
   });
+});
+
+  
+  document.addEventListener('DOMContentLoaded', function () {
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const historyContents = document.querySelectorAll('.history-content');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', function (event) {
+      event.stopPropagation(); // Prevent the event from closing the popup
+      
+      const tabName = this.getAttribute('data-tab'); // Use data-tab attribute to find matching content
+      
+      // Remove active state from all tabs and contents
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      historyContents.forEach(content => content.classList.remove('active'));
+      
+      // Activate the clicked tab and corresponding content
+      this.classList.add('active');
+      document.getElementById(tabName + 'History').classList.add('active');
+    });
+  });
+});
 
 
   </script>
