@@ -1566,30 +1566,42 @@
 
 
   
-    document.addEventListener('DOMContentLoaded', function () {
-      const tabButtons = document.querySelectorAll('.tab-button');
-      const historyContents = document.querySelectorAll('.history-content');
-      const closeButton = document.querySelector('#closeGraphPopup');
-      const popupOverlay = document.querySelector('#graphPopupOverlay');
+  document.querySelectorAll('.toggle-icon').forEach(toggleIcon => {
+  toggleIcon.addEventListener('click', function (event) {
+    event.stopPropagation();
+    
+    const historyHeader = this.closest('.history-header');
+    const historyDetails = historyHeader.nextElementSibling;
 
-      tabButtons.forEach(button => {
-        button.addEventListener('click', function (event) {
-          event.stopPropagation(); // Prevent the event from closing the popup
-          const tabName = this.getAttribute('data-tab');
-          tabButtons.forEach(btn => btn.classList.remove('active'));
-          historyContents.forEach(content => content.classList.remove('active'));
-          this.classList.add('active');
-          document.getElementById(tabName + 'History').classList.add('active');
-        });
-      });
+    if (historyDetails) {
+      historyDetails.classList.toggle('active');  // Show/hide details
+      this.classList.toggle('open');  // Change the arrow direction
+    }
+  });
+});
 
-      // Close button event
-      closeButton.addEventListener('click', function () {
-        popupOverlay.style.display = 'none'; // Hide the popup
-      });
+  
+  document.addEventListener('DOMContentLoaded', function () {
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const historyContents = document.querySelectorAll('.history-content');
 
-
+  tabButtons.forEach(button => {
+    button.addEventListener('click', function (event) {
+      event.stopPropagation(); // Prevent the event from closing the popup
+      
+      const tabName = this.getAttribute('data-tab'); // Use data-tab attribute to find matching content
+      
+      // Remove active state from all tabs and contents
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      historyContents.forEach(content => content.classList.remove('active'));
+      
+      // Activate the clicked tab and corresponding content
+      this.classList.add('active');
+      document.getElementById(tabName + 'History').classList.add('active');
     });
+  });
+});
+
 
   </script>
 <script src="../../../../Internal-CRM/scripts.js"></script>
