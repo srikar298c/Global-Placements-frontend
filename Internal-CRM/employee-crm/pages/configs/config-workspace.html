@@ -533,7 +533,51 @@
             </div>
         </div>
     </div>
-    </div>
+     <div class="popup-overlay" id="addNewCountryPopupOverlay">
+        <div class="popup-content add-new-reminder-content">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    ADD A NEW Country
+                </h2>
+                <button class="popup-close" id="closeAddNewCountryPopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+                <div class="form-group label-input">
+                    <label for="">Country Code</label>
+                    <input type="text" id="" value="">
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Name of the Country</label>
+                    <input type="text" id="" value="">
+                </div>
+                <div class="form-container">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="preferredStatus">Status</label>
+                            <div id="statusContainer" class="country-container">
+                                <!-- Labels will appear here -->
+                            </div>
+                            <input type="text" id="statusInput" placeholder="Status">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="preferredStatus">Registration Council</label>
+                            <div id="statusContainer" class="country-container">
+                                <!-- Labels will appear here -->
+                            </div>
+                            <input type="text" id="statusInput" placeholder="Registration Council">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="confirm-button">Add</button>
+                </div>
+            </div>
+        </div>
+ </div>
 
     <script src="../../../../Internal-CRM/scripts.js"></script>
     <script>
@@ -570,6 +614,23 @@
             // Initialize the first tab
             tabButtons[0].click();
         });
+  const addNewCountryPopup = document.getElementById('addNewCountryPopupOverlay');
+        const addNewCountryCloseButton = document.getElementById('closeAddNewCountryPopup');
+if (addNewCountryPopup && addNewCountryCloseButton) {
+        // Use event delegation for add new country buttons
+        document.addEventListener('click', function (event) {
+            if (event.target.closest('.add-new-country-button')) {
+                addNewCountryPopup.style.display = 'block';
+            }
+        });
+
+        addNewCountryCloseButton.addEventListener('click', () => addNewCountryPopup.style.display = 'none');
+        addNewCountryPopup.addEventListener('click', (event) => {
+            if (event.target === addNewCountryPopup) addNewCountryPopup.style.display = 'none';
+        });
+    } else {
+        console.error('Add new country popup elements not found');
+    }
 
     </script>
 </body>
