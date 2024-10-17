@@ -339,7 +339,198 @@ select,input,button{
   flex-direction: row;
   align-items: center;
 }
+.dashboard-section-01 {
+    padding: 10px;
+    max-width: 60%;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     margin-right: 10px;
+}
+.dashboard-section-02 {
+    padding: 10px;
+    max-width: 40%;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+   
+ .dashboard-notification-cards {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
 
+
+.latest-news {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 20px;
+    color: #005F6B;
+    margin-right: 10px;
+}
+
+.carousel {
+    overflow: hidden;
+    width: calc(100% - 0px); /* Adjust based on your layout */
+    padding:10px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 10s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% + 100vw));
+    }
+}
+
+.dashboard-card {
+    background-color: #fff;
+    color: #005F6B;
+    padding: 5px;
+    border-radius: 10px;
+    max-width: 250px;
+    
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    text-align: center;
+}
+.card-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.card-title svg{
+    height: 16px;
+    width:  16px;
+    margin-right: 5px;
+}
+.dashboard-card h3 {
+    font-size: 18px;
+}
+
+.dashboard-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+
+
+.dashboard-card p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+justify-content: center;
+}
+
+.dashboard-card p .icon-client {
+    margin-right: 8px;
+    /* Custom icon styles here */
+}
+
+.dashboard-card .view-more {
+    background-color: #fff;
+    color: #031417;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #005F6B;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dashboard-card:hover {
+    background: rgba(0, 95, 107, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dashboard-card .view-more:hover {
+    background-color: rgba(0, 95, 107, 0.1);
+    color: #005F6B;
+}
+
+/* Pause animation on hover */
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+.icon-achievement::before {
+    content: "🎉";
+     margin-right: 10px;
+}
+
+.icon-camera::before {
+    content: "📸";
+    margin-right: 10px;
+}
+
+.dashboard-calendar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+}
+
+.day-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  width: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 5px;
+}
+.day-card:last-child{
+  margin-right: 0;
+}
+.day-card:hover {
+  background-color: #e2e8f0;
+  cursor: pointer;
+}
+
+.month {
+  font-size: 10px;
+  color: #4a5568;
+  max-width: 60px;
+}
+.date{
+  font-size: 16px;
+  color: #4a5568;
+  max-width: 60px;
+}
+
+.day {
+  font-size: 8px;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.current-day {
+  background-color: #edf2f7;
+  border: 2px solid #4a5568;
+  color: #4a5568;
+  font-weight: bold;
+}
+
+.current-day .month-day {
+  color: #4a5568;
+}
+
+.current-day .day {
+  color: #4a5568;
+}
+
+
+    
 
 /* ***************************Projects ***********************/
 

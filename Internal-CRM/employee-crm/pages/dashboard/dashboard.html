@@ -9,132 +9,7 @@
     <link rel="icon" href="../../../../Internal-CRM/images/favicon.png" type="image/png">
 </head>
 <body>
-    <style>
- .dashboard-notification-cards {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.dashboard-section-01 {
-    padding: 10px;
-    width: 70%;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.latest-news {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    font-size: 20px;
-    color: #005F6B;
-    margin-right: 10px;
-}
-
-.carousel {
-    overflow: hidden;
-    width: calc(100% - 30px); /* Adjust based on your layout */
-    padding:10px 0;
-}
-
-.carousel-track {
-    display: flex;
-    gap: 20px;
-    animation: scroll 10s infinite;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-100% + 100vw));
-    }
-}
-
-.dashboard-card {
-    background-color: #fff;
-    color: #005F6B;
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 250px;
-    
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    flex-shrink: 0;
-    text-align: center;
-}
-.card-title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.card-title svg{
-    height: 16px;
-    width:  16px;
-    margin-right: 5px;
-}
-.dashboard-card h3 {
-    font-size: 20px;
-}
-
-.dashboard-card h2 {
-    font-size: 22px;
-    margin: 10px 0;
-}
-
-
-
-.dashboard-card p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-justify-content: center;
-}
-
-.dashboard-card p .icon-client {
-    margin-right: 8px;
-    /* Custom icon styles here */
-}
-
-.dashboard-card .view-more {
-    background-color: #fff;
-    color: #031417;
-    padding: 10px 15px;
-    border-radius: 10px;
-    border: 1px solid #005F6B;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    
-}
-
-.dashboard-card:hover {
-    background: rgba(0, 95, 107, 0.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.dashboard-card .view-more:hover {
-    background-color: rgba(0, 95, 107, 0.1);
-    color: #005F6B;
-}
-
-/* Pause animation on hover */
-.carousel-track:hover {
-    animation-play-state: paused;
-}
-
-.icon-achievement::before {
-    content: "🎉";
-     margin-right: 10px;
-}
-
-.icon-camera::before {
-    content: "📸";
-    margin-right: 10px;
-}
-
-
-    </style>
+   
     <div class="sidebar-container ">
         <div class="logo-container">
             <img class="logo" src="../../../../Internal-CRM/images/global_placements_logo.png" alt="Global Placements">
@@ -519,9 +394,46 @@ justify-content: center;
           </div>
     </div>
 </div>
-    <div class="dashboard-section-02">
-        <!-- Content for this section -->
-    </div>
+</div>
+<div class="dashboard-section-02">
+  <div class="dashboard-calendar">
+      <div class="day-card" data-date="Sept 30">
+      <span class="month">Sept </span>
+      <span class="date">28</span>
+      <span class="day">Mon</span>
+      </div>
+<div class="day-card" data-date="Sept 28">
+  <span class="month">Sept </span>
+      <span class="date">28</span>
+      <span class="day">Mon</span>
+</div>
+<div class="day-card" data-date="Sept 29">
+  <span class="month">Sept </span>
+      <span class="date">28</span>
+      <span class="day">Mon</span>
+</div>
+<div class="day-card current-day" data-date="Oct 1">
+  <span class="month">Sept </span>
+      <span class="date">28</span>
+      <span class="day">Mon</span>
+</div>
+<div class="day-card" data-date="Oct 2">
+  <span class="month">Sept </span>
+      <span class="date">28</span>
+      <span class="day">Mon</span>
+</div>
+<div class="day-card" data-date="Oct 3">
+  <span class="month">Sept </span>
+      <span class="date">28</span>
+      <span class="day">Mon</span>
+</div>
+<div class="day-card" data-date="Oct 4">
+  <span class="month">Sept </span>
+      <span class="date">28</span>
+      <span class="day">Mon</span>
+</div>
+</div>
+
 </div>
         </div>
     </div>
@@ -537,6 +449,23 @@ track.addEventListener('mouseout', () => {
     track.style.animationPlayState = 'running';
 });
   
+  document.addEventListener("DOMContentLoaded", function () {
+  const today = new Date();
+  const days = document.querySelectorAll(".day-card");
+
+  days.forEach(day => {
+    const dateText = day.getAttribute("data-date");
+    const [month, dayNumber] = dateText.split(" ");
+    
+    const isCurrentDay = today.getDate() === parseInt(dayNumber) && 
+                         today.toLocaleString('default', { month: 'short' }) === month;
+    
+    if (isCurrentDay) {
+      day.classList.add("current-day");
+    }
+  });
+});
+
 </script>
 </body>
 
