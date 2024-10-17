@@ -394,6 +394,116 @@
           </div>
     </div>
 </div>
+<div class="upcoming-interviews-container">
+  <div class="upcoming-interviews-header">
+    <h3>Upcoming Interviews</h3>
+    <div class="upcoming-interviews-controls">
+      <button class="upcoming-interviews-prev-btn" onclick="upcomingInterviewsMovePrev()">&#10094;</button>
+      <button class="upcoming-interviews-next-btn" onclick="upcomingInterviewsMoveNext()">&#10095;</button>
+    </div>
+  </div>
+
+  <div class="upcoming-interviews-carousel">
+    <div class="upcoming-interviews-track">
+      <div class="upcoming-interviews-item">
+        <div class="interview-card">
+          <h4>Project Code & Name</h4>
+          <p>Date & Time</p>
+          <p>Admin 1</p>
+        </div>
+      </div>
+      <div class="upcoming-interviews-item">
+        <div class="interview-card">
+          <h4>Project Code & Name</h4>
+          <p>Date & Time</p>
+          <p>Admin 1</p>
+        </div>
+      </div>
+      <div class="upcoming-interviews-item">
+        <div class="interview-card">
+          <h4>Project Code & Name</h4>
+          <p>Date & Time</p>
+          <p>Admin 1</p>
+        </div>
+      </div>
+      <div class="upcoming-interviews-item">
+        <div class="interview-card">
+          <h4>Project Code & Name</h4>
+          <p>Date & Time</p>
+          <p>Admin 1</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-container">
+  <!-- Tab Buttons -->
+  <div class="dashboard-tabs">
+    <button class="dashboard-tab-btn active" onclick="switchTab('dashboard-projects')">My Projects</button>
+    <button class="dashboard-tab-btn" onclick="switchTab('dashboard-healthcare')">Health Care</button>
+    <button class="dashboard-tab-btn" onclick="switchTab('dashboard-education')">Education</button>
+    <button class="dashboard-compare-btn">Compare</button>
+  </div>
+
+  <!-- Projects Tab Content -->
+  <div class="dashboard-tab-content" id="dashboard-projects-tab">
+    <!-- Project Card 1 -->
+    <div class="dashboard-project-card">
+      <div class="dashboard-card-header">
+        <div class="dashboard-card-title">
+          <span class="dashboard-bookmark-icon">🔖</span>
+          <span class="dashboard-project-name">Project Code & Name</span>
+        </div>
+        <span class="dashboard-country-name">Country Name 📍</span>
+      </div>
+      <div class="dashboard-card-content">
+        <div class="dashboard-card-sidebar">
+          <span class="dashboard-icon">▶</span>
+          <span class="dashboard-icon">📹</span>
+          <span class="dashboard-icon">📝</span>
+          <span class="dashboard-icon">📑</span>
+        </div>
+        <div class="dashboard-card-details">
+          <!-- Project details can be added here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="dashboard-project-card">
+      <div class="dashboard-card-header">
+        <div class="dashboard-card-title">
+          <span class="dashboard-bookmark-icon">🔖</span>
+          <span class="dashboard-project-name">Project Code & Name</span>
+        </div>
+        <span class="dashboard-country-name">Country Name 📍</span>
+      </div>
+      <div class="dashboard-card-content">
+        <div class="dashboard-card-sidebar">
+          <span class="dashboard-icon">▶</span>
+          <span class="dashboard-icon">📹</span>
+          <span class="dashboard-icon">📝</span>
+          <span class="dashboard-icon">📑</span>
+        </div>
+        <div class="dashboard-card-details">
+          <!-- Project details can be added here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Healthcare Tab Content (Hidden initially) -->
+  <div class="dashboard-tab-content" id="dashboard-healthcare-tab" style="display:none;">
+    <!-- Similar card structure -->
+  </div>
+
+  <!-- Education Tab Content (Hidden initially) -->
+  <div class="dashboard-tab-content" id="dashboard-education-tab" style="display:none;">
+    <!-- Similar card structure -->
+  </div>
+</div>
+
+</div>
+
 </div>
 <div class="dashboard-section-02">
   <div class="dashboard-calendar">
@@ -433,6 +543,104 @@
       <span class="day">Mon</span>
 </div>
 </div>
+<div class="summary-card">
+  <div class="summary-header">
+    <h3>Summary</h3>
+    <div class="date-dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown()">Today</button>
+      <ul class="dropdown-menu">
+        <li onclick="selectDateOption('Today')">Today</li>
+        <li onclick="selectDateOption('Yesterday')">Yesterday</li>
+        <li onclick="selectDateOption('Last 7 Days')">Last 7 Days</li>
+        <li onclick="selectDateOption('This Month')">This Month</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="summary-item">
+    <div class="">  <span class="item-title">Assigned Leads</span>
+    <span class="item-count">34</span></div>
+    <div class=""><span class="item-arrow">→</span></div>
+  
+  </div>
+
+  <div class="summary-item">
+    <div class=""><span class="item-title">Submitted</span>
+    <span class="item-count">34</span></div>
+    <div class="">  <span class="item-arrow">→</span></div>
+    
+  
+  </div>
+
+  <div class="summary-item">
+    <div class=""> <span class="item-title">Reminders</span>
+    <span class="item-count">34</span></div>
+    <div class=""><span class="item-arrow">→</span></div>
+    
+   
+  </div>
+
+  <div class="summary-item">
+    <div class=""><span class="item-title">Tasks</span>
+    <span class="item-count">34</span></div>
+    <div class=""><span class="item-arrow">→</span></div>
+    
+    
+  </div>
+
+  <div class="summary-item">
+    <div class=""> <span class="item-title">Client Notifications</span>
+    <span class="item-count">34</span></div>
+    <div class=""> <span class="item-arrow">→</span></div>
+   
+   
+  </div>
+</div>
+<div class="compliance-card">
+  <div class="compliance-header">
+    <h3>Compliance/Attendance</h3>
+    <div class="date-dropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown()">Sept</button>
+      <ul class="dropdown-menu">
+        <li onclick="selectDateOption('Sept')">Sept</li>
+        <li onclick="selectDateOption('Aug')">Aug</li>
+        <li onclick="selectDateOption('July')">July</li>
+        <li onclick="selectDateOption('June')">June</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="compliance-items">
+    <div class="compliance-item">
+      <span class="item-title">Total Working Days</span>
+      <span class="item-count">27 days</span>
+    </div>
+    <div class="compliance-item">
+      <span class="item-title">In-Office</span>
+      <span class="item-count">14 Days</span>
+    </div>
+    <div class="compliance-item">
+      <span class="item-title">On Leave</span>
+      <span class="item-count">2 Days</span>
+    </div>
+    <div class="compliance-item">
+      <span class="item-title">Late/Early</span>
+      <span class="item-count">2 Days</span>
+    </div>
+    <div class="compliance-item">
+      <span class="item-title">Comp-off</span>
+      <span class="item-count">-</span>
+    </div>
+    <div class="compliance-item">
+      <span class="item-title">Work From Home</span>
+      <span class="item-count">-</span>
+    </div>
+  </div>
+
+  <div class="view-all-btn">
+    <button>View all →</button>
+  </div>
+</div>
 
 </div>
         </div>
@@ -465,6 +673,80 @@ track.addEventListener('mouseout', () => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Scope this function to `.dashboard-section-02`
+  const dashboardSection = document.querySelector('.dashboard-section-02');
+
+  if (dashboardSection) {
+    const dropdownBtn = dashboardSection.querySelector('.dropdown-btn');
+    const dropdownMenu = dashboardSection.querySelector('.dropdown-menu');
+
+    // Toggle dropdown menu on button click
+    dropdownBtn.addEventListener('click', function(event) {
+      event.stopPropagation(); // Prevent click from bubbling up
+      dropdownMenu.classList.toggle('show');
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', function(event) {
+      if (!dropdownBtn.contains(event.target)) {
+        dropdownMenu.classList.remove('show');
+      }
+    });
+
+    // Optionally, handle dropdown item clicks
+    const dropdownItems = dropdownMenu.querySelectorAll('li');
+    dropdownItems.forEach(item => {
+      item.addEventListener('click', function() {
+        dropdownBtn.textContent = item.textContent; // Update button text
+        dropdownMenu.classList.remove('show'); // Hide menu after selection
+      });
+    });
+  }
+});
+let upcomingInterviewsCurrentPosition = 0;
+
+function upcomingInterviewsMoveNext() {
+  const track = document.querySelector('.upcoming-interviews-track');
+  const items = document.querySelectorAll('.upcoming-interviews-item');
+  const itemWidth = items[0].offsetWidth + 20; // 20 is the margin-right
+  const totalWidth = itemWidth * items.length;
+
+  if (upcomingInterviewsCurrentPosition > -(totalWidth - track.offsetWidth)) {
+    upcomingInterviewsCurrentPosition -= itemWidth;
+    track.style.transform = `translateX(${upcomingInterviewsCurrentPosition}px)`;
+  }
+}
+
+function upcomingInterviewsMovePrev() {
+  const track = document.querySelector('.upcoming-interviews-track');
+  const items = document.querySelectorAll('.upcoming-interviews-item');
+  const itemWidth = items[0].offsetWidth + 20;
+
+  if (upcomingInterviewsCurrentPosition < 0) {
+    upcomingInterviewsCurrentPosition += itemWidth;
+    track.style.transform = `translateX(${upcomingInterviewsCurrentPosition}px)`;
+  }
+}
+function switchTab(tabId) {
+  // Hide all tabs
+  document.querySelectorAll('.dashboard-tab-content').forEach(tab => {
+    tab.style.display = 'none';
+  });
+  
+  // Remove active class from all buttons
+  document.querySelectorAll('.dashboard-tab-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  
+  // Show the selected tab
+  document.getElementById(`${tabId}-tab`).style.display = 'block';
+  
+  // Add active class to the clicked button
+  event.target.classList.add('active');
+}
+
 
 </script>
 </body>
