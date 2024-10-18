@@ -2458,6 +2458,7 @@ input[type="radio"] {
 .history-details td {
   padding: 5px;
   border-bottom: 1px solid #e0e0e0;
+  font-size: 12px;
 }
 
 .view-more-btn {

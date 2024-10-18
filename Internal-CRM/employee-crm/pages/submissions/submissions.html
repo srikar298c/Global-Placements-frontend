@@ -445,7 +445,7 @@
       </div>
     </div>
   </div>
-  </div>
+</div>
   <div class="popup-overlay" id="scheduleInterviewPopupOverlay" style="display: none;">
     <div class="popup-content">
       <div class="popup-header">
@@ -454,6 +454,43 @@
       </div>
       <div class="popup-body">
         <form id="scheduleInterviewForm">
+            <div id="activityHistory" class="history-content active">
+         <div class="history-item">
+  <div class="history-header toggle-icon">
+    <span class="">Schedule Interview</span>
+    <span class="toggle-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+        <rect width="24" height="24" fill="none"/>
+        <path fill="currentColor" fill-rule="evenodd" d="M19.707 16.207a1 1 0 0 1-1.414 0L12 9.914l-6.293 6.293a1 1 0 0 1-1.414-1.414L10.586 8.5a2 2 0 0 1 2.828 0l6.293 6.293a1 1 0 0 1 0 1.414" clip-rule="evenodd"/>
+      </svg>
+    </span>
+  </div>
+  <div class="history-details">
+    <table>
+      <tr>
+        <td><input type="checkbox" class="checkbox-schedule"></td>
+        <td>Client 1</td>
+        <td>24-10-2024</td>
+        <td>17:30 Hrs</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="checkbox-schedule"></td>
+        <td>Client 1</td>
+        <td>24-10-2024</td>
+        <td>17:30 Hrs</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="checkbox-schedule"></td>
+        <td>Client 1</td>
+        <td>24-10-2024</td>
+        <td>17:30 Hrs</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+        
+        </div>
           <div class="form-row">
             <div class="form-group">
               <label for="project">Project</label>
@@ -613,10 +650,15 @@
         </div>
         <div id="activityHistory" class="history-content active">
           <div class="history-item">
-            <div class="history-header">
+            <div class="history-header toggle-icon">
               <span>New Project</span>
               <span>few hours ago</span>
-              <span class="toggle-icon">&#9660;</span>
+              <span class="toggle-icon"><svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
+                                    viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
+                                        clip-rule="evenodd" />
+                                </svg></span>
             </div>
             <div class="history-details">
               <table>
@@ -645,7 +687,7 @@
             </div>
           </div>
           <div class="history-item">
-            <div class="history-header">
+            <div class="history-header toggle-icon">
               <span>Project Name</span>
               <span>few hours ago</span>
               <span class="toggle-icon">&#9650;</span>
@@ -684,7 +726,7 @@
         </div>
         <div id="commentHistory" class="history-content">
           <div class="history-item">
-            <div class="history-header">
+            <div class="history-header toggle-icon">
               <span>Project Name</span>
               <span>few hours ago</span>
               <span class="toggle-icon">&#9650;</span>
@@ -787,7 +829,7 @@
     </div>
   </div>
   <div class="popup-overlay" id="addNewReminderPopupOverlay">
-    <div class="popup-content add-new-reminder-content">
+    <div class="popup-content ">
       <div class="popup-header">
         <h2 class="popup-title">
           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
