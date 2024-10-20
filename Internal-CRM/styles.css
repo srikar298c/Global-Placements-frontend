@@ -1471,26 +1471,28 @@ h3 {
   padding: 5px;
   border-radius: 10px;
   align-items: center;
-  justify-content: center;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
   margin: 10px 0px 20px;
   background-color: white;
-max-width: 1600px;
 }
 
 /* .filter-button, */
 
 .filter-select {
-  background-color: #f8f8f8;
-  color: #000;
+display: flex;
+align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: white;
+  color: #333;
   border: 0.25px solid #c7c7c7;
   padding: 8px 10px;
   border-radius: 6px;
-  width: 133px;
+  width: 100%;
   font-size: 10px;
   margin: 0px 2px;
   font-weight: 500;
-  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
 .search-bar {
@@ -1993,6 +1995,9 @@ input[type="radio"] {
   justify-content: center;
   width: 100%;
   margin: 10px 0px 20px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    background-color: white;
 }
 
 .submissions.base-filters {
