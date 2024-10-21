@@ -947,6 +947,8 @@
         const addNewCountryCloseButton = document.getElementById('closeAddNewCountryPopup');
         const addNewClientPopup = document.getElementById('addNewClientPopupOverlay');
 const addNewClientCloseButton = document.getElementById('closeAddNewClientPopup');
+const standardProcedurePopupOverlay = document.getElementById('standardProcedurePopupOverlay');
+const closeStandardProcedurePopup = document.getElementById('closeStandardProcedurePopup');
 const addNewDelegatePopup = document.getElementById('addNewDelegatePopupOverlay');
 const addNewDelegateCloseButton = document.getElementById('closeAddNewDelegatePopup');
 const addNewProjectPopup = document.getElementById('addNewProjectPopupOverlay');
@@ -992,6 +994,21 @@ const closeNewQualificationPopup = document.getElementById('closeNewQualificatio
     console.error('Add new client popup elements not found');
 }
 
+if (standardProcedurePopupOverlay && closeStandardProcedurePopup) {
+    // Use event delegation for standard procedure popup buttons
+    document.addEventListener('click', function (event) {
+        if (event.target.closest('.add-new-project-button')) {
+            standardProcedurePopupOverlay.style.display = 'block';
+        }
+    });
+
+    closeStandardProcedurePopup.addEventListener('click', () => standardProcedurePopupOverlay.style.display = 'none');
+    standardProcedurePopupOverlay.addEventListener('click', (event) => {
+        if (event.target === standardProcedurePopupOverlay) standardProcedurePopupOverlay.style.display = 'none';
+    });
+} else {
+    console.error('Standard procedure popup elements not found');
+}
 if (addNewDelegatePopup && addNewDelegateCloseButton) {
     // Use event delegation for add new delegate buttons
     document.addEventListener('click', function (event) {
