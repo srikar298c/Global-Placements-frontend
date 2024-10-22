@@ -710,7 +710,7 @@
                   <input type="text" placeholder="Carla Cronin">
                 </div>
                 <div class="form-group">
-                  <p class="extra-add"> + Add a Standard Procedure</p>
+                  <p class="extra-add add-standard-procedure"> + Add a Standard Procedure</p>
                 </div>
                 <div class="form-group">
                     <button class="confirm-button">Add</button>
@@ -718,8 +718,8 @@
             </div>
         </div>
  </div>
- <div class="popup-overlay" id="standardProcedurePopupOverlay
-        <div class="popup-content ">
+ <div class="popup-overlay" id="addStandardProcedurePopupOverlay">
+        <div class="popup-content profile-popup-content">
             <div class="popup-header">
                 <h2 class="popup-title">
                     STANDARD PROCEDURE
@@ -727,37 +727,228 @@
                 <button class="popup-close" id="closeStandardProcedurePopup">&#10005;</button>
             </div>
             <div class="popup-body ">
-                <div class="form-group label-input">
-                    <label for="">Category Name</label>
-                     <select id="">
-                         <option value="">Nurses</option>
-                       </select>
-                    </div>
+                
+                     <div class=" profile-popup">
 
-                 <div class="form-group label-input">
-                     <label for="">Choose the Country</label>
-                     <select id="">
-                         <option value="">Nurses</option>
+                    <div class="form-sections">
+                        <section id="" class="form-section">
+                          
+                                 <div class="form-title-header">
+                            <div class="">
+                                <h2>Eligibility Criteria</h2>
+                            </div>
+                            <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"/></svg>Add a new field</button></div>
+                        
+                        </div>
+                                
+                                <div class="form-container">
+                                    <div class="form-grid">
+                                        <div class="form-group full-width">
+                                            <label for="">Position</label>
+                                            <input type="text" id="" name=""
+                                                placeholder="lorem">
+                                        </div>
+
+                                        <div class="form-group ">
+                                            <label for="">Qualification</label>
+                                             <select id="">
+                         <option value=""></option>
                        </select>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label for="">Experience</label>
+                                             <select id="">
+                         <option value=""></option>
+                       </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Gender</label>
+                                            <div class="button-group">
+                                                <button type="button" class="gender-option">Both</button>
+                                                <button type="button" class="gender-option">Female</button>
+                                                <button type="button" class="gender-option">Male</button>
+                                            </div>
+                                        </div>
+                                     <div class="form-group ">
+                                            <label for="">Departments</label>
+                                             <select id="">
+                         <option value="">Multiselect (DD)</option>
+                       </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="">Age Limit</label>
+                                            <input type="text" id="" name="" placeholder="Age"
+                                                class="form-group">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Contract Period</label>
+                                            <input type="text" id="" name="" placeholder="3 Years"
+                                                class="form-group">
+                                        </div>
+                                            <div class="form-group ">
+                                            <label for="">Service Gap</label>
+                                             <select id="">
+                         <option value="">Yes</option>
+                         <option value="">No</option>
+                       </select>
+                       </div>
+                                        <div class="form-group">
+                                            <label for=""> Description</label>
+                                            <input type="text" id="" name="" placeholder="Description"
+                                                class="form-group">
+                                        </div>
+                                           <div class="form-group ">
+                                            <label for="">Tatto</label>
+                                             <select id="">
+                         <option value="">Not in Visible Parts</option>
+                         <option value="">No</option>
+                       </select>
+                                           </div>
+                                           <div class="form-group ">
+                                            <label for="">Extra Benefits (if any)</label>
+                                             <select id="">
+                         <option value="">Multiselect</option>
+                         <option value=""></option>
+                       </select>
+                       </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="" class="form-section">
+                            <div class="form-title-header">
+                                <h2>Salary & Perks</h2>
+                            </div>
+                            <div class="form-container">
+                                <div class="form-grid">
+                                    <div class="form-group  ">
+                                        <label for="currentEmployment">
+                                            <input type="checkbox" id="currentEmployment"> Current Employment
+                                        </label>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label>Duration</label>
+                                        <div class="date-inputs">
+                                            <input type="date" id="fromDate" name="fromDate" placeholder="From">
+                                            <input type="date" id="toDate" name="toDate" placeholder="To">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="designation">Designation</label>
+                                        <select id="designation" name="designation">
+                                            <option value="">Choose the Job Role</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="department">Department</label>
+                                        <select id="department" name="department">
+                                            <option value="">Choose the Department</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="registration-details">
+                            <div class="form-section registration-details">
+                                <div class="form-title-header">
+                                    <h2>Registration Details</h2>
+                                </div>
+                                <div class="form-container">
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label for="registrationType">Registration Type</label>
+                                            <select id="registrationType" name="registrationType">
+                                                <option value="">Choose the Registration Type</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="registrationNumber">Registration Number</label>
+                                            <input type="text" id="registrationNumber" name="registrationNumber"
+                                                placeholder="Enter the Registered Number">
+                                        </div>
+                                        <div class="form-group ">
+                                            <label for="registrationCouncil">Registration Council</label>
+                                            <select id="registrationCouncil" name="registrationCouncil">
+                                                <option value="">Choose the Registration Council</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label>Duration</label>
+                                            <div class="date-inputs">
+                                                <input type="date" id="fromDate" name="fromDate" placeholder="From">
+                                                <input type="date" id="toDate" name="toDate" placeholder="To">
+                                            </div>
+                                        </div>
+                                        <!-- Add more form groups as needed -->
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="educational-details">
+                            <div class="form-section educational-details">
+                                <div class="form-title-header">
+                                    <h2>Educational Details</h2>
+                                </div>
+                                <div class="form-container">
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label for="education">Education</label>
+                                            <select id="education" name="education">
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="degree">Degree</label>
+                                            <select id="degree" name="degree">
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Add more form groups as needed -->
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="preferences">
+                            <div class="form-section preferences">
+                                <div class="form-title-header">
+                                    <h2>Preferences</h2>
+                                </div>
+                                <div class="form-container">
+                                    <div class="form-grid">
+                                        <div class="form-group full-width">
+                                            <label for="preferredCountry">Country</label>
+                                            <div id="countryContainer" class="country-container">
+                                                <!-- Labels will appear here -->
+                                            </div>
+                                            <input type="text" id="countryInput" placeholder="Add a country">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="form-section ">
+                                <div class="form-group">
+                                    <button class="confirm-button">Add Candidate</button>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
                 </div>
-               
-                <div class="form-group label-input">
-                    <label for="">Add a Client</label>
-                  <input type="text" placeholder="Carla Cronin">
-                </div>
-                <div class="form-group label-input">
-                    <label for="">Add a Client Label</label>
-                  <input type="text" placeholder="Carla Cronin">
-                </div>
-                <div class="form-group">
-                  <p class="extra-add"> + Add a Standard Procedure</p>
-                </div>
-                <div class="form-group">
-                    <button class="confirm-button">Add</button>
-                </div>
-            </div>
+        </div>
         </div>
  </div>
+ 
+
  <div class="popup-overlay" id="addNewProjectPopupOverlay">
         <div class="popup-content ">
             <div class="popup-header">
@@ -987,8 +1178,8 @@
         const addNewCountryCloseButton = document.getElementById('closeAddNewCountryPopup');
         const addNewClientPopup = document.getElementById('addNewClientPopupOverlay');
 const addNewClientCloseButton = document.getElementById('closeAddNewClientPopup');
-const standardProcedurePopupOverlay = document.getElementById('standardProcedurePopupOverlay');
-const closeStandardProcedurePopup = document.getElementById('closeStandardProcedurePopup');
+const addStandardProcedurePopup = document.getElementById('addStandardProcedurePopupOverlay'); 
+const addStandardProcedureCloseButton = document.getElementById('closeStandardProcedurePopup');
 const addNewDelegatePopup = document.getElementById('addNewDelegatePopupOverlay');
 const addNewDelegateCloseButton = document.getElementById('closeAddNewDelegatePopup');
 const addNewProjectPopup = document.getElementById('addNewProjectPopupOverlay');
@@ -1034,17 +1225,20 @@ const closeNewQualificationPopup = document.getElementById('closeNewQualificatio
     console.error('Add new client popup elements not found');
 }
 
-if (standardProcedurePopupOverlay && closeStandardProcedurePopup) {
+if (addStandardProcedurePopup && addStandardProcedureCloseButton) {
     // Use event delegation for standard procedure popup buttons
     document.addEventListener('click', function (event) {
-        if (event.target.closest('.add-new-project-button')) {
-            standardProcedurePopupOverlay.style.display = 'block';
+        if (event.target.closest('.add-standard-procedure')) {
+            addStandardProcedurePopup.style.display = 'block';
         }
     });
 
-    closeStandardProcedurePopup.addEventListener('click', () => standardProcedurePopupOverlay.style.display = 'none');
-    standardProcedurePopupOverlay.addEventListener('click', (event) => {
-        if (event.target === standardProcedurePopupOverlay) standardProcedurePopupOverlay.style.display = 'none';
+    addStandardProcedureCloseButton.addEventListener('click', () => addStandardProcedurePopup.style.display = 'none');
+
+    addStandardProcedurePopup.addEventListener('click', (event) => {
+        if (event.target === addStandardProcedurePopup) {
+            addStandardProcedurePopup.style.display = 'none';
+        }
     });
 } else {
     console.error('Standard procedure popup elements not found');
