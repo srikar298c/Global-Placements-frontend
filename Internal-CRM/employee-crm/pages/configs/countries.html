@@ -303,7 +303,7 @@
                                 <td>Tracy Kemmer</td>
                                 <td>
                                     <!-- Placeholder for SVG icons -->
-                                   <svg class="" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <svg class="edit-country-button" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4.776 10.5932L11.5373 3.83182L10.5947 2.88915L3.83333 9.65049V10.5932H4.776ZM5.32867 11.9265H2.5V9.09782L10.1233 1.47449C10.2484 1.34951 10.4179 1.2793 10.5947 1.2793C10.7714 1.2793 10.941 1.34951 11.066 1.47449L12.952 3.36049C13.077 3.48551 13.1472 3.65505 13.1472 3.83182C13.1472 4.0086 13.077 4.17814 12.952 4.30315L5.32867 11.9265ZM2.5 13.2598H14.5V14.5932H2.5V13.2598Z" fill="black"/>
 </svg>
 
@@ -340,36 +340,79 @@
                 <button class="popup-close" id="closeAddNewCountryPopup">&#10005;</button>
             </div>
             <div class="popup-body ">
-                <div class="form-group label-input">
-                    <label for="">Country Code</label>
-                    <input type="text" id="" value="">
-                </div>
+              
                 <div class="form-group label-input">
                     <label for="">Name of the Country</label>
                     <input type="text" id="" value="">
                 </div>
-                <div class="form-container">
-                    <div class="form-grid">
-                        <div class="form-group full-width">
-                            <label for="preferredStatus">Status</label>
-                            <div id="statusContainer" class="country-container">
-                                <!-- Labels will appear here -->
-                            </div>
-                            <input type="text" id="statusInput" placeholder="Status">
+            <div class="form-container">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="statusInput">Status</label>
+                        <div id="statusContainer" class="country-container">
+                            <!-- Labels for Status will appear here -->
                         </div>
+                        <input type="text" id="statusInput" placeholder="Status">
                     </div>
                 </div>
-                <div class="form-container">
-                    <div class="form-grid">
-                        <div class="form-group full-width">
-                            <label for="preferredStatus">Registration Council</label>
-                            <div id="statusContainer" class="country-container">
-                                <!-- Labels will appear here -->
-                            </div>
-                            <input type="text" id="statusInput" placeholder="Registration Council">
+            </div>
+            
+            <div class="form-container">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="registrationCouncilInput">Registration Council</label>
+                        <div id="registrationCouncilContainer" class="country-container">
+                            <!-- Labels for Registration Council will appear here -->
                         </div>
+                        <input type="text" id="registrationCouncilInput" placeholder="Registration Council">
                     </div>
                 </div>
+            </div>
+
+                <div class="form-group">
+                    <button class="confirm-button">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-overlay" id="editCountryPopupOverlay">
+        <div class="popup-content add-new-reminder-content">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    EDIT COUNTRY
+                </h2>
+                <button class="popup-close" id="closeEditCountryPopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+              
+                <div class="form-group label-input">
+                    <label for="">Name of the Country</label>
+                    <input type="text" id="" value="">
+                </div>
+            <div class="form-container">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="statusInput">Status</label>
+                        <div id="statusContainer" class="country-container">
+                            <!-- Labels for Status will appear here -->
+                        </div>
+                        <input type="text" id="statusInput" placeholder="Status">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-container">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="registrationCouncilInput">Registration Council</label>
+                        <div id="registrationCouncilContainer" class="country-container">
+                            <!-- Labels for Registration Council will appear here -->
+                        </div>
+                        <input type="text" id="registrationCouncilInput" placeholder="Registration Council">
+                    </div>
+                </div>
+            </div>
+
                 <div class="form-group">
                     <button class="confirm-button">Add</button>
                 </div>
@@ -393,28 +436,30 @@
                     <label for="">Name of the Country</label>
                     <input type="text" id="" value="">
                 </div>
-                <div class="form-container">
-                    <div class="form-grid">
-                        <div class="form-group full-width">
-                            <label for="preferredStatus">Status</label>
-                            <div id="statusContainer" class="country-container">
-                                <!-- Labels will appear here -->
-                            </div>
-                            <input type="text" id="statusInput" placeholder="Status">
+            <div class="form-container">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="statusInput">Status</label>
+                        <div id="statusContainer" class="country-container">
+                            <!-- Labels for Status will appear here -->
                         </div>
+                        <input type="text" id="statusInput" placeholder="Status">
                     </div>
                 </div>
-                <div class="form-container">
-                    <div class="form-grid">
-                        <div class="form-group full-width">
-                            <label for="preferredStatus">Registration Council</label>
-                            <div id="statusContainer" class="country-container">
-                                <!-- Labels will appear here -->
-                            </div>
-                            <input type="text" id="statusInput" placeholder="Registration Council">
+            </div>
+            
+            <div class="form-container">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="registrationCouncilInput">Registration Council</label>
+                        <div id="registrationCouncilContainer" class="country-container">
+                            <!-- Labels for Registration Council will appear here -->
                         </div>
+                        <input type="text" id="registrationCouncilInput" placeholder="Registration Council">
                     </div>
                 </div>
+            </div>
+
                 <div class="form-group">
                     <button class="confirm-button">Add</button>
                 </div>
@@ -431,7 +476,7 @@
             </div>
             <div class="popup-body ">
                 <div class="form-group label-input">
-                    <label for="">Doctors</label>
+                    <label for="">Name of the Categeory</label>
                     <input type="text" id="" value="">
                 </div>
                 <div class="form-group label-input">
@@ -453,6 +498,8 @@
 
     const addNewCountryPopup = document.getElementById('addNewCountryPopupOverlay');
     const addNewCountryCloseButton = document.getElementById('closeAddNewCountryPopup');
+    const editCountryPopup = document.getElementById('editCountryPopupOverlay');
+    const closeEditCountryCloseButton = document.getElementById('closeEditCountryPopup');
     const createNewCategoryPopup = document.getElementById('createNewCategoryPopupOverlay');
     const createNewCategoryCloseButton = document.getElementById('closeCreateNewCategoryPopup');
 
@@ -471,6 +518,24 @@
     } else {
         console.error('Add new country popup elements not found');
     }
+    if (editCountryPopup && closeEditCountryCloseButton) {
+            // Use event delegation for the edit country button
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.edit-country-button')) {
+                    editCountryPopup.style.display = 'block';
+                }
+            });
+
+            // Close the popup when the close button is clicked
+            closeEditCountryCloseButton.addEventListener('click', () => editCountryPopup.style.display = 'none');
+
+            // Close the popup when clicking outside the popup content
+            editCountryPopup.addEventListener('click', (event) => {
+                if (event.target === editCountryPopup) editCountryPopup.style.display = 'none';
+            });
+        } else {
+            console.error('Edit country popup elements not found');
+        }
     if (createNewCategoryPopup && createNewCategoryCloseButton) {
         // Use event delegation for create new category buttons
         document.addEventListener('click', function (event) {
@@ -486,38 +551,43 @@
     } else {
         console.error('Create new category popup elements not found');
     }
-
-
-
-    const statusContainer = document.getElementById('statusContainer');
-    const statusInput = document.getElementById('statusInput');
-
-    // Function to create a new label
-    function addCountryLabel(countryName) {
+    // Generic function to create a new label
+    function addCountryLabel(inputElement, containerElement, value) {
         const label = document.createElement('div');
         label.className = 'country-label';
 
         const span = document.createElement('span');
-        span.textContent = countryName;
+        span.textContent = value;
 
         const removeButton = document.createElement('button');
         removeButton.textContent = '×';
         removeButton.addEventListener('click', () => {
-            statusContainer.removeChild(label);
+            containerElement.removeChild(label);
         });
 
         label.appendChild(span);
         label.appendChild(removeButton);
-        statusContainer.appendChild(label);
+        containerElement.appendChild(label);
     }
 
-    // Event listener for adding a country on pressing Enter
-    statusInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter' && statusInput.value.trim() !== '') {
-            addCountryLabel(statusInput.value.trim());
-            statusInput.value = '';
-        }
-    });
+    // Generic function to add label on Enter keypress
+    function setupInputHandler(inputId, containerId) {
+        const inputElement = document.getElementById(inputId);
+        const containerElement = document.getElementById(containerId);
+
+        inputElement.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && inputElement.value.trim() !== '') {
+                addCountryLabel(inputElement, containerElement, inputElement.value.trim());
+                inputElement.value = ''; // Clear the input after adding the label
+            }
+        });
+    }
+
+    // Setup for Status and Registration Council
+    setupInputHandler('statusInput', 'statusContainer');
+    setupInputHandler('registrationCouncilInput', 'registrationCouncilContainer');
+
+
     </script>
 </body>
 

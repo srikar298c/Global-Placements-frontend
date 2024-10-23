@@ -181,7 +181,7 @@ button {
 }
 
 .dropdown-menu li::before {
-  content: "•";
+
   /* Unicode for a dot */
   position: absolute;
   left: 10px;
@@ -3387,7 +3387,15 @@ select:focus {
   width: 100%;
   box-sizing: border-box;
 }
-
+#registrationCouncilInput{
+ margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box; 
+}
 /* __________________________________Approvals____________________________________ */
 
 /* Main container */
@@ -4169,9 +4177,9 @@ select:focus {
 }
 
 .tab-section .add-button {
-  position: absolute;
+  position: relative;
   bottom: 1px;
-  left: 590px;
+ 
   border: none;
   background-color: #005f6b;
   color: white;

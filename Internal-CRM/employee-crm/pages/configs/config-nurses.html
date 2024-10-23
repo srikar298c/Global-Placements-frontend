@@ -11,6 +11,7 @@
 <style>
 
 </style>
+
 <body>
     <div class="sidebar-container ">
         <div class="logo-container">
@@ -44,10 +45,10 @@
                                     <g fill="none" fill-rule="evenodd">
                                         <path
                                             d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                                            <path fill="currentColor"
+                                        <path fill="currentColor"
                                             d="M3 4a2 2 0 0 1 2-2h2c.364 0 .706.097 1 .268A2 2 0 0 1 9 2h2c.727 0 1.364.388 1.714.969c.21-.168.456-.296.732-.37l1.932-.517a2 2 0 0 1 2.45 1.414l4.14 15.455a2 2 0 0 1-1.414 2.45l-1.932.517a2 2 0 0 1-2.45-1.414L13 8.663V20a2 2 0 0 1-2 2H9a2 2 0 0 1-1-.268A2 2 0 0 1 7 22H5a2 2 0 0 1-2-2zm2 0h2v16H5zm6 16H9V4h2zm2.964-15.469l1.931-.517l4.142 15.455l-1.932.517z" />
-                                        </g>
-                                    </svg>
+                                    </g>
+                                </svg>
                                 <span class="sidebar-nav-item">Projects</span>
                                 <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
                                     viewBox="0 0 24 24">
@@ -239,29 +240,59 @@
             <div class="header-title">
                 <h2>Configurations</h2>
             </div>
-    <div class="header-lastitem">
-    <a href="../../../../Internal-CRM/employee-crm/pages/profile/profile.html">
-        <img src="../../../../Internal-CRM/images/profile.png" alt="Profile Picture" class="profile-icon">
-    </a>
-    <svg onclick="toggleProfileMenu()" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36" class="caret-icon">
-        <rect width="36" height="36" fill="none"/>
-        <path fill="currentColor" d="M29.52 22.52L18 10.6L6.48 22.52a1.7 1.7 0 0 0 2.45 2.36L18 15.49l9.08 9.39a1.7 1.7 0 0 0 2.45-2.36Z" class="clr-i-outline clr-i-outline-path-1"/>
-        <path fill="none" d="M0 0h36v36H0z"/>
-    </svg>
-</div>
+            <div class="header-lastitem">
+                <a href="../../../../Internal-CRM/employee-crm/pages/profile/profile.html">
+                    <img src="../../../../Internal-CRM/images/profile.png" alt="Profile Picture" class="profile-icon">
+                </a>
+                <svg onclick="toggleProfileMenu()" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                    viewBox="0 0 36 36" class="caret-icon">
+                    <rect width="36" height="36" fill="none" />
+                    <path fill="currentColor"
+                        d="M29.52 22.52L18 10.6L6.48 22.52a1.7 1.7 0 0 0 2.45 2.36L18 15.49l9.08 9.39a1.7 1.7 0 0 0 2.45-2.36Z"
+                        class="clr-i-outline clr-i-outline-path-1" />
+                    <path fill="none" d="M0 0h36v36H0z" />
+                </svg>
+            </div>
 
-<!-- Profile Menu Dropdown -->
-<div class="profile-dropdown" id="profileDropdown">
-    <p>mailid@mail.com</p>
-    <img src="../../../../Internal-CRM/images/profile.png" alt="Profile Picture" class="profile-large-icon">
-    <p class="profile-greeting">Hi, Admin!</p>
-    <ul class="profile-options">
-        <li><a href="../../../../Internal-CRM/employee-crm/pages/profile/profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><g fill="none" stroke="currentColor" stroke-width="1"><path d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2s1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 5.638-4.239 8.375-6.899 9.536C13.38 21.842 13.02 22 12 22s-1.38-.158-2.101-.473C7.239 20.365 3 17.63 3 11.991z"/><circle cx="12" cy="9" r="2"/><path d="M16 15c0 1.105 0 2-4 2s-4-.895-4-2s1.79-2 4-2s4 .895 4 2Z"/></g></svg> View Profile</a></li>
-        <li><a href="../../../../Internal-CRM/employee-crm/pages/attendance/attendance.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" d="M5.616 21q-.691 0-1.153-.462T4 19.385V6.615q0-.69.463-1.152T5.616 5h1.769V2.77h1.077V5h7.154V2.77h1V5h1.769q.69 0 1.153.463T20 6.616v5h-1v-1H5v8.769q0 .23.192.423t.423.192h6.231v1zM5 9.615h14v-3q0-.23-.192-.423T18.384 6H5.616q-.231 0-.424.192T5 6.616zm0 0V6zM14.23 21v-2.21l5.334-5.307q.148-.148.307-.2q.16-.052.32-.052q.165 0 .334.064q.17.065.298.194l.925.944q.123.148.187.308q.065.159.065.319t-.061.322t-.191.31L16.44 21zm6.886-5.94l-.925-.945zm-6 5.056h.95l3.467-3.474l-.47-.475l-.455-.488l-3.492 3.486zm3.948-3.949l-.456-.488l.925.963z"/></svg> Attendance</a></li>
-        <li><a href="../../../../Internal-CRM/employee-crm/pages/settings/settings.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><g fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="3"/><path d="M13.765 2.152C13.398 2 12.932 2 12 2s-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083c-.092.223-.129.484-.143.863a1.62 1.62 0 0 1-.79 1.353a1.62 1.62 0 0 1-1.567.008c-.336-.178-.579-.276-.82-.308a2 2 0 0 0-1.478.396C4.04 5.79 3.806 6.193 3.34 7s-.7 1.21-.751 1.605a2 2 0 0 0 .396 1.479c.148.192.355.353.676.555c.473.297.777.803.777 1.361s-.304 1.064-.777 1.36c-.321.203-.529.364-.676.556a2 2 0 0 0-.396 1.479c.052.394.285.798.75 1.605c.467.807.7 1.21 1.015 1.453a2 2 0 0 0 1.479.396c.24-.032.483-.13.819-.308a1.62 1.62 0 0 1 1.567.008c.483.28.77.795.79 1.353c.014.38.05.64.143.863a2 2 0 0 0 1.083 1.083C10.602 22 11.068 22 12 22s1.398 0 1.765-.152a2 2 0 0 0 1.083-1.083c.092-.223.129-.483.143-.863c.02-.558.307-1.074.79-1.353a1.62 1.62 0 0 1 1.567-.008c.336.178.579.276.819.308a2 2 0 0 0 1.479-.396c.315-.242.548-.646 1.014-1.453s.7-1.21.751-1.605a2 2 0 0 0-.396-1.479c-.148-.192-.355-.353-.676-.555A1.62 1.62 0 0 1 19.562 12c0-.558.304-1.064.777-1.36c.321-.203.529-.364.676-.556a2 2 0 0 0 .396-1.479c-.052-.394-.285-.798-.75-1.605c-.467-.807-.7-1.21-1.015-1.453a2 2 0 0 0-1.479-.396c-.24.032-.483.13-.82.308a1.62 1.62 0 0 1-1.566-.008a1.62 1.62 0 0 1-.79-1.353c-.014-.38-.05-.64-.143-.863a2 2 0 0 0-1.083-1.083Z"/></g></svg> Settings</a></li>
-        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 1024 1024"><rect width="1024" height="1024" fill="none"/><path fill="currentColor" d="M116.832 543.664H671.28c17.696 0 32-14.336 32-32s-14.304-32-32-32H118.832l115.76-115.76c12.496-12.496 12.496-32.752 0-45.248s-32.752-12.496-45.248 0l-189.008 194l189.008 194c6.256 6.256 14.432 9.376 22.624 9.376s16.368-3.12 22.624-9.376c12.496-12.496 12.496-32.752 0-45.248zM959.664 0H415.663c-35.36 0-64 28.656-64 64v288h64.416V103.024c0-21.376 17.344-38.72 38.72-38.72h464.72c21.391 0 38.72 17.344 38.72 38.72l1.007 818.288c0 21.376-17.328 38.72-38.72 38.72h-465.71c-21.376 0-38.72-17.344-38.72-38.72V670.944l-64.416.08V960c0 35.344 28.64 64 64 64h543.984c35.36 0 64.016-28.656 64.016-64V64c-.015-35.344-28.671-64-64.015-64z"/></svg> Sign Out</a></li>
-    </ul>
-</div>
+            <!-- Profile Menu Dropdown -->
+            <div class="profile-dropdown" id="profileDropdown">
+                <p>mailid@mail.com</p>
+                <img src="../../../../Internal-CRM/images/profile.png" alt="Profile Picture" class="profile-large-icon">
+                <p class="profile-greeting">Hi, Admin!</p>
+                <ul class="profile-options">
+                    <li><a href="../../../../Internal-CRM/employee-crm/pages/profile/profile.html"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                <rect width="24" height="24" fill="none" />
+                                <g fill="none" stroke="currentColor" stroke-width="1">
+                                    <path
+                                        d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2s1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 5.638-4.239 8.375-6.899 9.536C13.38 21.842 13.02 22 12 22s-1.38-.158-2.101-.473C7.239 20.365 3 17.63 3 11.991z" />
+                                    <circle cx="12" cy="9" r="2" />
+                                    <path d="M16 15c0 1.105 0 2-4 2s-4-.895-4-2s1.79-2 4-2s4 .895 4 2Z" />
+                                </g>
+                            </svg> View Profile</a></li>
+                    <li><a href="../../../../Internal-CRM/employee-crm/pages/attendance/attendance.html"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                <rect width="24" height="24" fill="none" />
+                                <path fill="currentColor"
+                                    d="M5.616 21q-.691 0-1.153-.462T4 19.385V6.615q0-.69.463-1.152T5.616 5h1.769V2.77h1.077V5h7.154V2.77h1V5h1.769q.69 0 1.153.463T20 6.616v5h-1v-1H5v8.769q0 .23.192.423t.423.192h6.231v1zM5 9.615h14v-3q0-.23-.192-.423T18.384 6H5.616q-.231 0-.424.192T5 6.616zm0 0V6zM14.23 21v-2.21l5.334-5.307q.148-.148.307-.2q.16-.052.32-.052q.165 0 .334.064q.17.065.298.194l.925.944q.123.148.187.308q.065.159.065.319t-.061.322t-.191.31L16.44 21zm6.886-5.94l-.925-.945zm-6 5.056h.95l3.467-3.474l-.47-.475l-.455-.488l-3.492 3.486zm3.948-3.949l-.456-.488l.925.963z" />
+                            </svg> Attendance</a></li>
+                    <li><a href="../../../../Internal-CRM/employee-crm/pages/settings/settings.html"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                <rect width="24" height="24" fill="none" />
+                                <g fill="none" stroke="currentColor" stroke-width="1">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path
+                                        d="M13.765 2.152C13.398 2 12.932 2 12 2s-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083c-.092.223-.129.484-.143.863a1.62 1.62 0 0 1-.79 1.353a1.62 1.62 0 0 1-1.567.008c-.336-.178-.579-.276-.82-.308a2 2 0 0 0-1.478.396C4.04 5.79 3.806 6.193 3.34 7s-.7 1.21-.751 1.605a2 2 0 0 0 .396 1.479c.148.192.355.353.676.555c.473.297.777.803.777 1.361s-.304 1.064-.777 1.36c-.321.203-.529.364-.676.556a2 2 0 0 0-.396 1.479c.052.394.285.798.75 1.605c.467.807.7 1.21 1.015 1.453a2 2 0 0 0 1.479.396c.24-.032.483-.13.819-.308a1.62 1.62 0 0 1 1.567.008c.483.28.77.795.79 1.353c.014.38.05.64.143.863a2 2 0 0 0 1.083 1.083C10.602 22 11.068 22 12 22s1.398 0 1.765-.152a2 2 0 0 0 1.083-1.083c.092-.223.129-.483.143-.863c.02-.558.307-1.074.79-1.353a1.62 1.62 0 0 1 1.567-.008c.336.178.579.276.819.308a2 2 0 0 0 1.479-.396c.315-.242.548-.646 1.014-1.453s.7-1.21.751-1.605a2 2 0 0 0-.396-1.479c-.148-.192-.355-.353-.676-.555A1.62 1.62 0 0 1 19.562 12c0-.558.304-1.064.777-1.36c.321-.203.529-.364.676-.556a2 2 0 0 0 .396-1.479c-.052-.394-.285-.798-.75-1.605c-.467-.807-.7-1.21-1.015-1.453a2 2 0 0 0-1.479-.396c-.24.032-.483.13-.82.308a1.62 1.62 0 0 1-1.566-.008a1.62 1.62 0 0 1-.79-1.353c-.014-.38-.05-.64-.143-.863a2 2 0 0 0-1.083-1.083Z" />
+                                </g>
+                            </svg> Settings</a></li>
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                viewBox="0 0 1024 1024">
+                                <rect width="1024" height="1024" fill="none" />
+                                <path fill="currentColor"
+                                    d="M116.832 543.664H671.28c17.696 0 32-14.336 32-32s-14.304-32-32-32H118.832l115.76-115.76c12.496-12.496 12.496-32.752 0-45.248s-32.752-12.496-45.248 0l-189.008 194l189.008 194c6.256 6.256 14.432 9.376 22.624 9.376s16.368-3.12 22.624-9.376c12.496-12.496 12.496-32.752 0-45.248zM959.664 0H415.663c-35.36 0-64 28.656-64 64v288h64.416V103.024c0-21.376 17.344-38.72 38.72-38.72h464.72c21.391 0 38.72 17.344 38.72 38.72l1.007 818.288c0 21.376-17.328 38.72-38.72 38.72h-465.71c-21.376 0-38.72-17.344-38.72-38.72V670.944l-64.416.08V960c0 35.344 28.64 64 64 64h543.984c35.36 0 64.016-28.656 64.016-64V64c-.015-35.344-28.671-64-64.015-64z" />
+                            </svg> Sign Out</a></li>
+                </ul>
+            </div>
 
 
 
@@ -288,8 +319,9 @@
                             href="../../../../Internal-CRM/employee-crm/pages/configs/config-workspace.html">Workspace</a>
                     </li>
                     <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/config-agents.html">Agents</a></li>
-                     <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/config-status.html">Status</a></li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/config-template.html">Template</a></li>
+                    <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/config-status.html">Status</a></li>
+                    <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/config-template.html">Template</a>
+                    </li>
 
                     <button class="create-button add-new-country-button"><svg xmlns="http://www.w3.org/2000/svg"
                             width="1em" height="1em" viewBox="0 0 24 24">
@@ -358,8 +390,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button class="add-button add-new-client-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                viewBox="0 0 24 24">
+                        <button class="add-button add-new-client-button"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em" viewBox="0 0 24 24">
                                 <rect width="24" height="24" fill="none" />
                                 <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
                             </svg>Add a Client</button>
@@ -414,7 +446,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button class="add-button add-new-delegate-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <button class="add-button add-new-delegate-button"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em" viewBox="0 0 24 24">
                                 <rect width="24" height="24" fill="none" />
                                 <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
                             </svg>Add a Delegate</button>
@@ -427,7 +460,7 @@
                                 <tr>
                                     <th>Project Code</th>
                                     <th>Name of the Project</th>
-                                   <th> Label</th>
+                                    <th> Label</th>
                                     <th>Created On</th>
                                     <th>Created By</th>
                                     <th>Status</th>
@@ -447,16 +480,20 @@
                                         </label></td>
                                     <td>
                                         <!-- Placeholder for SVG icons -->
-                                    <svg class="edit-a-project-button" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.776 10.5932L11.5373 3.83182L10.5947 2.88915L3.83333 9.65049V10.5932H4.776ZM5.32867 11.9265H2.5V9.09782L10.1233 1.47449C10.2484 1.34951 10.4179 1.2793 10.5947 1.2793C10.7714 1.2793 10.941 1.34951 11.066 1.47449L12.952 3.36049C13.077 3.48551 13.1472 3.65505 13.1472 3.83182C13.1472 4.0086 13.077 4.17814 12.952 4.30315L5.32867 11.9265ZM2.5 13.2598H14.5V14.5932H2.5V13.2598Z" fill="black"/>
-</svg>
+                                        <svg class="edit-a-project-button" width="17" height="16" viewBox="0 0 17 16"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4.776 10.5932L11.5373 3.83182L10.5947 2.88915L3.83333 9.65049V10.5932H4.776ZM5.32867 11.9265H2.5V9.09782L10.1233 1.47449C10.2484 1.34951 10.4179 1.2793 10.5947 1.2793C10.7714 1.2793 10.941 1.34951 11.066 1.47449L12.952 3.36049C13.077 3.48551 13.1472 3.65505 13.1472 3.83182C13.1472 4.0086 13.077 4.17814 12.952 4.30315L5.32867 11.9265ZM2.5 13.2598H14.5V14.5932H2.5V13.2598Z"
+                                                fill="black" />
+                                        </svg>
 
 
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-                        <button class="add-button add-new-project-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <button class="add-button add-new-project-button"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em" viewBox="0 0 24 24">
                                 <rect width="24" height="24" fill="none" />
                                 <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
                             </svg>Add a Project</button>
@@ -469,10 +506,10 @@
                                 <tr>
                                     <th>S.No </th>
                                     <th>Name of the Department</th>
-                                
+
                                     <th>Created On</th>
                                     <th>Created By</th>
-                             
+
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -483,7 +520,7 @@
                                     <td>DD-MM-YYYY </td>
                                     <td>Tracy Kemmer</td>
                                     <td>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z"
@@ -493,7 +530,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button class="add-button add-new-department-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <button class="add-button add-new-department-button"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em" viewBox="0 0 24 24">
                                 <rect width="24" height="24" fill="none" />
                                 <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
                             </svg>Add a Department</button>
@@ -506,10 +544,10 @@
                                 <tr>
                                     <th>S.No </th>
                                     <th>Name of the Designation</th>
-                                
+
                                     <th>Created On</th>
                                     <th>Created By</th>
-                             
+
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -520,7 +558,7 @@
                                     <td>DD-MM-YYYY </td>
                                     <td>Tracy Kemmer</td>
                                     <td>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z"
@@ -530,7 +568,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button class="add-button add-new-designation-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <button class="add-button add-new-designation-button"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em" viewBox="0 0 24 24">
                                 <rect width="24" height="24" fill="none" />
                                 <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
                             </svg>Add a Designation</button>
@@ -557,7 +596,7 @@
                                     <td>DD-MM-YYYY </td>
                                     <td>Tracy Kemmer</td>
                                     <td>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z"
@@ -567,7 +606,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button class="add-button add-new-qualification-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <button class="add-button add-new-qualification-button"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em" viewBox="0 0 24 24">
                                 <rect width="24" height="24" fill="none" />
                                 <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
                             </svg>Add a Qualification</button>
@@ -576,7 +616,7 @@
             </div>
         </div>
     </div>
- <div class="popup-overlay" id="addNewCountryPopupOverlay">
+    <div class="popup-overlay" id="addNewCountryPopupOverlay">
         <div class="popup-content ">
             <div class="popup-header">
                 <h2 class="popup-title">
@@ -620,8 +660,8 @@
                 </div>
             </div>
         </div>
- </div>
- <div class="popup-overlay" id="addNewDelegatePopupOverlay">
+    </div>
+    <div class="popup-overlay" id="addNewDelegatePopupOverlay">
         <div class="popup-content ">
             <div class="popup-header">
                 <h2 class="popup-title">
@@ -632,53 +672,53 @@
             <div class="popup-body ">
                 <div class="form-group label-input">
                     <label for="">Category Name</label>
-                     <select id="">
-                         <option value="">Nurses</option>
-                       </select>
-                    </div>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
 
-                 <div class="form-group label-input">
-                     <label for="">Choose the Country</label>
-                     <select id="">
-                         <option value="">Nurses</option>
-                       </select>
+                <div class="form-group label-input">
+                    <label for="">Choose the Country</label>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
                 </div>
-                 <div class="form-group label-input">
-                     <label for="">Choose a Client </label>
-                     <select id="">
-                         <option value="">Nurses</option>
-                       </select>
+                <div class="form-group label-input">
+                    <label for="">Choose a Client </label>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
                 </div>
-               
+
                 <div class="form-group label-input">
                     <label for="">Name of the Delegate</label>
-                  <input type="text" placeholder="Carla Cronin">
+                    <input type="text" placeholder="Carla Cronin">
                 </div>
                 <div class="form-group label-input">
                     <label for="">Designation</label>
-                  <input type="text" placeholder="">
+                    <input type="text" placeholder="">
                 </div>
-                  <div class="form-grid">
+                <div class="form-grid">
                     <div class="form-group label-input">
-                    <label for="">Mail ID</label>
-                  <input type="email" placeholder="">
-                </div>
+                        <label for="">Mail ID</label>
+                        <input type="email" placeholder="">
+                    </div>
                     <div class="form-group label-input">
-                    <label for="">Password</label>
-                  <input type="password" placeholder="">
+                        <label for="">Password</label>
+                        <input type="password" placeholder="">
+                    </div>
                 </div>
-                  </div>
-              
+
                 <div class="form-group label-input"></div>
                 <label for="">Internal CRM Access</label>
-                <label class="switch"> 
- <input type="checkbox" checked>
-                                            <span class="slider round"></span>
-                                        </label>
-                </div>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
         </div>
- </div>
- <div class="popup-overlay" id="addNewClientPopupOverlay">
+    </div>
+    <div class="popup-overlay" id="addNewClientPopupOverlay">
         <div class="popup-content ">
             <div class="popup-header">
                 <h2 class="popup-title">
@@ -689,36 +729,36 @@
             <div class="popup-body ">
                 <div class="form-group label-input">
                     <label for="">Category Name</label>
-                     <select id="">
-                         <option value="">Nurses</option>
-                       </select>
-                    </div>
-
-                 <div class="form-group label-input">
-                     <label for="">Choose the Country</label>
-                     <select id="">
-                         <option value="">Nurses</option>
-                       </select>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
                 </div>
-               
+
+                <div class="form-group label-input">
+                    <label for="">Choose the Country</label>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
+
                 <div class="form-group label-input">
                     <label for="">Add a Client</label>
-                  <input type="text" placeholder="Carla Cronin">
+                    <input type="text" placeholder="Carla Cronin">
                 </div>
                 <div class="form-group label-input">
                     <label for="">Add a Client Label</label>
-                  <input type="text" placeholder="Carla Cronin">
+                    <input type="text" placeholder="Carla Cronin">
                 </div>
                 <div class="form-group">
-                  <p class="extra-add add-standard-procedure"> + Add a Standard Procedure</p>
+                    <p class="extra-add add-standard-procedure"> + Add a Standard Procedure</p>
                 </div>
                 <div class="form-group">
                     <button class="confirm-button">Add</button>
                 </div>
             </div>
         </div>
- </div>
- <div class="popup-overlay" id="addStandardProcedurePopupOverlay">
+    </div>
+    <div class="popup-overlay" id="addStandardProcedurePopupOverlay">
         <div class="popup-content profile-popup-content">
             <div class="popup-header">
                 <h2 class="popup-title">
@@ -727,91 +767,91 @@
                 <button class="popup-close" id="closeStandardProcedurePopup">&#10005;</button>
             </div>
             <div class="popup-body ">
-                
-                     <div class=" profile-popup">
+
+                <div class=" profile-popup">
 
                     <div class="form-sections">
                         <section id="" class="form-section">
-                          
-                                 <div class="form-title-header">
-                            <div class="">
-                                <h2>Eligibility Criteria</h2>
+
+                            <div class="form-title-header">
+                                <div class="">
+                                    <h2>Eligibility Criteria</h2>
+                                </div>
+                                <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            viewBox="0 0 24 24">
+                                            <rect width="24" height="24" fill="none" />
+                                            <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
+                                        </svg>Add a new field</button></div>
+
                             </div>
-                            <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"/></svg>Add a new field</button></div>
-                        
-                        </div>
-                                
-                                <div class="form-container">
-                                    <div class="form-grid">
-                                        <div class="form-group full-width">
-                                            <label for="">Position</label>
-                                            <input type="text" id="" name=""
-                                                placeholder="lorem">
-                                        </div>
 
-                                        <div class="form-group ">
-                                            <label for="">Qualification</label>
-                                             <select id="">
-                         <option value=""></option>
-                       </select>
-                                        </div>
-                                        <div class="form-group ">
-                                            <label for="">Experience</label>
-                                             <select id="">
-                         <option value=""></option>
-                       </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Gender</label>
-                                            <div class="button-group">
-                                                <button type="button" class="gender-option">Both</button>
-                                                <button type="button" class="gender-option">Female</button>
-                                                <button type="button" class="gender-option">Male</button>
-                                            </div>
-                                        </div>
-                                     <div class="form-group ">
-                                            <label for="">Departments</label>
-                                             <select id="">
-                         <option value="">Multiselect (DD)</option>
-                       </select>
-                                        </div>
+                            <div class="form-container">
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label for="">Position</label>
+                                        <input type="text" id="" name="" placeholder="lorem">
+                                    </div>
 
-                                        <div class="form-group">
-                                            <label for="">Age Limit</label>
-                                            <input type="text" id="" name="" placeholder="Age"
-                                                class="form-group">
+                                    <div class="form-group ">
+                                        <label for="">Qualification</label>
+                                        <select id="">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="">Experience</label>
+                                        <select id="">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Gender</label>
+                                        <div class="button-group">
+                                            <button type="button" class="gender-option">Both</button>
+                                            <button type="button" class="gender-option">Female</button>
+                                            <button type="button" class="gender-option">Male</button>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="">Contract Period</label>
-                                            <input type="text" id="" name="" placeholder="3 Years"
-                                                class="form-group">
-                                        </div>
-                                            <div class="form-group ">
-                                            <label for="">Service Gap</label>
-                                             <select id="">
-                         <option value="">Yes</option>
-                         <option value="">No</option>
-                       </select>
-                       </div>
-                                        <div class="form-group">
-                                            <label for=""> Description</label>
-                                            <input type="text" id="" name="" placeholder="Description"
-                                                class="form-group">
-                                        </div>
-                                           <div class="form-group ">
-                                            <label for="">Tatto</label>
-                                             <select id="">
-                         <option value="">Not in Visible Parts</option>
-                         <option value="">No</option>
-                       </select>
-                                           </div>
-                                           <div class="form-group ">
-                                            <label for="">Extra Benefits (if any)</label>
-                                             <select id="">
-                         <option value="">Multiselect</option>
-                         <option value=""></option>
-                       </select>
-                       </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="">Departments</label>
+                                        <select id="">
+                                            <option value="">Multiselect (DD)</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="">Age Limit</label>
+                                        <input type="text" id="" name="" placeholder="Age" class="form-group">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Contract Period</label>
+                                        <input type="text" id="" name="" placeholder="3 Years" class="form-group">
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="">Service Gap</label>
+                                        <select id="">
+                                            <option value="">Yes</option>
+                                            <option value="">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for=""> Description</label>
+                                        <input type="text" id="" name="" placeholder="Description" class="form-group">
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="">Tatto</label>
+                                        <select id="">
+                                            <option value="">Not in Visible Parts</option>
+                                            <option value="">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="">Extra Benefits (if any)</label>
+                                        <select id="">
+                                            <option value="">Multiselect</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
 
                                 </div>
                             </div>
@@ -819,86 +859,138 @@
 
                         <section id="" class="form-section">
                             <div class="form-title-header">
-                                <h2>Salary & Perks</h2>
+                                <div class="">
+                                    <h2>Salary & Perks</h2>
+                                </div>
+                                <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            viewBox="0 0 24 24">
+                                            <rect width="24" height="24" fill="none" />
+                                            <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
+                                        </svg>Add a new field</button></div>
+
                             </div>
                             <div class="form-container">
                                 <div class="form-grid">
-                                    <div class="form-group  ">
-                                        <label for="currentEmployment">
-                                            <input type="checkbox" id="currentEmployment"> Current Employment
-                                        </label>
+
+                                    <div class="form-group full-width">
+                                        <label>Salary(in INR)</label>
+                                        <input type="text" id="" name="" placeholder="80,000-1,00,000">
                                     </div>
-                                    <div class="form-group ">
-                                        <label>Duration</label>
-                                        <div class="date-inputs">
-                                            <input type="date" id="fromDate" name="fromDate" placeholder="From">
-                                            <input type="date" id="toDate" name="toDate" placeholder="To">
+                                    <div class="form-group">
+                                        <label>Allowance</label>
+                                        <div class="marital-status-options">
+                                            <button type="button" class="status-option">Yes</button>
+                                            <button type="button" class="status-option">No</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Accomodation</label>
+                                        <div class="marital-status-options">
+                                            <button type="button" class="status-option">Yes</button>
+                                            <button type="button" class="status-option">No</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Transportaion</label>
+                                        <div class="marital-status-options">
+                                            <button type="button" class="status-option">Yes</button>
+                                            <button type="button" class="status-option">No</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Insurance</label>
+                                        <div class="marital-status-options">
+                                            <button type="button" class="status-option">Yes</button>
+                                            <button type="button" class="status-option">No</button>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="designation">Designation</label>
-                                        <select id="designation" name="designation">
-                                            <option value="">Choose the Job Role</option>
+                                        <label for="">Visa Category</label>
+                                        <select id="" name="">
+                                            <option value="">Work Permit</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="department">Department</label>
-                                        <select id="department" name="department">
-                                            <option value="">Choose the Department</option>
+                                        <label for="">Air Tickets</label>
+                                        <select id="" name="">
+                                            <option value="">One Way Provided</option>
                                         </select>
                                     </div>
-
+                                    <div class="form-group full-width">
+                                        <label>Working Hours</label>
+                                        <input type="text" id="" name="" placeholder="Lorem ipsum">
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label>Leaves</label>
+                                        <input type="text" id="" name="" placeholder="Lorem ipsum">
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label>Miscelaneous</label>
+                                        <input type="text" id="" name="" placeholder="Lorem ipsum">
+                                    </div>
                                 </div>
                             </div>
                         </section>
 
-                        <section id="registration-details">
+                        <section id="">
                             <div class="form-section registration-details">
                                 <div class="form-title-header">
-                                    <h2>Registration Details</h2>
+                                    <div class="">
+                                        <h2>Selection Process</h2>
+                                    </div>
+                                    <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                                height="1em" viewBox="0 0 24 24">
+                                                <rect width="24" height="24" fill="none" />
+                                                <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
+                                            </svg>Add a new field</button></div>
                                 </div>
-                                <div class="form-container">
-                                    <div class="form-grid">
-                                        <div class="form-group">
-                                            <label for="registrationType">Registration Type</label>
-                                            <select id="registrationType" name="registrationType">
-                                                <option value="">Choose the Registration Type</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="registrationNumber">Registration Number</label>
-                                            <input type="text" id="registrationNumber" name="registrationNumber"
-                                                placeholder="Enter the Registered Number">
-                                        </div>
-                                        <div class="form-group ">
-                                            <label for="registrationCouncil">Registration Council</label>
-                                            <select id="registrationCouncil" name="registrationCouncil">
-                                                <option value="">Choose the Registration Council</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group ">
-                                            <label>Duration</label>
-                                            <div class="date-inputs">
-                                                <input type="date" id="fromDate" name="fromDate" placeholder="From">
-                                                <input type="date" id="toDate" name="toDate" placeholder="To">
-                                            </div>
-                                        </div>
-                                        <!-- Add more form groups as needed -->
+                            <div class="form-container">
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label for="documents">Documents</label>
+                                        <input type="text" id="documents" name="documents" placeholder="Enter Required Documents">
+                                        <div id="documentsContainer" class="label-container"></div>
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label for="selection-process">Selection Process</label>
+                                        <input type="text" id="selection-process" name="selection_process" placeholder="Enter Selection Process">
+                                        <div id="selectionProcessContainer" class="label-container"></div>
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label for="procedure">Procedure</label>
+                                        <input type="text" id="procedure" name="procedure" placeholder="Enter Procedure">
+                                        <div id="procedureContainer" class="label-container"></div>
                                     </div>
                                 </div>
                             </div>
+
+
+                            </div>
                         </section>
-                        <section id="educational-details">
-                            <div class="form-section educational-details">
-                                <div class="form-title-header">
-                                    <h2>Educational Details</h2>
+                        <section id="">
+                            <div class="form-section ">
+                            <div class="form-title-header">
+                                <div class="">
+                                    <h2>Service Fee</h2>
                                 </div>
+                                <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                            <rect width="24" height="24" fill="none" />
+                                            <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
+                                        </svg>Add a new field</button></div>
+                            
+                                    </div>
                                 <div class="form-container">
                                     <div class="form-grid">
                                         <div class="form-group">
-                                            <label for="education">Education</label>
-                                            <select id="education" name="education">
+                                            <label for="">Basic Fee</label>
+                                            <select id="" name="">
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Basic Fee</label>
+                                            <select id="" name="">
                                                 <option value=""></option>
                                             </select>
                                         </div>
@@ -914,29 +1006,12 @@
                                 </div>
                             </div>
                         </section>
-                        <section id="preferences">
-                            <div class="form-section preferences">
-                                <div class="form-title-header">
-                                    <h2>Preferences</h2>
-                                </div>
-                                <div class="form-container">
-                                    <div class="form-grid">
-                                        <div class="form-group full-width">
-                                            <label for="preferredCountry">Country</label>
-                                            <div id="countryContainer" class="country-container">
-                                                <!-- Labels will appear here -->
-                                            </div>
-                                            <input type="text" id="countryInput" placeholder="Add a country">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                   
 
                         <section>
                             <div class="form-section ">
                                 <div class="form-group">
-                                    <button class="confirm-button">Add Candidate</button>
+                                    <button class="confirm-button">Save</button>
                                 </div>
                             </div>
                         </section>
@@ -944,12 +1019,12 @@
 
                     </div>
                 </div>
+            </div>
         </div>
-        </div>
- </div>
- 
+    </div>
 
- <div class="popup-overlay" id="addNewProjectPopupOverlay">
+
+    <div class="popup-overlay" id="addNewProjectPopupOverlay">
         <div class="popup-content ">
             <div class="popup-header">
                 <h2 class="popup-title">
@@ -960,44 +1035,44 @@
             <div class="popup-body ">
                 <div class="form-group label-input">
                     <label for="">Category Name</label>
-                     <select id="">
-                         <option value="">Nurses</option>
-                       </select>
-                    </div>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
 
-                    <div class="form-group label-input">
-                        <label for="">Name of the Project<span style="color: red;">*</span></label>
-                      <input type="text" placeholder="Nurses">
-                    </div>
-                 <div class="form-group label-input">
-                     <label for="">Add a Client Name</label>
-                     <select id="">
-                         <option value="">Client</option>
-                       </select>
-                    </div>
-                 <div class="form-group label-input">
-                     <label for="">Client Label</label>
-                     <select id="">
-                         <option value="">Label Name</option>
-                       </select>
-                    </div>
-                 <div class="form-group label-input">
-                     <label for="">Choose the Agents <span style="color: red;">*</span></label>
-                     <select id="">
-                         <option value="">All</option>
-                         <option value="">Agent 2</option>
-                         <option value="">Agent 3</option>
-                       </select>
-                    </div>
-               
-              
+                <div class="form-group label-input">
+                    <label for="">Name of the Project<span style="color: red;">*</span></label>
+                    <input type="text" placeholder="Nurses">
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Add a Client Name</label>
+                    <select id="">
+                        <option value="">Client</option>
+                    </select>
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Client Label</label>
+                    <select id="">
+                        <option value="">Label Name</option>
+                    </select>
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Choose the Agents <span style="color: red;">*</span></label>
+                    <select id="">
+                        <option value="">All</option>
+                        <option value="">Agent 2</option>
+                        <option value="">Agent 3</option>
+                    </select>
+                </div>
+
+
                 <div class="form-group">
                     <button class="confirm-button">Add</button>
                 </div>
             </div>
         </div>
- </div>
- <div class="popup-overlay" id="editAProjectPopupOverlay">
+    </div>
+    <div class="popup-overlay" id="editAProjectPopupOverlay">
         <div class="popup-content ">
             <div class="popup-header">
                 <h2 class="popup-title">
@@ -1008,44 +1083,44 @@
             <div class="popup-body ">
                 <div class="form-group label-input">
                     <label for="">Category Name</label>
-                     <select id="">
-                         <option value="">Nurses</option>
-                       </select>
-                    </div>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
 
-                    <div class="form-group label-input">
-                        <label for="">Name of the Project<span style="color: red;">*</span></label>
-                      <input type="text" placeholder="Nurses">
-                    </div>
-                 <div class="form-group label-input">
-                     <label for="">Add a Client Name</label>
-                     <select id="">
-                         <option value="">Client</option>
-                       </select>
-                    </div>
-                 <div class="form-group label-input">
-                     <label for="">Client Label</label>
-                     <select id="">
-                         <option value="">Label Name</option>
-                       </select>
-                    </div>
-                 <div class="form-group label-input">
-                     <label for="">Choose the Agents <span style="color: red;">*</span></label>
-                     <select id="">
-                         <option value="">All</option>
-                         <option value="">Agent 2</option>
-                         <option value="">Agent 3</option>
-                       </select>
-                    </div>
-               
-              
+                <div class="form-group label-input">
+                    <label for="">Name of the Project<span style="color: red;">*</span></label>
+                    <input type="text" placeholder="Nurses">
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Add a Client Name</label>
+                    <select id="">
+                        <option value="">Client</option>
+                    </select>
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Client Label</label>
+                    <select id="">
+                        <option value="">Label Name</option>
+                    </select>
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Choose the Agents <span style="color: red;">*</span></label>
+                    <select id="">
+                        <option value="">All</option>
+                        <option value="">Agent 2</option>
+                        <option value="">Agent 3</option>
+                    </select>
+                </div>
+
+
                 <div class="form-group">
                     <button class="confirm-button">Add</button>
                 </div>
             </div>
         </div>
- </div>
- <div class="popup-overlay" id="addNewDepartmentPopupOverlay">
+    </div>
+    <div class="popup-overlay" id="addNewDepartmentPopupOverlay">
         <div class="popup-content ">
             <div class="popup-header">
                 <h2 class="popup-title">
@@ -1056,25 +1131,25 @@
             <div class="popup-body ">
                 <div class="form-group label-input">
                     <label for="">Category Name</label>
-                     <select id="">
-                         <option value="">Nurses</option>
-                       </select>
-                    </div>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
 
-                    <div class="form-group label-input">
-                        <label for="">Add a Department</label>
-                      <input type="text" placeholder="">
-                    </div>
-         
-               
-              
+                <div class="form-group label-input">
+                    <label for="">Add a Department</label>
+                    <input type="text" placeholder="">
+                </div>
+
+
+
                 <div class="form-group">
                     <button class="confirm-button">Add</button>
                 </div>
             </div>
         </div>
- </div>
- <div class="popup-overlay" id="addNewDesignationPopupOverlay">
+    </div>
+    <div class="popup-overlay" id="addNewDesignationPopupOverlay">
         <div class="popup-content ">
             <div class="popup-header">
                 <h2 class="popup-title">
@@ -1085,25 +1160,25 @@
             <div class="popup-body ">
                 <div class="form-group label-input">
                     <label for="">Category Name</label>
-                     <select id="">
-                         <option value="">Nurses</option>
-                       </select>
-                    </div>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
 
-                    <div class="form-group label-input">
-                        <label for="">Add a Designation</label>
-                      <input type="text" placeholder="">
-                    </div>
-         
-               
-              
+                <div class="form-group label-input">
+                    <label for="">Add a Designation</label>
+                    <input type="text" placeholder="">
+                </div>
+
+
+
                 <div class="form-group">
                     <button class="confirm-button">Add</button>
                 </div>
             </div>
         </div>
- </div>
- <div class="popup-overlay" id="addNewQualificationPopupOverlay">
+    </div>
+    <div class="popup-overlay" id="addNewQualificationPopupOverlay">
         <div class="popup-content ">
             <div class="popup-header">
                 <h2 class="popup-title">
@@ -1114,29 +1189,29 @@
             <div class="popup-body ">
                 <div class="form-group label-input">
                     <label for="">Category Name</label>
-                     <select id="">
-                         <option value="">Nurses</option>
-                       </select>
-                    </div>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
                 <div class="form-group label-input">
                     <label for="">Degree Level</label>
-                     <select id="">
-                         <option value="">Graduation</option>
-                       </select>
-                    </div>
+                    <select id="">
+                        <option value="">Graduation</option>
+                    </select>
+                </div>
 
-                    <div class="form-group label-input">
-                        <label for="">Add a Degree</label>
-                      <input type="text" placeholder="B.Sc">
-                    </div>
+                <div class="form-group label-input">
+                    <label for="">Add a Degree</label>
+                    <input type="text" placeholder="B.Sc">
+                </div>
                 <div class="form-group">
                     <button class="confirm-button">Add</button>
                 </div>
             </div>
         </div>
- </div>
- 
- 
+    </div>
+
+
     <script src="../../../../Internal-CRM/scripts.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -1177,167 +1252,212 @@
         const addNewCountryPopup = document.getElementById('addNewCountryPopupOverlay');
         const addNewCountryCloseButton = document.getElementById('closeAddNewCountryPopup');
         const addNewClientPopup = document.getElementById('addNewClientPopupOverlay');
-const addNewClientCloseButton = document.getElementById('closeAddNewClientPopup');
-const addStandardProcedurePopup = document.getElementById('addStandardProcedurePopupOverlay'); 
-const addStandardProcedureCloseButton = document.getElementById('closeStandardProcedurePopup');
-const addNewDelegatePopup = document.getElementById('addNewDelegatePopupOverlay');
-const addNewDelegateCloseButton = document.getElementById('closeAddNewDelegatePopup');
-const addNewProjectPopup = document.getElementById('addNewProjectPopupOverlay');
-const addNewProjectCloseButton = document.getElementById('closeAddNewProjectPopup')
-const editAProjectPopup = document.getElementById('editAProjectPopupOverlay');
-const editAProjectCloseButton = document.getElementById('closeEditAProjectPopup');
-const addNewDepartmentPopup = document.getElementById('addNewDepartmentPopupOverlay');
-const closeNewDepartmentProjectPopup = document.getElementById('closeNewDepartmentProjectPopup');
-const addNewDesignationPopup = document.getElementById('addNewDesignationPopupOverlay');
-const closeNewDesignationProjectPopup = document.getElementById('closeNewDesignationProjectPopup');
-const addNewQualificationPopup = document.getElementById('addNewQualificationPopupOverlay');
-const closeNewQualificationPopup = document.getElementById('closeNewQualificationPopup');
+        const addNewClientCloseButton = document.getElementById('closeAddNewClientPopup');
+        const addStandardProcedurePopup = document.getElementById('addStandardProcedurePopupOverlay');
+        const addStandardProcedureCloseButton = document.getElementById('closeStandardProcedurePopup');
+        const addNewDelegatePopup = document.getElementById('addNewDelegatePopupOverlay');
+        const addNewDelegateCloseButton = document.getElementById('closeAddNewDelegatePopup');
+        const addNewProjectPopup = document.getElementById('addNewProjectPopupOverlay');
+        const addNewProjectCloseButton = document.getElementById('closeAddNewProjectPopup')
+        const editAProjectPopup = document.getElementById('editAProjectPopupOverlay');
+        const editAProjectCloseButton = document.getElementById('closeEditAProjectPopup');
+        const addNewDepartmentPopup = document.getElementById('addNewDepartmentPopupOverlay');
+        const closeNewDepartmentProjectPopup = document.getElementById('closeNewDepartmentProjectPopup');
+        const addNewDesignationPopup = document.getElementById('addNewDesignationPopupOverlay');
+        const closeNewDesignationProjectPopup = document.getElementById('closeNewDesignationProjectPopup');
+        const addNewQualificationPopup = document.getElementById('addNewQualificationPopupOverlay');
+        const closeNewQualificationPopup = document.getElementById('closeNewQualificationPopup');
 
-      if (addNewCountryPopup && addNewCountryCloseButton) {
-        // Use event delegation for add new country buttons
-        document.addEventListener('click', function (event) {
-            if (event.target.closest('.add-new-country-button')) {
-                addNewCountryPopup.style.display = 'block';
-            }
+        if (addNewCountryPopup && addNewCountryCloseButton) {
+            // Use event delegation for add new country buttons
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.add-new-country-button')) {
+                    addNewCountryPopup.style.display = 'block';
+                }
+            });
+
+            addNewCountryCloseButton.addEventListener('click', () => addNewCountryPopup.style.display = 'none');
+            addNewCountryPopup.addEventListener('click', (event) => {
+                if (event.target === addNewCountryPopup) addNewCountryPopup.style.display = 'none';
+            });
+        } else {
+            console.error('Add new country popup elements not found');
+        }
+
+        if (addNewClientPopup && addNewClientCloseButton) {
+            // Use event delegation for add new client buttons
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.add-new-client-button')) {
+                    addNewClientPopup.style.display = 'block';
+                }
+            });
+
+            addNewClientCloseButton.addEventListener('click', () => addNewClientPopup.style.display = 'none');
+            addNewClientPopup.addEventListener('click', (event) => {
+                if (event.target === addNewClientPopup) addNewClientPopup.style.display = 'none';
+            });
+        } else {
+            console.error('Add new client popup elements not found');
+        }
+
+        if (addStandardProcedurePopup && addStandardProcedureCloseButton) {
+            // Use event delegation for standard procedure popup buttons
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.add-standard-procedure')) {
+                    addStandardProcedurePopup.style.display = 'block';
+                }
+            });
+
+            addStandardProcedureCloseButton.addEventListener('click', () => addStandardProcedurePopup.style.display = 'none');
+
+            addStandardProcedurePopup.addEventListener('click', (event) => {
+                if (event.target === addStandardProcedurePopup) {
+                    addStandardProcedurePopup.style.display = 'none';
+                }
+            });
+        } else {
+            console.error('Standard procedure popup elements not found');
+        }
+        if (addNewDelegatePopup && addNewDelegateCloseButton) {
+            // Use event delegation for add new delegate buttons
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.add-new-delegate-button')) {
+                    addNewDelegatePopup.style.display = 'block';
+                }
+            });
+
+            addNewDelegateCloseButton.addEventListener('click', () => addNewDelegatePopup.style.display = 'none');
+            addNewDelegatePopup.addEventListener('click', (event) => {
+                if (event.target === addNewDelegatePopup) addNewDelegatePopup.style.display = 'none';
+            });
+        } else {
+            console.error('Add new delegate popup elements not found');
+        }
+
+        if (addNewProjectPopup && addNewProjectCloseButton) {
+            // Use event delegation for add new project buttons
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.add-new-project-button')) {
+                    addNewProjectPopup.style.display = 'block';
+                }
+            });
+
+            addNewProjectCloseButton.addEventListener('click', () => addNewProjectPopup.style.display = 'none');
+            addNewProjectPopup.addEventListener('click', (event) => {
+                if (event.target === addNewProjectPopup) addNewProjectPopup.style.display = 'none';
+            });
+        } else {
+            console.error('Add new project popup elements not found');
+        }
+        if (editAProjectPopup && editAProjectCloseButton) {
+            // Use event delegation for edit a project buttons
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.edit-a-project-button')) {
+                    editAProjectPopup.style.display = 'block';
+                }
+            });
+
+            editAProjectCloseButton.addEventListener('click', () => editAProjectPopup.style.display = 'none');
+            editAProjectPopup.addEventListener('click', (event) => {
+                if (event.target === editAProjectPopup) editAProjectPopup.style.display = 'none';
+            });
+        } else {
+            console.error('Edit a project popup elements not found');
+        }
+
+        if (addNewDepartmentPopup && closeNewDepartmentProjectPopup) {
+            // Use event delegation for add new department buttons
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.add-new-department-button')) {
+                    addNewDepartmentPopup.style.display = 'block';
+                }
+            });
+
+            closeNewDepartmentProjectPopup.addEventListener('click', () => addNewDepartmentPopup.style.display = 'none');
+            addNewDepartmentPopup.addEventListener('click', (event) => {
+                if (event.target === addNewDepartmentPopup) addNewDepartmentPopup.style.display = 'none';
+            });
+        } else {
+            console.error('Add new department popup elements not found');
+        }
+
+        if (addNewDesignationPopup && closeNewDesignationProjectPopup) {
+            // Use event delegation for add new designation buttons
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.add-new-designation-button')) {
+                    addNewDesignationPopup.style.display = 'block';
+                }
+            });
+
+            closeNewDesignationProjectPopup.addEventListener('click', () => addNewDesignationPopup.style.display = 'none');
+            addNewDesignationPopup.addEventListener('click', (event) => {
+                if (event.target === addNewDesignationPopup) addNewDesignationPopup.style.display = 'none';
+            });
+        } else {
+            console.error('Add new designation popup elements not found');
+        }
+
+
+        if (addNewQualificationPopup && closeNewQualificationPopup) {
+            // Use event delegation for add new qualification buttons
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.add-new-qualification-button')) {
+                    addNewQualificationPopup.style.display = 'block';
+                }
+            });
+
+            closeNewQualificationPopup.addEventListener('click', () => addNewQualificationPopup.style.display = 'none');
+            addNewQualificationPopup.addEventListener('click', (event) => {
+                if (event.target === addNewQualificationPopup) addNewQualificationPopup.style.display = 'none';
+            });
+        } else {
+            console.error('Add new qualification popup elements not found');
+        }
+    // Generic function to add a label based on form input
+    function addLabel(inputId, containerId) {
+        const inputElement = document.getElementById(inputId);
+        const containerElement = document.getElementById(containerId);
+
+        const inputValue = inputElement.value.trim();
+        if (inputValue === "") return; // Don't add empty labels
+
+        const label = document.createElement('div');
+        label.className = 'item-label'; // Shared class for styling
+
+        const span = document.createElement('span');
+        span.textContent = inputValue;
+
+        const removeButton = document.createElement('button');
+        removeButton.textContent = '×';
+        removeButton.className = 'remove-btn'; // Add styling class for button
+        removeButton.addEventListener('click', () => {
+            containerElement.removeChild(label);
         });
 
-        addNewCountryCloseButton.addEventListener('click', () => addNewCountryPopup.style.display = 'none');
-        addNewCountryPopup.addEventListener('click', (event) => {
-            if (event.target === addNewCountryPopup) addNewCountryPopup.style.display = 'none';
-        });
-    } else {
-        console.error('Add new country popup elements not found');
+        label.appendChild(span);
+        label.appendChild(removeButton);
+        containerElement.appendChild(label);
+
+        // Clear the input field after adding label
+        inputElement.value = '';
     }
 
-    if (addNewClientPopup && addNewClientCloseButton) {
-    // Use event delegation for add new client buttons
-    document.addEventListener('click', function (event) {
-        if (event.target.closest('.add-new-client-button')) {
-            addNewClientPopup.style.display = 'block';
+    // Event listeners for the inputs
+    document.getElementById('documents').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            addLabel('documents', 'documentsContainer');
         }
     });
-
-    addNewClientCloseButton.addEventListener('click', () => addNewClientPopup.style.display = 'none');
-    addNewClientPopup.addEventListener('click', (event) => {
-        if (event.target === addNewClientPopup) addNewClientPopup.style.display = 'none';
-    });
-} else {
-    console.error('Add new client popup elements not found');
-}
-
-if (addStandardProcedurePopup && addStandardProcedureCloseButton) {
-    // Use event delegation for standard procedure popup buttons
-    document.addEventListener('click', function (event) {
-        if (event.target.closest('.add-standard-procedure')) {
-            addStandardProcedurePopup.style.display = 'block';
+    document.getElementById('selection-process').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            addLabel('selection-process', 'selectionProcessContainer');
         }
     });
-
-    addStandardProcedureCloseButton.addEventListener('click', () => addStandardProcedurePopup.style.display = 'none');
-
-    addStandardProcedurePopup.addEventListener('click', (event) => {
-        if (event.target === addStandardProcedurePopup) {
-            addStandardProcedurePopup.style.display = 'none';
+    document.getElementById('procedure').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            addLabel('procedure', 'procedureContainer');
         }
     });
-} else {
-    console.error('Standard procedure popup elements not found');
-}
-if (addNewDelegatePopup && addNewDelegateCloseButton) {
-    // Use event delegation for add new delegate buttons
-    document.addEventListener('click', function (event) {
-        if (event.target.closest('.add-new-delegate-button')) {
-            addNewDelegatePopup.style.display = 'block';
-        }
-    });
-
-    addNewDelegateCloseButton.addEventListener('click', () => addNewDelegatePopup.style.display = 'none');
-    addNewDelegatePopup.addEventListener('click', (event) => {
-        if (event.target === addNewDelegatePopup) addNewDelegatePopup.style.display = 'none';
-    });
-} else {
-    console.error('Add new delegate popup elements not found');
-}
-
-if (addNewProjectPopup && addNewProjectCloseButton) {
-    // Use event delegation for add new project buttons
-    document.addEventListener('click', function (event) {
-        if (event.target.closest('.add-new-project-button')) {
-            addNewProjectPopup.style.display = 'block';
-        }
-    });
-
-    addNewProjectCloseButton.addEventListener('click', () => addNewProjectPopup.style.display = 'none');
-    addNewProjectPopup.addEventListener('click', (event) => {
-        if (event.target === addNewProjectPopup) addNewProjectPopup.style.display = 'none';
-    });
-} else {
-    console.error('Add new project popup elements not found');
-}
-if (editAProjectPopup && editAProjectCloseButton) {
-    // Use event delegation for edit a project buttons
-    document.addEventListener('click', function (event) {
-        if (event.target.closest('.edit-a-project-button')) {
-            editAProjectPopup.style.display = 'block';
-        }
-    });
-
-    editAProjectCloseButton.addEventListener('click', () => editAProjectPopup.style.display = 'none');
-    editAProjectPopup.addEventListener('click', (event) => {
-        if (event.target === editAProjectPopup) editAProjectPopup.style.display = 'none';
-    });
-} else {
-    console.error('Edit a project popup elements not found');
-}
-
-if (addNewDepartmentPopup && closeNewDepartmentProjectPopup) {
-    // Use event delegation for add new department buttons
-    document.addEventListener('click', function (event) {
-        if (event.target.closest('.add-new-department-button')) {
-            addNewDepartmentPopup.style.display = 'block';
-        }
-    });
-
-    closeNewDepartmentProjectPopup.addEventListener('click', () => addNewDepartmentPopup.style.display = 'none');
-    addNewDepartmentPopup.addEventListener('click', (event) => {
-        if (event.target === addNewDepartmentPopup) addNewDepartmentPopup.style.display = 'none';
-    });
-} else {
-    console.error('Add new department popup elements not found');
-}
-
-if (addNewDesignationPopup && closeNewDesignationProjectPopup) {
-    // Use event delegation for add new designation buttons
-    document.addEventListener('click', function (event) {
-        if (event.target.closest('.add-new-designation-button')) {
-            addNewDesignationPopup.style.display = 'block';
-        }
-    });
-
-    closeNewDesignationProjectPopup.addEventListener('click', () => addNewDesignationPopup.style.display = 'none');
-    addNewDesignationPopup.addEventListener('click', (event) => {
-        if (event.target === addNewDesignationPopup) addNewDesignationPopup.style.display = 'none';
-    });
-} else {
-    console.error('Add new designation popup elements not found');
-}
-
-
-if (addNewQualificationPopup && closeNewQualificationPopup) {
-    // Use event delegation for add new qualification buttons
-    document.addEventListener('click', function (event) {
-        if (event.target.closest('.add-new-qualification-button')) {
-            addNewQualificationPopup.style.display = 'block';
-        }
-    });
-
-    closeNewQualificationPopup.addEventListener('click', () => addNewQualificationPopup.style.display = 'none');
-    addNewQualificationPopup.addEventListener('click', (event) => {
-        if (event.target === addNewQualificationPopup) addNewQualificationPopup.style.display = 'none';
-    });
-} else {
-    console.error('Add new qualification popup elements not found');
-}
 
     </script>
 </body>
