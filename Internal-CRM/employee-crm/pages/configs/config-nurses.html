@@ -423,21 +423,14 @@
                                             <span class="slider round"></span>
                                         </label></td>
                                     <td>
-                                        <!-- Placeholder for SVG icons -->
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M19 12.998H13V18.998H11V12.998H5V10.998H11V4.99805H13V10.998H19V12.998Z"
-                                                fill="black" />
-                                        </svg>
+                                      
 
 
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z"
-                                                fill="#FF0000" />
-                                        </svg>
+                                <svg class="edit-delegate-button" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <rect width="24" height="24" fill="none" />
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        d="m5 16l-1 4l4-1L19.586 7.414a2 2 0 0 0 0-2.828l-.172-.172a2 2 0 0 0-2.828 0zM15 6l3 3m-5 11h8" />
+                                </svg>
 
 
                                     </td>
@@ -701,6 +694,66 @@
                     ADD A NEW DELEGATE
                 </h2>
                 <button class="popup-close" id="closeAddNewDelegatePopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+                <div class="form-group label-input">
+                    <label for="">Category Name</label>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
+
+                <div class="form-group label-input">
+                    <label for="">Choose the Country</label>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Choose a Client </label>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
+
+                <div class="form-group label-input">
+                    <label for="">Name of the Delegate</label>
+                    <input type="text" placeholder="Carla Cronin">
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Designation</label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="form-grid">
+                    <div class="form-group label-input">
+                        <label for="">Mail ID</label>
+                        <input type="email" placeholder="">
+                    </div>
+                    <div class="form-group label-input">
+                        <label for="">Password</label>
+                        <input type="password" placeholder="">
+                    </div>
+                </div>
+
+                <div class="form-group switch-input">
+                <label for="">Internal CRM Access</label>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label></div>
+                <div class="form-group">
+                    <button class="confirm-button">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-overlay" id="editDelegatePopupOverlay">
+        <div class="popup-content ">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    EDIT DELEGATE
+                </h2>
+                <button class="popup-close" id="closeEditDelegatePopup">&#10005;</button>
             </div>
             <div class="popup-body ">
                 <div class="form-group label-input">
@@ -1250,33 +1303,21 @@
         const addStandardProcedureCloseButton = document.getElementById('closeStandardProcedurePopup');
         const addNewDelegatePopup = document.getElementById('addNewDelegatePopupOverlay');
         const addNewDelegateCloseButton = document.getElementById('closeAddNewDelegatePopup');
-        
+        const editDelegatePopup = document.getElementById('editDelegatePopupOverlay');
+            const closeEditDelegatePopupButton = document.getElementById('closeEditDelegatePopup');
         const addNewProjectPopup = document.getElementById('addNewProjectPopupOverlay');
         const addNewProjectCloseButton = document.getElementById('closeAddNewProjectPopup')
         const editAProjectPopup = document.getElementById('editAProjectPopupOverlay');
         const editAProjectCloseButton = document.getElementById('closeEditAProjectPopup');
         const addNewDepartmentPopup = document.getElementById('addNewDepartmentPopupOverlay');
         const closeNewDepartmentProjectPopup = document.getElementById('closeNewDepartmentProjectPopup');
+        
         const addNewDesignationPopup = document.getElementById('addNewDesignationPopupOverlay');
         const closeNewDesignationProjectPopup = document.getElementById('closeNewDesignationProjectPopup');
         const addNewQualificationPopup = document.getElementById('addNewQualificationPopupOverlay');
         const closeNewQualificationPopup = document.getElementById('closeNewQualificationPopup');
 
-        if (addNewCountryPopup && addNewCountryCloseButton) {
-            // Use event delegation for add new country buttons
-            document.addEventListener('click', function (event) {
-                if (event.target.closest('.add-new-country-button')) {
-                    addNewCountryPopup.style.display = 'block';
-                }
-            });
-
-            addNewCountryCloseButton.addEventListener('click', () => addNewCountryPopup.style.display = 'none');
-            addNewCountryPopup.addEventListener('click', (event) => {
-                if (event.target === addNewCountryPopup) addNewCountryPopup.style.display = 'none';
-            });
-        } else {
-            console.error('Add new country popup elements not found');
-        }
+      
 
         if (addNewClientPopup && addNewClientCloseButton) {
             // Use event delegation for add new client buttons
@@ -1347,6 +1388,28 @@
         } else {
             console.error('Add new delegate popup elements not found');
         }
+
+    if (editDelegatePopup && closeEditDelegatePopupButton) {
+        // Use event delegation for edit delegate buttons
+        document.addEventListener('click', function (event) {
+            if (event.target.closest('.edit-delegate-button')) {
+                editDelegatePopup.style.display = 'block';
+            }
+        });
+
+        // Close the popup when the close button is clicked
+        closeEditDelegatePopupButton.addEventListener('click', () => editDelegatePopup.style.display = 'none');
+
+        // Close the popup when clicking outside the popup content
+        editDelegatePopup.addEventListener('click', (event) => {
+            if (event.target === editDelegatePopup) {
+                editDelegatePopup.style.display = 'none';
+            }
+        });
+    } else {
+        console.error('Edit delegate popup elements not found');
+    }
+
 
         if (addNewProjectPopup && addNewProjectCloseButton) {
             // Use event delegation for add new project buttons
