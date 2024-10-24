@@ -320,7 +320,7 @@
                     </li>
                     <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/config-agents.html">Agents</a></li>
                     <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/config-status.html">Status</a></li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/config-template.html">Template</a>
+                    
                     </li>
 
                     <button class="create-button add-new-country-button"><svg xmlns="http://www.w3.org/2000/svg"
@@ -511,11 +511,10 @@
                                     <td>DD-MM-YYYY </td>
                                     <td>Tracy Kemmer</td>
                                     <td>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z"
-                                                fill="#FF0000" />
+                                        <svg class="edit-department-button" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <rect width="24" height="24" fill="none" />
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                d="m5 16l-1 4l4-1L19.586 7.414a2 2 0 0 0 0-2.828l-.172-.172a2 2 0 0 0-2.828 0zM15 6l3 3m-5 11h8" />
                                         </svg>
                                     </td>
                                 </tr>
@@ -549,12 +548,11 @@
                                     <td>DD-MM-YYYY </td>
                                     <td>Tracy Kemmer</td>
                                     <td>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z"
-                                                fill="#FF0000" />
-                                        </svg>
+                                    <svg class="edit-designation-button" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <rect width="24" height="24" fill="none" />
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            d="m5 16l-1 4l4-1L19.586 7.414a2 2 0 0 0 0-2.828l-.172-.172a2 2 0 0 0-2.828 0zM15 6l3 3m-5 11h8" />
+                                    </svg>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1193,6 +1191,35 @@
             </div>
         </div>
     </div>
+    <div class="popup-overlay" id="editDepartmentPopupOverlay">
+        <div class="popup-content ">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    EDIT DEPARTMENT
+                </h2>
+                <button class="popup-close" id="closeEditDepartmentPopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+                <div class="form-group label-input">
+                    <label for="">Category Name</label>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
+
+                <div class="form-group label-input">
+                    <label for="">Add a Department</label>
+                    <input type="text" placeholder="">
+                </div>
+
+
+
+                <div class="form-group">
+                    <button class="confirm-button">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="popup-overlay" id="addNewDesignationPopupOverlay">
         <div class="popup-content ">
             <div class="popup-header">
@@ -1200,6 +1227,35 @@
                     ADD A NEW DESIGNATION
                 </h2>
                 <button class="popup-close" id="closeNewDesignationProjectPopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+                <div class="form-group label-input">
+                    <label for="">Category Name</label>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
+
+                <div class="form-group label-input">
+                    <label for="">Add a Designation</label>
+                    <input type="text" placeholder="">
+                </div>
+
+
+
+                <div class="form-group">
+                    <button class="confirm-button">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-overlay" id="editDesignationPopupOverlay">
+        <div class="popup-content ">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    EDIT DESIGNATION
+                </h2>
+                <button class="popup-close" id="closeEditDesignationPopup">&#10005;</button>
             </div>
             <div class="popup-body ">
                 <div class="form-group label-input">
@@ -1311,9 +1367,12 @@
         const editAProjectCloseButton = document.getElementById('closeEditAProjectPopup');
         const addNewDepartmentPopup = document.getElementById('addNewDepartmentPopupOverlay');
         const closeNewDepartmentProjectPopup = document.getElementById('closeNewDepartmentProjectPopup');
-        
+        const editDepartmentPopup = document.getElementById('editDepartmentPopupOverlay');
+            const closeEditDepartmentPopupButton = document.getElementById('closeEditDepartmentPopup');
         const addNewDesignationPopup = document.getElementById('addNewDesignationPopupOverlay');
         const closeNewDesignationProjectPopup = document.getElementById('closeNewDesignationProjectPopup');
+        const editDesignationPopup = document.getElementById('editDesignationPopupOverlay');
+            const closeEditDesignationPopupButton = document.getElementById('closeEditDesignationPopup');
         const addNewQualificationPopup = document.getElementById('addNewQualificationPopupOverlay');
         const closeNewQualificationPopup = document.getElementById('closeNewQualificationPopup');
 
@@ -1457,7 +1516,26 @@
         } else {
             console.error('Add new department popup elements not found');
         }
+        if (editDepartmentPopup && closeEditDepartmentPopupButton) {
+                // Use event delegation for edit department buttons
+                document.addEventListener('click', function (event) {
+                    if (event.target.closest('.edit-department-button')) {
+                        editDepartmentPopup.style.display = 'block';
+                    }
+                });
 
+                // Close the popup when the close button is clicked
+                closeEditDepartmentPopupButton.addEventListener('click', () => editDepartmentPopup.style.display = 'none');
+
+                // Close the popup when clicking outside the popup content
+                editDepartmentPopup.addEventListener('click', (event) => {
+                    if (event.target === editDepartmentPopup) {
+                        editDepartmentPopup.style.display = 'none';
+                    }
+                });
+            } else {
+                console.error('Edit department popup elements not found');
+            }
         if (addNewDesignationPopup && closeNewDesignationProjectPopup) {
             // Use event delegation for add new designation buttons
             document.addEventListener('click', function (event) {
@@ -1474,6 +1552,26 @@
             console.error('Add new designation popup elements not found');
         }
 
+        if (editDesignationPopup && closeEditDesignationPopupButton) {
+                // Use event delegation for edit designation buttons
+                document.addEventListener('click', function (event) {
+                    if (event.target.closest('.edit-designation-button')) {
+                        editDesignationPopup.style.display = 'block';
+                    }
+                });
+
+                // Close the popup when the close button is clicked
+                closeEditDesignationPopupButton.addEventListener('click', () => editDesignationPopup.style.display = 'none');
+
+                // Close the popup when clicking outside the popup content
+                editDesignationPopup.addEventListener('click', (event) => {
+                    if (event.target === editDesignationPopup) {
+                        editDesignationPopup.style.display = 'none';
+                    }
+                });
+            } else {
+                console.error('Edit designation popup elements not found');
+            }
 
         if (addNewQualificationPopup && closeNewQualificationPopup) {
             // Use event delegation for add new qualification buttons
