@@ -4215,6 +4215,12 @@ select:focus {
   height: 0;
 }
 
+.switch-input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
 .slider {
   position: absolute;
   cursor: pointer;

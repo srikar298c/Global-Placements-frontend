@@ -377,13 +377,11 @@
                                                 fill="black" />
                                         </svg>
 
-
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z"
-                                                fill="#FF0000" />
-                                        </svg>
+<svg class="edit-new-client-button" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <rect width="24" height="24" fill="none" />
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+        d="m5 16l-1 4l4-1L19.586 7.414a2 2 0 0 0 0-2.828l-.172-.172a2 2 0 0 0-2.828 0zM15 6l3 3m-5 11h8" />
+</svg>
 
 
                                     </td>
@@ -616,45 +614,80 @@
             </div>
         </div>
     </div>
-    <div class="popup-overlay" id="addNewCountryPopupOverlay">
+   <div class="popup-overlay" id="addNewClientPopupOverlay">
         <div class="popup-content ">
             <div class="popup-header">
                 <h2 class="popup-title">
-                    ADD A NEW Country
+                    ADD A NEW CLIENT
                 </h2>
-                <button class="popup-close" id="closeAddNewCountryPopup">&#10005;</button>
+                <button class="popup-close" id="closeAddNewClientPopup">&#10005;</button>
             </div>
             <div class="popup-body ">
                 <div class="form-group label-input">
-                    <label for="">Country Code</label>
-                    <input type="text" id="" value="">
+                    <label for="">Category Name</label>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
+
+                <div class="form-group label-input">
+                    <label for="">Choose the Country</label>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
+
+                <div class="form-group label-input">
+                    <label for="">Add a Client</label>
+                    <input type="text" placeholder="Carla Cronin">
                 </div>
                 <div class="form-group label-input">
-                    <label for="">Name of the Country</label>
-                    <input type="text" id="" value="">
+                    <label for="">Add a Client Label</label>
+                    <input type="text" placeholder="Carla Cronin">
                 </div>
-                <div class="form-container">
-                    <div class="form-grid">
-                        <div class="form-group full-width">
-                            <label for="preferredStatus">Status</label>
-                            <div id="statusContainer" class="country-container">
-                                <!-- Labels will appear here -->
-                            </div>
-                            <input type="text" id="statusInput" placeholder="Status">
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <p class="extra-add add-standard-procedure"> + Add a Standard Procedure</p>
                 </div>
-                <div class="form-container">
-                    <div class="form-grid">
-                        <div class="form-group full-width">
-                            <label for="preferredStatus">Registration Council</label>
-                            <div id="statusContainer" class="country-container">
-                                <!-- Labels will appear here -->
-                            </div>
-                            <input type="text" id="statusInput" placeholder="Registration Council">
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <button class="confirm-button">Add</button>
                 </div>
+            </div>
+        </div>
+    </div>
+   <div class="popup-overlay" id="editNewClientPopupOverlay">
+        <div class="popup-content ">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    EDIT CLIENT
+                </h2>
+                <button class="popup-close" id="closeEditNewClientPopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+                <div class="form-group label-input">
+                    <label for="">Category Name</label>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
+
+                <div class="form-group label-input">
+                    <label for="">Choose the Country</label>
+                    <select id="">
+                        <option value="">Nurses</option>
+                    </select>
+                </div>
+
+                <div class="form-group label-input">
+                    <label for="">Add a Client</label>
+                    <input type="text" placeholder="Carla Cronin">
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Add a Client Label</label>
+                    <input type="text" placeholder="Carla Cronin">
+                </div>
+                <!-- <div class="form-group">
+                    <p class="extra-add add-standard-procedure"> + Add a Standard Procedure</p>
+                </div> -->
                 <div class="form-group">
                     <button class="confirm-button">Add</button>
                 </div>
@@ -709,319 +742,277 @@
                     </div>
                 </div>
 
-                <div class="form-group label-input"></div>
+                <div class="form-group switch-input">
                 <label for="">Internal CRM Access</label>
                 <label class="switch">
                     <input type="checkbox" checked>
                     <span class="slider round"></span>
-                </label>
-            </div>
-        </div>
-    </div>
-    <div class="popup-overlay" id="addNewClientPopupOverlay">
-        <div class="popup-content ">
-            <div class="popup-header">
-                <h2 class="popup-title">
-                    ADD A NEW CLIENT
-                </h2>
-                <button class="popup-close" id="closeAddNewClientPopup">&#10005;</button>
-            </div>
-            <div class="popup-body ">
-                <div class="form-group label-input">
-                    <label for="">Category Name</label>
-                    <select id="">
-                        <option value="">Nurses</option>
-                    </select>
-                </div>
-
-                <div class="form-group label-input">
-                    <label for="">Choose the Country</label>
-                    <select id="">
-                        <option value="">Nurses</option>
-                    </select>
-                </div>
-
-                <div class="form-group label-input">
-                    <label for="">Add a Client</label>
-                    <input type="text" placeholder="Carla Cronin">
-                </div>
-                <div class="form-group label-input">
-                    <label for="">Add a Client Label</label>
-                    <input type="text" placeholder="Carla Cronin">
-                </div>
-                <div class="form-group">
-                    <p class="extra-add add-standard-procedure"> + Add a Standard Procedure</p>
-                </div>
+                </label></div>
                 <div class="form-group">
                     <button class="confirm-button">Add</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="popup-overlay" id="addStandardProcedurePopupOverlay">
-        <div class="popup-content profile-popup-content">
-            <div class="popup-header">
-                <h2 class="popup-title">
-                    STANDARD PROCEDURE
-                </h2>
-                <button class="popup-close" id="closeStandardProcedurePopup">&#10005;</button>
-            </div>
-            <div class="popup-body ">
+   
+    
+<div class="popup-overlay" id="addStandardProcedurePopupOverlay">
+    <div class="popup-content profile-popup-content">
+        <div class="popup-header">
+            <h2 class="popup-title">STANDARD PROCEDURE</h2>
+            <button type="button" class="popup-close" id="closeStandardProcedurePopup"
+                aria-label="Close popup">&#10005;</button>
+        </div>
+        <div class="popup-body">
+            <div class="profile-popup">
+                <form class="form-sections">
+                    <!-- Eligibility Criteria Section -->
+                    <section class="form-section">
+                        <div class="form-title-header">
+                            <h2>Eligibility Criteria</h2>
+                          
+                        </div>
 
-                <div class=" profile-popup">
-
-                    <div class="form-sections">
-                        <section id="" class="form-section">
-
-                            <div class="form-title-header">
-                                <div class="">
-                                    <h2>Eligibility Criteria</h2>
+                        <div class="form-container">
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="position">Position</label>
+                                    <input type="text" id="position" name="position" placeholder="Enter position">
                                 </div>
-                                <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                            viewBox="0 0 24 24">
-                                            <rect width="24" height="24" fill="none" />
-                                            <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
-                                        </svg>Add a new field</button></div>
 
-                            </div>
-
-                            <div class="form-container">
-                                <div class="form-grid">
-                                    <div class="form-group full-width">
-                                        <label for="">Position</label>
-                                        <input type="text" id="" name="" placeholder="lorem">
-                                    </div>
-
-                                    <div class="form-group ">
-                                        <label for="">Qualification</label>
-                                        <select id="">
-                                            <option value=""></option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group ">
-                                        <label for="">Experience</label>
-                                        <select id="">
-                                            <option value=""></option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Gender</label>
-                                        <div class="button-group">
-                                            <button type="button" class="gender-option">Both</button>
-                                            <button type="button" class="gender-option">Female</button>
-                                            <button type="button" class="gender-option">Male</button>
-                                        </div>
-                                    </div>
-                                    <div class="form-group ">
-                                        <label for="">Departments</label>
-                                        <select id="">
-                                            <option value="">Multiselect (DD)</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="">Age Limit</label>
-                                        <input type="text" id="" name="" placeholder="Age" class="form-group">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Contract Period</label>
-                                        <input type="text" id="" name="" placeholder="3 Years" class="form-group">
-                                    </div>
-                                    <div class="form-group ">
-                                        <label for="">Service Gap</label>
-                                        <select id="">
-                                            <option value="">Yes</option>
-                                            <option value="">No</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for=""> Description</label>
-                                        <input type="text" id="" name="" placeholder="Description" class="form-group">
-                                    </div>
-                                    <div class="form-group ">
-                                        <label for="">Tatto</label>
-                                        <select id="">
-                                            <option value="">Not in Visible Parts</option>
-                                            <option value="">No</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group ">
-                                        <label for="">Extra Benefits (if any)</label>
-                                        <select id="">
-                                            <option value="">Multiselect</option>
-                                            <option value=""></option>
-                                        </select>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </section>
-
-                        <section id="" class="form-section">
-                            <div class="form-title-header">
-                                <div class="">
-                                    <h2>Salary & Perks</h2>
-                                </div>
-                                <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                            viewBox="0 0 24 24">
-                                            <rect width="24" height="24" fill="none" />
-                                            <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
-                                        </svg>Add a new field</button></div>
-
-                            </div>
-                            <div class="form-container">
-                                <div class="form-grid">
-
-                                    <div class="form-group full-width">
-                                        <label>Salary(in INR)</label>
-                                        <input type="text" id="" name="" placeholder="80,000-1,00,000">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Allowance</label>
-                                        <div class="marital-status-options">
-                                            <button type="button" class="status-option">Yes</button>
-                                            <button type="button" class="status-option">No</button>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Accomodation</label>
-                                        <div class="marital-status-options">
-                                            <button type="button" class="status-option">Yes</button>
-                                            <button type="button" class="status-option">No</button>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Transportaion</label>
-                                        <div class="marital-status-options">
-                                            <button type="button" class="status-option">Yes</button>
-                                            <button type="button" class="status-option">No</button>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Insurance</label>
-                                        <div class="marital-status-options">
-                                            <button type="button" class="status-option">Yes</button>
-                                            <button type="button" class="status-option">No</button>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="">Visa Category</label>
-                                        <select id="" name="">
-                                            <option value="">Work Permit</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Air Tickets</label>
-                                        <select id="" name="">
-                                            <option value="">One Way Provided</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group full-width">
-                                        <label>Working Hours</label>
-                                        <input type="text" id="" name="" placeholder="Lorem ipsum">
-                                    </div>
-                                    <div class="form-group full-width">
-                                        <label>Leaves</label>
-                                        <input type="text" id="" name="" placeholder="Lorem ipsum">
-                                    </div>
-                                    <div class="form-group full-width">
-                                        <label>Miscelaneous</label>
-                                        <input type="text" id="" name="" placeholder="Lorem ipsum">
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section id="">
-                            <div class="form-section registration-details">
-                                <div class="form-title-header">
-                                    <div class="">
-                                        <h2>Selection Process</h2>
-                                    </div>
-                                    <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em"
-                                                height="1em" viewBox="0 0 24 24">
-                                                <rect width="24" height="24" fill="none" />
-                                                <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
-                                            </svg>Add a new field</button></div>
-                                </div>
-                            <div class="form-container">
-                                <div class="form-grid">
-                                    <div class="form-group full-width">
-                                        <label for="documents">Documents</label>
-                                        <input type="text" id="documents" name="documents" placeholder="Enter Required Documents">
-                                        <div id="documentsContainer" class="label-container"></div>
-                                    </div>
-                                    <div class="form-group full-width">
-                                        <label for="selection-process">Selection Process</label>
-                                        <input type="text" id="selection-process" name="selection_process" placeholder="Enter Selection Process">
-                                        <div id="selectionProcessContainer" class="label-container"></div>
-                                    </div>
-                                    <div class="form-group full-width">
-                                        <label for="procedure">Procedure</label>
-                                        <input type="text" id="procedure" name="procedure" placeholder="Enter Procedure">
-                                        <div id="procedureContainer" class="label-container"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            </div>
-                        </section>
-                        <section id="">
-                            <div class="form-section ">
-                            <div class="form-title-header">
-                                <div class="">
-                                    <h2>Service Fee</h2>
-                                </div>
-                                <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                                            <rect width="24" height="24" fill="none" />
-                                            <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
-                                        </svg>Add a new field</button></div>
-                            
-                                    </div>
-                                <div class="form-container">
-                                    <div class="form-grid">
-                                        <div class="form-group">
-                                            <label for="">Basic Fee</label>
-                                            <select id="" name="">
-                                                <option value=""></option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="">Basic Fee</label>
-                                            <select id="" name="">
-                                                <option value=""></option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="degree">Degree</label>
-                                            <select id="degree" name="degree">
-                                                <option value=""></option>
-                                            </select>
-                                        </div>
-
-                                        <!-- Add more form groups as needed -->
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                   
-
-                        <section>
-                            <div class="form-section ">
                                 <div class="form-group">
-                                    <button class="confirm-button">Save</button>
+                                    <label for="qualification">Qualification</label>
+                                    <select id="qualification" name="qualification">
+                                        <option value="">Select qualification</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="experience">Experience</label>
+                                    <select id="experience" name="experience">
+                                        <option value="">Select experience</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <div class="button-group" role="group" aria-label="Gender selection">
+                                        <button type="button" class="gender-option">Both</button>
+                                        <button type="button" class="gender-option">Female</button>
+                                        <button type="button" class="gender-option">Male</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="departments">Departments</label>
+                                    <select id="departments" name="departments" multiple>
+                                        <option value="">Select departments</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="age-limit">Age Limit</label>
+                                    <input type="number" id="age-limit" name="age_limit" placeholder="Enter age limit">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contract-period">Contract Period</label>
+                                    <input type="text" id="contract-period" name="contract_period"
+                                        placeholder="3 Years">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="service-gap">Service Gap</label>
+                                    <select id="service-gap" name="service_gap">
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <input type="text" id="description" name="description"
+                                        placeholder="Enter description">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="tattoo">Tattoo</label>
+                                    <select id="tattoo" name="tattoo">
+                                        <option value="not-visible">Not in Visible Parts</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="extra-benefits">Extra Benefits</label>
+                                    <select id="extra-benefits" name="extra_benefits" multiple>
+                                        <option value="">Select benefits</option>
+                                        <option value="">Select benefits</option>
+                                        <option value="">Select benefits</option>
+                                    </select>
                                 </div>
                             </div>
-                        </section>
+                        </div>
+                    </section>
 
+                    <!-- Salary & Perks Section -->
+                    <section class="form-section">
+                        <div class="form-title-header">
+                            <h2>Salary & Perks</h2>
+                          
+                        </div>
 
-                    </div>
-                </div>
+                        <div class="form-container">
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="salary">Salary (in INR)</label>
+                                    <input type="text" id="salary" name="salary" placeholder="80,000-1,00,000">
+                                </div>
+
+                                <div class="form-group">
+                                    <label id="allowance-label">Allowance</label>
+                                    <div class="marital-status-options" role="group" aria-labelledby="allowance-label">
+                                        <button type="button" class="status-option">Yes</button>
+                                        <button type="button" class="status-option">No</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label id="accommodation-label">Accommodation</label>
+                                    <div class="marital-status-options" role="group"
+                                        aria-labelledby="accommodation-label">
+                                        <button type="button" class="status-option">Yes</button>
+                                        <button type="button" class="status-option">No</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label id="transportation-label">Transportation</label>
+                                    <div class="marital-status-options" role="group"
+                                        aria-labelledby="transportation-label">
+                                        <button type="button" class="status-option">Yes</button>
+                                        <button type="button" class="status-option">No</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label id="insurance-label">Insurance</label>
+                                    <div class="marital-status-options" role="group" aria-labelledby="insurance-label">
+                                        <button type="button" class="status-option">Yes</button>
+                                        <button type="button" class="status-option">No</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="visa-category">Visa Category</label>
+                                    <select id="visa-category" name="visa_category">
+                                        <option value="work-permit">Work Permit</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="air-tickets">Air Tickets</label>
+                                    <select id="air-tickets" name="air_tickets">
+                                        <option value="one-way">One Way Provided</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="working-hours">Working Hours</label>
+                                    <input type="text" id="working-hours" name="working_hours"
+                                        placeholder="Enter working hours">
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="leaves">Leaves</label>
+                                    <input type="text" id="leaves" name="leaves" placeholder="Enter leave details">
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="miscellaneous">Miscellaneous</label>
+                                    <input type="text" id="miscellaneous" name="miscellaneous"
+                                        placeholder="Enter miscellaneous details">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Selection Process Section -->
+                    <section class="form-section registration-details">
+                        <div class="form-title-header">
+                            <h2>Selection Process</h2>
+                          
+                        </div>
+
+                        <div class="form-container">
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="documents">Documents</label>
+                                    <input type="text" id="documents" name="documents"
+                                        placeholder="Enter Required Documents">
+                                    <div id="documentsContainer" class="label-container"></div>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="selection-process">Selection Process</label>
+                                    <input type="text" id="selection-process" name="selection_process"
+                                        placeholder="Enter Selection Process">
+                                    <div id="selectionProcessContainer" class="label-container"></div>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="procedure">Procedure</label>
+                                    <input type="text" id="procedure" name="procedure" placeholder="Enter Procedure">
+                                    <div id="procedureContainer" class="label-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Service Fee Section -->
+                    <section class="form-section">
+                        <div class="form-title-header">
+                            <h2>Service Fee</h2>
+                          
+                        </div>
+
+                        <div class="form-container">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="basic-fee-1">Basic Fee</label>
+                                    <select id="basic-fee-1" name="basic_fee_1">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="basic-fee-2">Variable Fee</label>
+                                    <select id="basic-fee-2" name="basic_fee_2">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="degree">Additional Fee</label>
+                                    <select id="degree" name="degree">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Submit Section -->
+                    <section class="form-section">
+                        <div class="form-group">
+                            <button type="submit" class="confirm-button">Save</button>
+                        </div>
+                    </section>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
 
     <div class="popup-overlay" id="addNewProjectPopupOverlay">
@@ -1253,10 +1244,13 @@
         const addNewCountryCloseButton = document.getElementById('closeAddNewCountryPopup');
         const addNewClientPopup = document.getElementById('addNewClientPopupOverlay');
         const addNewClientCloseButton = document.getElementById('closeAddNewClientPopup');
+        const editNewClientPopup = document.getElementById('editNewClientPopupOverlay');
+            const closeEditNewClientPopupButton = document.getElementById('closeEditNewClientPopup');
         const addStandardProcedurePopup = document.getElementById('addStandardProcedurePopupOverlay');
         const addStandardProcedureCloseButton = document.getElementById('closeStandardProcedurePopup');
         const addNewDelegatePopup = document.getElementById('addNewDelegatePopupOverlay');
         const addNewDelegateCloseButton = document.getElementById('closeAddNewDelegatePopup');
+        
         const addNewProjectPopup = document.getElementById('addNewProjectPopupOverlay');
         const addNewProjectCloseButton = document.getElementById('closeAddNewProjectPopup')
         const editAProjectPopup = document.getElementById('editAProjectPopupOverlay');
@@ -1300,6 +1294,26 @@
             console.error('Add new client popup elements not found');
         }
 
+        if (editNewClientPopup && closeEditNewClientPopupButton) {
+                // Use event delegation for edit new client buttons
+                document.addEventListener('click', function (event) {
+                    if (event.target.closest('.edit-new-client-button')) {
+                        editNewClientPopup.style.display = 'block';
+                    }
+                });
+
+                // Close the popup when the close button is clicked
+                closeEditNewClientPopupButton.addEventListener('click', () => editNewClientPopup.style.display = 'none');
+
+                // Close the popup when clicking outside the popup content
+                editNewClientPopup.addEventListener('click', (event) => {
+                    if (event.target === editNewClientPopup) {
+                        editNewClientPopup.style.display = 'none';
+                    }
+                });
+            } else {
+                console.error('Edit new client popup elements not found');
+            }
         if (addStandardProcedurePopup && addStandardProcedureCloseButton) {
             // Use event delegation for standard procedure popup buttons
             document.addEventListener('click', function (event) {
