@@ -1227,9 +1227,8 @@ h3 {
   max-height: 100vh;
   overflow-y: auto;
   padding: 2rem;
-  position: relative;
   animation: popupFadeIn 0.3s ease-out;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -2531,6 +2530,20 @@ input[type="radio"] {
 
 /* Confirm button styling */
 
+.form-sections .form-group .confirm-button{
+   width: 30%;
+  padding: 14px 0;
+  background-color: #006064;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  bottom: 8px;
+  left: 35%;
+}
 .form-group .confirm-button,
 .form-group .download-button {
   width: 30%;
@@ -2952,18 +2965,14 @@ section {
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns:  1fr 1fr;
   gap: 20px;
   width: 100%;
 }
 
-.profile .form-group {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
 
-.profile-popup .form-group {
+
+ .form-group {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -2990,7 +2999,7 @@ section {
   color: #000000;
 }
 
-.profile-popup label {
+.form-sections label {
   margin-bottom: 5px;
   font-weight: bold;
   color: #000000;
@@ -3020,11 +3029,11 @@ select:focus {
   outline: none;
 }
 
-.profile-popup input[type="text"],
-.profile-popup input[type="tel"],
-.profile-popup input[type="email"],
-.profile-popup input[type="date"],
-.profile-popup select {
+.form-sections input[type="text"],
+.form-sections input[type="tel"],
+.form-sections input[type="email"],
+.form-sections input[type="date"],
+.form-sections select {
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -3034,7 +3043,7 @@ select:focus {
   transition: border-color 0.3s;
 }
 
-.profile-popup input[type="text"]:focus,
+.form-sections input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="email"]:focus,
 input[type="date"]:focus,
@@ -4219,7 +4228,7 @@ select:focus {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 10pxFs;
 }
 .slider {
   position: absolute;
