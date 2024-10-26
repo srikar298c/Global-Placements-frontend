@@ -3033,6 +3033,7 @@ select:focus {
 .form-sections input[type="tel"],
 .form-sections input[type="email"],
 .form-sections input[type="date"],
+.form-sections input[type="password"],
 .form-sections select {
   padding: 8px;
   border: 1px solid #ddd;
