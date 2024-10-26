@@ -3052,7 +3052,15 @@ select:focus {
   border-color: #006b77;
   outline: none;
 }
-
+#select{
+   padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  background-color: #fafafa;
+  transition: border-color 0.3s;
+}
 .gender-option,
 .marital-status-options,
 .measurement-options {

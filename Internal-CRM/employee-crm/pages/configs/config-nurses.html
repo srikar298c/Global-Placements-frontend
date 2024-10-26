@@ -7,6 +7,23 @@
     <title> Configs</title>
     <link rel="stylesheet" href="../../../../Internal-CRM/styles.css">
     <link rel="icon" href="../../../../Internal-CRM/images/favicon.png" type="image/png">
+    
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Chosen Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Chosen Plugin CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <style>
+         
+/*         
+            /* Customize Chosen Dropdown Styling */
+            .chosen-container {
+                width: 100% !important;
+            } */
+        </style>
 </head>
 <style>
 
@@ -873,12 +890,18 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="departments">Departments</label>
-                                    <select id="departments" name="departments" multiple>
-                                        <option value="">Select departments</option>
-                                    </select>
-                                </div>
+                               
+                        <div class="form-group">
+                            <label for="departments">Departments</label>
+                            <select id="select" multiple >
+                                <option value="">ICU</option>
+                                <option value="">Maternity Ward</option>
+                                <option value="">ortho</option>
+                                <option value="">MRI</option>
+                                <option value="">Morturay</option>
+                            </select>
+                        </div>
+                               
 
                                 <div class="form-group">
                                     <label for="age-limit">Age Limit</label>
@@ -913,14 +936,14 @@
                                     </select>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="extra-benefits">Extra Benefits</label>
-                                    <select id="extra-benefits" name="extra_benefits" multiple>
-                                        <option value="">Select benefits</option>
-                                        <option value="">Select benefits</option>
-                                        <option value="">Select benefits</option>
-                                    </select>
-                                </div>
+                            <div class="form-group">
+                                <label for="departments">Departments</label>
+                                <select id="benefitsSelect" multiple>
+                                    <option value="">Chimtu</option>
+                                    <option value="">Maternity Ward</option>
+                                 
+                                </select>
+                            </div>
                             </div>
                         </div>
                     </section>
@@ -1046,23 +1069,17 @@
                             <div class="form-grid">
                                 <div class="form-group">
                                     <label for="basic-fee-1">Basic Fee</label>
-                                    <select id="basic-fee-1" name="basic_fee_1">
-                                        <option value=""></option>
-                                    </select>
+                                  <input type="text">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="basic-fee-2">Variable Fee</label>
-                                    <select id="basic-fee-2" name="basic_fee_2">
-                                        <option value=""></option>
-                                    </select>
+                                <input type="text">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="degree">Additional Fee</label>
-                                    <select id="degree" name="degree">
-                                        <option value=""></option>
-                                    </select>
+                                   <input type="text">
                                 </div>
                             </div>
                         </div>
@@ -1663,7 +1680,14 @@
             addLabel('procedure', 'procedureContainer');
         }
     });
-
+    // Initiating the chosen plugin
+    $(document).ready(function () {
+        $("#select").chosen();
+    })
+    // Initiating the chosen plugin
+    $(document).ready(function () {
+        $("#benefitsSelect").chosen();
+    })
     </script>
 </body>
 
