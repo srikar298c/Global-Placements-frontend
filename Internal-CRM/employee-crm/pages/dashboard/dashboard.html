@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Internal Global Placements - Dashboard </title>
+    <link rel="stylesheet" href="../../../../Internal-CRM/styles.css">
+    <link rel="icon" href="../../../../Internal-CRM/images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <div class="sidebar-container ">
+        <div class="logo-container">
+            <img class="logo" src="../../../../Internal-CRM/images/global_placements_logo.png" alt="Global Placements">
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-nav">
+                <div class=" section-1">
+                    <ul>
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/dashboard/dashboard.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M13 9V3h8v6zM3 13V3h8v10zm10 8V11h8v10zM3 21v-6h8v6zm2-10h4V5H5zm10 8h4v-6h-4zm0-12h4V5h-4zM5 19h4v-2H5zm4-2" />
+                                </svg><span class="sidebar-nav-item">Dashboard</span></a>
+
+                        </li>
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/Configurations/countries.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <rect width="24" height="24" fill="none" />
+                                    <path fill="currentColor"
+                                        d="m13.691 15.778l-.63-.49a2 2 0 0 0 .023-.288a1.6 1.6 0 0 0-.024-.289l.625-.49a.15.15 0 0 0 .036-.188l-.59-1.02a.15.15 0 0 0-.183-.065l-.73.295a2 2 0 0 0-.502-.289l-.112-.778a.14.14 0 0 0-.141-.124h-1.18a.15.15 0 0 0-.147.124l-.112.778a2.4 2.4 0 0 0-.5.29l-.732-.296a.154.154 0 0 0-.183.065l-.59 1.02a.146.146 0 0 0 .036.189l.625.49a2.4 2.4 0 0 0 0 .577l-.625.49a.15.15 0 0 0-.035.188l.59 1.02a.15.15 0 0 0 .182.065l.731-.295a2 2 0 0 0 .501.289l.112.778a.15.15 0 0 0 .148.124h1.179a.15.15 0 0 0 .147-.124l.112-.778a2.2 2.2 0 0 0 .495-.29l.737.296a.154.154 0 0 0 .183-.065l.59-1.02a.15.15 0 0 0-.036-.189m-2.818.106a.884.884 0 1 1 .885-.884a.883.883 0 0 1-.885.884" />
+                                    <path fill="currentColor"
+                                        d="M14 2H6a2.006 2.006 0 0 0-2 2v16a2.006 2.006 0 0 0 2 2h12a2.006 2.006 0 0 0 2-2V8Zm4 18H6V4h7v5h5Z" />
+                                </svg>
+                                <span class="sidebar-nav-item">Configurations</span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path
+                                            d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                            <path fill="currentColor"
+                                            d="M3 4a2 2 0 0 1 2-2h2c.364 0 .706.097 1 .268A2 2 0 0 1 9 2h2c.727 0 1.364.388 1.714.969c.21-.168.456-.296.732-.37l1.932-.517a2 2 0 0 1 2.45 1.414l4.14 15.455a2 2 0 0 1-1.414 2.45l-1.932.517a2 2 0 0 1-2.45-1.414L13 8.663V20a2 2 0 0 1-2 2H9a2 2 0 0 1-1-.268A2 2 0 0 1 7 22H5a2 2 0 0 1-2-2zm2 0h2v16H5zm6 16H9V4h2zm2.964-15.469l1.931-.517l4.142 15.455l-1.932.517z" />
+                                        </g>
+                                    </svg>
+                                <span class="sidebar-nav-item">Projects</span>
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/nurses.html"><span
+                                            class="dropdown-menu-item">Nurses</span></a></li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/teachers.html"><span
+                                            class="dropdown-menu-item">Teachers</span></a></li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/lecturers.html"><span
+                                            class="dropdown-menu-item">Lecturers</span></a>
+                                </li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/doctors.html"><span
+                                            class="dropdown-menu-item">Doctors</span></a></li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/projects/paramedics.html"><span
+                                            class="dropdown-menu-item">Paramedics</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="../../../../Internal-CRM/employee-crm/pages/database/#" class="dropdown-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19" />
+                                </svg>
+                                <span class="sidebar-nav-item">Database</span>
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/database/global_database.html"><span
+                                            class="sidebar-nav-item">Global
+                                            Database</span></a></li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/database/approvals.html"><span
+                                            class="sidebar-nav-item">Approvals</span></a>
+                                </li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/database/rejected.html"><span
+                                            class="sidebar-nav-item">Rejected</span></a></li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/database/students-data.html"><span
+                                            class="sidebar-nav-item">Students Data</span></a></li>
+                            </ul>
+                        </li>
+
+
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/submissions/submissions.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <rect width="24" height="24" fill="none" />
+                                    <path fill="none" stroke="currentColor" stroke-width="2"
+                                        d="m6.998 10.247l.435.76c.277.485.415.727.415.993s-.138.508-.415.992l-.435.761c-1.238 2.167-1.857 3.25-1.375 3.788c.483.537 1.627.037 3.913-.963l6.276-2.746c1.795-.785 2.693-1.178 2.693-1.832s-.898-1.047-2.693-1.832L9.536 7.422c-2.286-1-3.43-1.5-3.913-.963s.137 1.62 1.375 3.788Z" />
+                                </svg>
+                                <span class="sidebar-nav-item">Submissions</span>
+                            </a>
+                        </li>
+
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/interviews/interviews.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M5.25 5A3.25 3.25 0 0 0 2 8.25v7.5A3.25 3.25 0 0 0 5.25 19h7.5A3.25 3.25 0 0 0 16 15.75v-.312l3.258 2.25c1.16.8 2.744-.03 2.744-1.44V7.751c0-1.41-1.584-2.242-2.744-1.44L16 8.562V8.25A3.25 3.25 0 0 0 12.75 5zM16 10.384l4.11-2.838a.25.25 0 0 1 .392.206v8.495a.25.25 0 0 1-.392.206L16 13.615zM3.5 8.25c0-.966.784-1.75 1.75-1.75h7.5c.966 0 1.75.784 1.75 1.75v7.5a1.75 1.75 0 0 1-1.75 1.75h-7.5a1.75 1.75 0 0 1-1.75-1.75z" />
+                                </svg><span class="sidebar-nav-item">Interviews</span></a>
+                        </li>
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/post_selection/post_selection.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <rect width="24" height="24" fill="none" />
+                                    <path fill="currentColor"
+                                        d="M15.28 9.03a.75.75 0 0 0-1.06-1.06L10 12.19l-1.97-1.97a.75.75 0 1 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0zM3 6.25A3.25 3.25 0 0 1 6.25 3h9.5A3.25 3.25 0 0 1 19 6.25v9.5A3.25 3.25 0 0 1 15.75 19h-9.5A3.25 3.25 0 0 1 3 15.75zM6.25 4.5A1.75 1.75 0 0 0 4.5 6.25v9.5c0 .966.784 1.75 1.75 1.75h9.5a1.75 1.75 0 0 0 1.75-1.75v-9.5a1.75 1.75 0 0 0-1.75-1.75zm2.991 17A3.25 3.25 0 0 1 6.5 19.999h9.746A3.753 3.753 0 0 0 20 16.246V6.5a3.25 3.25 0 0 1 1.5 2.741v7.005a5.254 5.254 0 0 1-5.254 5.254z" />
+                                </svg>
+                                </svg><span class="sidebar-nav-item">Post Selection</span></a>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/#" class="dropdown-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19" />
+                                </svg>
+                                <span class="sidebar-nav-item">Feedbacks</span>
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/client_feedback.html"><span
+                                            class="sidebar-nav-item">Client Feedback</span></a></li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/subject_expert_feedback.html"><span
+                                            class="sidebar-nav-item">Subject Expert Feedback</span></a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="../../../../Internal-CRM/employee-crm/pages/notifications/notifications.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M12 1.25A7.75 7.75 0 0 0 4.25 9v.704a3.53 3.53 0 0 1-.593 1.958L2.51 13.385c-1.334 2-.316 4.718 2.003 5.35q1.133.309 2.284.523l.002.005C7.567 21.315 9.622 22.75 12 22.75s4.433-1.435 5.202-3.487l.002-.005a29 29 0 0 0 2.284-.523c2.319-.632 3.337-3.35 2.003-5.35l-1.148-1.723a3.53 3.53 0 0 1-.593-1.958V9A7.75 7.75 0 0 0 12 1.25m3.376 18.287a28.5 28.5 0 0 1-6.753 0c.711 1.021 1.948 1.713 3.377 1.713s2.665-.692 3.376-1.713M5.75 9a6.25 6.25 0 1 1 12.5 0v.704c0 .993.294 1.964.845 2.79l1.148 1.723a2.02 2.02 0 0 1-1.15 3.071a26.96 26.96 0 0 1-14.187 0a2.02 2.02 0 0 1-1.15-3.07l1.15-1.724a5.03 5.03 0 0 0 .844-2.79z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="sidebar-nav-item">Notifications</span></a>
+                        </li>
+                        <li>
+                            <a href="../../../../Internal-CRM/employee-crm/pages/reminders/reminders.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <rect width="24" height="24" fill="none" />
+                                    <path fill="currentColor"
+                                        d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z" />
+                                </svg>
+                                <span class="sidebar-nav-item">Reminders</span></a>
+                        </li>
+                        <li>
+                            <a href="../../../../Internal-CRM/employee-crm/pages/tasks/tasks.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36">
+                                    <rect width="36" height="36" fill="none" />
+                                    <path fill="currentColor"
+                                        d="M29.29 34H6.71A1.7 1.7 0 0 1 5 32.31V6.69A1.75 1.75 0 0 1 7 5h2v2H7v25h22V7h-2V5h2.25A1.7 1.7 0 0 1 31 6.69v25.62A1.7 1.7 0 0 1 29.29 34"
+                                        class="clr-i-outline clr-i-outline-path-1" />
+                                    <path fill="currentColor"
+                                        d="M16.66 25.76L11.3 20.4a1 1 0 0 1 1.42-1.4l3.94 3.94l8.64-8.64a1 1 0 0 1 1.41 1.41Z"
+                                        class="clr-i-outline clr-i-outline-path-2" />
+                                    <path fill="currentColor"
+                                        d="M26 11H10V7.33A2.34 2.34 0 0 1 12.33 5h1.79a4 4 0 0 1 7.75 0h1.79A2.34 2.34 0 0 1 26 7.33ZM12 9h12V7.33a.33.33 0 0 0-.33-.33H20V6a2 2 0 0 0-4 0v1h-3.67a.33.33 0 0 0-.33.33Z"
+                                        class="clr-i-outline clr-i-outline-path-3" />
+                                    <path fill="none" d="M0 0h36v36H0z" />
+                                </svg>
+
+                                <span class="sidebar-nav-item">Tasks</span></a>
+                        </li>
+
+
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/statistics/statistics.html"><svg
+                                    width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.1875 16.5625V1.875H0.625V16.875C0.69463 17.228 0.884868 17.5457 1.1631 17.7738C1.44134 18.0018 1.79024 18.126 2.15 18.125H19.375V16.5625H2.1875Z"
+                                        fill="white" />
+                                    <path
+                                        d="M3.9375 10H5.5V14.875H3.9375V10ZM8.0125 5H9.5875V14.875H8.0125V5ZM12.1 7.5H13.6625V14.875H12.1V7.5ZM16.1875 3.125H17.75V14.875H16.1875V3.125Z"
+                                        fill="white" />
+                                </svg>
+
+                                <span class="sidebar-nav-item">Statistics</span></a></li>
+                        <li>
+                            <a href="../../../../Internal-CRM/employee-crm/pages/our_partners/our_partners.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
+                                    <rect width="14" height="14" fill="none" />
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="m.548 3.085l2.194 1.18l1.96-.338a2.23 2.23 0 0 1 1.844.515v0m4.736 4.84L8.18 11.486a2 2 0 0 1-2.285.022L.548 7.863" />
+                                        <path
+                                            d="m13.402 7.84l-2.195 1.5l-3.406-2.75l-1.253.911a1.17 1.17 0 0 1-1.609-.226v0a1.17 1.17 0 0 1 .169-1.613l1.305-1.097a3 3 0 0 1 2.25-.688l2.033.218l2.706-1.463" />
+                                        <path d="M7.801 6.597c.82.73 1.982.357 2.414-.239" />
+                                    </g>
+                                </svg>
+                                <span class="sidebar-nav-item">Our Partners</span></a>
+                        </li>
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/global_team/global_team.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
+                                    <rect width="14" height="14" fill="none" />
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M13.5 10.5v2a1 1 0 0 1-1 1h-2m0-13h2a1 1 0 0 1 1 1v2m-13 0v-2a1 1 0 0 1 1-1h2m0 13h-2a1 1 0 0 1-1-1v-2m6.5-4a2 2 0 1 0 0-4a2 2 0 0 0 0 4m3.803 4.5a3.994 3.994 0 0 0-7.606 0z" />
+                                </svg>
+
+                                <span class="sidebar-nav-item">Global Team</span></a></li>
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/announcements/announcements.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <rect width="24" height="24" fill="none" />
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M13 15V7m0 8l5.504 3.145A1 1 0 0 0 20 17.277V4.723a1 1 0 0 0-1.496-.868L13 7m0 8h-3m3-8H7a4 4 0 0 0-4 4v0a4 4 0 0 0 4 4v0m0 0v4.5A1.5 1.5 0 0 0 8.5 21v0a1.5 1.5 0 0 0 1.5-1.5V15m-3 0h3" />
+                                </svg>
+
+                                <span class="sidebar-nav-item">Announcements</span></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="header-title">
+                <h2>Dashboard</h2>
+            </div>
+            <div class="header-lastitem">
+                <a href="../../../../Internal-CRM/employee-crm/pages/profile/profile.html">
+                    <img src="../../../../Internal-CRM/images/profile.png" alt="Profile Picture" class="profile-icon">
+                </a>
+                <svg onclick="toggleProfileMenu()" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36" class="caret-icon">
+        <rect width="36" height="36" fill="none"/>
+        <path fill="currentColor" d="M29.52 22.52L18 10.6L6.48 22.52a1.7 1.7 0 0 0 2.45 2.36L18 15.49l9.08 9.39a1.7 1.7 0 0 0 2.45-2.36Z" class="clr-i-outline clr-i-outline-path-1"/>
+        <path fill="none" d="M0 0h36v36H0z"/>
+    </svg>
+            </div>
+
+            <!-- Profile Menu Dropdown -->
+            <div class="profile-dropdown" id="profileDropdown">
+                <p>mailid@mail.com</p>
+                <img src="../../../../Internal-CRM/images/profile.png" alt="Profile Picture" class="profile-large-icon">
+                <p class="profile-greeting">Hi, Admin!</p>
+                <ul class="profile-options">
+                    <li><a href="../../../../Internal-CRM/employee-crm/pages/profile/profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><g fill="none" stroke="currentColor" stroke-width="1"><path d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2s1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 5.638-4.239 8.375-6.899 9.536C13.38 21.842 13.02 22 12 22s-1.38-.158-2.101-.473C7.239 20.365 3 17.63 3 11.991z"/><circle cx="12" cy="9" r="2"/><path d="M16 15c0 1.105 0 2-4 2s-4-.895-4-2s1.79-2 4-2s4 .895 4 2Z"/></g></svg> View Profile</a></li>
+                    <li><a href="../../../../Internal-CRM/employee-crm/pages/attendance/attendance.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" d="M5.616 21q-.691 0-1.153-.462T4 19.385V6.615q0-.69.463-1.152T5.616 5h1.769V2.77h1.077V5h7.154V2.77h1V5h1.769q.69 0 1.153.463T20 6.616v5h-1v-1H5v8.769q0 .23.192.423t.423.192h6.231v1zM5 9.615h14v-3q0-.23-.192-.423T18.384 6H5.616q-.231 0-.424.192T5 6.616zm0 0V6zM14.23 21v-2.21l5.334-5.307q.148-.148.307-.2q.16-.052.32-.052q.165 0 .334.064q.17.065.298.194l.925.944q.123.148.187.308q.065.159.065.319t-.061.322t-.191.31L16.44 21zm6.886-5.94l-.925-.945zm-6 5.056h.95l3.467-3.474l-.47-.475l-.455-.488l-3.492 3.486zm3.948-3.949l-.456-.488l.925.963z"/></svg> Attendance</a></li>
+                    <li><a href="../../../../Internal-CRM/employee-crm/pages/settings/settings.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><g fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="3"/><path d="M13.765 2.152C13.398 2 12.932 2 12 2s-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083c-.092.223-.129.484-.143.863a1.62 1.62 0 0 1-.79 1.353a1.62 1.62 0 0 1-1.567.008c-.336-.178-.579-.276-.82-.308a2 2 0 0 0-1.478.396C4.04 5.79 3.806 6.193 3.34 7s-.7 1.21-.751 1.605a2 2 0 0 0 .396 1.479c.148.192.355.353.676.555c.473.297.777.803.777 1.361s-.304 1.064-.777 1.36c-.321.203-.529.364-.676.556a2 2 0 0 0-.396 1.479c.052.394.285.798.75 1.605c.467.807.7 1.21 1.015 1.453a2 2 0 0 0 1.479.396c.24-.032.483-.13.819-.308a1.62 1.62 0 0 1 1.567.008c.483.28.77.795.79 1.353c.014.38.05.64.143.863a2 2 0 0 0 1.083 1.083C10.602 22 11.068 22 12 22s1.398 0 1.765-.152a2 2 0 0 0 1.083-1.083c.092-.223.129-.483.143-.863c.02-.558.307-1.074.79-1.353a1.62 1.62 0 0 1 1.567-.008c.336.178.579.276.819.308a2 2 0 0 0 1.479-.396c.315-.242.548-.646 1.014-1.453s.7-1.21.751-1.605a2 2 0 0 0-.396-1.479c-.148-.192-.355-.353-.676-.555A1.62 1.62 0 0 1 19.562 12c0-.558.304-1.064.777-1.36c.321-.203.529-.364.676-.556a2 2 0 0 0 .396-1.479c-.052-.394-.285-.798-.75-1.605c-.467-.807-.7-1.21-1.015-1.453a2 2 0 0 0-1.479-.396c-.24.032-.483.13-.82.308a1.62 1.62 0 0 1-1.566-.008a1.62 1.62 0 0 1-.79-1.353c-.014-.38-.05-.64-.143-.863a2 2 0 0 0-1.083-1.083Z"/></g></svg> Settings</a></li>
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 1024 1024"><rect width="1024" height="1024" fill="none"/><path fill="currentColor" d="M116.832 543.664H671.28c17.696 0 32-14.336 32-32s-14.304-32-32-32H118.832l115.76-115.76c12.496-12.496 12.496-32.752 0-45.248s-32.752-12.496-45.248 0l-189.008 194l189.008 194c6.256 6.256 14.432 9.376 22.624 9.376s16.368-3.12 22.624-9.376c12.496-12.496 12.496-32.752 0-45.248zM959.664 0H415.663c-35.36 0-64 28.656-64 64v288h64.416V103.024c0-21.376 17.344-38.72 38.72-38.72h464.72c21.391 0 38.72 17.344 38.72 38.72l1.007 818.288c0 21.376-17.328 38.72-38.72 38.72h-465.71c-21.376 0-38.72-17.344-38.72-38.72V670.944l-64.416.08V960c0 35.344 28.64 64 64 64h543.984c35.36 0 64.016-28.656 64.016-64V64c-.015-35.344-28.671-64-64.015-64z"/></svg> Sign Out</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Profile Menu Dropdown -->
+            <div class="profile-dropdown" id="profileDropdown">
+                <img src="../../../../Internal-CRM/images/profile.png" alt="Profile Picture" class="profile-large-icon">
+                <p class="profile-greeting">Hi, Admin!</p>
+                <ul class="profile-options">
+                    <li><a href="#"><svg width="16" height="16" class="icon"><!-- dummy svg icon --></svg> View Profile</a></li>
+                    <li><a href="#"><svg width="16" height="16" class="icon"><!-- dummy svg icon --></svg> Attendance</a></li>
+                    <li><a href="#"><svg width="16" height="16" class="icon"><!-- dummy svg icon --></svg> Settings</a></li>
+                    <li><a href="#"><svg width="16" height="16" class="icon"><!-- dummy svg icon --></svg> Sign Out</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="main-content">
+            <div class="dashboard-flex">
+                <div class="dashboard-section-01">
+                    <div class="dashboard-notification-cards">
+                        <div class="latest-news">LATEST NEWS</div>
+                        <div class="carousel">
+                            <div class="carousel-track">
+                                <!-- Original cards -->
+                                <div class="dashboard-card">
+                                    <div class="card-title">
+                                        <div class="icon-location">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2">
+                                <path d="M6.4 4.76a7.92 7.92 0 0 1 11.2 11.2l-4.186 4.186a2 2 0 0 1-2.828 0L6.4 15.96a7.92 7.92 0 0 1 0-11.2Z"/>
+                                <circle cx="12" cy="10.36" r="3" stroke-linecap="round"/>
+                            </g>
+                        </svg>
+                                        </div>
+                                        <div class="">
+                                            <h3>Country Name</h3>
+                                        </div>
+
+                                    </div>
+                                    <h2>Project Code & Name</h2>
+                                    <p><svg class="icon-client" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" fill-rule="evenodd" d="M7.263 3.26A2.25 2.25 0 0 1 9.5 1.25h5a2.25 2.25 0 0 1 2.237 2.01c.764.016 1.423.055 1.987.159c.758.14 1.403.404 1.928.93c.602.601.86 1.36.982 2.26c.116.866.116 1.969.116 3.336v6.11c0 1.367 0 2.47-.116 3.337c-.122.9-.38 1.658-.982 2.26s-1.36.86-2.26.982c-.867.116-1.97.116-3.337.116h-6.11c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337v-6.11c0-1.367 0-2.47.117-3.337c.12-.9.38-1.658.981-2.26c.525-.525 1.17-.79 1.928-.929c.564-.104 1.224-.143 1.987-.159m.002 1.5c-.718.016-1.272.052-1.718.134c-.566.104-.895.272-1.138.515c-.277.277-.457.665-.556 1.4c-.101.754-.103 1.756-.103 3.191v6c0 1.435.002 2.436.103 3.192c.099.734.28 1.122.556 1.399c.277.277.665.457 1.4.556c.754.101 1.756.103 3.191.103h6c1.435 0 2.436-.002 3.192-.103c.734-.099 1.122-.28 1.399-.556c.277-.277.457-.665.556-1.4c.101-.755.103-1.756.103-3.191v-6c0-1.435-.002-2.437-.103-3.192c-.099-.734-.28-1.122-.556-1.399c-.244-.243-.572-.41-1.138-.515c-.446-.082-1-.118-1.718-.133A2.25 2.25 0 0 1 14.5 6.75h-5a2.25 2.25 0 0 1-2.235-1.99M9.5 2.75a.75.75 0 0 0-.75.75v1c0 .414.336.75.75.75h5a.75.75 0 0 0 .75-.75v-1a.75.75 0 0 0-.75-.75zM6.25 10.5A.75.75 0 0 1 7 9.75h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>Client
+                                        1</p>
+                                    <p><svg class="icon-client" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" fill-rule="evenodd" d="M7.263 3.26A2.25 2.25 0 0 1 9.5 1.25h5a2.25 2.25 0 0 1 2.237 2.01c.764.016 1.423.055 1.987.159c.758.14 1.403.404 1.928.93c.602.601.86 1.36.982 2.26c.116.866.116 1.969.116 3.336v6.11c0 1.367 0 2.47-.116 3.337c-.122.9-.38 1.658-.982 2.26s-1.36.86-2.26.982c-.867.116-1.97.116-3.337.116h-6.11c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337v-6.11c0-1.367 0-2.47.117-3.337c.12-.9.38-1.658.981-2.26c.525-.525 1.17-.79 1.928-.929c.564-.104 1.224-.143 1.987-.159m.002 1.5c-.718.016-1.272.052-1.718.134c-.566.104-.895.272-1.138.515c-.277.277-.457.665-.556 1.4c-.101.754-.103 1.756-.103 3.191v6c0 1.435.002 2.436.103 3.192c.099.734.28 1.122.556 1.399c.277.277.665.457 1.4.556c.754.101 1.756.103 3.191.103h6c1.435 0 2.436-.002 3.192-.103c.734-.099 1.122-.28 1.399-.556c.277-.277.457-.665.556-1.4c.101-.755.103-1.756.103-3.191v-6c0-1.435-.002-2.437-.103-3.192c-.099-.734-.28-1.122-.556-1.399c-.244-.243-.572-.41-1.138-.515c-.446-.082-1-.118-1.718-.133A2.25 2.25 0 0 1 14.5 6.75h-5a2.25 2.25 0 0 1-2.235-1.99M9.5 2.75a.75.75 0 0 0-.75.75v1c0 .414.336.75.75.75h5a.75.75 0 0 0 .75-.75v-1a.75.75 0 0 0-.75-.75zM6.25 10.5A.75.75 0 0 1 7 9.75h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>Client
+                                        2</p>
+                                    <p>More...</p>
+                                    <button class="view-more">View More</button>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="card-title">
+                                        <div class="icon-location">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2">
+                                <path d="M6.4 4.76a7.92 7.92 0 0 1 11.2 11.2l-4.186 4.186a2 2 0 0 1-2.828 0L6.4 15.96a7.92 7.92 0 0 1 0-11.2Z"/>
+                                <circle cx="12" cy="10.36" r="3" stroke-linecap="round"/>
+                            </g>
+                        </svg>
+                                        </div>
+                                        <div class="">
+                                            <h3>Country Name</h3>
+                                        </div>
+                                    </div>
+                                    <h2>Project Code & Name</h2>
+                                    <p><svg class="icon-client" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" fill-rule="evenodd" d="M7.263 3.26A2.25 2.25 0 0 1 9.5 1.25h5a2.25 2.25 0 0 1 2.237 2.01c.764.016 1.423.055 1.987.159c.758.14 1.403.404 1.928.93c.602.601.86 1.36.982 2.26c.116.866.116 1.969.116 3.336v6.11c0 1.367 0 2.47-.116 3.337c-.122.9-.38 1.658-.982 2.26s-1.36.86-2.26.982c-.867.116-1.97.116-3.337.116h-6.11c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337v-6.11c0-1.367 0-2.47.117-3.337c.12-.9.38-1.658.981-2.26c.525-.525 1.17-.79 1.928-.929c.564-.104 1.224-.143 1.987-.159m.002 1.5c-.718.016-1.272.052-1.718.134c-.566.104-.895.272-1.138.515c-.277.277-.457.665-.556 1.4c-.101.754-.103 1.756-.103 3.191v6c0 1.435.002 2.436.103 3.192c.099.734.28 1.122.556 1.399c.277.277.665.457 1.4.556c.754.101 1.756.103 3.191.103h6c1.435 0 2.436-.002 3.192-.103c.734-.099 1.122-.28 1.399-.556c.277-.277.457-.665.556-1.4c.101-.755.103-1.756.103-3.191v-6c0-1.435-.002-2.437-.103-3.192c-.099-.734-.28-1.122-.556-1.399c-.244-.243-.572-.41-1.138-.515c-.446-.082-1-.118-1.718-.133A2.25 2.25 0 0 1 14.5 6.75h-5a2.25 2.25 0 0 1-2.235-1.99M9.5 2.75a.75.75 0 0 0-.75.75v1c0 .414.336.75.75.75h5a.75.75 0 0 0 .75-.75v-1a.75.75 0 0 0-.75-.75zM6.25 10.5A.75.75 0 0 1 7 9.75h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>Client
+                                        1</p>
+                                    <p><svg class="icon-client" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" fill-rule="evenodd" d="M7.263 3.26A2.25 2.25 0 0 1 9.5 1.25h5a2.25 2.25 0 0 1 2.237 2.01c.764.016 1.423.055 1.987.159c.758.14 1.403.404 1.928.93c.602.601.86 1.36.982 2.26c.116.866.116 1.969.116 3.336v6.11c0 1.367 0 2.47-.116 3.337c-.122.9-.38 1.658-.982 2.26s-1.36.86-2.26.982c-.867.116-1.97.116-3.337.116h-6.11c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337v-6.11c0-1.367 0-2.47.117-3.337c.12-.9.38-1.658.981-2.26c.525-.525 1.17-.79 1.928-.929c.564-.104 1.224-.143 1.987-.159m.002 1.5c-.718.016-1.272.052-1.718.134c-.566.104-.895.272-1.138.515c-.277.277-.457.665-.556 1.4c-.101.754-.103 1.756-.103 3.191v6c0 1.435.002 2.436.103 3.192c.099.734.28 1.122.556 1.399c.277.277.665.457 1.4.556c.754.101 1.756.103 3.191.103h6c1.435 0 2.436-.002 3.192-.103c.734-.099 1.122-.28 1.399-.556c.277-.277.457-.665.556-1.4c.101-.755.103-1.756.103-3.191v-6c0-1.435-.002-2.437-.103-3.192c-.099-.734-.28-1.122-.556-1.399c-.244-.243-.572-.41-1.138-.515c-.446-.082-1-.118-1.718-.133A2.25 2.25 0 0 1 14.5 6.75h-5a2.25 2.25 0 0 1-2.235-1.99M9.5 2.75a.75.75 0 0 0-.75.75v1c0 .414.336.75.75.75h5a.75.75 0 0 0 .75-.75v-1a.75.75 0 0 0-.75-.75zM6.25 10.5A.75.75 0 0 1 7 9.75h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>Client
+                                        2</p>
+                                    <button class="view-more">View More</button>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="card-title">
+                                        <div class="icon-location">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2">
+                                <path d="M6.4 4.76a7.92 7.92 0 0 1 11.2 11.2l-4.186 4.186a2 2 0 0 1-2.828 0L6.4 15.96a7.92 7.92 0 0 1 0-11.2Z"/>
+                                <circle cx="12" cy="10.36" r="3" stroke-linecap="round"/>
+                            </g>
+                        </svg>
+                                        </div>
+                                        <div class="">
+                                            <h3>Country Name</h3>
+                                        </div>
+
+                                    </div>
+                                    <h2>Project Code & Name</h2>
+                                    <p><svg class="icon-client" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" fill-rule="evenodd" d="M7.263 3.26A2.25 2.25 0 0 1 9.5 1.25h5a2.25 2.25 0 0 1 2.237 2.01c.764.016 1.423.055 1.987.159c.758.14 1.403.404 1.928.93c.602.601.86 1.36.982 2.26c.116.866.116 1.969.116 3.336v6.11c0 1.367 0 2.47-.116 3.337c-.122.9-.38 1.658-.982 2.26s-1.36.86-2.26.982c-.867.116-1.97.116-3.337.116h-6.11c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337v-6.11c0-1.367 0-2.47.117-3.337c.12-.9.38-1.658.981-2.26c.525-.525 1.17-.79 1.928-.929c.564-.104 1.224-.143 1.987-.159m.002 1.5c-.718.016-1.272.052-1.718.134c-.566.104-.895.272-1.138.515c-.277.277-.457.665-.556 1.4c-.101.754-.103 1.756-.103 3.191v6c0 1.435.002 2.436.103 3.192c.099.734.28 1.122.556 1.399c.277.277.665.457 1.4.556c.754.101 1.756.103 3.191.103h6c1.435 0 2.436-.002 3.192-.103c.734-.099 1.122-.28 1.399-.556c.277-.277.457-.665.556-1.4c.101-.755.103-1.756.103-3.191v-6c0-1.435-.002-2.437-.103-3.192c-.099-.734-.28-1.122-.556-1.399c-.244-.243-.572-.41-1.138-.515c-.446-.082-1-.118-1.718-.133A2.25 2.25 0 0 1 14.5 6.75h-5a2.25 2.25 0 0 1-2.235-1.99M9.5 2.75a.75.75 0 0 0-.75.75v1c0 .414.336.75.75.75h5a.75.75 0 0 0 .75-.75v-1a.75.75 0 0 0-.75-.75zM6.25 10.5A.75.75 0 0 1 7 9.75h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>Client
+                                        1</p>
+                                    <p><svg class="icon-client" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" fill-rule="evenodd" d="M7.263 3.26A2.25 2.25 0 0 1 9.5 1.25h5a2.25 2.25 0 0 1 2.237 2.01c.764.016 1.423.055 1.987.159c.758.14 1.403.404 1.928.93c.602.601.86 1.36.982 2.26c.116.866.116 1.969.116 3.336v6.11c0 1.367 0 2.47-.116 3.337c-.122.9-.38 1.658-.982 2.26s-1.36.86-2.26.982c-.867.116-1.97.116-3.337.116h-6.11c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337v-6.11c0-1.367 0-2.47.117-3.337c.12-.9.38-1.658.981-2.26c.525-.525 1.17-.79 1.928-.929c.564-.104 1.224-.143 1.987-.159m.002 1.5c-.718.016-1.272.052-1.718.134c-.566.104-.895.272-1.138.515c-.277.277-.457.665-.556 1.4c-.101.754-.103 1.756-.103 3.191v6c0 1.435.002 2.436.103 3.192c.099.734.28 1.122.556 1.399c.277.277.665.457 1.4.556c.754.101 1.756.103 3.191.103h6c1.435 0 2.436-.002 3.192-.103c.734-.099 1.122-.28 1.399-.556c.277-.277.457-.665.556-1.4c.101-.755.103-1.756.103-3.191v-6c0-1.435-.002-2.437-.103-3.192c-.099-.734-.28-1.122-.556-1.399c-.244-.243-.572-.41-1.138-.515c-.446-.082-1-.118-1.718-.133A2.25 2.25 0 0 1 14.5 6.75h-5a2.25 2.25 0 0 1-2.235-1.99M9.5 2.75a.75.75 0 0 0-.75.75v1c0 .414.336.75.75.75h5a.75.75 0 0 0 .75-.75v-1a.75.75 0 0 0-.75-.75zM6.25 10.5A.75.75 0 0 1 7 9.75h10a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75m1 3.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg>Client
+                                        2</p>
+                                    <button class="view-more">View More</button>
+                                </div>
+
+                                <div class="dashboard-card">
+                                    <div class="card-title">
+                                        <div class="icon-achievement"></div>
+                                        <div class="">
+                                            <h3>Achievement</h3>
+                                        </div>
+
+                                    </div>
+                                    <h2>Name of the Employee</h2>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <button class="view-more">View More</button>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="card-title">
+                                        <div class="icon-achievement"></div>
+                                        <div class="">
+                                            <h3>Achievement</h3>
+                                        </div>
+
+                                    </div>
+                                    <h2>Name of the Employee</h2>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <button class="view-more">View More</button>
+                                </div>
+
+                                <div class="dashboard-card">
+                                    <div class="card-title">
+                                        <div class="icon-achievement"></div>
+
+                                        <div>
+                                            <h3>Celebration</h3>
+                                        </div>
+
+                                    </div>
+                                    <h3>Celebration</h3>
+                                    <h2>Name of the Event</h2>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <button class="view-more">View More</button>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="card-title">
+                                        <div class="icon-achievement"></div>
+
+                                        <div>
+                                            <h3>Celebration</h3>
+                                        </div>
+
+                                    </div>
+                                    <h3>Celebration</h3>
+                                    <h2>Name of the Event</h2>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <p>Lorem ipsum dolor sit.</p>
+                                    <button class="view-more">View More</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upcoming-interviews-container">
+                        <div class="upcoming-interviews-header">
+                            <h3>Upcoming Interviews</h3>
+                            <div class="upcoming-interviews-controls">
+                                <button class="upcoming-interviews-prev-btn" onclick="upcomingInterviewsMovePrev()">&#10094;</button>
+                                <button class="upcoming-interviews-next-btn" onclick="upcomingInterviewsMoveNext()">&#10095;</button>
+                            </div>
+                        </div>
+                        <div class="upcoming-interviews-carousel">
+                            <div class="upcoming-interviews-track">
+                                <div class="upcoming-interviews-item">
+                                    <div class="interview-card">
+                                        <h4>Project Code & Name</h4>
+                                        <p>Date & Time</p>
+                                        <p>Admin 1</p>
+                                    </div>
+                                </div>
+                                <div class="upcoming-interviews-item">
+                                    <div class="interview-card">
+                                        <h4>Project Code & Name</h4>
+                                        <p>Date & Time</p>
+                                        <p>Admin 1</p>
+                                    </div>
+                                </div>
+                                <div class="upcoming-interviews-item">
+                                    <div class="interview-card">
+                                        <h4>Project Code & Name</h4>
+                                        <p>Date & Time</p>
+                                        <p>Admin 1</p>
+                                    </div>
+                                </div>
+                                <div class="upcoming-interviews-item">
+                                    <div class="interview-card">
+                                        <h4>Project Code & Name</h4>
+                                        <p>Date & Time</p>
+                                        <p>Admin 1</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-container">
+                        <!-- Tab Buttons -->
+                        <div class="dashboard-tabs">
+                            <button class="dashboard-tab-btn active" onclick="switchTab('dashboard-projects')">My Projects</button>
+                            <button class="dashboard-tab-btn" onclick="switchTab('dashboard-healthcare')">Health Care</button>
+                            <button class="dashboard-tab-btn" onclick="switchTab('dashboard-education')">Education</button>
+                            <button class="dashboard-compare-btn">Compare</button>
+                        </div>
+
+                        <!-- Projects Tab Content - Visible by Default -->
+                        <div class="dashboard-tab-content" id="dashboard-projects-tab">
+                            <!-- Project Card 1 -->
+                            <div class="dashboard-project-card">
+                                <div class="dashboard-card-header">
+                                    <div class="dashboard-card-title">
+                                        <span class="dashboard-bookmark-icon">
+        <!-- Bookmark SVG Icon -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#004851" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 2C4.9 2 4 2.9 4 4V20.79C4 21.55 4.92 22.03 5.58 21.58L12 17.2L18.42 21.58C19.08 22.03 20 21.55 20 20.79V4C20 2.9 19.1 2 18 2H6Z" />
+        </svg>
+      </span>
+                                        <span class="dashboard-project-name">Project Code & Name</span>
+                                    </div>
+                                    <span class="dashboard-country-name">
+      Country Name
+      <span class="dashboard-pin-icon">
+        <!-- Pin SVG Icon -->
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#d9534f" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C8.69 2 6 4.69 6 8C6 12.44 12 21 12 21C12 21 18 12.44 18 8C18 4.69 15.31 2 12 2ZM12 10.5C10.62 10.5 9.5 9.38 9.5 8C9.5 6.62 10.62 5.5 12 5.5C13.38 5.5 14.5 6.62 14.5 8C14.5 9.38 13.38 10.5 12 10.5Z" />
+        </svg>
+      </span>
+                                    </span>
+                                </div>
+                                <div class="dashboard-card-content">
+                                    <div class="dashboard-card-sidebar">
+                                        <!-- Arrow SVG Icon -->
+                                        <span class="dashboard-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#004851" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 17L15 12L10 7V17Z" />
+        </svg>
+      </span>
+                                        <!-- Video SVG Icon -->
+                                        <span class="dashboard-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#004851" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 10.5V7C17 5.9 16.1 5 15 5H5C3.9 5 3 5.9 3 7V17C3 18.1 3.9 19 5 19H15C16.1 19 17 18.1 17 17V13.5L21 17V7L17 10.5Z" />
+        </svg>
+      </span>
+                                        <!-- Notes SVG Icon -->
+                                        <span class="dashboard-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#004851" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 4H20V6H4V4ZM4 9H14V11H4V9ZM4 14H14V16H4V14Z" />
+        </svg>
+      </span>
+                                        <!-- Document SVG Icon -->
+                                        <span class="dashboard-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#004851" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM13 9V3.5L18.5 9H13Z" />
+        </svg>
+      </span>
+                                    </div>
+                                    <div class="dashboard-card-details">
+                                        <!-- Main project details can go here -->
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Project Card 2 -->
+                            <div class="dashboard-project-card">
+                                <div class="dashboard-card-header">
+                                    <div class="dashboard-card-title">
+                                        <span class="dashboard-bookmark-icon">🔖</span>
+                                        <span class="dashboard-project-name">Project Code & Name</span>
+                                    </div>
+                                    <span class="dashboard-country-name">Country Name 📍</span>
+                                </div>
+                                <div class="dashboard-card-content">
+                                    <div class="dashboard-card-sidebar">
+                                        <span class="dashboard-icon">▶</span>
+                                        <span class="dashboard-icon">📹</span>
+                                        <span class="dashboard-icon">📝</span>
+                                        <span class="dashboard-icon">📑</span>
+                                    </div>
+                                    <div class="dashboard-card-details">
+                                        <!-- Project details can be added here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Healthcare Tab Content (Hidden initially) -->
+                        <div class="dashboard-tab-content" id="dashboard-healthcare-tab" style="display:none;">
+                            <!-- Similar card structure -->
+                        </div>
+
+                        <!-- Education Tab Content (Hidden initially) -->
+                        <div class="dashboard-tab-content" id="dashboard-education-tab" style="display:none;">
+                            <!-- Similar card structure -->
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dashboard-section-02">
+                    <div class="dashboard-calendar">
+                        <div class="day-card" data-date="Sept 30">
+                            <span class="month">Sept </span>
+                            <span class="date">28</span>
+                            <span class="day">Mon</span>
+                        </div>
+                        <div class="day-card" data-date="Sept 28">
+                            <span class="month">Sept </span>
+                            <span class="date">28</span>
+                            <span class="day">Mon</span>
+                        </div>
+                        <div class="day-card" data-date="Sept 29">
+                            <span class="month">Sept </span>
+                            <span class="date">28</span>
+                            <span class="day">Mon</span>
+                        </div>
+                        <div class="day-card current-day" data-date="Oct 1">
+                            <span class="month">Sept </span>
+                            <span class="date">28</span>
+                            <span class="day">Mon</span>
+                        </div>
+                        <div class="day-card" data-date="Oct 2">
+                            <span class="month">Sept </span>
+                            <span class="date">28</span>
+                            <span class="day">Mon</span>
+                        </div>
+                        <div class="day-card" data-date="Oct 3">
+                            <span class="month">Sept </span>
+                            <span class="date">28</span>
+                            <span class="day">Mon</span>
+                        </div>
+                        <div class="day-card" data-date="Oct 4">
+                            <span class="month">Sept </span>
+                            <span class="date">28</span>
+                            <span class="day">Mon</span>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-header">
+                            <h3>Summary</h3>
+                            <div class="date-dropdown">
+                                <button class="dropdown-btn" onclick="toggleDropdown()">Today</button>
+                                <ul class="dropdown-menu">
+                                    <li onclick="selectDateOption('Today')">Today</li>
+                                    <li onclick="selectDateOption('Yesterday')">Yesterday</li>
+                                    <li onclick="selectDateOption('Last 7 Days')">Last 7 Days</li>
+                                    <li onclick="selectDateOption('This Month')">This Month</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="summary-item">
+                            <div class="title-count"> <span class="item-title">Assigned Leads</span>
+                                <span class="item-count">34</span></div>
+                            <div class=""><span class="item-arrow">→</span></div>
+
+                        </div>
+
+                        <div class="summary-item">
+                            <div class="title-count"><span class="item-title">Submitted</span>
+                                <span class="item-count">34</span></div>
+                            <div class=""> <span class="item-arrow">→</span></div>
+
+
+                        </div>
+
+                        <div class="summary-item">
+                            <div class="title-count"> <span class="item-title">Reminders</span>
+                                <span class="item-count">34</span></div>
+                            <div class=""><span class="item-arrow">→</span></div>
+
+
+                        </div>
+
+                        <div class="summary-item">
+                            <div class="title-count"><span class="item-title">Tasks</span>
+                                <span class="item-count">34</span></div>
+                            <div class=""><span class="item-arrow">→</span></div>
+
+
+                        </div>
+
+                        <div class="summary-item">
+                            <div class="title-count"> <span class="item-title">Client Notifications</span>
+                                <span class="item-count">34</span></div>
+                            <div class=""> <span class="item-arrow">→</span></div>
+
+
+                        </div>
+                    </div>
+                    <div class="compliance-card">
+                        <div class="compliance-header">
+                            <h3>Compliance/Attendance</h3>
+                            <div class="date-dropdown">
+                                <button class="dropdown-btn" onclick="toggleDropdown()">Sept</button>
+                                <ul class="dropdown-menu">
+                                    <li onclick="selectDateOption('Sept')">Sept</li>
+                                    <li onclick="selectDateOption('Aug')">Aug</li>
+                                    <li onclick="selectDateOption('July')">July</li>
+                                    <li onclick="selectDateOption('June')">June</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="compliance-items">
+                            <div class="compliance-item">
+                                <span class="item-title">Total Working Days</span>
+                                <span class="item-count">27 days</span>
+                            </div>
+                            <div class="compliance-item">
+                                <span class="item-title">In-Office</span>
+                                <span class="item-count">14 Days</span>
+                            </div>
+                            <div class="compliance-item">
+                                <span class="item-title">On Leave</span>
+                                <span class="item-count">2 Days</span>
+                            </div>
+                            <div class="compliance-item">
+                                <span class="item-title">Late/Early</span>
+                                <span class="item-count">2 Days</span>
+                            </div>
+                            <div class="compliance-item">
+                                <span class="item-title">Comp-off</span>
+                                <span class="item-count">-</span>
+                            </div>
+                            <div class="compliance-item">
+                                <span class="item-title">Work From Home</span>
+                                <span class="item-count">-</span>
+                            </div>
+                        </div>
+
+                        <div class="view-all-btn">
+                            <button>View all →</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="../../../../Internal-CRM/scripts.js"></script>
+        <script>
+            const track = document.querySelector('.carousel-track');
+
+            track.addEventListener('mouseover', () => {
+                track.style.animationPlayState = 'paused';
+            });
+
+            track.addEventListener('mouseout', () => {
+                track.style.animationPlayState = 'running';
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+                const today = new Date();
+                const days = document.querySelectorAll(".day-card");
+
+                days.forEach(day => {
+                    const dateText = day.getAttribute("data-date");
+                    const [month, dayNumber] = dateText.split(" ");
+
+                    const isCurrentDay = today.getDate() === parseInt(dayNumber) &&
+                        today.toLocaleString('default', {
+                            month: 'short'
+                        }) === month;
+
+                    if (isCurrentDay) {
+                        day.classList.add("current-day");
+                    }
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                // Scope this function to `.dashboard-section-02`
+                const dashboardSection = document.querySelector('.dashboard-section-02');
+
+                if (dashboardSection) {
+                    const dropdownBtn = dashboardSection.querySelector('.dropdown-btn');
+                    const dropdownMenu = dashboardSection.querySelector('.dropdown-menu');
+
+                    // Toggle dropdown menu on button click
+                    dropdownBtn.addEventListener('click', function(event) {
+                        event.stopPropagation(); // Prevent click from bubbling up
+                        dropdownMenu.classList.toggle('show');
+                    });
+
+                    // Close dropdown if clicked outside
+                    document.addEventListener('click', function(event) {
+                        if (!dropdownBtn.contains(event.target)) {
+                            dropdownMenu.classList.remove('show');
+                        }
+                    });
+
+                    // Optionally, handle dropdown item clicks
+                    const dropdownItems = dropdownMenu.querySelectorAll('li');
+                    dropdownItems.forEach(item => {
+                        item.addEventListener('click', function() {
+                            dropdownBtn.textContent = item.textContent; // Update button text
+                            dropdownMenu.classList.remove('show'); // Hide menu after selection
+                        });
+                    });
+                }
+            });
+            let upcomingInterviewsCurrentPosition = 0;
+
+            function upcomingInterviewsMoveNext() {
+                const track = document.querySelector('.upcoming-interviews-track');
+                const items = document.querySelectorAll('.upcoming-interviews-item');
+                const itemWidth = items[0].offsetWidth + 20; // 20 is the margin-right
+                const totalWidth = itemWidth * items.length;
+
+                if (upcomingInterviewsCurrentPosition > -(totalWidth - track.offsetWidth)) {
+                    upcomingInterviewsCurrentPosition -= itemWidth;
+                    track.style.transform = `translateX(${upcomingInterviewsCurrentPosition}px)`;
+                }
+            }
+
+            function upcomingInterviewsMovePrev() {
+                const track = document.querySelector('.upcoming-interviews-track');
+                const items = document.querySelectorAll('.upcoming-interviews-item');
+                const itemWidth = items[0].offsetWidth + 20;
+
+                if (upcomingInterviewsCurrentPosition < 0) {
+                    upcomingInterviewsCurrentPosition += itemWidth;
+                    track.style.transform = `translateX(${upcomingInterviewsCurrentPosition}px)`;
+                }
+            }
+
+            function switchTab(tabId) {
+                // Hide all tabs
+                document.querySelectorAll('.dashboard-tab-content').forEach(tab => {
+                    tab.style.display = 'none';
+                });
+
+                // Remove active class from all buttons
+                document.querySelectorAll('.dashboard-tab-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                // Show the selected tab
+                document.getElementById(`${tabId}-tab`).style.display = 'block';
+
+                // Add active class to the clicked button
+                event.target.classList.add('active');
+            }
+
+            // Set the default visible tab on page load
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById('dashboard-projects-tab').style.display = 'block';
+            });
+        </script>
+</body>
+
+</html>
