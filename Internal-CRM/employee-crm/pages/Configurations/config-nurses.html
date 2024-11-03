@@ -19,14 +19,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <style>
-        /*         
-            /* Customize Chosen Dropdown Styling */
+     
 
         .chosen-container {
             width: 100% !important;
         }
 
-        */
+   
     </style>
 </head>
 <style>
@@ -733,15 +732,15 @@
                 </div>
 
                 <div class="form-group label-input">
-                    <label for="">Add a Client</label>
+                    <label for="">Edit Client</label>
                     <input type="text" placeholder="Carla Cronin">
                 </div>
                 <div class="form-group label-input">
-                    <label for="">Add a Client Label</label>
+                    <label for="">Edit Client Label</label>
                     <input type="text" placeholder="Carla Cronin">
                 </div>
                 <div class="form-group">
-                    <p class="extra-add add-standard-procedure"> Edit Standard Procedure</p>
+                    <p class="extra-add edit-standard-procedure"> Edit Standard Procedure</p>
                 </div>
                 <div class="form-group">
                     <button class="confirm-button">Save</button>
@@ -922,7 +921,7 @@
 
                                 <div class="form-group">
                                     <label for="departments">Departments</label>
-                                    <select id="select"class="chosen-select" multiple>
+                                    <select id="select" class="chosen-select" multiple>
                                         <option value="">ICU</option>
                                         <option value="">Maternity Ward</option>
                                         <option value="">ortho</option>
@@ -1065,19 +1064,19 @@
                         <div class="form-container">
                             <div class="form-grid">
                                 <div class="form-group full-width">
-                                <label for="documents">Documents</label>
-                                <select id="" class="chosen-select" multiple>
-                                    <option value="chimtu">Chimtu</option>
-                                    <option value="maternity">Maternity Ward</option>
-                                </select>
-                            </div>
+                                    <label for="documents">Documents</label>
+                                    <select id="" class="chosen-select" multiple>
+                                        <option value="chimtu">Chimtu</option>
+                                        <option value="maternity">Maternity Ward</option>
+                                    </select>
+                                </div>
 
                                 <div class="form-group full-width">
                                     <label for="selection-process">Selection Process (add in order)</label>
-                                <select id="" class="chosen-select" multiple>
-                                    <option value="chimtu">Chimtu</option>
-                                    <option value="maternity">Maternity Ward</option>
-                                </select>
+                                    <select id="" class="chosen-select" multiple>
+                                        <option value="chimtu">Chimtu</option>
+                                        <option value="maternity">Maternity Ward</option>
+                                    </select>
                                 </div>
 
                                 <div class="form-group full-width">
@@ -1095,7 +1094,9 @@
                     <section class="form-section">
                         <div class="form-title-header">
                             <h2>Service Fee</h2>
-
+                            <div class="">
+                                <button>+ Add a new field</button>
+                            </div>
                         </div>
 
                         <div class="form-container">
@@ -1107,18 +1108,270 @@
 
                                 <div class="form-group">
                                     <label for="basic-fee-2">Variable Fee</label>
-                <select id="" class="chosen-select" multiple>
-                    <option value="chimtu">Chimtu</option>
-                    <option value="maternity">Maternity Ward</option>
-                </select>
+                                    <input type="text">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="degree">Additional Fee</label>
-                                <select id="" class="chosen-select" multiple>
-                                    <option value="chimtu">Chimtu</option>
-                                    <option value="maternity">Maternity Ward</option>
-                                </select>
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Submit Section -->
+                    <section class="form-section">
+                        <div class="form-group">
+                            <button type="submit" class="confirm-button">Save</button>
+                        </div>
+                    </section>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="popup-overlay" id="editStandardProcedurePopupOverlay">
+        <div class="popup-content ">
+            <div class="popup-header">
+                <h2 class="popup-title">STANDARD PROCEDURE</h2>
+                <button type="button" class="popup-close" id="closeEditStandardProcedurePopup"
+                    aria-label="Close popup">&#10005;</button>
+            </div>
+            <div class="popup-body">
+
+                <form class="form-sections">
+                    <!-- Eligibility Criteria Section -->
+                    <section class="form-section">
+                        <div class="form-title-header">
+                            <h2>Eligibility Criteria</h2>
+
+                        </div>
+
+                        <div class="form-container">
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="position">Position</label>
+                                    <input type="text" id="position" name="position" placeholder="Enter position">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="qualification">Qualification</label>
+                                    <select id="qualification" name="qualification">
+                                        <option value="">Select qualification</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="experience">Experience</label>
+                                    <input type="text" id="position" name="position"
+                                        placeholder="Enter the range of Experience">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <div class="button-group" role="group" aria-label="Gender selection">
+                                        <button type="button" class="gender-option">Both</button>
+                                        <button type="button" class="gender-option">Female</button>
+                                        <button type="button" class="gender-option">Male</button>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="departments">Departments</label>
+                                    <select id="select" class="chosen-select" multiple>
+                                        <option value="">ICU</option>
+                                        <option value="">Maternity Ward</option>
+                                        <option value="">ortho</option>
+                                        <option value="">MRI</option>
+                                        <option value="">Morturay</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="age-limit">Age Limit</label>
+                                    <input type="text" id="age-limit" name="age_limit" placeholder="Enter age limit">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contract-period">Contract Period</label>
+                                    <input type="text" id="contract-period" name="contract_period"
+                                        placeholder="3 Years">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="service-gap">Service Gap</label>
+                                    <select id="service-gap" name="service_gap">
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <input type="text" id="description" name="description"
+                                        placeholder="Enter description">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="tattoo">Tattoo</label>
+                                    <select id="tattoo" name="tattoo">
+                                        <option value="not-visible">Not in Visible Parts</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">Select Benefits (if any)</label>
+                                    <select id="benefitsSelect" class="chosen-select" multiple>
+                                        <option value="">Chimtu</option>
+                                        <option value="">Maternity Ward</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Salary & Perks Section -->
+                    <section class="form-section">
+                        <div class="form-title-header">
+                            <h2>Salary & Perks</h2>
+
+                        </div>
+
+                        <div class="form-container">
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="salary">Salary (in INR)</label>
+                                    <input type="text" id="salary" name="salary" placeholder="80,000-1,00,000">
+                                </div>
+
+                                <div class="form-group">
+                                    <label id="allowance-label">Allowance</label>
+                                    <div class="marital-status-options" role="group" aria-labelledby="allowance-label">
+                                        <button type="button" class="status-option">Yes</button>
+                                        <button type="button" class="status-option">No</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label id="accommodation-label">Accommodation</label>
+                                    <div class="marital-status-options" role="group"
+                                        aria-labelledby="accommodation-label">
+                                        <button type="button" class="status-option">Yes</button>
+                                        <button type="button" class="status-option">No</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label id="transportation-label">Transportation</label>
+                                    <div class="marital-status-options" role="group"
+                                        aria-labelledby="transportation-label">
+                                        <button type="button" class="status-option">Yes</button>
+                                        <button type="button" class="status-option">No</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label id="insurance-label">Insurance</label>
+                                    <div class="marital-status-options" role="group" aria-labelledby="insurance-label">
+                                        <button type="button" class="status-option">Yes</button>
+                                        <button type="button" class="status-option">No</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="visa-category">Visa Category</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="air-tickets">Air Tickets</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="working-hours">Working Hours</label>
+                                    <input type="text" id="working-hours" name="working_hours"
+                                        placeholder="Enter working hours">
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="leaves">Leaves</label>
+                                    <input type="text" id="leaves" name="leaves" placeholder="Enter leave details">
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="miscellaneous">Miscellaneous</label>
+                                    <input type="text" id="miscellaneous" name="miscellaneous"
+                                        placeholder="Enter miscellaneous details">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Selection Process Section -->
+                    <section class="form-section registration-details">
+                        <div class="form-title-header">
+                            <h2>Selection Process</h2>
+
+                        </div>
+
+                        <div class="form-container">
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="documents">Documents</label>
+                                    <select id="" class="chosen-select" multiple>
+                                        <option value="chimtu">Chimtu</option>
+                                        <option value="maternity">Maternity Ward</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="selection-process">Selection Process (add in order)</label>
+                                    <select id="" class="chosen-select" multiple>
+                                        <option value="chimtu">Chimtu</option>
+                                        <option value="maternity">Maternity Ward</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="procedure">Procedure</label>
+                                    <select id="" class="chosen-select" multiple>
+                                        <option value="chimtu">Chimtu</option>
+                                        <option value="maternity">Maternity Ward</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Service Fee Section -->
+                    <section class="form-section">
+                        <div class="form-title-header">
+                            <h2>Service Fee</h2>
+                            <div class="">
+                                <button>+ Add a new field</button>
+                            </div>
+                        </div>
+
+                        <div class="form-container">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="basic-fee-1">Basic Fee</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="basic-fee-2">Variable Fee</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="degree">Additional Fee</label>
+                                    <input type="text">
                                 </div>
                             </div>
                         </div>
@@ -1206,13 +1459,13 @@
                     <input type="text" placeholder="Nurses">
                 </div>
                 <div class="form-group label-input">
-                    <label for="">Add a Client Name</label>
+                    <label for="">Edit Client Name</label>
                     <select id="">
                         <option value="">Client</option>
                     </select>
                 </div>
                 <div class="form-group label-input">
-                    <label for="">Client Label</label>
+                    <label for="">Edit Client Label</label>
                     <select id="">
                         <option value="">Label Name</option>
                     </select>
@@ -1279,7 +1532,7 @@
                 </div>
 
                 <div class="form-group label-input">
-                    <label for="">Add a Department</label>
+                    <label for="">Edit Department</label>
                     <input type="text" placeholder="">
                 </div>
 
@@ -1337,7 +1590,7 @@
                 </div>
 
                 <div class="form-group label-input">
-                    <label for="">Add a Designation</label>
+                    <label for="">Edit Designation</label>
                     <input type="text" placeholder="">
                 </div>
 
@@ -1432,6 +1685,8 @@
         const closeEditNewClientPopupButton = document.getElementById('closeEditNewClientPopup');
         const addStandardProcedurePopup = document.getElementById('addStandardProcedurePopupOverlay');
         const addStandardProcedureCloseButton = document.getElementById('closeStandardProcedurePopup');
+        const editStandardProcedurePopup = document.getElementById('editStandardProcedurePopupOverlay');
+        const editStandardProcedureCloseButton = document.getElementById('closeEditStandardProcedurePopup');
         const addNewDelegatePopup = document.getElementById('addNewDelegatePopupOverlay');
         const addNewDelegateCloseButton = document.getElementById('closeAddNewDelegatePopup');
         const editDelegatePopup = document.getElementById('editDelegatePopupOverlay');
@@ -1520,6 +1775,28 @@
             });
         } else {
             console.error('Standard procedure popup elements not found');
+        }
+        if (editStandardProcedurePopup && editStandardProcedureCloseButton) {
+            // Use event delegation for edit standard procedure popup buttons
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.edit-standard-procedure')) {
+                    editStandardProcedurePopup.style.display = 'block';
+                }
+            });
+
+            // Close button event for edit standard procedure popup
+            editStandardProcedureCloseButton.addEventListener('click', () => {
+                editStandardProcedurePopup.style.display = 'none';
+            });
+
+            // Close popup when clicking outside the popup content
+            editStandardProcedurePopup.addEventListener('click', (event) => {
+                if (event.target === editStandardProcedurePopup) {
+                    editStandardProcedurePopup.style.display = 'none';
+                }
+            });
+        } else {
+            console.error('Edit standard procedure popup elements not found');
         }
         if (addNewDelegatePopup && addNewDelegateCloseButton) {
             // Use event delegation for add new delegate buttons
@@ -1705,11 +1982,11 @@
             // Clear the input field after adding label
             inputElement.value = '';
         }
-    $(document).ready(function () {
-        $(".chosen-select").chosen({
-        
+        $(document).ready(function () {
+            $(".chosen-select").chosen({
+
+            });
         });
-    });
 
     </script>
 </body>

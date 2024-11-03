@@ -2619,10 +2619,7 @@ input[type="radio"] {
     left: 35%;
 }
 
-.form-group.extra-add {
-    position: absolute;
-    bottom: 30px;
-    left: 35%;
+.form-group .extra-add {
     cursor: pointer;
 }
 

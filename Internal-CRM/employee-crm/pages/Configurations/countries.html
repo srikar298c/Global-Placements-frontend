@@ -4,10 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Internal Global Placements</title>
+    <title> Configurations</title>
     <link rel="stylesheet" href="../../../../Internal-CRM/styles.css">
     <link rel="icon" href="../../../../Internal-CRM/images/favicon.png" type="image/png">
+
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Chosen Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+
+    <!-- Chosen Plugin CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
+
+<style>
+    .chosen-container {
+        width: 100% !important;
+    }
+</style>
 
 <body>
     <div class="sidebar-container ">
@@ -36,7 +53,8 @@
                                     </g>
                                 </svg>
                                 <span class="sidebar-nav-item">Projects</span>
-                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
+                                    viewBox="0 0 24 24">
                                     <path fill="currentColor" fill-rule="evenodd"
                                         d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
                                         clip-rule="evenodd" />
@@ -65,7 +83,8 @@
                                         d="M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19" />
                                 </svg>
                                 <span class="sidebar-nav-item">Database</span>
-                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
+                                    viewBox="0 0 24 24">
                                     <path fill="currentColor" fill-rule="evenodd"
                                         d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
                                         clip-rule="evenodd" />
@@ -129,16 +148,19 @@
                                         d="M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19" />
                                 </svg>
                                 <span class="sidebar-nav-item">Feedbacks</span>
-                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
+                                    viewBox="0 0 24 24">
                                     <path fill="currentColor" fill-rule="evenodd"
                                         d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
                                         clip-rule="evenodd" />
                                 </svg>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/client_feedback.html"><span
+                                <li><a
+                                        href="../../../../Internal-CRM/employee-crm/pages/feedbacks/client_feedback.html"><span
                                             class="sidebar-nav-item">Client Feedback</span></a></li>
-                                <li><a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/subject_expert_feedback.html"><span
+                                <li><a
+                                        href="../../../../Internal-CRM/employee-crm/pages/feedbacks/subject_expert_feedback.html"><span
                                             class="sidebar-nav-item">Subject Expert Feedback</span></a>
                                 </li>
 
@@ -251,23 +273,39 @@
         <div class="config-main-content">
             <div class="config-main-section-sidebar">
                 <ul>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/Configurations/countries.html">Countries</a></li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-nurses.html">Nurses</a></li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-teachers.html">Teachers</a>
+                    <li><a
+                            href="../../../../Internal-CRM/employee-crm/pages/Configurations/countries.html">Countries</a>
                     </li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-lecturers.html">Lectureres</a>
+                    <li><a
+                            href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-nurses.html">Nurses</a>
                     </li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-doctors.html">Doctors</a>
+                    <li><a
+                            href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-teachers.html">Teachers</a>
                     </li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-paramedics.html">Paramedics</a>
+                    <li><a
+                            href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-lecturers.html">Lectureres</a>
                     </li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-internships.html">Internships</a>
+                    <li><a
+                            href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-doctors.html">Doctors</a>
                     </li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-workspace.html">Workspace</a>
+                    <li><a
+                            href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-paramedics.html">Paramedics</a>
                     </li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-agents.html">Agents</a></li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-status.html">Status</a></li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-template.html">Template</a></li>
+                    <li><a
+                            href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-internships.html">Internships</a>
+                    </li>
+                    <li><a
+                            href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-workspace.html">Workspace</a>
+                    </li>
+                    <li><a
+                            href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-agents.html">Agents</a>
+                    </li>
+                    <li><a
+                            href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-status.html">Status</a>
+                    </li>
+                    <li><a
+                            href="../../../../Internal-CRM/employee-crm/pages/Configurations/config-template.html">Template</a>
+                    </li>
                     <button class="create-button create-new-category-button"><svg xmlns="http://www.w3.org/2000/svg"
                             width="1em" height="1em" viewBox="0 0 24 24">
                             <rect width="24" height="24" fill="none" />
@@ -300,9 +338,12 @@
                                     <td>Tracy Kemmer</td>
                                     <td>
                                         <!-- Placeholder for SVG icons -->
-                                        <svg class="edit-country-button" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.776 10.5932L11.5373 3.83182L10.5947 2.88915L3.83333 9.65049V10.5932H4.776ZM5.32867 11.9265H2.5V9.09782L10.1233 1.47449C10.2484 1.34951 10.4179 1.2793 10.5947 1.2793C10.7714 1.2793 10.941 1.34951 11.066 1.47449L12.952 3.36049C13.077 3.48551 13.1472 3.65505 13.1472 3.83182C13.1472 4.0086 13.077 4.17814 12.952 4.30315L5.32867 11.9265ZM2.5 13.2598H14.5V14.5932H2.5V13.2598Z" fill="black"/>
-</svg>
+                                        <svg class="edit-country-button" width="17" height="16" viewBox="0 0 17 16"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4.776 10.5932L11.5373 3.83182L10.5947 2.88915L3.83333 9.65049V10.5932H4.776ZM5.32867 11.9265H2.5V9.09782L10.1233 1.47449C10.2484 1.34951 10.4179 1.2793 10.5947 1.2793C10.7714 1.2793 10.941 1.34951 11.066 1.47449L12.952 3.36049C13.077 3.48551 13.1472 3.65505 13.1472 3.83182C13.1472 4.0086 13.077 4.17814 12.952 4.30315L5.32867 11.9265ZM2.5 13.2598H14.5V14.5932H2.5V13.2598Z"
+                                                fill="black" />
+                                        </svg>
 
 
 
@@ -311,10 +352,11 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button class="add-button add-new-country-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                            <rect width="24" height="24" fill="none" />
-                            <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
-                        </svg>Add a Country</button>
+                        <button class="add-button add-new-country-button"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em" viewBox="0 0 24 24">
+                                <rect width="24" height="24" fill="none" />
+                                <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z" />
+                            </svg>Add a Country</button>
                 </div>
                 </section>
             </div>
@@ -340,10 +382,13 @@
                     <div class="form-grid">
                         <div class="form-group full-width">
                             <label for="statusInput">Status</label>
-                            <div id="statusContainer" class="country-container">
-                                <!-- Labels for Status will appear here -->
-                            </div>
-                            <input type="text" id="statusInput" placeholder="Status">
+                        <select id="select" class="chosen-select" multiple>
+                            <option value="">ICU</option>
+                            <option value="">Maternity Ward</option>
+                            <option value="">ortho</option>
+                            <option value="">MRI</option>
+                            <option value="">Morturay</option>
+                        </select>
                         </div>
                     </div>
                 </div>
@@ -352,188 +397,199 @@
                     <div class="form-grid">
                         <div class="form-group full-width">
                             <label for="registrationCouncilInput">Registration Council</label>
-                            <div id="registrationCouncilContainer" class="country-container">
-                                <!-- Labels for Registration Council will appear here -->
-                            </div>
-                            <input type="text" id="registrationCouncilInput" placeholder="Registration Council">
+                            <select id="select" class="chosen-select" multiple>
+                                <option value="">ICU</option>
+                                <option value="">Maternity Ward</option>
+                                <option value="">ortho</option>
+                                <option value="">MRI</option>
+                                <option value="">Morturay</option>
+                            </select>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <button class="confirm-button">Add</button>
+                    <div class="form-group">
+                        <button class="confirm-button">Add</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="popup-overlay" id="editCountryPopupOverlay">
-        <div class="popup-content add-new-reminder-content">
-            <div class="popup-header">
-                <h2 class="popup-title">
-                    EDIT COUNTRY
-                </h2>
-                <button class="popup-close" id="closeEditCountryPopup">&#10005;</button>
-            </div>
-            <div class="popup-body ">
-
-                <div class="form-group label-input">
-                    <label for="">Name of the Country</label>
-                    <input type="text" id="" value="">
+        <div class="popup-overlay" id="editCountryPopupOverlay">
+            <div class="popup-content add-new-reminder-content">
+                <div class="popup-header">
+                    <h2 class="popup-title">
+                        EDIT COUNTRY
+                    </h2>
+                    <button class="popup-close" id="closeEditCountryPopup">&#10005;</button>
                 </div>
-                <div class="form-container">
-                    <div class="form-grid">
-                        <div class="form-group full-width">
-                            <label for="statusInput">Status</label>
-                            <div id="statusContainer" class="country-container">
-                                <!-- Labels for Status will appear here -->
+                <div class="popup-body ">
+
+                    <div class="form-group label-input">
+                        <label for="">Name of the Country</label>
+                        <input type="text" id="" value="">
+                    </div>
+                    <div class="form-container">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="statusInput">Status</label>
+                                <div id="statusContainer" class="country-container">
+                                    <!-- Labels for Status will appear here -->
+                                </div>
+                                <input type="text" id="statusInput" placeholder="Status">
                             </div>
-                            <input type="text" id="statusInput" placeholder="Status">
                         </div>
                     </div>
-                </div>
 
-                <div class="form-container">
-                    <div class="form-grid">
-                        <div class="form-group full-width">
-                            <label for="registrationCouncilInput">Registration Council</label>
-                            <div id="registrationCouncilContainer" class="country-container">
-                                <!-- Labels for Registration Council will appear here -->
+                    <div class="form-container">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="registrationCouncilInput">Registration Council</label>
+                                <div id="registrationCouncilContainer" class="country-container">
+                                    <!-- Labels for Registration Council will appear here -->
+                                </div>
+                                <input type="text" id="registrationCouncilInput" placeholder="Registration Council">
                             </div>
-                            <input type="text" id="registrationCouncilInput" placeholder="Registration Council">
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <button class="confirm-button">Save</button>
+                    <div class="form-group">
+                        <button class="confirm-button">Save</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="popup-overlay" id="createNewCategoryPopupOverlay">
-        <div class="popup-content add-new-reminder-content">
-            <div class="popup-header">
-                <h2 class="popup-title">
-                    CREATE A NEW CATEGORY
-                </h2>
-                <button class="popup-close" id="closeCreateNewCategoryPopup">&#10005;</button>
-            </div>
-            <div class="popup-body ">
-                <div class="form-group label-input">
-                    <label for="">Name of the Categeory</label>
-                    <input type="text" id="" value="">
+        <div class="popup-overlay" id="createNewCategoryPopupOverlay">
+            <div class="popup-content add-new-reminder-content">
+                <div class="popup-header">
+                    <h2 class="popup-title">
+                        CREATE A NEW CATEGORY
+                    </h2>
+                    <button class="popup-close" id="closeCreateNewCategoryPopup">&#10005;</button>
                 </div>
-                <div class="form-group label-input">
-                    <label for="">Choose Categeory</label>
-                    <select name="" id="">
+                <div class="popup-body ">
+                    <div class="form-group label-input">
+                        <label for="">Name of the Categeory</label>
+                        <input type="text" id="" value="">
+                    </div>
+                    <div class="form-group label-input">
+                        <label for="">Choose Categeory</label>
+                        <select name="" id="">
 
-                    <option value="">Choose Category</option>
-                    <option value="">Health Care</option>
-                    <option value="">Education</option>
-                  </select>
-                </div>
+                            <option value="">Choose Category</option>
+                            <option value="">Health Care</option>
+                            <option value="">Education</option>
+                        </select>
+                    </div>
 
 
-                <div class="form-group">
-                    <button class="confirm-button">Add</button>
+                    <div class="form-group">
+                        <button class="confirm-button">Add</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="../../../../Internal-CRM/scripts.js"></script>
-    <script>
-        const addNewCountryPopup = document.getElementById('addNewCountryPopupOverlay');
-        const addNewCountryCloseButton = document.getElementById('closeAddNewCountryPopup');
-        const editCountryPopup = document.getElementById('editCountryPopupOverlay');
-        const closeEditCountryCloseButton = document.getElementById('closeEditCountryPopup');
-        const createNewCategoryPopup = document.getElementById('createNewCategoryPopupOverlay');
-        const createNewCategoryCloseButton = document.getElementById('closeCreateNewCategoryPopup');
+        <script src="../../../../Internal-CRM/scripts.js"></script>
+        <script>
+            
+                $(document).ready(function () {
+                    $(".chosen-select").chosen({
 
-        if (addNewCountryPopup && addNewCountryCloseButton) {
-            // Use event delegation for add new country buttons
-            document.addEventListener('click', function(event) {
-                if (event.target.closest('.add-new-country-button')) {
-                    addNewCountryPopup.style.display = 'block';
-                }
-            });
+                    });
+                });
+                
+            const addNewCountryPopup = document.getElementById('addNewCountryPopupOverlay');
+            const addNewCountryCloseButton = document.getElementById('closeAddNewCountryPopup');
+            const editCountryPopup = document.getElementById('editCountryPopupOverlay');
+            const closeEditCountryCloseButton = document.getElementById('closeEditCountryPopup');
+            const createNewCategoryPopup = document.getElementById('createNewCategoryPopupOverlay');
+            const createNewCategoryCloseButton = document.getElementById('closeCreateNewCategoryPopup');
 
-            addNewCountryCloseButton.addEventListener('click', () => addNewCountryPopup.style.display = 'none');
-            addNewCountryPopup.addEventListener('click', (event) => {
-                if (event.target === addNewCountryPopup) addNewCountryPopup.style.display = 'none';
-            });
-        } else {
-            console.error('Add new country popup elements not found');
-        }
-        if (editCountryPopup && closeEditCountryCloseButton) {
-            // Use event delegation for the edit country button
-            document.addEventListener('click', function(event) {
-                if (event.target.closest('.edit-country-button')) {
-                    editCountryPopup.style.display = 'block';
-                }
-            });
+            if (addNewCountryPopup && addNewCountryCloseButton) {
+                // Use event delegation for add new country buttons
+                document.addEventListener('click', function (event) {
+                    if (event.target.closest('.add-new-country-button')) {
+                        addNewCountryPopup.style.display = 'block';
+                    }
+                });
 
-            // Close the popup when the close button is clicked
-            closeEditCountryCloseButton.addEventListener('click', () => editCountryPopup.style.display = 'none');
+                addNewCountryCloseButton.addEventListener('click', () => addNewCountryPopup.style.display = 'none');
+                addNewCountryPopup.addEventListener('click', (event) => {
+                    if (event.target === addNewCountryPopup) addNewCountryPopup.style.display = 'none';
+                });
+            } else {
+                console.error('Add new country popup elements not found');
+            }
+            if (editCountryPopup && closeEditCountryCloseButton) {
+                // Use event delegation for the edit country button
+                document.addEventListener('click', function (event) {
+                    if (event.target.closest('.edit-country-button')) {
+                        editCountryPopup.style.display = 'block';
+                    }
+                });
 
-            // Close the popup when clicking outside the popup content
-            editCountryPopup.addEventListener('click', (event) => {
-                if (event.target === editCountryPopup) editCountryPopup.style.display = 'none';
-            });
-        } else {
-            console.error('Edit country popup elements not found');
-        }
-        if (createNewCategoryPopup && createNewCategoryCloseButton) {
-            // Use event delegation for create new category buttons
-            document.addEventListener('click', function(event) {
-                if (event.target.closest('.create-new-category-button')) {
-                    createNewCategoryPopup.style.display = 'block';
-                }
-            });
+                // Close the popup when the close button is clicked
+                closeEditCountryCloseButton.addEventListener('click', () => editCountryPopup.style.display = 'none');
 
-            createNewCategoryCloseButton.addEventListener('click', () => createNewCategoryPopup.style.display = 'none');
-            createNewCategoryPopup.addEventListener('click', (event) => {
-                if (event.target === createNewCategoryPopup) createNewCategoryPopup.style.display = 'none';
-            });
-        } else {
-            console.error('Create new category popup elements not found');
-        }
-        // Generic function to create a new label
-        function addCountryLabel(inputElement, containerElement, value) {
-            const label = document.createElement('div');
-            label.className = 'country-label';
+                // Close the popup when clicking outside the popup content
+                editCountryPopup.addEventListener('click', (event) => {
+                    if (event.target === editCountryPopup) editCountryPopup.style.display = 'none';
+                });
+            } else {
+                console.error('Edit country popup elements not found');
+            }
+            if (createNewCategoryPopup && createNewCategoryCloseButton) {
+                // Use event delegation for create new category buttons
+                document.addEventListener('click', function (event) {
+                    if (event.target.closest('.create-new-category-button')) {
+                        createNewCategoryPopup.style.display = 'block';
+                    }
+                });
 
-            const span = document.createElement('span');
-            span.textContent = value;
+                createNewCategoryCloseButton.addEventListener('click', () => createNewCategoryPopup.style.display = 'none');
+                createNewCategoryPopup.addEventListener('click', (event) => {
+                    if (event.target === createNewCategoryPopup) createNewCategoryPopup.style.display = 'none';
+                });
+            } else {
+                console.error('Create new category popup elements not found');
+            }
+            // Generic function to create a new label
+            function addCountryLabel(inputElement, containerElement, value) {
+                const label = document.createElement('div');
+                label.className = 'country-label';
 
-            const removeButton = document.createElement('button');
-            removeButton.textContent = '×';
-            removeButton.addEventListener('click', () => {
-                containerElement.removeChild(label);
-            });
+                const span = document.createElement('span');
+                span.textContent = value;
 
-            label.appendChild(span);
-            label.appendChild(removeButton);
-            containerElement.appendChild(label);
-        }
+                const removeButton = document.createElement('button');
+                removeButton.textContent = '×';
+                removeButton.addEventListener('click', () => {
+                    containerElement.removeChild(label);
+                });
 
-        // Generic function to add label on Enter keypress
-        function setupInputHandler(inputId, containerId) {
-            const inputElement = document.getElementById(inputId);
-            const containerElement = document.getElementById(containerId);
+                label.appendChild(span);
+                label.appendChild(removeButton);
+                containerElement.appendChild(label);
+            }
 
-            inputElement.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter' && inputElement.value.trim() !== '') {
-                    addCountryLabel(inputElement, containerElement, inputElement.value.trim());
-                    inputElement.value = ''; // Clear the input after adding the label
-                }
-            });
-        }
+            // Generic function to add label on Enter keypress
+            function setupInputHandler(inputId, containerId) {
+                const inputElement = document.getElementById(inputId);
+                const containerElement = document.getElementById(containerId);
 
-        // Setup for Status and Registration Council
-        setupInputHandler('statusInput', 'statusContainer');
-        setupInputHandler('registrationCouncilInput', 'registrationCouncilContainer');
-    </script>
+                inputElement.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' && inputElement.value.trim() !== '') {
+                        addCountryLabel(inputElement, containerElement, inputElement.value.trim());
+                        inputElement.value = ''; // Clear the input after adding the label
+                    }
+                });
+            }
+
+            // Setup for Status and Registration Council
+            setupInputHandler('statusInput', 'statusContainer');
+            setupInputHandler('registrationCouncilInput', 'registrationCouncilContainer');
+
+
+        </script>
 </body>
 
 </html>
