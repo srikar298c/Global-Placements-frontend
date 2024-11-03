@@ -15,13 +15,13 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .tabs {
             display: flex;
             gap: 15px;
             margin-bottom: 30px;
         }
-        
+
         .tab {
             padding: 12px 24px;
             background: white;
@@ -32,18 +32,18 @@
             transition: all 0.3s ease;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+
         .tab:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        
+
         .tab.active {
             background: #00B5A5;
             color: white;
             box-shadow: 0 4px 12px rgba(0, 181, 165, 0.2);
         }
-        
+
         .charts-container {
             width: 100%;
             display: none;
@@ -51,11 +51,11 @@
             gap: 20px;
             margin-bottom: 30px;
         }
-        
+
         .charts-container.active {
             display: grid;
         }
-        
+
         .chart-box {
             background: white;
             padding: 20px;
@@ -64,50 +64,50 @@
             transition: all 0.3s ease;
             width: 100%;
         }
-        
+
         .chart-box:hover {
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
             transform: translateY(-2px);
         }
-        
+
         .chart-title {
             font-size: 16px;
             margin-bottom: 15px;
             color: #333;
         }
-        
+
         .pie-container {
             position: relative;
             width: 100%;
             height: 300px;
             margin: 0 auto;
         }
-        
+
         .pie-container svg {
             width: 100%;
             height: 100%;
         }
-        
+
         .legend {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-top: 15px;
         }
-        
+
         .legend-item {
             display: flex;
             align-items: center;
             gap: 8px;
             font-size: 14px;
         }
-        
+
         .legend-color {
             width: 12px;
             height: 12px;
             border-radius: 50%;
         }
-        
+
         .table-container {
             background: white;
             padding: 20px;
@@ -116,54 +116,55 @@
             overflow-x: auto;
             display: none;
         }
-        
+
         .table-container.active {
             display: block;
         }
-        
+
         table {
             width: 100%;
             border-collapse: collapse;
         }
-        
+
         th,
         td {
             padding: 12px;
             text-align: left;
             border-bottom: 1px solid #eee;
         }
-        
+
         th {
             background-color: #f8f9fa;
             font-weight: 600;
             color: #666;
         }
-        
+
         tr:hover {
             background-color: #f8f9fa;
         }
-        
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .fade-in {
             animation: fadeIn 0.5s ease forwards;
         }
-        
+
         @media (max-width: 1024px) {
             .charts-container {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        
+
         @media (max-width: 768px) {
             .charts-container {
                 grid-template-columns: 1fr;
@@ -196,7 +197,8 @@
                                     </g>
                                 </svg>
                                 <span class="sidebar-nav-item">Projects</span>
-                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
+                                    viewBox="0 0 24 24">
                                     <path fill="currentColor" fill-rule="evenodd"
                                         d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
                                         clip-rule="evenodd" />
@@ -225,7 +227,8 @@
                                         d="M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19" />
                                 </svg>
                                 <span class="sidebar-nav-item">Database</span>
-                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
+                                    viewBox="0 0 24 24">
                                     <path fill="currentColor" fill-rule="evenodd"
                                         d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
                                         clip-rule="evenodd" />
@@ -255,7 +258,7 @@
                                 <span class="sidebar-nav-item">Submissions</span>
                             </a>
                         </li>
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/Configurations/countries.html"><svg
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/configs/countries.html"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <rect width="24" height="24" fill="none" />
                                     <path fill="currentColor"
@@ -263,7 +266,7 @@
                                     <path fill="currentColor"
                                         d="M14 2H6a2.006 2.006 0 0 0-2 2v16a2.006 2.006 0 0 0 2 2h12a2.006 2.006 0 0 0 2-2V8Zm4 18H6V4h7v5h5Z" />
                                 </svg>
-                                <span class="sidebar-nav-item">Configurations</span>
+                                <span class="sidebar-nav-item">Configs</span>
                             </a>
                         </li>
 
@@ -289,42 +292,40 @@
                                         d="M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19" />
                                 </svg>
                                 <span class="sidebar-nav-item">Feedbacks</span>
-                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
+                                    viewBox="0 0 24 24">
                                     <path fill="currentColor" fill-rule="evenodd"
                                         d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
                                         clip-rule="evenodd" />
                                 </svg>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/client_feedback.html"><span
+                                <li><a
+                                        href="../../../../Internal-CRM/employee-crm/pages/feedbacks/client_feedback.html"><span
                                             class="sidebar-nav-item">Client Feedback</span></a></li>
-                                <li><a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/subject_expert_feedback.html"><span
+                                <li><a
+                                        href="../../../../Internal-CRM/employee-crm/pages/feedbacks/subject_expert_feedback.html"><span
                                             class="sidebar-nav-item">Subject Expert Feedback</span></a>
                                 </li>
 
                             </ul>
                         </li>
 
-                        <li>
-                            <a href="../../../../Internal-CRM/employee-crm/pages/notifications/notifications.html">
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/notifications/notifications.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <path fill="currentColor" fill-rule="evenodd"
                                         d="M12 1.25A7.75 7.75 0 0 0 4.25 9v.704a3.53 3.53 0 0 1-.593 1.958L2.51 13.385c-1.334 2-.316 4.718 2.003 5.35q1.133.309 2.284.523l.002.005C7.567 21.315 9.622 22.75 12 22.75s4.433-1.435 5.202-3.487l.002-.005a29 29 0 0 0 2.284-.523c2.319-.632 3.337-3.35 2.003-5.35l-1.148-1.723a3.53 3.53 0 0 1-.593-1.958V9A7.75 7.75 0 0 0 12 1.25m3.376 18.287a28.5 28.5 0 0 1-6.753 0c.711 1.021 1.948 1.713 3.377 1.713s2.665-.692 3.376-1.713M5.75 9a6.25 6.25 0 1 1 12.5 0v.704c0 .993.294 1.964.845 2.79l1.148 1.723a2.02 2.02 0 0 1-1.15 3.071a26.96 26.96 0 0 1-14.187 0a2.02 2.02 0 0 1-1.15-3.07l1.15-1.724a5.03 5.03 0 0 0 .844-2.79z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <span class="sidebar-nav-item">Notifications</span></a>
-                        </li>
-                        <li>
-                            <a href="../../../../Internal-CRM/employee-crm/pages/reminders/reminders.html">
+                                <span class="sidebar-nav-item">Notifications</span></a></li>
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/reminders/reminders.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <rect width="24" height="24" fill="none" />
                                     <path fill="currentColor"
                                         d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z" />
                                 </svg>
-                                <span class="sidebar-nav-item">Reminders</span></a>
-                        </li>
-                        <li>
-                            <a href="../../../../Internal-CRM/employee-crm/pages/tasks/tasks.html">
+                                <span class="sidebar-nav-item">Reminders</span></a></li>
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/tasks/tasks.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36">
                                     <rect width="36" height="36" fill="none" />
                                     <path fill="currentColor"
@@ -339,8 +340,7 @@
                                     <path fill="none" d="M0 0h36v36H0z" />
                                 </svg>
 
-                                <span class="sidebar-nav-item">Tasks</span></a>
-                        </li>
+                                <span class="sidebar-nav-item">Tasks</span></a></li>
 
 
                         <li><a href="../../../../Internal-CRM/employee-crm/pages/statistics/statistics.html"><svg
@@ -467,9 +467,50 @@
                                 <span>Female</span>
                             </div>
                         </div>
-                        <div class="table-container active fade-in">
+                    </div>
+                </div>
+
+                <!-- Healthcare Tab Content -->
+                <div class="charts-container" data-content="healthcare">
+                    <div class="chart-box fade-in">
+                        <h3 class="chart-title">Healthcare Candidates Distribution</h3>
+                        <div class="pie-container">
+                            <svg viewBox="0 0 200 200" id="healthcareChart"></svg>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #00B5A5"></div>
+                                <span>Doctors</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #00A7CC"></div>
+                                <span>Nurses</span>
+                            </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Education Tab Content -->
+                <div class="charts-container" data-content="education">
+                    <div class="chart-box fade-in">
+                        <h3 class="chart-title">Education Candidates Distribution</h3>
+                        <div class="pie-container">
+                            <svg viewBox="0 0 200 200" id="educationChart"></svg>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #00B5A5"></div>
+                                <span>Teachers</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #00A7CC"></div>
+                                <span>Administrators</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-container active fade-in">
                     <table>
                         <thead>
                             <tr>
@@ -509,88 +550,6 @@
                         </tbody>
                     </table>
                 </div>
-
-                <!-- Healthcare Tab Content -->
-                <div class="charts-container" data-content="healthcare">
-                    <div class="tabs">
-                        <button class="tab active" data-tab="candidate">Candidate</button>
-                        <button class="tab" data-tab="employee">Employee</button>
-                        <button class="tab" data-tab="client">Client</button>
-                    </div>
-                    <div class="" data-content="candidate">
-                        <div class="chart-box fade-in">
-                            <h3 class="chart-title">Candidate's Education</h3>
-                            <div class="pie-container">
-                                <svg viewBox="0 0 200 200" id="healthcareChart"></svg>
-                            </div>
-                            <div class="legend">
-                                <div class="legend-item">
-                                    <div class="legend-color" style="background: #00B5A5"></div>
-                                    <span>B Sc</span>
-                                </div>
-                                <div class="legend-item">
-                                    <div class="legend-color" style="background: #00A7CC"></div>
-                                    <span>GNM</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    .
-                    <div class="chart-box fade-in" data-content="employee">
-                        <h3 class="chart-title">Candidate's with International Experience</h3>
-                        <div class="pie-container">
-                            <svg viewBox="0 0 200 200" id="healthcareChart"></svg>
-                        </div>
-                        <div class="legend">
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: #00B5A5"></div>
-                                <span>B Sc</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: #00A7CC"></div>
-                                <span>GNM</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chart-box fade-in" data-content="client">
-                        <h3 class="chart-title">Candidate's with International Experience</h3>
-                        <div class="pie-container">
-                            <svg viewBox="0 0 200 200" id="healthcareChart"></svg>
-                        </div>
-                        <div class="legend">
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: #00B5A5"></div>
-                                <span>B Sc</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: #00A7CC"></div>
-                                <span>GNM</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Education Tab Content -->
-                <div class="charts-container" data-content="education">
-                    <div class="chart-box fade-in">
-                        <h3 class="chart-title">Education Candidates Distribution</h3>
-                        <div class="pie-container">
-                            <svg viewBox="0 0 200 200" id="educationChart"></svg>
-                        </div>
-                        <div class="legend">
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: #00B5A5"></div>
-                                <span>Teachers</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="legend-color" style="background: #00A7CC"></div>
-                                <span>Administrators</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
 
         </div>
@@ -652,41 +611,26 @@
 
         // Initialize charts with data
         const charts = {
-            healthChart: [{
-                value: 65,
-                label: "Health Care"
-            }, {
-                value: 35,
-                label: "Education"
-            }],
-            nationalityChart: [{
-                value: 70,
-                label: "Indians"
-            }, {
-                value: 30,
-                label: "Foreigners"
-            }],
-            genderChart: [{
-                value: 60,
-                label: "Male"
-            }, {
-                value: 40,
-                label: "Female"
-            }],
-            healthcareChart: [{
-                value: 70,
-                label: "Doctors"
-            }, {
-                value: 30,
-                label: "Nurses"
-            }],
-            educationChart: [{
-                value: 55,
-                label: "Teachers"
-            }, {
-                value: 45,
-                label: "Administrators"
-            }]
+            healthChart: [
+                { value: 65, label: "Health Care" },
+                { value: 35, label: "Education" }
+            ],
+            nationalityChart: [
+                { value: 70, label: "Indians" },
+                { value: 30, label: "Foreigners" }
+            ],
+            genderChart: [
+                { value: 60, label: "Male" },
+                { value: 40, label: "Female" }
+            ],
+            healthcareChart: [
+                { value: 70, label: "Doctors" },
+                { value: 30, label: "Nurses" }
+            ],
+            educationChart: [
+                { value: 55, label: "Teachers" },
+                { value: 45, label: "Administrators" }
+            ]
         };
 
         // Create all charts
