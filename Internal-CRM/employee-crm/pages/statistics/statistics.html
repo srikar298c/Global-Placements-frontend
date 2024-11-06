@@ -11,20 +11,23 @@
 
 <body>
 <style>
+  
+   
     .statistics-container {
         max-width: 1200px;
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .parent-tabs,
-    .child-tabs {
+    .parent-tabs {
         display: flex;
         gap: 15px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
-    .parent-tab,
-    .child-tab {
+    .parent-tab {
         padding: 12px 24px;
         background: white;
         border: none;
@@ -35,29 +38,66 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .parent-tab:hover,
-    .child-tab:hover {
+    .parent-tab:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .parent-tab.active,
-    .child-tab.active {
+    .parent-tab.active {
         background: #00B5A5;
         color: white;
         box-shadow: 0 4px 12px rgba(0, 181, 165, 0.2);
     }
 
+    .child-tabs {
+     
+        gap: 15px;
+   margin-bottom: 20px;
+    }
+
+    .child-tab {
+        padding: 10px 20px;
+        background: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .child-tab:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .child-tab.active {
+        background: #00A7CC;
+        color: white;
+        box-shadow: 0 4px 12px rgba(0, 167, 204, 0.2);
+    }
+
     /* Content Display */
-    .parent-content,
+    .parent-content {
+        display: none;
+    }
+
+    .parent-content.active {
+        display: block;
+    }
+
+    .child-tabs.active {
+        display: flex;
+    }
+
     .child-content {
         display: none;
     }
 
-    .parent-content.active,
     .child-content.active {
         display: block;
     }
+
 
    /* Grid Layout for Chart Boxes */
     .charts-container {
@@ -121,36 +161,78 @@
         border-radius: 50%;
     }
 
-    .table-container {
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        overflow-x: auto;
-    }
+        /* Container styling */
+        .table-container {
+            position: relative;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            max-width: 100%;
+            margin: 20px auto;
+        }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
 
-    th,
-    td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid #eee;
-    }
+        th, td {
+            padding: 12px 20px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            white-space: nowrap;
+        }
 
-    th {
-        background-color: #f8f9fa;
-        font-weight: bold;
-        color: #333;
-    }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
 
-    tr:hover {
-        background-color: #f3f4f5;
-    }
+        tr:hover {
+            background-color: #f3f4f5;
+        }
 
+        /* Navigation button styling */
+        .nav-buttons {
+            display: flex;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            gap: 10px;
+        }
+
+        .nav-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .nav-buttons button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* Positioning navigation buttons */
+        .nav-left {
+            left: -40px;
+        }
+
+        .nav-right {
+            right: -40px;
+        }
     @keyframes fadeIn {
         from {
             opacity: 0;
@@ -472,10 +554,10 @@
         <!-- All Tab Content -->
     <div class="parent-content active" data-parent-content="all">
         <div class="charts-container">
-            <div class="chart-box">
+            <div class="chart-box fade-in">
                 <h3 class="chart-title">Candidates in Health Care and Education</h3>
                 <div class="pie-container">
-                    <svg viewBox="0 0 200 200" id="healthChart"></svg>
+                    <svg viewBox="0 0 200 200" id="healthCareEducationCareChart"></svg>
                 </div>
                 <div class="legend">
                     <div class="legend-item">
@@ -486,6 +568,31 @@
                         <div class="legend-color" style="background: #00A7CC"></div>
                         <span>Education</span>
                     </div>
+                </div>
+            </div>
+            <div class="chart-box fade-in">
+                <h3 class="chart-title">Candidates in Health Care and Education</h3>
+                <div class="pie-container">
+                    <svg viewBox="0 0 200 200" id="healthCareSubSectorsChart"></svg>
+                </div>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #00B5A5"></div>
+                        <span>Doctors</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #00A7CC"></div>
+                        <span>Lecturers</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #111170"></div>
+                        <span>Nurses</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #84d914"></div>
+                        <span>Para medics</span>
+                    </div>
+                 
                 </div>
             </div>
     
@@ -501,7 +608,7 @@
                     </div>
                     <div class="legend-item">
                         <div class="legend-color" style="background: #00A7CC"></div>
-                        <span>Foreigners</span>
+                        <span>Abroad</span>
                     </div>
                 </div>
             </div>
@@ -524,49 +631,62 @@
             </div>
         </div>
     
-        <!-- Full-width Table -->
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Category 1</th>
-                        <th>Category 2</th>
-                        <th>Category 3</th>
-                        <th>Category 4</th>
-                        <th>Category 5</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Kent Metz Jr.</td>
-                        <td>99046</td>
-                        <td>99046</td>
-                        <td>99046</td>
-                        <td>99046</td>
-                        <td>99046</td>
-                    </tr>
-                    <tr>
-                        <td>Opal Hermann</td>
-                        <td>17865</td>
-                        <td>17865</td>
-                        <td>17865</td>
-                        <td>17865</td>
-                        <td>17865</td>
-                    </tr>
-                    <tr>
-                        <td>Kelly Streich</td>
-                        <td>95071</td>
-                        <td>95071</td>
-                        <td>95071</td>
-                        <td>95071</td>
-                        <td>95071</td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="table-container">
+        <div class="nav-buttons nav-left">
+            <button id="scroll-left">‹</button>
+        </div>
+        <table id="scrollable-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category 1</th>
+                    <th>Category 2</th>
+                    <th>Category 3</th>
+                    <th>Category 4</th>
+                    <th>Category 5</th>
+                    <th>Category 6</th>
+                    <th>Category 7</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kent Metz Jr.</td>
+                    <td>99046</td>
+                    <td>99046</td>
+                    <td>99046</td>
+                    <td>99046</td>
+                    <td>99046</td>
+                    <td>99046</td>
+                    <td>99046</td>
+                </tr>
+                <tr>
+                    <td>Opal Hermann</td>
+                    <td>17865</td>
+                    <td>17865</td>
+                    <td>17865</td>
+                    <td>17865</td>
+                    <td>17865</td>
+                    <td>17865</td>
+                    <td>17865</td>
+                </tr>
+                <tr>
+                    <td>Kelly Streich</td>
+                    <td>95071</td>
+                    <td>95071</td>
+                    <td>95071</td>
+                    <td>95071</td>
+                    <td>95071</td>
+                    <td>95071</td>
+                    <td>95071</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="nav-buttons nav-right">
+            <button id="scroll-right">›</button>
         </div>
     </div>
     </div>
+    
       
     
             <!-- Healthcare Parent Tab Content with Child Tabs -->
@@ -579,6 +699,7 @@
     
                 <!-- Healthcare Candidate Content -->
                 <div class="child-content active" data-child-content="healthcare-candidate">
+                    <div class="charts-container">
                     <div class="chart-box fade-in">
                         <h3 class="chart-title">Candidate's Education</h3>
                         <div class="pie-container">
@@ -596,6 +717,34 @@
                         </div>
                     </div>
                     <div class="chart-box fade-in">
+                        <h3 class="chart-title">Health Professionals</h3>
+                        <div class="pie-container">
+                            <svg viewBox="0 0 200 200" id="healthProfessionalsChart"></svg>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #00B5A5"></div>
+                                <span>MBBS</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #00A7CC"></div>
+                                <span>RMP</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #00A7CC"></div>
+                                <span>FRCS</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #00A7CC"></div>
+                                <span>MD</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #00A7CC"></div>
+                                <span>Ph.D</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-box fade-in">
                         <h3 class="chart-title">Candidate's with International Experience</h3>
                         <div class="pie-container">
                             <svg viewBox="0 0 200 200" id="candidatesInternationalExperinceChart"></svg>
@@ -608,7 +757,7 @@
                             <div class="legend-item">
                                 <div class="legend-color" style="background: #00A7CC"></div>
                                 <span>No</span>
-                            </div>
+                            </div></div>
                         </div>
                     </div>
                 </div>
@@ -623,6 +772,46 @@
                 <div class="child-content" data-child-content="healthcare-client">
                     <h3>Healthcare - Client</h3>
                     <!-- Chart or other content specific to Healthcare Client -->
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Category 1</th>
+                                <th>Category 2</th>
+                                <th>Category 3</th>
+                                <th>Category 4</th>
+                                <th>Category 5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Kent Metz Jr.</td>
+                                <td>99046</td>
+                                <td>99046</td>
+                                <td>99046</td>
+                                <td>99046</td>
+                                <td>99046</td>
+                            </tr>
+                            <tr>
+                                <td>Opal Hermann</td>
+                                <td>17865</td>
+                                <td>17865</td>
+                                <td>17865</td>
+                                <td>17865</td>
+                                <td>17865</td>
+                            </tr>
+                            <tr>
+                                <td>Kelly Streich</td>
+                                <td>95071</td>
+                                <td>95071</td>
+                                <td>95071</td>
+                                <td>95071</td>
+                                <td>95071</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
     
@@ -652,10 +841,9 @@
                     <!-- Chart or other content specific to Education Client -->
                 </div>
             </div>
-        </div>
+        </div></div>
     </div>
 
-    </div>
 
 
     <script src="../../../../Internal-CRM/scripts.js"></script>
@@ -713,9 +901,15 @@
 
         // Initialize charts with data
         const charts = {
-            healthChart: [
+            healthCareEducationCareChart: [
                 { value: 65, label: "Health Care" },
                 { value: 35, label: "Education" }
+            ],
+            healthCareSubSectorsChart: [
+                { value: 15, label: "Doctors" },
+                { value: 20, label: "Lectures" },
+                { value: 55, label: "Nurses" },
+                { value: 10, label: "Para medics" }
             ],
             nationalityChart: [
                 { value: 70, label: "Indians" },
@@ -737,6 +931,10 @@
                 { value: 70, label: "BSc" },
                 { value: 30, label: "GNM" }
             ],
+            healthProfessionalsChart: [
+                { value: 70, label: "BSc" },
+                { value: 30, label: "GNM" }
+            ],
             candidatesInternationalExperinceChart: [
                 { value: 55, label: "Yes" },
                 { value: 45, label: "No" }
@@ -749,46 +947,46 @@
                 createPieChart(id, data);
             }
         });
+    // Parent Tab Functionality
+    const parentTabs = document.querySelectorAll('.parent-tab');
+    const parentContents = document.querySelectorAll('.parent-content');
 
-      // Parent Tab Functionality
-        const parentTabs = document.querySelectorAll('.parent-tab');
-        const parentContents = document.querySelectorAll('.parent-content');
+    parentTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all parent tabs and contents
+            parentTabs.forEach(t => t.classList.remove('active'));
+            parentContents.forEach(c => c.classList.remove('active'));
 
-        parentTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all parent tabs and contents
-                parentTabs.forEach(t => t.classList.remove('active'));
-                parentContents.forEach(c => c.classList.remove('active'));
+            // Add active class to clicked parent tab and its corresponding content
+            tab.classList.add('active');
+            const contentToShow = document.querySelector(`.parent-content[data-parent-content="${tab.dataset.parentTab}"]`);
+            if (contentToShow) {
+                contentToShow.classList.add('active');
+            }
+        });
+    });
 
-                // Add active class to clicked parent tab and its corresponding content
-                tab.classList.add('active');
-                const contentToShow = document.querySelector(`.parent-content[data-parent-content="${tab.dataset.parentTab}"]`);
-                if (contentToShow) {
-                    contentToShow.classList.add('active');
+    // Child Tab Functionality
+    document.querySelectorAll('.parent-content').forEach(parentContent => {
+        const childTabs = parentContent.querySelectorAll('.child-tab');
+        const childContents = parentContent.querySelectorAll('.child-content');
+
+        childTabs.forEach(childTab => {
+            childTab.addEventListener('click', () => {
+                // Remove active class from all child tabs and contents in the current parent content
+                childTabs.forEach(t => t.classList.remove('active'));
+                childContents.forEach(c => c.classList.remove('active'));
+
+                // Add active class to clicked child tab and its corresponding content
+                childTab.classList.add('active');
+                const childContentToShow = parentContent.querySelector(`.child-content[data-child-content="${childTab.dataset.childTab}"]`);
+                if (childContentToShow) {
+                    childContentToShow.classList.add('active');
                 }
             });
         });
+    });
 
-        // Child Tab Functionality
-        document.querySelectorAll('.parent-content').forEach(parentContent => {
-            const childTabs = parentContent.querySelectorAll('.child-tab');
-            const childContents = parentContent.querySelectorAll('.child-content');
-
-            childTabs.forEach(childTab => {
-                childTab.addEventListener('click', () => {
-                    // Remove active class from all child tabs and contents in the current parent content
-                    childTabs.forEach(t => t.classList.remove('active'));
-                    childContents.forEach(c => c.classList.remove('active'));
-
-                    // Add active class to clicked child tab and its corresponding content
-                    childTab.classList.add('active');
-                    const childContentToShow = parentContent.querySelector(`.child-content[data-child-content="${childTab.dataset.childTab}"]`);
-                    if (childContentToShow) {
-                        childContentToShow.classList.add('active');
-                    }
-                });
-            });
-        });
 
     </script>
 </body>
