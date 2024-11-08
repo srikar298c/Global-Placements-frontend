@@ -7,260 +7,11 @@
     <title> Internal Global Placements</title>
     <link rel="stylesheet" href="../../../../Internal-CRM/styles.css">
     <link rel="icon" href="../../../../Internal-CRM/images/favicon.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-<style>
-  
-   
-    .statistics-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .parent-tabs {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 20px;
-    }
-
-    .parent-tab {
-        padding: 12px 24px;
-        background: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .parent-tab:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .parent-tab.active {
-        background: #00B5A5;
-        color: white;
-        box-shadow: 0 4px 12px rgba(0, 181, 165, 0.2);
-    }
-
-    .child-tabs {
-     
-        gap: 15px;
-   margin-bottom: 20px;
-    }
-
-    .child-tab {
-        padding: 10px 20px;
-        background: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 14px;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .child-tab:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .child-tab.active {
-        background: #00A7CC;
-        color: white;
-        box-shadow: 0 4px 12px rgba(0, 167, 204, 0.2);
-    }
-
-    /* Content Display */
-    .parent-content {
-        display: none;
-    }
-
-    .parent-content.active {
-        display: block;
-    }
-
-    .child-tabs.active {
-        display: flex;
-    }
-
-    .child-content {
-        display: none;
-    }
-
-    .child-content.active {
-        display: block;
-    }
-
-
-   /* Grid Layout for Chart Boxes */
-    .charts-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        margin-bottom: 30px;
-    }
-
-    .chart-box {
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-        width: 100%;
-    }
-
-    .chart-box:hover {
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-        transform: translateY(-2px);
-    }
-
-    .chart-title {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 15px;
-        color: #333;
-        text-align: center;
-    }
-
-    .pie-container {
-        position: relative;
-        width: 100%;
-        height: 300px;
-        margin: 0 auto;
-    }
-
-    .pie-container svg {
-        width: 100%;
-        height: 100%;
-    }
-
-    .legend {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 15px;
-    }
-
-    .legend-item {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 14px;
-    }
-
-    .legend-color {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-    }
-
-        /* Container styling */
-        .table-container {
-            position: relative;
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-            overflow: hidden;
-            max-width: 100%;
-            margin: 20px auto;
-        }
-
-        /* Table styling */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 600px;
-        }
-
-        th, td {
-            padding: 12px 20px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-            white-space: nowrap;
-        }
-
-        th {
-            background-color: #f8f9fa;
-            font-weight: bold;
-            color: #333;
-            position: sticky;
-            top: 0;
-            z-index: 1;
-        }
-
-        tr:hover {
-            background-color: #f3f4f5;
-        }
-
-        /* Navigation button styling */
-        .nav-buttons {
-            display: flex;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            gap: 10px;
-        }
-
-        .nav-buttons button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-
-        .nav-buttons button:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-        }
-
-        /* Positioning navigation buttons */
-        .nav-left {
-            left: -40px;
-        }
-
-        .nav-right {
-            right: -40px;
-        }
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .fade-in {
-        animation: fadeIn 0.5s ease forwards;
-    }
-
-    @media (max-width: 1024px) {
-        .charts-container {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .charts-container {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
+ 
     <div class="sidebar-container ">
         <div class="logo-container">
             <img class="logo" src="../../../../Internal-CRM/images/global_placements_logo.png" alt="Global Placements">
@@ -631,60 +382,125 @@
             </div>
         </div>
     
-    <div class="table-container">
-        <div class="nav-buttons nav-left">
-            <button id="scroll-left">‹</button>
-        </div>
-        <table id="scrollable-table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Category 1</th>
-                    <th>Category 2</th>
-                    <th>Category 3</th>
-                    <th>Category 4</th>
-                    <th>Category 5</th>
-                    <th>Category 6</th>
-                    <th>Category 7</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Kent Metz Jr.</td>
-                    <td>99046</td>
-                    <td>99046</td>
-                    <td>99046</td>
-                    <td>99046</td>
-                    <td>99046</td>
-                    <td>99046</td>
-                    <td>99046</td>
-                </tr>
-                <tr>
-                    <td>Opal Hermann</td>
-                    <td>17865</td>
-                    <td>17865</td>
-                    <td>17865</td>
-                    <td>17865</td>
-                    <td>17865</td>
-                    <td>17865</td>
-                    <td>17865</td>
-                </tr>
-                <tr>
-                    <td>Kelly Streich</td>
-                    <td>95071</td>
-                    <td>95071</td>
-                    <td>95071</td>
-                    <td>95071</td>
-                    <td>95071</td>
-                    <td>95071</td>
-                    <td>95071</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="nav-buttons nav-right">
-            <button id="scroll-right">›</button>
-        </div>
+<div class="statistics-candidate-container">
+    <h1 class="statistics-candidate-title">Candidate Data Statistics</h1>
+
+    <div class="statistics-candidate-search-section">
+        <input type="text" id="employee-search" placeholder="Enter the Employee Name"
+            class="statistics-candidate-search-input" />
+        <button id="show-button" class="statistics-candidate-show-button">Show</button>
     </div>
+
+    <div class="statistics-candidate-table-container">
+        <button class="statistics-candidate-scroll-button statistics-candidate-scroll-left"
+            onclick="scrollTable(-1)">&#10094;</button>
+
+        <div class="statistics-candidate-table-wrapper">
+            <table class="statistics-candidate-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Kent Metz Jr.</th>
+                        <th>Opal Hermann</th>
+                        <th>Kally Streich</th>
+                        <th>Ann Dietrich</th>
+                        <th>Isabel Ziemann</th>
+                        <th>Wanda Johnston</th>
+                        <th>Darnell Kozey</th>
+                        <th>Darnell Kozey</th>
+                        <th>Darnell Kozey</th>
+                        <th>Darnell Kozey</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Category 1</td>
+                        <td>99046</td>
+                        <td>17865</td>
+                        <td>95071</td>
+                        <td>72422</td>
+                        <td>28399</td>
+                        <td>21237</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                    </tr>
+                    <tr>
+                        <td>Category 2</td>
+                        <td>99046</td>
+                        <td>17865</td>
+                        <td>95071</td>
+                        <td>72422</td>
+                        <td>28399</td>
+                        <td>21237</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                    </tr>
+                    <tr>
+                        <td>Category 3</td>
+                        <td>99046</td>
+                        <td>17865</td>
+                        <td>95071</td>
+                        <td>72422</td>
+                        <td>28399</td>
+                        <td>21237</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                    </tr>
+                    <tr>
+                        <td>Category 4</td>
+                        <td>99046</td>
+                        <td>17865</td>
+                        <td>95071</td>
+                        <td>72422</td>
+                        <td>28399</td>
+                        <td>21237</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                    </tr>
+                    <tr>
+                        <td>Category 5</td>
+                        <td>99046</td>
+                        <td>17865</td>
+                        <td>95071</td>
+                        <td>72422</td>
+                        <td>28399</td>
+                        <td>21237</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                    </tr>
+                    <tr>
+                        <td>Category 6</td>
+                        <td>99046</td>
+                        <td>17865</td>
+                        <td>95071</td>
+                        <td>72422</td>
+                        <td>28399</td>
+                        <td>21237</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                        <td>23015</td>
+                    </tr>
+                    <!-- Additional rows here -->
+                </tbody>
+            </table>
+        </div>
+
+        <button class="statistics-candidate-scroll-button statistics-candidate-scroll-right"
+            onclick="scrollTable(1)">&#10095;</button>
+    </div>
+</div>
+
     </div>
     
       
@@ -773,46 +589,7 @@
                     <h3>Healthcare - Client</h3>
                     <!-- Chart or other content specific to Healthcare Client -->
                 </div>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Category 1</th>
-                                <th>Category 2</th>
-                                <th>Category 3</th>
-                                <th>Category 4</th>
-                                <th>Category 5</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Kent Metz Jr.</td>
-                                <td>99046</td>
-                                <td>99046</td>
-                                <td>99046</td>
-                                <td>99046</td>
-                                <td>99046</td>
-                            </tr>
-                            <tr>
-                                <td>Opal Hermann</td>
-                                <td>17865</td>
-                                <td>17865</td>
-                                <td>17865</td>
-                                <td>17865</td>
-                                <td>17865</td>
-                            </tr>
-                            <tr>
-                                <td>Kelly Streich</td>
-                                <td>95071</td>
-                                <td>95071</td>
-                                <td>95071</td>
-                                <td>95071</td>
-                                <td>95071</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            
             </div>
     
             <!-- Education Parent Tab Content with Child Tabs -->
@@ -847,6 +624,7 @@
 
 
     <script src="../../../../Internal-CRM/scripts.js"></script>
+  
     <script>
         // Create SVG Pie Chart function
         function createPieChart(elementId, data) {
@@ -987,6 +765,16 @@
         });
     });
 
+    function scrollTable(direction) {
+            const tableWrapper = document.querySelector('.statistics-candidate-table-wrapper');
+            const scrollAmount = 200; // Adjust the scroll amount as needed
+
+            // Scroll to the left or right
+            tableWrapper.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
 
     </script>
 </body>
