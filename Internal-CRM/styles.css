@@ -1368,6 +1368,68 @@ h3 {
     align-items: left;
     justify-content: center;
 }
+.dashboard-compare-projects {
+    width: 100%;
+    overflow-x: auto;
+    font-family: Arial, sans-serif;
+}
+.section-header {
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #f5f5f5;
+    text-align: left;
+    padding: 12px 16px;
+    border-top: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+}
+
+.comparison-table thead th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    text-align: center;
+}
+
+.add-project {
+    color: #00695c;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.comparison-table tbody td:first-child {
+    font-weight: 500;
+}
+
+.comparison-table tbody td {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .dashboard-compare-projects {
+        overflow-x: auto;
+    }
+
+    .comparison-table th, .comparison-table td {
+        padding: 10px;
+    }
+}
 
 .client-name {
     display: inline-flex;
