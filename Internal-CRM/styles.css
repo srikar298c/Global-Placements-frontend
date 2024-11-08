@@ -2856,7 +2856,7 @@ input[type="radio"] {
 /* Profile page */
 .main-profile-section{
     display:grid;
-    grid-template-columns: 200px 700px 250px;
+    grid-template-columns: 2fr 5fr 3fr;
     gap: 1rem; 
     width:100%;/* Optional: Add space between the columns */
 }
@@ -2917,7 +2917,7 @@ section {
 
 .candidate-profile-card {
 
-
+    height: fit-content;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
