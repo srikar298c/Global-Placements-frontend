@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../../../../Internal-CRM/styles.css">
     <link rel="icon" href="../../../../Internal-CRM/images/favicon.png" type="image/png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-geo@3.9.0/dist/chartjs-chart-geo.min.js"></script>
+
 </head>
 
 <body>
@@ -576,18 +579,456 @@
                             </div></div>
                         </div>
                     </div>
+                    <div class="statistics-geochart-container">
+                        <div class="dropdown-container">
+                            <select id="origin-dropdown" class="dropdown">
+                                <option value="origin">Origin of Candidates</option>
+                                <!-- Add more options if needed -->
+                            </select>
+                        </div>
+                    
+                        <div class="map-container">
+                            <canvas id="geoChart"></canvas>
+                        </div>
+                    </div>
+                <div class="statistics-healthcare-candidate-container">
+                    <h2 class="statistics-healthcare-candidate-title">Project Data Management</h2>
+                
+                    <!-- Filters and Dropdowns -->
+                    <div class="statistics-healthcare-candidate-filter-bar">
+                        <select id="statistics-healthcare-candidate-project-dropdown" class="statistics-healthcare-candidate-dropdown">
+                            <option>Choose a Project</option>
+                            <option>Project Alpha</option>
+                            <option>Project Beta</option>
+                            <option>Project Gamma</option>
+                        </select>
+                
+                        <select id="statistics-healthcare-candidate-view-statistics" class="statistics-healthcare-candidate-dropdown">
+                            <option>Interviews Attended vs Not Attended</option>
+                            <option>Success vs Failure</option>
+                            <option>Completion Rate</option>
+                        </select>
+                
+                        <select id="statistics-healthcare-candidate-view-by" class="statistics-healthcare-candidate-dropdown">
+                            <option>Weekly</option>
+                            <option>Monthly</option>
+                            <option>Quarterly</option>
+                        </select>
+                    </div>
+                
+                    <!-- Title for Charts -->
+                    <h3 class="statistics-healthcare-candidate-chart-title">Interviews - Attended vs Non-Attended</h3>
+                
+                    <!-- Candidate Charts Section -->
+                    <div class="statistics-healthcare-candidate-charts-section">
+                        <!-- Candidate charts will be generated here by JavaScript -->
+                    </div>
+                
+                    <!-- Legend -->
+                    <div class="statistics-healthcare-candidate-legend">
+                        <div class="statistics-healthcare-candidate-legend-item">
+                            <span class="statistics-healthcare-candidate-legend-color attended"></span> Attended
+                        </div>
+                        <div class="statistics-healthcare-candidate-legend-item">
+                            <span class="statistics-healthcare-candidate-legend-color not-attended"></span> Not Attended
+                        </div>
+                    </div>
+                </div>
+
+
                 </div>
     
                 <!-- Healthcare Employee Content -->
                 <div class="child-content" data-child-content="healthcare-employee">
                     <h3>Healthcare - Employee</h3>
-                    <!-- Chart or other content specific to Healthcare Employee -->
+                <div class="statistics-candidate-container">
+                    <h1 class="statistics-candidate-title">Status Updates</h1>
+                
+                    <div class="statistics-candidate-search-section">
+                        <input type="text" id="employee-search" placeholder="Enter the Employee Name"
+                            class="statistics-candidate-search-input" />
+                        <button id="show-button" class="statistics-candidate-show-button">Show</button>
+                    </div>
+                
+                    <div class="statistics-candidate-table-container">
+                        <button class="statistics-candidate-scroll-button statistics-candidate-scroll-left"
+                            onclick="scrollTable(-1)">&#10094;</button>
+                
+                        <div class="statistics-candidate-table-wrapper">
+                            <table class="statistics-candidate-table">
+                                <thead>
+                                    <tr>
+                                        <th>Status</th>
+                                        <th>Kent Metz Jr.</th>
+                                        <th>Opal Hermann</th>
+                                        <th>Kally Streich</th>
+                                        <th>Ann Dietrich</th>
+                                        <th>Isabel Ziemann</th>
+                                        <th>Wanda Johnston</th>
+                                        <th>Darnell Kozey</th>
+                                        <th>Darnell Kozey</th>
+                                        <th>Darnell Kozey</th>
+                                        <th>Darnell Kozey</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Status 1</td>
+                                        <td>99046</td>
+                                        <td>17865</td>
+                                        <td>95071</td>
+                                        <td>72422</td>
+                                        <td>28399</td>
+                                        <td>21237</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Status 2</td>
+                                        <td>99046</td>
+                                        <td>17865</td>
+                                        <td>95071</td>
+                                        <td>72422</td>
+                                        <td>28399</td>
+                                        <td>21237</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Status 3</td>
+                                        <td>99046</td>
+                                        <td>17865</td>
+                                        <td>95071</td>
+                                        <td>72422</td>
+                                        <td>28399</td>
+                                        <td>21237</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Status 4</td>
+                                        <td>99046</td>
+                                        <td>17865</td>
+                                        <td>95071</td>
+                                        <td>72422</td>
+                                        <td>28399</td>
+                                        <td>21237</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Status 5</td>
+                                        <td>99046</td>
+                                        <td>17865</td>
+                                        <td>95071</td>
+                                        <td>72422</td>
+                                        <td>28399</td>
+                                        <td>21237</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Status 6</td>
+                                        <td>99046</td>
+                                        <td>17865</td>
+                                        <td>95071</td>
+                                        <td>72422</td>
+                                        <td>28399</td>
+                                        <td>21237</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                    </tr>
+                                    <!-- Additional rows here -->
+                                </tbody>
+                            </table>
+                        </div>
+                
+                        <button class="statistics-candidate-scroll-button statistics-candidate-scroll-right"
+                            onclick="scrollTable(1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="statistics-candidate-container">
+                    <h1 class="statistics-candidate-title">Process Updates</h1>
+                
+                    <div class="statistics-candidate-search-section">
+                        <input type="text" id="employee-search" placeholder="Enter the Employee Name"
+                            class="statistics-candidate-search-input" />
+                        <button id="show-button" class="statistics-candidate-show-button">Show</button>
+                    </div>
+                
+                    <div class="statistics-candidate-table-container">
+                        <button class="statistics-candidate-scroll-button statistics-candidate-scroll-left"
+                            onclick="scrollTable(-1)">&#10094;</button>
+                
+                        <div class="statistics-candidate-table-wrapper">
+                            <table class="statistics-candidate-table">
+                                <thead>
+                                    <tr>
+                                        <th>Stage</th>
+                                        <th>Kent Metz Jr.</th>
+                                        <th>Opal Hermann</th>
+                                        <th>Kally Streich</th>
+                                        <th>Ann Dietrich</th>
+                                        <th>Isabel Ziemann</th>
+                                        <th>Wanda Johnston</th>
+                                        <th>Darnell Kozey</th>
+                                        <th>Darnell Kozey</th>
+                                        <th>Darnell Kozey</th>
+                                        <th>Darnell Kozey</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Stage 1</td>
+                                        <td>99046</td>
+                                        <td>17865</td>
+                                        <td>95071</td>
+                                        <td>72422</td>
+                                        <td>28399</td>
+                                        <td>21237</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stage 2</td>
+                                        <td>99046</td>
+                                        <td>17865</td>
+                                        <td>95071</td>
+                                        <td>72422</td>
+                                        <td>28399</td>
+                                        <td>21237</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stage 3</td>
+                                        <td>99046</td>
+                                        <td>17865</td>
+                                        <td>95071</td>
+                                        <td>72422</td>
+                                        <td>28399</td>
+                                        <td>21237</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stage 4</td>
+                                        <td>99046</td>
+                                        <td>17865</td>
+                                        <td>95071</td>
+                                        <td>72422</td>
+                                        <td>28399</td>
+                                        <td>21237</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stage 5</td>
+                                        <td>99046</td>
+                                        <td>17865</td>
+                                        <td>95071</td>
+                                        <td>72422</td>
+                                        <td>28399</td>
+                                        <td>21237</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stage 6</td>
+                                        <td>99046</td>
+                                        <td>17865</td>
+                                        <td>95071</td>
+                                        <td>72422</td>
+                                        <td>28399</td>
+                                        <td>21237</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                        <td>23015</td>
+                                    </tr>
+                                    <!-- Additional rows here -->
+                                </tbody>
+                            </table>
+                        </div>
+                
+                        <button class="statistics-candidate-scroll-button statistics-candidate-scroll-right"
+                            onclick="scrollTable(1)">&#10095;</button>
+                    </div>
+                </div>
                 </div>
     
                 <!-- Healthcare Client Content -->
                 <div class="child-content" data-child-content="healthcare-client">
                     <h3>Healthcare - Client</h3>
-                    <!-- Chart or other content specific to Healthcare Client -->
+                    <div class="statistics-candidate-container">
+                        <h1 class="statistics-candidate-title">Status Updates</h1>
+                        
+                        <div class="statistics-candidate-filter-section">
+                            <div class="statistics-candidate-filter-group">
+                                <label for="country-dropdown">Country</label>
+                                <select id="country-dropdown" class="statistics-candidate-dropdown">
+                                    <option>Country</option>
+                                    <!-- Add more countries here -->
+                                </select>
+                            </div>
+                        
+                            <div class="statistics-candidate-filter-group">
+                                <label for="project-dropdown">Project Name</label>
+                                <select id="project-dropdown" class="statistics-candidate-dropdown">
+                                    <option>Project Name</option>
+                                    <!-- Add more project names here -->
+                                </select>
+                            </div>
+                        
+                            <div class="statistics-candidate-filter-group">
+                                <label for="client-dropdown">Client</label>
+                                <select id="client-dropdown" class="statistics-candidate-dropdown">
+                                    <option>Client</option>
+                                    <!-- Add more clients here -->
+                                </select>
+                            </div>
+                        
+                            <div class="statistics-candidate-filter-group date-range">
+                                <label>Choose from</label>
+                                <input type="date" id="from-date" class="statistics-candidate-date-input" placeholder="From" />
+                                <input type="date" id="to-date" class="statistics-candidate-date-input" placeholder="To" />
+                            </div>
+                        
+                            <button id="show-button" class="statistics-candidate-show-button">Show</button>
+                        </div>
+
+                    
+                        <div class="statistics-candidate-table-container">
+                            <button class="statistics-candidate-scroll-button statistics-candidate-scroll-left"
+                                onclick="scrollTable(-1)">&#10094;</button>
+                    
+                            <div class="statistics-candidate-table-wrapper">
+                                <table class="statistics-candidate-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Status</th>
+                                            <th>Kent Metz Jr.</th>
+                                            <th>Opal Hermann</th>
+                                            <th>Kally Streich</th>
+                                            <th>Ann Dietrich</th>
+                                            <th>Isabel Ziemann</th>
+                                            <th>Wanda Johnston</th>
+                                            <th>Darnell Kozey</th>
+                                            <th>Darnell Kozey</th>
+                                            <th>Darnell Kozey</th>
+                                            <th>Darnell Kozey</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Status 1</td>
+                                            <td>99046</td>
+                                            <td>17865</td>
+                                            <td>95071</td>
+                                            <td>72422</td>
+                                            <td>28399</td>
+                                            <td>21237</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status 2</td>
+                                            <td>99046</td>
+                                            <td>17865</td>
+                                            <td>95071</td>
+                                            <td>72422</td>
+                                            <td>28399</td>
+                                            <td>21237</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status 3</td>
+                                            <td>99046</td>
+                                            <td>17865</td>
+                                            <td>95071</td>
+                                            <td>72422</td>
+                                            <td>28399</td>
+                                            <td>21237</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status 4</td>
+                                            <td>99046</td>
+                                            <td>17865</td>
+                                            <td>95071</td>
+                                            <td>72422</td>
+                                            <td>28399</td>
+                                            <td>21237</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status 5</td>
+                                            <td>99046</td>
+                                            <td>17865</td>
+                                            <td>95071</td>
+                                            <td>72422</td>
+                                            <td>28399</td>
+                                            <td>21237</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status 6</td>
+                                            <td>99046</td>
+                                            <td>17865</td>
+                                            <td>95071</td>
+                                            <td>72422</td>
+                                            <td>28399</td>
+                                            <td>21237</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                            <td>23015</td>
+                                        </tr>
+                                        <!-- Additional rows here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                    
+                            <button class="statistics-candidate-scroll-button statistics-candidate-scroll-right"
+                                onclick="scrollTable(1)">&#10095;</button>
+                        </div>
+                    </div>
                 </div>
             
             </div>
@@ -765,16 +1206,178 @@
         });
     });
 
-    function scrollTable(direction) {
-            const tableWrapper = document.querySelector('.statistics-candidate-table-wrapper');
-            const scrollAmount = 200; // Adjust the scroll amount as needed
+   function initializeScrollButtons() {
+        // Select all left and right scroll buttons
+        const scrollButtons = document.querySelectorAll('.statistics-candidate-scroll-button');
 
-            // Scroll to the left or right
-            tableWrapper.scrollBy({
-                left: direction * scrollAmount,
-                behavior: 'smooth'
+        scrollButtons.forEach(button => {
+            // Get the scroll direction from the button's class
+            const direction = button.classList.contains('statistics-candidate-scroll-left') ? -1 : 1;
+
+            // Get the table wrapper specific to this button
+            const tableWrapper = button.parentElement.querySelector('.statistics-candidate-table-wrapper');
+
+            // Add click event listener to each button
+            button.addEventListener('click', () => {
+                const scrollAmount = 200; // Adjust the scroll amount as needed
+                tableWrapper.scrollBy({
+                    left: direction * scrollAmount,
+                    behavior: 'smooth'
+                });
             });
-        }
+        });
+    }
+
+    // Initialize scroll buttons when the DOM content is loaded
+    document.addEventListener('DOMContentLoaded', initializeScrollButtons);
+
+    // script.js
+    // script.js
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const ctx = document.getElementById('geoChart').getContext('2d');
+
+        fetch('https://unpkg.com/world-atlas/countries-50m.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const countries = ChartGeo.topojson.feature(data, data.objects.countries).features;
+
+                // Generating random data, including duplicates for testing purposes
+                const candidateData = countries.map(country => ({
+                    feature: country,
+                    value: Math.floor(Math.random() * 5000) + 100 // Random data for candidates
+                }));
+
+                // Adding duplicate data entries for specific countries
+                candidateData.push(
+                    { feature: countries.find(c => c.properties.name === "India"), value: 3500 },
+                    { feature: countries.find(c => c.properties.name === "India"), value: 3000 },
+                    { feature: countries.find(c => c.properties.name === "China"), value: 2500 },
+                    { feature: countries.find(c => c.properties.name === "China"), value: 2000 },
+                    { feature: countries.find(c => c.properties.name === "United States"), value: 1500 }
+                );
+
+                const chart = new Chart(ctx, {
+                    type: 'choropleth',
+                    data: {
+                        labels: countries.map(country => country.properties.name),
+                        datasets: [{
+                            label: 'Candidates by Country',
+                            data: candidateData
+                        }]
+                    },
+                    options: {
+                        showOutline: true,
+                        showGraticule: true,
+                        scales: {
+                            xy: {
+                                projection: 'equalEarth'
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'bottom'
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (context) {
+                                        const countryName = context.label || '';
+                                        const value = context.raw.value || 0;
+                                        return `${countryName}: ${value} candidates`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(error => {
+                console.error("Error loading map data:", error);
+            });
+    });
+   // Mock data for each candidate (can be replaced with actual data)
+    const candidatesData = [
+        { name: "Darin Tromp", attended: 3248, notAttended: 2458 },
+        { name: "Daryl Legees", attended: 3148, notAttended: 2345 },
+        { name: "Alfred Spencer", attended: 3548, notAttended: 2567 },
+        { name: "Dr. Courtney Smitham", attended: 3423, notAttended: 2231 },
+        { name: "Carla Johnston", attended: 3780, notAttended: 1980 },
+        { name: "Tommy Lee", attended: 2985, notAttended: 2654 },
+        { name: "Jessica James", attended: 4125, notAttended: 1875 },
+        { name: "Alyssa Green", attended: 3900, notAttended: 2100 },
+        { name: "Kevin Fields", attended: 3100, notAttended: 2750 },
+        { name: "Sammy Turner", attended: 3450, notAttended: 2350 }
+    ];
+
+    // Function to create chart for each candidate
+    function createCandidateChart(canvasId, attended, notAttended) {
+        const ctx = document.getElementById(canvasId).getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Attended", "Not Attended"],
+                datasets: [
+                    {
+                        label: "Interviews",
+                        data: [attended, notAttended],
+                        backgroundColor: ["#00B5A5", "#E1E7EB"],
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1000
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Initialize charts for each candidate
+    document.addEventListener("DOMContentLoaded", () => {
+        const chartsSection = document.querySelector(".statistics-healthcare-candidate-charts-section");
+
+        candidatesData.forEach((candidate, index) => {
+            // Dynamically create a new canvas element for each candidate
+            const chartRow = document.createElement("div");
+            chartRow.className = "statistics-healthcare-candidate-chart-row";
+
+            // Candidate name
+            const nameSpan = document.createElement("span");
+            nameSpan.className = "statistics-healthcare-candidate-name";
+            nameSpan.textContent = candidate.name;
+            chartRow.appendChild(nameSpan);
+
+            // Chart canvas
+            const canvas = document.createElement("canvas");
+            canvas.id = `statistics-healthcare-candidate-chart-${index}`;
+            canvas.className = "statistics-healthcare-candidate-bar-chart";
+            chartRow.appendChild(canvas);
+
+            chartsSection.appendChild(chartRow);
+
+            // Create chart with candidate data
+            createCandidateChart(canvas.id, candidate.attended, candidate.notAttended);
+        });
+    });
 
     </script>
 </body>

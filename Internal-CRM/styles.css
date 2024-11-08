@@ -324,6 +324,7 @@ h3 {
     justify-content: space-between;
     width: auto;
     justify-content: flex-end;
+    max-width:1200px;
 }
 
 .marquee-container {
@@ -1005,7 +1006,7 @@ h3 {
 }
 
 .dashboard-icon:hover {
-  color: #007bff;
+  color: #005f6b;
 }
 
 .dashboard-card-details {
@@ -1863,7 +1864,7 @@ input[type="radio"] {
 
 #candidateTable th:nth-child(n+5):nth-child(-n+7) {
     font-size: 12px;
-    max-width: 180px;
+    /* max-width: 180px; */
 }
 
 #candidateTable td {
@@ -2211,8 +2212,7 @@ input[type="radio"] {
 }
 
 .submissions.candidate-table {
-    min-width: 1240px;
-    width: 100%;
+    /* min-width: 1240px; */
 }
 
 #candidateSubmissionTable {
@@ -2475,7 +2475,7 @@ input[type="radio"] {
     display: block;
     margin: 10px auto 0;
     padding: 5px 15px;
-    background-color: #007bff;
+    background-color: #005f6b;
     color: white;
     border: none;
     border-radius: 4px;
@@ -4671,12 +4671,7 @@ input:focus+.slider {
   text-align: center;
 
   max-width: 1200px;
-
-}
-.statistics-candidate-title {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 .statistics-candidate-search-section {
@@ -4695,7 +4690,7 @@ input:focus+.slider {
 
 .statistics-candidate-show-button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #005f6b;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -4707,7 +4702,7 @@ input:focus+.slider {
   position: relative;
   display: flex;
   align-items: center;
-  border: 2px solid #007bff;
+  border: 2px solid #005f6b;
   border-radius: 8px;
   overflow: hidden;
   background-color: #fff;
@@ -4740,7 +4735,7 @@ input:focus+.slider {
 }
 
 .statistics-candidate-table th {
-    background-color: #007bff;
+    background-color: #005f6b;
     color: #fff;
     font-weight: bold;
     position: sticky;
@@ -4781,7 +4776,7 @@ input:focus+.slider {
 /* Scroll buttons styling */
 .statistics-candidate-scroll-button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #005f6b;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -4835,3 +4830,181 @@ input:focus+.slider {
     }
 
    
+.statistics-geochart-container {
+    
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.statistics-geochart-container .dropdown-container {
+    margin-bottom: 20px;
+}
+
+.statistics-geochart-container .dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+#geoChart {
+    width: 100%;
+    height: 100%;
+}
+.statistics-healthcare-candidate-container {
+   
+    margin: 0 auto;
+    background-color: #f9f9fb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+.statistics-healthcare-candidate-title {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.statistics-healthcare-candidate-filter-bar {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.statistics-healthcare-candidate-dropdown {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.statistics-healthcare-candidate-chart-title {
+    font-size: 1.5em;
+    color: #007bff;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.statistics-healthcare-candidate-charts-section {
+    margin-top: 1rem;
+}
+
+.statistics-healthcare-candidate-chart-row {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.statistics-healthcare-candidate-name {
+    width: 20%;
+    font-weight: bold;
+    color: #333;
+    padding-right: 10px;
+}
+
+.statistics-healthcare-candidate-bar-chart {
+    width: 75%;
+}
+
+.statistics-healthcare-candidate-legend {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.statistics-healthcare-candidate-legend-color {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 3px;
+}
+
+.attended {
+    background-color: #00B5A5;
+}
+
+.not-attended {
+    background-color: #E1E7EB;
+}
+.statistics-candidate-title {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.statistics-candidate-filter-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.statistics-candidate-filter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.statistics-candidate-filter-group label {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 0.2rem;
+}
+
+.statistics-candidate-dropdown,
+.statistics-candidate-date-input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 1em;
+}
+
+.statistics-candidate-date-input {
+    width: 120px;
+}
+
+.date-range {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.statistics-candidate-show-button {
+    padding: 0.6rem 1.5rem;
+    background-color: #006666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.statistics-candidate-show-button:hover {
+    background-color: #004d4d;
+}
