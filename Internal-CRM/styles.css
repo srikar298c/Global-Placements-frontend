@@ -1362,7 +1362,7 @@ h3 {
     margin-right: 0.5rem;
 }
 
-.clients {
+.dashboard-clients {
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -1523,6 +1523,7 @@ h3 {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     margin: 10px 0px 20px;
     background-color: white;
+    width:100%;
 }
 
 
@@ -2791,13 +2792,15 @@ input[type="radio"] {
 
 
 /* Profile page */
-
+.main-profile-section{
+    display:grid;
+    grid-template-columns: 200px 700px 250px;
+    gap: 1rem; 
+    width:100%;/* Optional: Add space between the columns */
+}
 .profile {
     display: flex;
-    flex-direction: row;
-    position: relative;
-    left: 220px;
-    max-width: 650px;
+    flex-direction: row; 
     margin: 25px 0px 0px 0px;
 }
 
@@ -2815,14 +2818,14 @@ input[type="radio"] {
 }
 
 .quick-links {
-    width: 200px;
-    padding: 20px;
+  
+    position: relative;
+    padding: 10px;
     background-color: #fff;
     border-radius: 10px;
     border: 1px solid #004957;
-    height: auto;
-    position: fixed;
-    top: 100px;
+    height: fit-content;
+        margin: 25px 0px 0px 0px;
 }
 
 .quick-links h2 {
@@ -2838,6 +2841,7 @@ input[type="radio"] {
     font-weight: 500;
     cursor: pointer;
     margin-left: 18px;
+    
 }
 
 .quick-links a {
@@ -2850,14 +2854,13 @@ section {
 }
 
 .candidate-profile-card {
-    width: 300px;
-    background-color: #fff;
+
+
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    right: 0;
-    top: 100px;
+
+        margin: 25px 0px 0px 0px;
 }
 
 .profile-header {
@@ -2881,11 +2884,6 @@ section {
     left: 10px;
 }
 
-.progress-ring {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
 .candidate-name {
     color: #008080;
@@ -4442,7 +4440,7 @@ input:focus+.slider {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    z-index: 100;
+    z-index: 11000;
 }
 
 .profile-dropdown p {
