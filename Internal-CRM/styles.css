@@ -2298,7 +2298,7 @@ input[type="radio"] {
 #candidateSubmissionTable td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #005f6b;
 }
 
 #candidateSubmissionTable th {
@@ -3084,6 +3084,11 @@ section {
     border-radius: 8px;
     /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
+.form-group-container{
+ background-color: #ffffff;
+    width: 100%;
+    border-radius: 8px;
+}
 
 .form-grid {
     display: grid;
@@ -3099,6 +3104,11 @@ section {
 }
 
 .form-group.full-width {
+    grid-column: 1 / -1;
+    color: #767676;
+    font-size: 14px;
+}
+.form-sections .full-width {
     grid-column: 1 / -1;
     color: #767676;
     font-size: 14px;
@@ -3174,6 +3184,23 @@ select:focus {
     border-color: #006b77;
     outline: none;
 }
+.label-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Puts space between "Licensing" and "Add More" */
+    width: 100%;
+}
+
+.add-more {
+    font-size: 14px;
+    color: #005f6b; /* Adjust color as needed */
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+.add-more:hover {
+    text-decoration: underline;
+}
 
 #select {
     padding: 8px;
@@ -3225,7 +3252,9 @@ select:focus {
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
 }
-
+.measure-option{
+    width:70px;
+}
 .gender-option:hover,
 .status-option:hover,
 .measure-option:hover {
@@ -5067,4 +5096,64 @@ margin-bottom: 20px;
 
 .statistics-candidate-show-button:hover {
     background-color: #004d4d;
+}
+/* Custom Alert Styling */
+.custom-alert {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #005f6b;
+    border: 1px solid #004851;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 80%;
+    padding: 20px;
+    z-index: 2000; /* Make sure it's above the popup overlay */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Showing the Alert */
+.custom-alert.show {
+    opacity: 1;
+    visibility: visible;
+    animation: slideIn 0.4s ease forwards;
+}
+
+/* Alert Content Styling */
+.custom-alert-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-alert-message {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Close Button Styling */
+.custom-alert-close {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+}
+
+.custom-alert-close:hover {
+    color: #444;
+}
+
+/* Animation for Alert */
+@keyframes slideIn {
+    0% {
+        transform: translate(-50%, -20%);
+    }
+    100% {
+        transform: translate(-50%, 0%);
+    }
 }

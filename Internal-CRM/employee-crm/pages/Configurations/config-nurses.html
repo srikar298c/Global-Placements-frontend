@@ -22,6 +22,8 @@
         .chosen-container {
             width: 100% !important;
         }
+        /* Custom Alert Styling */
+
     </style>
 </head>
 <style>
@@ -1118,7 +1120,7 @@
                     <!-- Submit Section -->
                     <section class="form-section">
                         <div class="form-group">
-                            <button type="submit" class="confirm-button">Save</button>
+                            <button type="submit" class="confirm-button" >Save</button>
                         </div>
                     </section>
                 </form>
@@ -1474,7 +1476,7 @@
 
 
                 <div class="form-group">
-                    <button class="confirm-button">Save</button>
+                    <button class="confirm-button" id="saveButton">Save</button>
                 </div>
             </div>
         </div>
@@ -1630,7 +1632,13 @@
             </div>
         </div>
     </div>
-
+<!-- Custom Alert -->
+<div id="customAlert" class="custom-alert">
+    <div class="custom-alert-content">
+        <span class="custom-alert-message">Your data has been saved successfully!</span>
+        <button class="custom-alert-close">&times;</button>
+    </div>
+</div>
 
     <script src="../../../../Internal-CRM/scripts.js"></script>
     <script>
@@ -1980,6 +1988,25 @@
 
             });
         });
+    // script.js
+
+    // Get elements
+    const saveButton = document.getElementById('saveButton');
+    const customAlert = document.getElementById('customAlert');
+    const closeButton = document.querySelector('.custom-alert-close');
+
+    // Show alert when clicking the Save button
+    saveButton.addEventListener('click', () => {
+        customAlert.classList.add('show'); // Show the alert
+        setTimeout(() => {
+            customAlert.classList.remove('show'); // Hide the alert after 3 seconds
+        }, 30000);
+    });
+
+    // Hide alert when clicking the close button
+    closeButton.addEventListener('click', () => {
+        customAlert.classList.remove('show');
+    });
 
     </script>
 </body>
