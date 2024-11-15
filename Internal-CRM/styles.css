@@ -3127,7 +3127,7 @@ section {
 
 .profile label {
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 500;
     color: #000000;
 }
 
@@ -3187,7 +3187,7 @@ select:focus {
 .label-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Puts space between "Licensing" and "Add More" */
+    justify-content: space-between; 
     width: 100%;
 }
 
@@ -3429,7 +3429,61 @@ select:focus {
         padding: 3px 6px;
     }
 }
+  .project-history-table-container {
+        width: 100%;
+        max-width: 1000px;
+        background: #ffffff;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+    }
 
+    .project-history-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .project-history-table th, 
+    .project-history-table td {
+        padding: 15px 20px;
+        text-align: left;
+    }
+
+    .project-history-table thead {
+        background-color: #005f6b;
+        color: #ffffff;
+    }
+
+    .project-history-table th {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .project-history-table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .project-history-table tbody tr:hover {
+        background-color: #e0f4f6;
+        cursor: pointer;
+    }
+
+    .project-history-table td {
+        font-size: 14px;
+        color: #333;
+    }
+
+    .project-history-table td:first-child {
+        font-weight: bold;
+        color: #005f6b;
+    }
+
+    .project-history-table tbody tr {
+        transition: background-color 0.3s ease;
+    }
+    
 .option-button {
     flex: 1;
     padding: 10px;
@@ -3496,6 +3550,37 @@ select:focus {
     .date-inputs {
         flex-direction: row;
     }
+}
+/* Basic Button Styling */
+.btn-add-more {
+    background: linear-gradient(135deg, #006f74, #008080); /* Gradient background */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.2s ease;
+    padding: 0px 25px;
+  
+
+  /* Smooth background and transform transition */
+}
+
+/* Hover Effects */
+.btn-add-more:hover {
+    background: linear-gradient(135deg, #008080, #006f74); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight upward movement */
+}
+
+/* Focused state for accessibility */
+.btn-add-more:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 95, 107, 0.7); /* Add custom focus shadow */
+}
+
+/* Disabled button */
+.btn-add-more:disabled {
+    background: #cccccc; /* Grey background for disabled state */
+    cursor: not-allowed; /* Change cursor to indicate it's disabled */
 }
 
 

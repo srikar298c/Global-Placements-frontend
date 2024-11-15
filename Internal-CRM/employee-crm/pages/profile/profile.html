@@ -249,7 +249,7 @@
                     <li><a href="#skills-recoginition">Skills & Recogntion</a></li>
                     <li><a href="#documents">Documents</a></li>
                     <li><a href="#preferences">Preferences</a></li>
-                    <li><a href="#interview-history">Interview History</a></li>
+                    <li><a href="#project-history">Project History</a></li>
                 </ul>
             </div>
             <div class="profile">
@@ -667,7 +667,7 @@
                                         <label>
                                             <div class="label-container">
                                                 <span>Licensing</span>
-                                                <a href="#" class="add-more" onclick="addMoreFields(event)">Add More</a>
+                                                <a href="#" class="add-more" onclick="addMoreFields(event)" class="btn-add-more">+ Add </a>
                                             </div>
                                         </label>
                                         <select name="examName[]">
@@ -696,7 +696,7 @@
                                     </div>
                                 </div>
                                     <div class="form-row date-group">
-                                        <div class="form-group duration-group">
+                                        <div class="form-group duration">
                                             <label>Date Of Exam</label>
                                             <input type="date" name="dateOfExam[]">
                                         </div>
@@ -766,18 +766,30 @@
                             <div class="">
                                 <h2>Educational Details</h2>
                             </div>
-                            <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                        viewBox="0 0 24 24">
-                                        <rect width="24" height="24" fill="none" />
-                                        <path fill="currentColor"
-                                            d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                    </svg> Edit</button></div>
+                       
+                                    <div class="">
+                                        <button onclick="addEducationalFields(event)"  class="btn-add-more">+ Add 
+                                        </button>
+                                        <button>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                                <rect width="24" height="24" fill="none" />
+                                                <path fill="currentColor"
+                                                    d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
+                                            </svg>
+                                            Edit
+                                        </button>
+                                    </div>
 
                         </div>
                         <div class="form-container">
-                            <div class="form-grid">
+                            <div class="form-grid educational-group">
                                 <div class="form-group">
-                                    <label for="">Education</label>
+                                <label>
+                                    <div class="label-container">
+                                        <span>Education</span>
+                                        
+                                    </div>
+                                </label>
                                     <select id="" name="">
                                         <option value="">Graduation</option>
                                         <option value=""></option>
@@ -824,18 +836,27 @@
                                 <div class="">
                                     <h2>Registration Details</h2>
                                 </div>
-                                <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                            viewBox="0 0 24 24">
-                                            <rect width="24" height="24" fill="none" />
-                                            <path fill="currentColor"
-                                                d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                        </svg> Edit</button></div>
+                                
+                                        <div class="">
+                                            <button onclick="addRegistrationFields(event)" type="button" class="btn-add-more">+ Add 
+                                            </button>
+                                            <button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                                    <rect width="24" height="24" fill="none" />
+                                                    <path fill="currentColor"
+                                                        d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
+                                                </svg> Edit</button>
+                                        </div>
 
                             </div>
                             <div class="form-container">
-                                <div class="form-grid">
+                                <div class="form-grid registration-group">
                                     <div class="form-group">
-                                        <label for="registrationType">Registration Type</label>
+                                    <label>
+                                        <div class="label-container">
+                                            <span>Registration</span>
+                                           
+                                        </div>
+                                    </label>
                                         <select id="registrationType" name="registrationType">
                                             <option value="">Choose the Registration Type</option>
                                         </select>
@@ -864,299 +885,286 @@
                             </div>
                         </div>
                     </section>
-                    <section id="work-experience" class="form-section">
+                <section id="work-experience" class="form-section">
+                    <div class="form-title-header">
+                        <div class="">
+                            <h2>Work Experience</h2>
+                        </div>
+                        <div class="">
+                            <button id="addMoreExperience" type="button" class="btn-add-more">+ Add 
+                            </button>
+                            <button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <rect width="24" height="24" fill="none" />
+                                    <path fill="currentColor"
+                                        d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
+                                </svg> Edit</button>
+                        </div>
+                    </div>
+                    <div class="form-container" id="experienceContainer">
+                        <div class="form-grid">
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="currentEmployment" name="currentEmployment">
+                                <label for="currentEmployment">Current Employment</label>
+                            </div>
+                            <div class="form-group">
+                                <label>Duration</label>
+                                <div class="date-inputs">
+                                    <input type="date" id="fromDate" name="fromDate" placeholder="From">
+                                    <input type="date" id="toDate" name="toDate" placeholder="To">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="organization">Organization</label>
+                                <select id="organization" name="organization">
+                                    <option value="">Choose the Organization Name</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="designation">Designation</label>
+                                <select id="designation" name="designation">
+                                    <option value="">Choose the Job Role</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="department">Department</label>
+                                <select id="department" name="department">
+                                    <option value="">Choose the Department</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="bedCapacity">Bed Capacity</label>
+                                <input type="text" id="bedCapacity" name="bedCapacity" placeholder="Enter the Bed capacity">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address" placeholder="Enter the Organization Address">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="workSummary">Work Summary</label>
+                                <textarea id="workSummary" name="workSummary" placeholder="Enter Work Summary"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="skills-recognition">
+                    <div class="form-title-header">
+                        <div class="">
+                            <h2>Skills & Recognition</h2>
+                        </div>
+                        <div class=""><button id="addMoreSkills" class="btn-add-more">+ Add  </button></div>
+                    </div>
+                    <div class="form-container" id="skillsContainer">
+                        <!-- Dynamic form rows will be appended here -->
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="">Recognition</label>
+                                <input type="date" name="recognition" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Name of the Achievement</label>
+                                <input type="text" name="achievement" placeholder="Lorem ipsum">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="documents">
+                    <div class="form-section">
                         <div class="form-title-header">
                             <div class="">
-                                <h2>Work Experience</h2>
+                                <h2>Documents</h2>
                             </div>
-                            <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                        viewBox="0 0 24 24">
+                            <div class="">
+                                <button id="addMoreDocuments" type="button">
+                                   + Add
+                                </button>
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                         <rect width="24" height="24" fill="none" />
                                         <path fill="currentColor"
                                             d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                    </svg> Edit</button></div>
-
+                                    </svg>
+                                    Edit
+                                </button>
+                            </div>
                         </div>
                         <div class="form-container">
-                            <div class="form-grid">
-                                <div class="form-group checkbox-group">
-                                    <input type="checkbox" id="currentEmployment" name="currentEmployment">
-                                    <label for="currentEmployment">Current Employment</label>
-                                </div>
-                                <div class="form-group duration-group">
-                                    <label>Duration</label>
-                                    <div class="date-inputs">
-                                        <input type="date" id="fromDate" name="fromDate" placeholder="From">
-                                        <input type="date" id="toDate" name="toDate" placeholder="To">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="organization">Organization</label>
-                                    <select id="organization" name="organization">
-                                        <option value="">Choose the Organization Name</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="designation">Designation</label>
-                                    <select id="designation" name="designation">
-                                        <option value="">Choose the Job Role</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="department">Department</label>
-                                    <select id="department" name="department">
-                                        <option value="">Choose the Department</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="bedCapacity">Bed Capacity</label>
-                                    <input type="text" id="bedCapacity" name="bedCapacity"
-                                        placeholder="Enter the Bed capacity">
-                                </div>
-                                <div class="form-group full-width">
-                                    <label for="address">Address</label>
-                                    <input type="text" id="address" name="address"
-                                        placeholder="Enter the Organization Address">
-                                </div>
-                                <div class="form-group full-width">
-                                    <label for="workSummary">Work Summary</label>
-                                    <textarea id="workSummary" name="workSummary"
-                                        placeholder="Enter Work Summary"></textarea>
-                                </div>
-                            </div>
+                            <table class="documents-table">
+                                <thead>
+                                    <tr>
+                                        <th>Document Name</th>
+                                        <th>Upload Documents</th>
+                                        <th>Received</th>
+                                        <th>Verified</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="documentsTableBody">
+                                    <tr>
+                                        <td>
+                                            <select name="">
+                                                <option value="">Document Name</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <div class="upload-button">
+                                                <span>Document Name</span>
+                                                <input type="file" id="doc1" name="doc1">
+                                                <label for="doc1" class="upload-icon">&#8593;</label>
+                                            </div>
+                                        </td>
+                                        <td><input type="checkbox" id="received1" name="received1"></td>
+                                        <td><input type="checkbox" id="verified1" name="verified1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="">
+                                                <option value="">Document Name</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <div class="upload-button">
+                                                <span>Document Name</span>
+                                                <input type="file" id="doc2" name="doc2">
+                                                <label for="doc2" class="upload-icon">&#8593;</label>
+                                            </div>
+                                        </td>
+                                        <td><input type="checkbox" id="received2" name="received2"></td>
+                                        <td><input type="checkbox" id="verified2" name="verified2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="">
+                                                <option value="">Document Name</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <div class="upload-button">
+                                                <span>Document Name</span>
+                                                <input type="file" id="doc3" name="doc3">
+                                                <label for="doc3" class="upload-icon">&#8593;</label>
+                                            </div>
+                                        </td>
+                                        <td><input type="checkbox" id="received3" name="received3"></td>
+                                        <td><input type="checkbox" id="verified3" name="verified3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="">
+                                                <option value="">Document Name</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <div class="upload-button">
+                                                <span>Document Name</span>
+                                                <input type="file" id="doc4" name="doc4">
+                                                <label for="doc4" class="upload-icon">&#8593;</label>
+                                            </div>
+                                        </td>
+                                        <td><input type="checkbox" id="received4" name="received4"></td>
+                                        <td><input type="checkbox" id="verified4" name="verified4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="">
+                                                <option value="">Document Name</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <div class="upload-button">
+                                                <span>Document Name</span>
+                                                <input type="file" id="doc5" name="doc5">
+                                                <label for="doc5" class="upload-icon">&#8593;</label>
+                                            </div>
+                                        </td>
+                                        <td><input type="checkbox" id="received5" name="received5"></td>
+                                        <td><input type="checkbox" id="verified5" name="verified5"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                    </section>
-                    <section id="skills-recoginition">
-                        <div class="form-title-header">
-                            <div class="">
-                                <h2>Skills & Recogntion</h2>
-                            </div>
-                            <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                        viewBox="0 0 24 24">
-                                        <rect width="24" height="24" fill="none" />
-                                        <path fill="currentColor"
-                                            d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                    </svg> Edit</button></div>
-
-                        </div>
-                        <div class="form-container">
-                            <div class="form-grid">
-                                <div class="form-group">
-                                    <label for="">Recogntion</label>
-                                    <input type="date" id="" name="" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Name of the Acheivement</label>
-                                    <input type="text" id="" name="" placeholder="Lorem ipsum">
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-                    <section id="documents">
-                        <div class="form-section">
-                            <div class="form-title-header">
-                                <div class="">
-                                    <h2>Documents</h2>
-                                </div>
-                                <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                            viewBox="0 0 24 24">
-                                            <rect width="24" height="24" fill="none" />
-                                            <path fill="currentColor"
-                                                d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                        </svg> Edit</button></div>
-
-                            </div>
-                            <div class="form-container">
-                                <table class="documents-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Document Name</th>
-                                            <th>Upload Documents</th>
-                                            <th>Received</th>
-                                            <th>Verified</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Document Name</td>
-                                            <td>
-                                                <div class="upload-button">
-                                                    <span>Document Name</span>
-                                                    <input type="file" id="doc1" name="doc1">
-                                                    <label for="doc1" class="upload-icon">&#8593;</label>
-                                                </div>
-                                            </td>
-                                            <td><input type="checkbox" id="received1" name="received1"></td>
-                                            <td><input type="checkbox" id="verified1" name="verified1"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Document Name</td>
-                                            <td>
-                                                <div class="upload-button">
-                                                    <span>Document Name</span>
-                                                    <input type="file" id="doc2" name="doc2">
-                                                    <label for="doc2" class="upload-icon">&#8593;</label>
-                                                </div>
-                                            </td>
-                                            <td><input type="checkbox" id="received2" name="received2"></td>
-                                            <td><input type="checkbox" id="verified2" name="verified2"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Document Name</td>
-                                            <td>
-                                                <div class="upload-button">
-                                                    <span>Document Name</span>
-                                                    <input type="file" id="doc3" name="doc3">
-                                                    <label for="doc3" class="upload-icon">&#8593;</label>
-                                                </div>
-                                            </td>
-                                            <td><input type="checkbox" id="received3" name="received3"></td>
-                                            <td><input type="checkbox" id="verified3" name="verified3"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Document Name</td>
-                                            <td>
-                                                <div class="upload-button">
-                                                    <span>Document Name</span>
-                                                    <input type="file" id="doc4" name="doc4">
-                                                    <label for="doc4" class="upload-icon">&#8593;</label>
-                                                </div>
-                                            </td>
-                                            <td><input type="checkbox" id="received4" name="received4"></td>
-                                            <td><input type="checkbox" id="verified4" name="verified4"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Document Name</td>
-                                            <td>
-                                                <div class="upload-button">
-                                                    <span>Document Name</span>
-                                                    <input type="file" id="doc5" name="doc5">
-                                                    <label for="doc5" class="upload-icon">&#8593;</label>
-                                                </div>
-                                            </td>
-                                            <td><input type="checkbox" id="received5" name="received5"></td>
-                                            <td><input type="checkbox" id="verified5" name="verified5"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </section>
+                    </div>
+                </section>
                     <section id="preferences">
                         <div class="form-title-header">
                             <div class="">
                                 <h2>Preferences</h2>
                             </div>
-                            <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                            <!-- <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                         viewBox="0 0 24 24">
                                         <rect width="24" height="24" fill="none" />
                                         <path fill="currentColor"
                                             d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                    </svg> Edit</button></div>
+                                    </svg> Edit</button></div> -->
 
                         </div>
-                        <div class="form-container">
-                            <div class="form-grid">
-
-                                <div class="form-group">
-                                    <label for="">Applied For</label>
-                                    <input type="text" id="" name="" placeholder="xxxxxxxx">
+                    <div class="form-container">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="preferredCountry">Country</label>
+                                <div id="countryContainer" class="country-container">
+                                    <!-- Labels will appear here -->
                                 </div>
-                                <div class="form-group">
-                                    <label for="department">Client</label>
-                                    <select id="department" name="department">
-                                        <option value="">Lorem ipsum dolor sit amet.</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="department">Status</label>
-                                    <select id="department" name="department">
-                                        <option value="">Rejected</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Comments</label>
-                                    <input type="text" id="" name="" placeholder="Enter your comments">
-                                </div>
-                                <div class="form-group">
-                                    <label for="department">preferred Country</label>
-                                    <select id="department" name="department">
-                                        <option value="">Singapore</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="department">Client</label>
-                                    <select id="department" name="department">
-                                        <option value="">Client Name</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="department">Status</label>
-                                    <select id="department" name="department">
-                                        <option value="">Choose the Status</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Comments</label>
-                                    <input type="text" id="" name="" placeholder="Enter your comments">
-                                </div>
-
+                                <input type="text" id="countryInput" placeholder="Add a country">
                             </div>
                         </div>
+                    </div>
                     </section>
-                    <section id="interview-history">
+                    <section id="project-history">
                         <div class="form-title-header">
                             <div class="">
-                                <h2>Interview History</h2>
-                            </div>
-                            <div class=""><button><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                        viewBox="0 0 24 24">
-                                        <rect width="24" height="24" fill="none" />
-                                        <path fill="currentColor"
-                                            d="M6.414 15.89L16.556 5.748l-1.414-1.414L5 14.476v1.414zm.829 2H3v-4.243L14.435 2.212a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414zM3 19.89h18v2H3z" />
-                                    </svg> Edit</button></div>
-
-                        </div>
-                        <div class="form-container">
-                            <div class="form-grid">
-                                <div class="form-group">
-                                    <label for="">Project Name</label>
-                                    <input type="text" id="" name="" placeholder="Oman-Nurses-2022">
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="examDate">Details</label>
-                                        <input type="date" id="" name="" placeholder="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="nationality">Status</label>
-                                        <select id="nationality" name="nationality">
-                                            <option value="">Not Selected</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Project Name</label>
-                                    <input type="text" id="" name="" placeholder="Oman-Nurses-2022">
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="examDate">Details</label>
-                                        <input type="date" id="" name="" placeholder="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="nationality">Status</label>
-                                        <select id="nationality" name="nationality">
-                                            <option value="">Not Selected</option>
-                                        </select>
-                                    </div>
-                                </div>
-
+                                <h2>Project History</h2>
                             </div>
                         </div>
+                    <div class="project-history-table-container">
+                        <table class="project-history-table">
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Project</th>
+                                    <th>Client</th>
+                                    <th>Client Status</th>
+                                    <th>Interview Status</th>
+                                    <th>Overall Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>USA</td>
+                                    <td>Project Alpha</td>
+                                    <td>Client A</td>
+                                    <td>Active</td>
+                                    <td>Scheduled</td>
+                                    <td>In Progress</td>
+                                </tr>
+                                <tr>
+                                    <td>Canada</td>
+                                    <td>Project Beta</td>
+                                    <td>Client B</td>
+                                    <td>Pending</td>
+                                    <td>Pending</td>
+                                    <td>Not Started</td>
+                                </tr>
+                                <tr>
+                                    <td>UK</td>
+                                    <td>Project Gamma</td>
+                                    <td>Client C</td>
+                                    <td>Active</td>
+                                    <td>Completed</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>India</td>
+                                    <td>Project Delta</td>
+                                    <td>Client D</td>
+                                    <td>Inactive</td>
+                                    <td>Not Scheduled</td>
+                                    <td>On Hold</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                     </section>
                 </div>
             </div>
@@ -1319,15 +1327,208 @@
         // Select the last form set and clone it
         const formSet = document.querySelector(".form-set:last-of-type").cloneNode(true);
 
-        // Remove the "Add More" link from the cloned set to avoid multiple links
+        // Remove the "+ Add" link from the cloned set to avoid multiple links
         const addMoreLink = formSet.querySelector(".add-more");
         if (addMoreLink) addMoreLink.remove();
+
+        // Apply background color and border radius to the cloned form set
+        formSet.style.backgroundColor = "rgba(0, 95, 107, 0.1)"; // Background color with 10% opacity
+        formSet.style.padding = "15px"; // Padding inside the form set
+        formSet.style.borderRadius = "8px"; // Rounded corners
+        formSet.style.marginBottom = "8px";
 
         // Append the cloned form set after the last existing form set
         document.querySelector(".form-set:last-of-type").after(formSet);
     }
 
+    function addEducationalFields(event) {
+        event.preventDefault();
 
+        // Select the last educational group and clone it
+        const lastGroup = document.querySelector(".educational-group:last-of-type").cloneNode(true);
+
+        // Remove the "+ Add" link from the cloned group
+        const addMoreLink = lastGroup.querySelector(".add-more");
+        if (addMoreLink) addMoreLink.remove();
+
+        // Apply background color and border radius to the cloned educational group
+        lastGroup.style.backgroundColor = "rgba(0, 95, 107, 0.1)"; // Background color with 10% opacity
+        lastGroup.style.padding = "15px"; // Padding inside the educational group
+        lastGroup.style.borderRadius = "8px"; // Rounded corners
+        lastGroup.style.marginBottom = "8px";
+
+        // Append the cloned group after the last one
+        document.querySelector(".educational-group:last-of-type").after(lastGroup);
+    }
+
+    function addRegistrationFields(event) {
+        event.preventDefault();
+
+        // Select the last registration group and clone it
+        const lastGroup = document.querySelector(".registration-group:last-of-type").cloneNode(true);
+
+        // Remove the "+ Add" link from the cloned group
+        const addMoreLink = lastGroup.querySelector(".add-more");
+        if (addMoreLink) addMoreLink.remove();
+
+        // Apply background color and border radius to the cloned registration group
+        lastGroup.style.backgroundColor = "rgba(0, 95, 107, 0.1)"; // Background color with 10% opacity
+        lastGroup.style.padding = "15px"; // Padding inside the registration group
+        lastGroup.style.borderRadius = "8px"; // Rounded corners
+        lastGroup.style.marginBottom = "8px";
+
+        // Append the cloned group after the last one
+        document.querySelector(".registration-group:last-of-type").after(lastGroup);
+    }
+
+        const countryContainer = document.getElementById('countryContainer');
+        const countryInput = document.getElementById('countryInput');
+
+        // Function to create a new label
+        function addCountryLabel(countryName) {
+            const label = document.createElement('div');
+            label.className = 'country-label';
+
+            const span = document.createElement('span');
+            span.textContent = countryName;
+
+            const removeButton = document.createElement('button');
+            removeButton.textContent = '×';
+            removeButton.addEventListener('click', () => {
+                countryContainer.removeChild(label);
+            });
+
+            label.appendChild(span);
+            label.appendChild(removeButton);
+            countryContainer.appendChild(label);
+        }
+
+        // Event listener for adding a country on pressing Enter
+        countryInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && countryInput.value.trim() !== '') {
+                addCountryLabel(countryInput.value.trim());
+                countryInput.value = '';
+            }
+        });
+
+
+            document.getElementById("addMoreExperience").addEventListener("click", function () {
+        // Get the container where experiences are stored
+        const experienceContainer = document.getElementById("experienceContainer");
+
+            // Create a new experience entry
+            const newExperience = document.createElement("div");
+            newExperience.className = "form-grid";
+
+            // Exclude the "Current Employment" field in new entries
+            newExperience.innerHTML = `
+            <div class="form-group">
+                <label>Duration</label>
+                <div class="date-inputs">
+                    <input type="date" name="fromDate" placeholder="From">
+                        <input type="date" name="toDate" placeholder="To">
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="organization">Organization</label>
+                    <select name="organization">
+                        <option value="">Choose the Organization Name</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="designation">Designation</label>
+                    <select name="designation">
+                        <option value="">Choose the Job Role</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select name="department">
+                        <option value="">Choose the Department</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bedCapacity">Bed Capacity</label>
+                    <input type="text" name="bedCapacity" placeholder="Enter the Bed capacity">
+                </div>
+                <div class="form-group full-width">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" placeholder="Enter the Organization Address">
+                </div>
+                <div class="form-group full-width">
+                    <label for="workSummary">Work Summary</label>
+                    <textarea name="workSummary" placeholder="Enter Work Summary"></textarea>
+                </div>
+        `;
+
+       newExperience.style.backgroundColor = "rgba(0, 95, 107, 0.1)"; // rgba for #005f6b with 10% opacity
+                newExperience.style.borderRadius = "8px"; // Add rounded corners (border-radius)
+                newExperience.style.padding = "15px"; // Add padding to the form
+                newExperience.style.marginBottom = "8px"; 
+        experienceContainer.appendChild(newExperience);
+    });
+ 
+    document.getElementById("addMoreSkills").addEventListener("click", function () {
+        // Get the container where skills and recognition entries are stored
+        const skillsContainer = document.getElementById("skillsContainer");
+
+        // Create a new form grid
+        const newSkillRecognition = document.createElement("div");
+        newSkillRecognition.className = "form-grid";
+
+        // Set the style for the new entry (background color, padding, border radius)
+        newSkillRecognition.style.backgroundColor = "rgba(0, 95, 107, 0.1)"; // 10% opacity background
+        newSkillRecognition.style.padding = "15px"; // Padding for spacing
+        newSkillRecognition.style.borderRadius = "8px"; // Border radius for rounded corners
+        newSkillRecognition.style.marginBottom = "8px"; // Border radius for rounded corners
+
+        // Add the new form fields inside the new grid
+        newSkillRecognition.innerHTML = `
+        <div class="form-group">
+            <label for="">Recognition</label>
+            <input type="date" name="recognition" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="">Name of the Achievement</label>
+            <input type="text" name="achievement" placeholder="Lorem ipsum">
+        </div>
+    `;
+
+        // Append the new skill recognition entry to the container
+        skillsContainer.appendChild(newSkillRecognition);
+    });
+
+
+    document.getElementById('addMoreDocuments').addEventListener('click', function () {
+        const tableBody = document.getElementById('documentsTableBody');
+
+        // Create a new row
+        const newRow = document.createElement('tr');
+
+        // Add columns to the new row
+        newRow.innerHTML = `
+            <td>
+                <select name="">
+                    <option value="">Document Name</option>
+                </select>
+            </td>
+            <td>
+                <div class="upload-button">
+                    <span>Document Name</span>
+                    <input type="file">
+                    <label class="upload-icon">&#8593;</label>
+                </div>
+            </td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        `;
+
+        // Apply the background color with opacity
+        newRow.style.backgroundColor = "rgba(0, 95, 107, 0.1)"; // rgba for #005f6b with 10% opacity
+
+        // Append the new row to the table body
+        tableBody.appendChild(newRow);
+    });
     </script>
 </body>
 
