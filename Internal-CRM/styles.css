@@ -314,10 +314,8 @@ h3 {
 
 .main-content-global-database {
     position: relative;
-    /* margin: 10px auto; */
     border-radius: 10px;
     padding: 5px 5px 20px;
-    /* box-shadow: 0 0px 2px rgba(0, 0, 0, 0.5); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3214,9 +3212,18 @@ select:focus {
 
 .gender-option,
 .marital-status-options,
-.measurement-options {
+.measurement-options,
+.option-button,
+.status-option,
+.measure-option {
     display: flex;
     gap: 5px;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .form-row {
@@ -3255,11 +3262,20 @@ select:focus {
 .measure-option{
     width:70px;
 }
+.gender-option.active,
+.status-option.active,
+.measure-option.active,
+.option-button.active {
+    background-color: #005f6b;
+    color: white;
+    border-color: #005f6b;
+}
 .gender-option:hover,
 .status-option:hover,
-.measure-option:hover {
-    background-color: #e6e6e6;
-    border-color: #005f6b;
+.measure-option:hover,
+.option-button.active {
+   background-color: rgba(0, 95, 107, 0.1);
+    color: #005f6b;
 }
 
 .soft-skills-rating {
@@ -3475,7 +3491,7 @@ select:focus {
         color: #333;
     }
 
-    .project-history-table td:first-child {
+        .project-history-table td:first-child {
         font-weight: bold;
         color: #005f6b;
     }
@@ -3484,14 +3500,6 @@ select:focus {
         transition: background-color 0.3s ease;
     }
     
-.option-button {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-}
 
 .scores-group {
     display: flex;

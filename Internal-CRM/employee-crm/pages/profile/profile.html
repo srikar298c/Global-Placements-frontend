@@ -976,7 +976,7 @@
                                 <h2>Documents</h2>
                             </div>
                             <div class="">
-                                <button id="addMoreDocuments" type="button">
+                                <button id="addMoreDocuments" type="button" class="btn-add-more">
                                    + Add
                                 </button>
                                 <button>
@@ -1321,7 +1321,7 @@
             }
         });
        
- function addMoreFields(event) {
+    function addMoreFields(event) {
         event.preventDefault();
 
         // Select the last form set and clone it
@@ -1337,9 +1337,31 @@
         formSet.style.borderRadius = "8px"; // Rounded corners
         formSet.style.marginBottom = "8px";
 
+        // Create the cross button to remove the form set
+        const removeButton = document.createElement("button");
+        removeButton.innerHTML = "&#10005;"; // Cross symbol
+        removeButton.style.position = "absolute";
+        removeButton.style.top = "10px";
+        removeButton.style.right = "10px";
+        removeButton.style.fontSize = "15px";
+        removeButton.style.background = "transparent";
+        removeButton.style.border = "none";
+        removeButton.style.cursor = "pointer";
+        removeButton.style.color = "red"; // Red color for the cross button
+
+        // Add event listener to remove the form set when clicked
+        removeButton.addEventListener("click", function () {
+            formSet.remove();
+        });
+
+        // Add the remove button to the cloned form set
+        formSet.style.position = "relative"; // Ensure the button is positioned correctly within the group
+        formSet.appendChild(removeButton);
+
         // Append the cloned form set after the last existing form set
         document.querySelector(".form-set:last-of-type").after(formSet);
     }
+
 
     function addEducationalFields(event) {
         event.preventDefault();
@@ -1357,11 +1379,33 @@
         lastGroup.style.borderRadius = "8px"; // Rounded corners
         lastGroup.style.marginBottom = "8px";
 
+        // Create the cross button to remove the section
+        const removeButton = document.createElement("button");
+        removeButton.innerHTML = "&#10005;"; // Cross symbol
+        removeButton.style.position = "absolute";
+        removeButton.style.top = "10px";
+        removeButton.style.right = "10px";
+        removeButton.style.fontSize = "15px";
+        removeButton.style.background = "transparent";
+        removeButton.style.border = "none";
+        removeButton.style.cursor = "pointer";
+        removeButton.style.color ="red";
+
+        // Add event listener to remove the group when clicked
+        removeButton.addEventListener("click", function () {
+            lastGroup.remove();
+        });
+
+        // Add the remove button to the cloned educational group
+        lastGroup.style.position = "relative"; // Ensure the button is positioned correctly within the group
+        lastGroup.appendChild(removeButton);
+
         // Append the cloned group after the last one
         document.querySelector(".educational-group:last-of-type").after(lastGroup);
     }
 
-    function addRegistrationFields(event) {
+
+   function addRegistrationFields(event) {
         event.preventDefault();
 
         // Select the last registration group and clone it
@@ -1377,9 +1421,31 @@
         lastGroup.style.borderRadius = "8px"; // Rounded corners
         lastGroup.style.marginBottom = "8px";
 
-        // Append the cloned group after the last one
+        // Create the cross button to remove the registration group
+        const removeButton = document.createElement("button");
+        removeButton.innerHTML = "&#10005;"; // Cross symbol
+        removeButton.style.position = "absolute";
+        removeButton.style.top = "10px";
+        removeButton.style.right = "10px";
+        removeButton.style.fontSize = "15px";
+        removeButton.style.background = "transparent";
+        removeButton.style.border = "none";
+        removeButton.style.cursor = "pointer";
+        removeButton.style.color = "red"; // Red color for the cross button
+
+        // Add event listener to remove the registration group when clicked
+        removeButton.addEventListener("click", function () {
+            lastGroup.remove();
+        });
+
+        // Add the remove button to the cloned registration group
+        lastGroup.style.position = "relative"; // Ensure the button is positioned correctly within the group
+        lastGroup.appendChild(removeButton);
+
+        // Append the cloned registration group after the last one
         document.querySelector(".registration-group:last-of-type").after(lastGroup);
     }
+
 
         const countryContainer = document.getElementById('countryContainer');
         const countryInput = document.getElementById('countryInput');
@@ -1412,78 +1478,103 @@
         });
 
 
-            document.getElementById("addMoreExperience").addEventListener("click", function () {
-        // Get the container where experiences are stored
-        const experienceContainer = document.getElementById("experienceContainer");
+           document.getElementById("addMoreExperience").addEventListener("click", function () {
+                // Get the container where experiences are stored
+                const experienceContainer = document.getElementById("experienceContainer");
 
-            // Create a new experience entry
-            const newExperience = document.createElement("div");
-            newExperience.className = "form-grid";
+                // Create a new experience entry
+                const newExperience = document.createElement("div");
+                newExperience.className = "form-grid";
 
-            // Exclude the "Current Employment" field in new entries
-            newExperience.innerHTML = `
-            <div class="form-group">
-                <label>Duration</label>
-                <div class="date-inputs">
-                    <input type="date" name="fromDate" placeholder="From">
-                        <input type="date" name="toDate" placeholder="To">
-                        </div>
-                </div>
-                <div class="form-group">
-                    <label for="organization">Organization</label>
-                    <select name="organization">
-                        <option value="">Choose the Organization Name</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="designation">Designation</label>
-                    <select name="designation">
-                        <option value="">Choose the Job Role</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="department">Department</label>
-                    <select name="department">
-                        <option value="">Choose the Department</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="bedCapacity">Bed Capacity</label>
-                    <input type="text" name="bedCapacity" placeholder="Enter the Bed capacity">
-                </div>
-                <div class="form-group full-width">
-                    <label for="address">Address</label>
-                    <input type="text" name="address" placeholder="Enter the Organization Address">
-                </div>
-                <div class="form-group full-width">
-                    <label for="workSummary">Work Summary</label>
-                    <textarea name="workSummary" placeholder="Enter Work Summary"></textarea>
-                </div>
-        `;
+                // Exclude the "Current Employment" field in new entries
+                newExperience.innerHTML = `
+        <div class="form-group">
+            <label>Duration</label>
+            <div class="date-inputs">
+                <input type="date" name="fromDate" placeholder="From">
+                <input type="date" name="toDate" placeholder="To">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="organization">Organization</label>
+            <select name="organization">
+                <option value="">Choose the Organization Name</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="designation">Designation</label>
+            <select name="designation">
+                <option value="">Choose the Job Role</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="department">Department</label>
+            <select name="department">
+                <option value="">Choose the Department</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="bedCapacity">Bed Capacity</label>
+            <input type="text" name="bedCapacity" placeholder="Enter the Bed capacity">
+        </div>
+        <div class="form-group full-width">
+            <label for="address">Address</label>
+            <input type="text" name="address" placeholder="Enter the Organization Address">
+        </div>
+        <div class="form-group full-width">
+            <label for="workSummary">Work Summary</label>
+            <textarea name="workSummary" placeholder="Enter Work Summary"></textarea>
+        </div>
+    `;
 
-       newExperience.style.backgroundColor = "rgba(0, 95, 107, 0.1)"; // rgba for #005f6b with 10% opacity
-                newExperience.style.borderRadius = "8px"; // Add rounded corners (border-radius)
-                newExperience.style.padding = "15px"; // Add padding to the form
-                newExperience.style.marginBottom = "8px"; 
-        experienceContainer.appendChild(newExperience);
-    });
- 
+                // Add styling to the new experience entry
+                newExperience.style.backgroundColor = "rgba(0, 95, 107, 0.1)"; // Background color with 10% opacity
+                newExperience.style.borderRadius = "8px"; // Rounded corners
+                newExperience.style.padding = "15px"; // Padding inside the form
+                newExperience.style.marginBottom = "8px";
+
+                // Create the remove button (cross symbol)
+                const removeButton = document.createElement("button");
+                removeButton.innerHTML = "&#10005;"; // Cross symbol
+                removeButton.style.position = "absolute";
+                removeButton.style.top = "10px";
+                removeButton.style.right = "10px";
+                removeButton.style.fontSize = "20px";
+                removeButton.style.background = "transparent";
+                removeButton.style.border = "none";
+                removeButton.style.cursor = "pointer";
+                removeButton.style.color = "red"; // Red color for the cross button
+
+                // Add event listener to remove the experience entry when clicked
+                removeButton.addEventListener("click", function () {
+                    newExperience.remove();
+                });
+
+                // Position the remove button correctly
+                newExperience.style.position = "relative"; // Ensure it's positioned relative to the experience entry
+                newExperience.appendChild(removeButton);
+
+                // Append the new experience entry to the container
+                experienceContainer.appendChild(newExperience);
+            });
+
     document.getElementById("addMoreSkills").addEventListener("click", function () {
-        // Get the container where skills and recognition entries are stored
-        const skillsContainer = document.getElementById("skillsContainer");
+            // Get the container where skills and recognition entries are stored
+            const skillsContainer = document.getElementById("skillsContainer");
 
-        // Create a new form grid
-        const newSkillRecognition = document.createElement("div");
-        newSkillRecognition.className = "form-grid";
+            // Create a new form grid for skill and recognition entry
+            const newSkillRecognition = document.createElement("div");
+            newSkillRecognition.className = "form-grid";
 
-        // Set the style for the new entry (background color, padding, border radius)
-        newSkillRecognition.style.backgroundColor = "rgba(0, 95, 107, 0.1)"; // 10% opacity background
-        newSkillRecognition.style.padding = "15px"; // Padding for spacing
-        newSkillRecognition.style.borderRadius = "8px"; // Border radius for rounded corners
-        newSkillRecognition.style.marginBottom = "8px"; // Border radius for rounded corners
+            // Set the style for the new entry (background color, padding, border radius)
+            newSkillRecognition.style.backgroundColor = "rgba(0, 95, 107, 0.1)"; // 10% opacity background
+            newSkillRecognition.style.padding = "15px"; // Padding for spacing
+            newSkillRecognition.style.borderRadius = "8px"; // Border radius for rounded corners
+            newSkillRecognition.style.marginBottom = "8px"; // Margin between entries
+            newSkillRecognition.style.position = "relative"; // Ensure positioning for the remove button
 
-        // Add the new form fields inside the new grid
-        newSkillRecognition.innerHTML = `
+            // Add the new form fields inside the new grid
+            newSkillRecognition.innerHTML = `
         <div class="form-group">
             <label for="">Recognition</label>
             <input type="date" name="recognition" placeholder="">
@@ -1494,12 +1585,31 @@
         </div>
     `;
 
-        // Append the new skill recognition entry to the container
-        skillsContainer.appendChild(newSkillRecognition);
-    });
+            // Create the remove button (cross symbol)
+            const removeButton = document.createElement("button");
+            removeButton.innerHTML = "&#10005;"; // Cross symbol
+            removeButton.style.position = "absolute";
+            removeButton.style.top = "10px";
+            removeButton.style.right = "10px";
+            removeButton.style.fontSize = "20px";
+            removeButton.style.background = "transparent";
+            removeButton.style.border = "none";
+            removeButton.style.cursor = "pointer";
+            removeButton.style.color = "red"; // Red color for the cross button
 
+            // Add event listener to remove the skill/recognition entry when clicked
+            removeButton.addEventListener("click", function () {
+                newSkillRecognition.remove();
+            });
 
-    document.getElementById('addMoreDocuments').addEventListener('click', function () {
+            // Append the remove button to the new skill/recognition entry
+            newSkillRecognition.appendChild(removeButton);
+
+            // Append the new skill/recognition entry to the container
+            skillsContainer.appendChild(newSkillRecognition);
+        });
+
+   document.getElementById('addMoreDocuments').addEventListener('click', function () {
         const tableBody = document.getElementById('documentsTableBody');
 
         // Create a new row
@@ -1507,28 +1617,89 @@
 
         // Add columns to the new row
         newRow.innerHTML = `
-            <td>
-                <select name="">
-                    <option value="">Document Name</option>
-                </select>
-            </td>
-            <td>
-                <div class="upload-button">
-                    <span>Document Name</span>
-                    <input type="file">
-                    <label class="upload-icon">&#8593;</label>
-                </div>
-            </td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-        `;
+        <td>
+            <select name="">
+                <option value="">Document Name</option>
+            </select>
+        </td>
+        <td>
+            <div class="upload-button">
+                <span>Document Name</span>
+                <input type="file">
+                <label class="upload-icon">&#8593;</label>
+            </div>
+        </td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+    `;
 
         // Apply the background color with opacity
         newRow.style.backgroundColor = "rgba(0, 95, 107, 0.1)"; // rgba for #005f6b with 10% opacity
 
+        // Create the remove button (cross symbol)
+        const removeButton = document.createElement("button");
+        removeButton.innerHTML = "&#10005;"; // Cross symbol
+        removeButton.style.fontSize = "20px";
+        removeButton.style.background = "transparent";
+        removeButton.style.border = "none";
+        removeButton.style.cursor = "pointer";
+        removeButton.style.color = "red"; // Red color for the cross button
+        removeButton.style.marginLeft = "10px"; // Add space between the button and the last column
+
+        // Add event listener to remove the row when clicked
+        removeButton.addEventListener("click", function () {
+            newRow.remove();
+        });
+
+        // Add a new cell for the remove button
+        const removeCell = document.createElement('td');
+        removeCell.appendChild(removeButton);
+
+        // Append the new remove cell to the new row
+        newRow.appendChild(removeCell);
+
         // Append the new row to the table body
         tableBody.appendChild(newRow);
     });
+    // Get all gender option buttons
+    const genderButtons = document.querySelectorAll('.gender-option');
+
+    // Add event listeners to each button
+    genderButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Remove the 'active' class from all buttons
+            genderButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Add the 'active' class to the clicked button
+            this.classList.add('active');
+        });
+    });
+  // Get all the status option buttons
+    const statusButtons = document.querySelectorAll('.status-option');
+
+    // Add event listeners to each status option button
+    statusButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Remove the 'active' class from all status buttons
+            statusButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Add the 'active' class to the clicked button
+            this.classList.add('active');
+        });
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll(".button-group .option-button");
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                // Remove 'active' class from all buttons
+                buttons.forEach((btn) => btn.classList.remove("active"));
+                // Add 'active' class to the clicked button
+                button.classList.add("active");
+            });
+        });
+    });
+
     </script>
 </body>
 
