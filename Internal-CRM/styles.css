@@ -4281,6 +4281,9 @@ select:focus {
     background-color: #ffebea;
 }
 
+.green-candidate{
+   background-color: rgba(0, 95, 107, 0.1);
+}
 .notifications-filter__group {
     display: flex;
     align-items: center;
@@ -4300,6 +4303,7 @@ select:focus {
 }
 
 .notification-tab-button {
+
     padding: 10px 12px;
     width: 100%;
     border: 1px solid #ccc;
@@ -5249,4 +5253,25 @@ margin-bottom: 20px;
     100% {
         transform: translate(-50%, 0%);
     }
+}
+
+.whatsappIcon-number {
+    display: flex;
+    align-items: center; 
+}
+
+.whatsappIcon-number .icon-container {
+    display: flex;
+    align-items: center; 
+    gap: 3px; 
+}
+
+.whatsappIcon-number .whatsapp-icon {
+    width: 14px; /* Set icon width */
+    height: 14px; /* Set icon height */
+}
+
+.whatsappIcon-number .phone-number {
+    font-size: 10px; 
+    color: #333; 
 }

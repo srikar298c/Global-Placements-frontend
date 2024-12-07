@@ -1623,11 +1623,11 @@
             </select>
         </td>
         <td>
-            <div class="upload-button">
-                <span>Document Name</span>
-                <input type="file">
-                <label class="upload-icon">&#8593;</label>
-            </div>
+              <div class="upload-button">
+  <span>Document Name</span>
+<input type="file" class="document-file" id="doc-extra" name="doc-extra">
+<label for="doc-extra" class="upload-icon">&#8593;</label>
+                                            </div>
         </td>
         <td><input type="checkbox"></td>
         <td><input type="checkbox"></td>
@@ -1661,8 +1661,22 @@
         // Append the new row to the table body
         tableBody.appendChild(newRow);
     });
-    // Get all gender option buttons
-    const genderButtons = document.querySelectorAll('.gender-option');
+
+    // Add event listener for file input change
+    document.getElementById('documentsTableBody').addEventListener('change', function (event) {
+        // Check if the change event is triggered by a file input
+        if (event.target && event.target.type === 'file') {
+            const fileInput = event.target;
+            const file = fileInput.files[0]; // Get the selected file
+
+            // Handle file selection
+            if (file) {
+                console.log('File selected:', file.name);
+                // Additional file handling logic (e.g., preview, upload) can go here
+            }
+        }
+    });
+   const genderButtons = document.querySelectorAll('.gender-option');
 
     // Add event listeners to each button
     genderButtons.forEach(button => {
@@ -1704,3 +1718,5 @@
 </body>
 
 </html>
+<td>
+    
