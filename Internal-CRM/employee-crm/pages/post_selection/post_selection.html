@@ -12,101 +12,249 @@
 
 <body>
     <style>
-        #candidateTable th,
-        #candidateTable td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
+        #post_selction_candidateTable {
+            width: 100%;
+            min-width: 1240px;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
         }
-        
-        #candidateTable th {
-            background-color: #f2f2f2;
+
+        #post_selction_candidateTable th {
+            font-size: 12px;
+            background-color: #e8e7e7;
         }
-        
-        .avatar {
-            width: 40px;
-            height: 40px;
-            background-color: #ccc;
+
+        #post_selction_candidateTable th:first-child {
+            border-radius: 10px 0px 0px;
+        }
+
+        #post_selction_candidateTable th:last-child {
+            border-radius: 0px 10px 0px 0px;
+        }
+
+        #post_selction_candidateTable td {
+            font-size: 10px;
+        }
+
+        #post_selction_candidateTable td {
+            font-size: 10px;
+        }
+
+        #post_selction_candidateTable .candidate-image {
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             margin-right: 10px;
+            vertical-align: middle;
         }
-        
-        .candidate-details {
+
+        #post_selction_candidateTable th,
+        #post_selction_candidateTable td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+
+
+        .post_documents {
+
+
+            padding: 5px;
+
+
+        }
+
+        .document_row {
+            gap: 10px;
             display: flex;
-            align-items: center;
+            justify-content: space-around;
+
+            margin-bottom: 10px;
+
         }
-        
-        .documents {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
+
+        /* Styling for the span elements */
+        .post_documents .document {
+            display: inline-block;
+            width: 100px;
+            /* Fixed width */
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 5px;
+            /* color: #fff; */
+            font-size: 12px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
-        .document {
-            padding: 2px 5px;
-            border-radius: 3px;
-            font-size: 0.8em;
-        }
-        
+
         .green {
             background-color: #e6ffe6;
             color: #006600;
         }
-        
+
         .yellow {
             background-color: #ffffcc;
             color: #999900;
         }
-        
+
         .red {
             background-color: #ffe6e6;
             color: #cc0000;
         }
-        
+
         .gray {
             background-color: #f2f2f2;
             color: #666666;
         }
-        
-        .important-dates div {
-            margin-bottom: 10px;
+
+        .post_important-dates {
+            gap: 15px;
+            padding: 15px;
         }
-        
-        .important-dates label {
-            display: block;
-            font-size: 0.8em;
+
+        /* Styling for the container */
+
+
+        /* Styling for each label and input group */
+        .post_important-dates div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .post_important-dates label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* Styling for the input fields */
+        .post_important-dates input[type="date"] {
+            padding: 6px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #fff;
+            color: #333;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        /* Focused state for the input fields */
+        .post_important-dates input[type="date"]:focus {
+            border-color: #006600;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+
+        /* Hover state for the input fields */
+        .post_important-dates input[type="date"]:hover {
+            border-color: #006600;
+        }
+
+        /* Adding responsive behavior */
+        @media (max-width: 768px) {
+            .post_important-dates {
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .post_important-dates label {
+                font-size: 13px;
+            }
+
+            .post_important-dates input[type="date"] {
+                font-size: 13px;
+                padding: 8px;
+            }
+        }
+
+
+        /* Container for comments */
+        .comments-container {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+            background-color: #fafafa;
+        }
+
+        /* Individual comment */
+        .comment {
+            border-bottom: 1px solid #eaeaea;
+            padding: 8px;
+            font-size: 12px;
+            color: #333;
+        }
+
+        .comment:last-child {
+            border-bottom: none;
+        }
+
+        /* Admin and timestamp styling */
+        .comment .admin {
+            font-size: 10px;
             color: #666;
+            margin-top: 4px;
         }
-        
-        .comments {
-            margin-bottom: 10px;
-        }
-        
-        .comments p {
-            margin: 0 0 10px 0;
-        }
-        
+
+        /* Add comment section */
         .add-comment {
             display: flex;
             margin-top: 10px;
+            align-items: center;
+            gap: 10px;
         }
-        
-        .add-comment input {
-            flex-grow: 1;
-            margin-right: 10px;
-        }
-        
-        .add-comment button {
-            padding: 5px 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 3px;
+
+        /* History icon styling */
+        .history-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background-color: #eaf5ff;
+            border: 1px solid #005f6b;
+            border-radius: 50%;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
-        
+
+        .history-icon:hover {
+            background-color: #d4ebff;
+        }
+
+        .history-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #004d4d;
+        }
+
+        .add-comment input {
+            flex: 1;
+            padding: 6px;
+            font-size: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .add-comment button {
+            padding: 6px 10px;
+            font-size: 12px;
+            color: white;
+            background-color: #005f6b;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
         .add-comment button:hover {
-            background-color: #0056b3;
+            background-color: #004d4d;
         }
     </style>
     <div class="sidebar-container ">
@@ -141,12 +289,13 @@
                                     <g fill="none" fill-rule="evenodd">
                                         <path
                                             d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                                            <path fill="currentColor"
+                                        <path fill="currentColor"
                                             d="M3 4a2 2 0 0 1 2-2h2c.364 0 .706.097 1 .268A2 2 0 0 1 9 2h2c.727 0 1.364.388 1.714.969c.21-.168.456-.296.732-.37l1.932-.517a2 2 0 0 1 2.45 1.414l4.14 15.455a2 2 0 0 1-1.414 2.45l-1.932.517a2 2 0 0 1-2.45-1.414L13 8.663V20a2 2 0 0 1-2 2H9a2 2 0 0 1-1-.268A2 2 0 0 1 7 22H5a2 2 0 0 1-2-2zm2 0h2v16H5zm6 16H9V4h2zm2.964-15.469l1.931-.517l4.142 15.455l-1.932.517z" />
-                                        </g>
-                                    </svg>
+                                    </g>
+                                </svg>
                                 <span class="sidebar-nav-item">Projects</span>
-                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
+                                    viewBox="0 0 24 24">
                                     <path fill="currentColor" fill-rule="evenodd"
                                         d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
                                         clip-rule="evenodd" />
@@ -175,7 +324,8 @@
                                         d="M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19" />
                                 </svg>
                                 <span class="sidebar-nav-item">Database</span>
-                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
+                                    viewBox="0 0 24 24">
                                     <path fill="currentColor" fill-rule="evenodd"
                                         d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
                                         clip-rule="evenodd" />
@@ -228,16 +378,19 @@
                                         d="M12 21q-3.775 0-6.387-1.162T3 17V7q0-1.65 2.638-2.825T12 3t6.363 1.175T21 7v10q0 1.675-2.613 2.838T12 21m0-11.975q2.225 0 4.475-.638T19 7.025q-.275-.725-2.512-1.375T12 5q-2.275 0-4.462.638T5 7.025q.35.75 2.538 1.375T12 9.025M12 14q1.05 0 2.025-.1t1.863-.288t1.675-.462T19 12.525v-3q-.65.35-1.437.625t-1.675.463t-1.863.287T12 11t-2.05-.1t-1.888-.288T6.4 10.15T5 9.525v3q.625.35 1.4.625t1.663.463t1.887.287T12 14m0 5q1.15 0 2.338-.175t2.187-.462t1.675-.65t.8-.738v-2.45q-.65.35-1.437.625t-1.675.463t-1.863.287T12 16t-2.05-.1t-1.888-.288T6.4 15.15T5 14.525V17q.125.375.788.725t1.662.638t2.2.462T12 19" />
                                 </svg>
                                 <span class="sidebar-nav-item">Feedbacks</span>
-                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 24 24">
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20"
+                                    viewBox="0 0 24 24">
                                     <path fill="currentColor" fill-rule="evenodd"
                                         d="M4.47 9.4a.75.75 0 0 1 1.06 0l6.364 6.364a.25.25 0 0 0 .354 0L18.612 9.4a.75.75 0 0 1 1.06 1.06l-6.364 6.364a1.75 1.75 0 0 1-2.475 0L4.47 10.46a.75.75 0 0 1 0-1.06"
                                         clip-rule="evenodd" />
                                 </svg>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/client_feedback.html"><span
+                                <li><a
+                                        href="../../../../Internal-CRM/employee-crm/pages/feedbacks/client_feedback.html"><span
                                             class="sidebar-nav-item">Client Feedback</span></a></li>
-                                <li><a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/subject_expert_feedback.html"><span
+                                <li><a
+                                        href="../../../../Internal-CRM/employee-crm/pages/feedbacks/subject_expert_feedback.html"><span
                                             class="sidebar-nav-item">Subject Expert Feedback</span></a>
                                 </li>
 
@@ -341,11 +494,14 @@
                 <a href="../../../../Internal-CRM/employee-crm/pages/profile/profile.html">
                     <img src="../../../../Internal-CRM/images/profile.png" alt="Profile Picture" class="profile-icon">
                 </a>
-                <svg onclick="toggleProfileMenu()" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36" class="caret-icon">
-        <rect width="36" height="36" fill="none"/>
-        <path fill="currentColor" d="M29.52 22.52L18 10.6L6.48 22.52a1.7 1.7 0 0 0 2.45 2.36L18 15.49l9.08 9.39a1.7 1.7 0 0 0 2.45-2.36Z" class="clr-i-outline clr-i-outline-path-1"/>
-        <path fill="none" d="M0 0h36v36H0z"/>
-    </svg>
+                <svg onclick="toggleProfileMenu()" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                    viewBox="0 0 36 36" class="caret-icon">
+                    <rect width="36" height="36" fill="none" />
+                    <path fill="currentColor"
+                        d="M29.52 22.52L18 10.6L6.48 22.52a1.7 1.7 0 0 0 2.45 2.36L18 15.49l9.08 9.39a1.7 1.7 0 0 0 2.45-2.36Z"
+                        class="clr-i-outline clr-i-outline-path-1" />
+                    <path fill="none" d="M0 0h36v36H0z" />
+                </svg>
             </div>
 
             <!-- Profile Menu Dropdown -->
@@ -354,10 +510,37 @@
                 <img src="../../../../Internal-CRM/images/profile.png" alt="Profile Picture" class="profile-large-icon">
                 <p class="profile-greeting">Hi, Admin!</p>
                 <ul class="profile-options">
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/profile/profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><g fill="none" stroke="currentColor" stroke-width="1"><path d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2s1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 5.638-4.239 8.375-6.899 9.536C13.38 21.842 13.02 22 12 22s-1.38-.158-2.101-.473C7.239 20.365 3 17.63 3 11.991z"/><circle cx="12" cy="9" r="2"/><path d="M16 15c0 1.105 0 2-4 2s-4-.895-4-2s1.79-2 4-2s4 .895 4 2Z"/></g></svg> View Profile</a></li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/attendance/attendance.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" d="M5.616 21q-.691 0-1.153-.462T4 19.385V6.615q0-.69.463-1.152T5.616 5h1.769V2.77h1.077V5h7.154V2.77h1V5h1.769q.69 0 1.153.463T20 6.616v5h-1v-1H5v8.769q0 .23.192.423t.423.192h6.231v1zM5 9.615h14v-3q0-.23-.192-.423T18.384 6H5.616q-.231 0-.424.192T5 6.616zm0 0V6zM14.23 21v-2.21l5.334-5.307q.148-.148.307-.2q.16-.052.32-.052q.165 0 .334.064q.17.065.298.194l.925.944q.123.148.187.308q.065.159.065.319t-.061.322t-.191.31L16.44 21zm6.886-5.94l-.925-.945zm-6 5.056h.95l3.467-3.474l-.47-.475l-.455-.488l-3.492 3.486zm3.948-3.949l-.456-.488l.925.963z"/></svg> Attendance</a></li>
-                    <li><a href="../../../../Internal-CRM/employee-crm/pages/settings/settings.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><g fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="3"/><path d="M13.765 2.152C13.398 2 12.932 2 12 2s-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083c-.092.223-.129.484-.143.863a1.62 1.62 0 0 1-.79 1.353a1.62 1.62 0 0 1-1.567.008c-.336-.178-.579-.276-.82-.308a2 2 0 0 0-1.478.396C4.04 5.79 3.806 6.193 3.34 7s-.7 1.21-.751 1.605a2 2 0 0 0 .396 1.479c.148.192.355.353.676.555c.473.297.777.803.777 1.361s-.304 1.064-.777 1.36c-.321.203-.529.364-.676.556a2 2 0 0 0-.396 1.479c.052.394.285.798.75 1.605c.467.807.7 1.21 1.015 1.453a2 2 0 0 0 1.479.396c.24-.032.483-.13.819-.308a1.62 1.62 0 0 1 1.567.008c.483.28.77.795.79 1.353c.014.38.05.64.143.863a2 2 0 0 0 1.083 1.083C10.602 22 11.068 22 12 22s1.398 0 1.765-.152a2 2 0 0 0 1.083-1.083c.092-.223.129-.483.143-.863c.02-.558.307-1.074.79-1.353a1.62 1.62 0 0 1 1.567-.008c.336.178.579.276.819.308a2 2 0 0 0 1.479-.396c.315-.242.548-.646 1.014-1.453s.7-1.21.751-1.605a2 2 0 0 0-.396-1.479c-.148-.192-.355-.353-.676-.555A1.62 1.62 0 0 1 19.562 12c0-.558.304-1.064.777-1.36c.321-.203.529-.364.676-.556a2 2 0 0 0 .396-1.479c-.052-.394-.285-.798-.75-1.605c-.467-.807-.7-1.21-1.015-1.453a2 2 0 0 0-1.479-.396c-.24.032-.483.13-.82.308a1.62 1.62 0 0 1-1.566-.008a1.62 1.62 0 0 1-.79-1.353c-.014-.38-.05-.64-.143-.863a2 2 0 0 0-1.083-1.083Z"/></g></svg> Settings</a></li>
-                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 1024 1024"><rect width="1024" height="1024" fill="none"/><path fill="currentColor" d="M116.832 543.664H671.28c17.696 0 32-14.336 32-32s-14.304-32-32-32H118.832l115.76-115.76c12.496-12.496 12.496-32.752 0-45.248s-32.752-12.496-45.248 0l-189.008 194l189.008 194c6.256 6.256 14.432 9.376 22.624 9.376s16.368-3.12 22.624-9.376c12.496-12.496 12.496-32.752 0-45.248zM959.664 0H415.663c-35.36 0-64 28.656-64 64v288h64.416V103.024c0-21.376 17.344-38.72 38.72-38.72h464.72c21.391 0 38.72 17.344 38.72 38.72l1.007 818.288c0 21.376-17.328 38.72-38.72 38.72h-465.71c-21.376 0-38.72-17.344-38.72-38.72V670.944l-64.416.08V960c0 35.344 28.64 64 64 64h543.984c35.36 0 64.016-28.656 64.016-64V64c-.015-35.344-28.671-64-64.015-64z"/></svg> Sign Out</a></li>
+                    <li><a href="../../../../Internal-CRM/employee-crm/pages/profile/profile.html"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                <rect width="24" height="24" fill="none" />
+                                <g fill="none" stroke="currentColor" stroke-width="1">
+                                    <path
+                                        d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2s1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 5.638-4.239 8.375-6.899 9.536C13.38 21.842 13.02 22 12 22s-1.38-.158-2.101-.473C7.239 20.365 3 17.63 3 11.991z" />
+                                    <circle cx="12" cy="9" r="2" />
+                                    <path d="M16 15c0 1.105 0 2-4 2s-4-.895-4-2s1.79-2 4-2s4 .895 4 2Z" />
+                                </g>
+                            </svg> View Profile</a></li>
+                    <li><a href="../../../../Internal-CRM/employee-crm/pages/attendance/attendance.html"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                <rect width="24" height="24" fill="none" />
+                                <path fill="currentColor"
+                                    d="M5.616 21q-.691 0-1.153-.462T4 19.385V6.615q0-.69.463-1.152T5.616 5h1.769V2.77h1.077V5h7.154V2.77h1V5h1.769q.69 0 1.153.463T20 6.616v5h-1v-1H5v8.769q0 .23.192.423t.423.192h6.231v1zM5 9.615h14v-3q0-.23-.192-.423T18.384 6H5.616q-.231 0-.424.192T5 6.616zm0 0V6zM14.23 21v-2.21l5.334-5.307q.148-.148.307-.2q.16-.052.32-.052q.165 0 .334.064q.17.065.298.194l.925.944q.123.148.187.308q.065.159.065.319t-.061.322t-.191.31L16.44 21zm6.886-5.94l-.925-.945zm-6 5.056h.95l3.467-3.474l-.47-.475l-.455-.488l-3.492 3.486zm3.948-3.949l-.456-.488l.925.963z" />
+                            </svg> Attendance</a></li>
+                    <li><a href="../../../../Internal-CRM/employee-crm/pages/settings/settings.html"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                <rect width="24" height="24" fill="none" />
+                                <g fill="none" stroke="currentColor" stroke-width="1">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path
+                                        d="M13.765 2.152C13.398 2 12.932 2 12 2s-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083c-.092.223-.129.484-.143.863a1.62 1.62 0 0 1-.79 1.353a1.62 1.62 0 0 1-1.567.008c-.336-.178-.579-.276-.82-.308a2 2 0 0 0-1.478.396C4.04 5.79 3.806 6.193 3.34 7s-.7 1.21-.751 1.605a2 2 0 0 0 .396 1.479c.148.192.355.353.676.555c.473.297.777.803.777 1.361s-.304 1.064-.777 1.36c-.321.203-.529.364-.676.556a2 2 0 0 0-.396 1.479c.052.394.285.798.75 1.605c.467.807.7 1.21 1.015 1.453a2 2 0 0 0 1.479.396c.24-.032.483-.13.819-.308a1.62 1.62 0 0 1 1.567.008c.483.28.77.795.79 1.353c.014.38.05.64.143.863a2 2 0 0 0 1.083 1.083C10.602 22 11.068 22 12 22s1.398 0 1.765-.152a2 2 0 0 0 1.083-1.083c.092-.223.129-.483.143-.863c.02-.558.307-1.074.79-1.353a1.62 1.62 0 0 1 1.567-.008c.336.178.579.276.819.308a2 2 0 0 0 1.479-.396c.315-.242.548-.646 1.014-1.453s.7-1.21.751-1.605a2 2 0 0 0-.396-1.479c-.148-.192-.355-.353-.676-.555A1.62 1.62 0 0 1 19.562 12c0-.558.304-1.064.777-1.36c.321-.203.529-.364.676-.556a2 2 0 0 0 .396-1.479c-.052-.394-.285-.798-.75-1.605c-.467-.807-.7-1.21-1.015-1.453a2 2 0 0 0-1.479-.396c-.24.032-.483.13-.82.308a1.62 1.62 0 0 1-1.566-.008a1.62 1.62 0 0 1-.79-1.353c-.014-.38-.05-.64-.143-.863a2 2 0 0 0-1.083-1.083Z" />
+                                </g>
+                            </svg> Settings</a></li>
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                                viewBox="0 0 1024 1024">
+                                <rect width="1024" height="1024" fill="none" />
+                                <path fill="currentColor"
+                                    d="M116.832 543.664H671.28c17.696 0 32-14.336 32-32s-14.304-32-32-32H118.832l115.76-115.76c12.496-12.496 12.496-32.752 0-45.248s-32.752-12.496-45.248 0l-189.008 194l189.008 194c6.256 6.256 14.432 9.376 22.624 9.376s16.368-3.12 22.624-9.376c12.496-12.496 12.496-32.752 0-45.248zM959.664 0H415.663c-35.36 0-64 28.656-64 64v288h64.416V103.024c0-21.376 17.344-38.72 38.72-38.72h464.72c21.391 0 38.72 17.344 38.72 38.72l1.007 818.288c0 21.376-17.328 38.72-38.72 38.72h-465.71c-21.376 0-38.72-17.344-38.72-38.72V670.944l-64.416.08V960c0 35.344 28.64 64 64 64h543.984c35.36 0 64.016-28.656 64.016-64V64c-.015-35.344-28.671-64-64.015-64z" />
+                            </svg> Sign Out</a></li>
                 </ul>
             </div>
         </div>
@@ -366,7 +549,7 @@
                 <div class="approvals-filter__container">
                     <!-- Category Filter -->
                     <div class="approvals-filter__group">
-                        <label for="" class="approvals-filter__label">Categorylabel>
+                        <label for="" class="approvals-filter__label">Category</label>
                         <select class="approvals-filter__select">
                             <option value="">Nurses</option>
                             <option>...</option>
@@ -423,8 +606,8 @@
 
             </div>
 
-            <div class="candidate-table">
-                <table id="candidateTable">
+            <div class="post_selection_candidate-table">
+                <table id="post_selction_candidateTable">
                     <thead>
                         <tr>
                             <th>Details of the Candidate</th>
@@ -436,87 +619,127 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="candidate-details">
-                                <div class="avatar"></div>
-                                <div>
-                                    <p>1234567</p>
-                                    <p>NameNameNameName</p>
-                                    <p>candidateemail@gmail.com</p>
-                                    <p>999-999-9999</p>
-                                    <p>XXXXXXXX</p>
-                                </div>
-                            </td>
-                            <td class="documents">
-                                <span class="document green">Document 1</span>
-                                <span class="document yellow">Document 2</span>
-                                <span class="document yellow">Document 3</span>
-                                <span class="document red">Document 4</span>
-                                <span class="document red">Document 5</span>
-                                <span class="document red">Document 6</span>
-                                <span class="document red">Document 7</span>
-                                <span class="document gray">Document 8</span>
-                                <span class="document gray">Document 9</span>
-                            </td>
-                            <td class="important-dates">
-                                <div>
-                                    <label for="tentativeDate">Tentative Date</label>
-                                    <input type="date" id="tentativeDate">
-                                </div>
-                                <div>
-                                    <label for="finalDate">Final Date</label>
-                                    <input type="date" id="finalDate">
-                                </div>
-                                <div>
-                                    <label for="joiningDate">Joining Date</label>
-                                    <input type="date" id="joiningDate">
-                                </div>
-                                <div>
-                                    <label for="returnDate">Return Date</label>
-                                    <input type="date" id="returnDate">
-                                </div>
-                            </td>
-                            <td class="comments">
-                                <div id="commentsList">
-                                    <!-- Comments will be dynamically added here -->
-                                </div>
-                                <div class="add-comment">
-                                    <input type="text" id="newComment" placeholder="Add a comment">
-                                    <button onclick="addComment()">Add</button>
-                                </div>
-                            </td>
-                            <td class="status">
-                                <select>
-                                <option value="successful">Successful</option>
-                                <option value="in-progress">In Progress</option>
-                                <option value="returned">Returned</option>
-                            </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                            <td class="post_candidate-details">
+
+                                <img src="https://via.placeholder.com/50" class="candidate-image"> CAND001
+
+                                <!-- <p>1234567</p> -->
+                                <p>NameNameNameName</p>
+                                <p>candidateemail@gmail.com</p>
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.99em" height="2em"
+                                        viewBox="0 0 256 258">
+                                        <defs>
+                                            <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
+                                                <stop offset="0%" stop-color="#1faf38" />
+                                                <stop offset="100%" stop-color="#60d669" />
+                                            </linearGradient>
+                                            <linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%">
+                                                <stop offset="0%" stop-color="#f9f9f9" />
+                                                <stop offset="100%" stop-color="#fff" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path fill="url(#logosWhatsappIcon0)"
+                                            d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004" />
+                                        <path fill="url(#logosWhatsappIcon1)"
+                                            d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z" />
+                                        <path fill="#fff"
+                                            d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" />
+                                    </svg>+1 (555) 123-4567
+                                </p>
+                                <p>XXXXXXXX</p>
             </div>
 
-            <div id="candidateTablePagination" class="pagination-container">
-                <div class="pagination">
-                    <button class="pagination-btn prev">‹ Back</button>
-                    <button class="pagination-btn">1</button>
-                    <button class="pagination-btn active">2</button>
-                    <button class="pagination-btn">3</button>
-                    <span class="pagination-ellipsis">...</span>
-                    <button class="pagination-btn">25</button>
-                    <button class="pagination-btn next">Next ›</button>
+            </td>
+            <td class="post_documents">
+                <div class="document_row">
+                    <span class="document green">Document 1</span>
+                    <span class="document yellow">Document 2</span>
+                    <span class="document yellow">Document 3</span>
                 </div>
-                <div class="results-per-page">
-                    <label for="resultsPerPage">Result per page</label>
-                    <select id="resultsPerPage" class="results-select">
-                        <option value="10">10</option>
-                        <option value="25">25</option>
-                        <option value="50" selected>50</option>
-                        <option value="100">100</option>
-                    </select>
+                <div class="document_row">
+                    <span class="document red">Document 4</span>
+                    <span class="document red">Document 5</span>
+                    <span class="document red">Document 6</span>
                 </div>
+                <div class="document_row">
+                    <span class="document red">Document 7</span>
+                    <span class="document gray">Document 8</span>
+                    <span class="document gray">Document 9</span>
+                </div>
+            </td>
+            <td class="post_important-dates">
+                <div>
+                    <label for="tentativeDate">Tentative Date</label>
+                    <input type="date" id="tentativeDate">
+                </div>
+                <div>
+                    <label for="finalDate">Final Date</label>
+                    <input type="date" id="finalDate">
+                </div>
+                <div>
+                    <label for="joiningDate">Joining Date</label>
+                    <input type="date" id="joiningDate">
+                </div>
+                <div>
+                    <label for="returnDate">Return Date</label>
+                    <input type="date" id="returnDate">
+                </div>
+            </td>
+            <td class="post_comments">
+                <div id="commentsList" class="comments-container">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+                <div class="add-comment">
+                    <span class="history-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M5.079 5.069c3.795-3.79 9.965-3.75 13.783.069c3.82 3.82 3.86 9.993.064 13.788s-9.968 3.756-13.788-.064a9.81 9.81 0 0 1-2.798-8.28a.75.75 0 1 1 1.487.203a8.31 8.31 0 0 0 2.371 7.017c3.245 3.244 8.468 3.263 11.668.064c3.199-3.2 3.18-8.423-.064-11.668c-3.243-3.242-8.463-3.263-11.663-.068l.748.003a.75.75 0 1 1-.007 1.5l-2.546-.012a.75.75 0 0 1-.746-.747L3.575 4.33a.75.75 0 1 1 1.5-.008z"
+                                clip-rule="evenodd" />
+                            <path fill="currentColor"
+                                d="M12 7.25a.75.75 0 0 1 .75.75v3.69l2.28 2.28a.75.75 0 1 1-1.06 1.06l-2.427-2.426a1 1 0 0 1-.293-.708V8a.75.75 0 0 1 .75-.75"
+                                opacity="0.5" />
+                        </svg>
+                    </span>
+                    <input type="text" id="newComment" placeholder="Add a comment" />
+                    <button onclick="addComment()">Add</button>
+                </div>
+            </td>
+
+
+            <td class="post_status">
+                <select>
+                    <option value="successful">Successful</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="returned">Returned</option>
+                </select>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <div id="candidateTablePagination" class="pagination-container">
+            <div class="pagination">
+                <button class="pagination-btn prev">‹ Back</button>
+                <button class="pagination-btn">1</button>
+                <button class="pagination-btn active">2</button>
+                <button class="pagination-btn">3</button>
+                <span class="pagination-ellipsis">...</span>
+                <button class="pagination-btn">25</button>
+                <button class="pagination-btn next">Next ›</button>
+            </div>
+            <div class="results-per-page">
+                <label for="resultsPerPage">Result per page</label>
+                <select id="resultsPerPage" class="results-select">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50" selected>50</option>
+                    <option value="100">100</option>
+                </select>
             </div>
         </div>
+    </div>
     </div>
     </div>
     </div>
@@ -640,7 +863,7 @@
 
             if (commentsPopup && commentsCloseButton) {
                 // Use event delegation for opening the comments popup
-                document.addEventListener('click', function(event) {
+                document.addEventListener('click', function (event) {
                     if (event.target.closest('.comments-button')) {
                         commentsPopup.style.display = 'block';
                     }
@@ -664,7 +887,7 @@
             }
             if (addNewTaskPopup && closeAddNewTaskPopup) {
                 // Use event delegation for opening the add new task popup
-                document.addEventListener('click', function(event) {
+                document.addEventListener('click', function (event) {
                     if (event.target.closest('.add-task-button')) {
                         addNewTaskPopup.style.display = 'block';
                     }
@@ -799,19 +1022,7 @@
                 alert("Open Date Picker here");
             });
         });
-        let comments = [{
-            text: 'Lorem ipsum dolor sit amet',
-            admin: 'Admin 1',
-            time: '13:56'
-        }, {
-            text: 'Lorem ipsum dolor sit amet',
-            admin: 'Admin 1',
-            time: '13:56'
-        }, {
-            text: 'Lorem ipsum dolor sit amet',
-            admin: 'Admin 1',
-            time: '13:56'
-        }];
+        let comments = [];
 
         function renderComments() {
             const commentsList = document.getElementById('commentsList');
