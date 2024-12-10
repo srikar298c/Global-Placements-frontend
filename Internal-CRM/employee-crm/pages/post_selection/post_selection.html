@@ -42,13 +42,7 @@
             font-size: 10px;
         }
 
-        #post_selction_candidateTable .candidate-image {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
+       
 
         #post_selction_candidateTable th,
         #post_selction_candidateTable td {
@@ -60,12 +54,84 @@
 
 
         .post_documents {
+padding: 5px;
+}
 
+/* Candidate Details Container */
+.post_candidate-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.5;
+    padding: 8px;
+  
+  
+}
 
-            padding: 5px;
+/* Candidate Image */
+.candidate-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+/* Candidate Text Information */
+.post_candidate-details p {
+    margin: 4px 0;
+    word-wrap: break-word;
+}
 
-        }
+/* Candidate ID and Name Styling */
+.post_candidate-details p:first-of-type {
+    font-weight: bold;
+    color: #005f73;
+}
+
+/* Candidate Email Styling */
+.post_candidate-details p:nth-of-type(2) {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Phone Number Styling */
+.post_candidate-details p:nth-of-type(3) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* WhatsApp Icon */
+.post_candidate-details p:nth-of-type(3) svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Placeholder Data */
+.post_candidate-details p:nth-of-type(4) {
+    font-size: 13px;
+    color: #999;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .post_candidate-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .candidate-image {
+        margin-bottom: 10px;
+    }
+}
+
 
         .document_row {
             gap: 10px;
@@ -256,6 +322,58 @@
         .add-comment button:hover {
             background-color: #004d4d;
         }
+        /* Container styling for the dropdowns */
+.status-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Styling for the dropdowns */
+.status-container select {
+    padding: 6px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.status-container select:focus {
+    border-color: #005f73;
+    outline: none;
+}
+
+/* Offer details container */
+.offer-details {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #005f73;
+    font-weight: 500;
+    gap: 6px;
+    cursor: pointer;
+}
+
+/* Info icon styling */
+.offer-details .info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #eaf7fa;
+    border-radius: 50%;
+}
+
+.offer-details .info-icon svg {
+    fill: #005f73;
+    width: 12px;
+    height: 12px;
+}
+
     </style>
     <div class="sidebar-container ">
         <div class="logo-container">
@@ -648,6 +766,7 @@
                                     </svg>+1 (555) 123-4567
                                 </p>
                                 <p>XXXXXXXX</p>
+                            </td>
             </div>
 
             </td>
@@ -705,15 +824,29 @@
                     <button onclick="addComment()">Add</button>
                 </div>
             </td>
+<td class="post_status">
+    <div class="status-container">
+        <select>
+            <option value="successful">Successful</option>
+            <option value="in-progress">In Progress</option>
+            <option value="returned">Returned</option>
+        </select>
+        <select>
+            <option value="drop">Drop</option>
+            <option value="accepted">Accepted the Offer</option>
+        </select>
+    </div>
+    <div class="offer-details">
+        <span>Offer Details</span>
+        <span class="info-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+                <path fill="#005f73" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm.75 15h-1.5v-6h1.5zm0-8h-1.5V7h1.5z">
+                </path>
+            </svg>
+        </span>
+    </div>
+</td>
 
-
-            <td class="post_status">
-                <select>
-                    <option value="successful">Successful</option>
-                    <option value="in-progress">In Progress</option>
-                    <option value="returned">Returned</option>
-                </select>
-            </td>
             </tr>
             </tbody>
             </table>
