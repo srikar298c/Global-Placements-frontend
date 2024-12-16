@@ -137,9 +137,7 @@
             gap: 10px;
             display: flex;
             justify-content: space-around;
-
             margin-bottom: 10px;
-
         }
 
         /* Styling for the span elements */
@@ -375,47 +373,9 @@
             height: 12px;
         }
         /* Overlay */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
 
-/* Popup Content */
-.popup-content {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  width: 700px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-}
 
-/* Header */
-.popup-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 20px;
-}
 
-.popup-title {
-  font-size: 1.5rem;
-}
-
-.close-popup {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
 
 /* Candidate Name Section */
 .candidate-name-section {
@@ -910,19 +870,9 @@
             </td>
             <td class="post_documents">
                 <div class="document_row">
-                    <span class="document green">Document 1</span>
-                    <span class="document yellow">Document 2</span>
-                    <span class="document yellow">Document 3</span>
-                </div>
-                <div class="document_row">
-                    <span class="document red">Document 4</span>
-                    <span class="document red">Document 5</span>
-                    <span class="document red">Document 6</span>
-                </div>
-                <div class="document_row">
-                    <span class="document red">Document 7</span>
-                    <span class="document gray">Document 8</span>
-                    <span class="document gray">Document 9</span>
+                    <span class="document " ></span>
+                  
+                    <span class="" id="openUploadPopup">...</span>
                 </div>
             </td>
             <td class="post_status">
@@ -1222,16 +1172,15 @@
         </div>
     </div>
 
-<!-- Upload Documents Popup -->
+Upload Documents Popup
 <div class="popup-overlay" id="uploadDocumentsPopup">
     <div class="popup-content">
-        <!-- Header -->
+       
         <div class="popup-header">
             <h2 class="popup-title">UPLOAD DOCUMENTS</h2>
             <button class="close-popup" id="closeUploadPopup">✖</button>
         </div>
 
-        <!-- Candidate Name Input -->
         <div class="candidate-name-section">
             <label for="candidateName">Name of the Candidate</label>
             <input type="text" id="candidateName" placeholder="Name (by default)" class="form-input" />
@@ -1262,7 +1211,7 @@
             <button id="saveDocumentsButton" class="save-button">Save</button>
         </div>
     </div>
-</div>
+</div> -->
 
 
     <script src="../../../../Internal-CRM/scripts.js"></script>
@@ -1409,107 +1358,114 @@
         }
 
 
-        // Elements
-            const uploadPopup = document.getElementById("uploadDocumentsPopup");
-            const closePopupButton = document.getElementById("closeUploadPopup");
-            const addDocumentButton = document.getElementById("addDocumentButton");
-            const documentRows = document.getElementById("documentRows");
+    // Elements
+    const uploadPopup = document.getElementById("uploadDocumentsPopup");
+    const closePopupButton = document.getElementById("closeUploadPopup");
+    const addDocumentButton = document.getElementById("addDocumentButton");
+    const documentRows = document.getElementById("documentRows");
+    const openPopupButton = document.getElementById("openUploadPopup"); // Button to open popup
 
-            // Function to Add New Row
-            function addDocumentRow() {
-                const newRow = document.createElement("tr");
-                newRow.className = "document-row";
-                newRow.innerHTML = `
+    // Function to Add New Row
+    function addDocumentRow() {
+        const newRow = document.createElement("tr");
+        newRow.className = "document-row";
+        newRow.innerHTML = `
     <td>
-      <select class="status-dropdown">
+      <select class="status-dropdown" onchange="updateDropdownColor(this)">
         <option value="completed" class="status-completed">Completed</option>
         <option value="in-progress" class="status-in-progress">In Progress</option>
         <option value="not-started" class="status-not-started">Not Started</option>
       </select>
     </td>
     <td>
-  <input type="text" class="document-name-input" placeholder="Document Name" />
-</td>
-<td>
-  <div class="upload-files-section"></div>
-  <input type="file" class="upload-input" hidden />
-  <button class="upload-button">Choose File</button>
-</td>
-<td>
-  <button class="add-document-button">➕</button>
-  <button class="delete-row-button">🗑️</button>
-</td>
-`;
+      <input type="text" class="document-name-input" placeholder="Document Name" />
+    </td>
+    <td>
+      <div class="upload-files-section"></div>
+      <input type="file" class="upload-input" hidden />
+      <button class="upload-button">Choose File</button>
+    </td>
+    <td>
+      <button class="add-document-button">➕</button>
+      <button class="delete-row-button">🗑️</button>
+    </td>
+    `;
 
-            // Attach Event Listeners
-            const deleteButton = newRow.querySelector(".delete-row-button");
-            const uploadButton = newRow.querySelector(".upload-button");
-            const uploadInput = newRow.querySelector(".upload-input");
-            const uploadFilesSection = newRow.querySelector(".upload-files-section");
-            const addFileButton = newRow.querySelector(".add-document-button");
+        // Attach Event Listeners
+        const deleteButton = newRow.querySelector(".delete-row-button");
+        const uploadButton = newRow.querySelector(".upload-button");
+        const uploadInput = newRow.querySelector(".upload-input");
+        const uploadFilesSection = newRow.querySelector(".upload-files-section");
+        const addFileButton = newRow.querySelector(".add-document-button");
 
-            // Handle File Upload
-            uploadButton.addEventListener("click", () => uploadInput.click());
-            uploadInput.addEventListener("change", (e) => {
-                addUploadedFile(e.target, uploadFilesSection);
-            });
+        // Handle File Upload
+        uploadButton.addEventListener("click", () => uploadInput.click());
+        uploadInput.addEventListener("change", (e) => {
+            addUploadedFile(e.target, uploadFilesSection);
+        });
 
-            // Handle Deletion of Row
-            deleteButton.addEventListener("click", () => newRow.remove());
+        // Handle Deletion of Row
+        deleteButton.addEventListener("click", () => newRow.remove());
 
-            // Add Uploaded File Programmatically
-            addFileButton.addEventListener("click", () => uploadInput.click());
+        // Add Uploaded File Programmatically
+        addFileButton.addEventListener("click", () => uploadInput.click());
 
-            // Append the Row
-            documentRows.appendChild(newRow);
+        // Append the Row
+        documentRows.appendChild(newRow);
+    }
+
+    // Update Dropdown Color Dynamically
+    function updateDropdownColor(select) {
+        select.classList.remove("status-completed", "status-in-progress", "status-not-started");
+        switch (select.value) {
+            case "completed":
+                select.classList.add("status-completed");
+                break;
+            case "in-progress":
+                select.classList.add("status-in-progress");
+                break;
+            case "not-started":
+                select.classList.add("status-not-started");
+                break;
         }
+    }
 
-        // Update Dropdown Color Dynamically
-        function updateDropdownColor(select) {
-            select.classList.remove("status-completed", "status-in-progress", "status-not-started");
-            switch (select.value) {
-                case "completed":
-                    select.classList.add("status-completed");
-                    break;
-                case "in-progress":
-                    select.classList.add("status-in-progress");
-                    break;
-                case "not-started":
-                    select.classList.add("status-not-started");
-                    break;
-            }
-        }
-
-        // Function to Add Uploaded File
-        function addUploadedFile(input, uploadFilesSection) {
-            if (input.files.length > 0) {
-                const fileName = input.files[0].name;
-                const fileItem = document.createElement("div");
-                fileItem.className = "uploaded-file-item";
-                fileItem.innerHTML = `
+    // Function to Add Uploaded File
+    function addUploadedFile(input, uploadFilesSection) {
+        if (input.files.length > 0) {
+            const fileName = input.files[0].name;
+            const fileItem = document.createElement("div");
+            fileItem.className = "uploaded-file-item";
+            fileItem.innerHTML = `
       <span>${fileName}</span>
       <button class="delete-file-button">✖</button>
     `;
 
-                // Delete Uploaded File
-                fileItem.querySelector(".delete-file-button").addEventListener("click", () => {
-                    fileItem.remove();
-                    input.value = ""; // Reset the file input
-                });
-                uploadFilesSection.appendChild(fileItem);
-            }
+            // Delete Uploaded File
+            fileItem.querySelector(".delete-file-button").addEventListener("click", () => {
+                fileItem.remove();
+                input.value = ""; // Reset the file input
+            });
+            uploadFilesSection.appendChild(fileItem);
         }
+    }
 
-        // Close Popup Logic
-        closePopupButton.addEventListener("click", () => {
-            uploadPopup.style.display = "none";
-        });
+    // Open Popup Logic
+    openPopupButton.addEventListener("click", () => {
+        uploadPopup.style.display = "block"; // Display popup
+    });
 
-        // Add New Row on Button Click
-        addDocumentButton.addEventListener("click", addDocumentRow);
+    // Close Popup Logic
+    closePopupButton.addEventListener("click", () => {
+        uploadPopup.style.display = "none";
+    });
 
-        // Initial Setup: Add a Default Row
-        addDocumentRow();
+    // Add New Row on Button Click
+    addDocumentButton.addEventListener("click", addDocumentRow);
+
+    // Initial Setup: Add a Default Row
+    addDocumentRow();
+
 
 
         let comments = [];
