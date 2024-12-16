@@ -5275,3 +5275,85 @@ margin-bottom: 20px;
     font-size: 10px; 
     color: #333; 
 }
+
+
+.offer-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.client-name-section {
+    margin-bottom: 20px;
+}
+.offer-status.accepted-status {
+    background-color: #a5e5a5;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.offer-heading-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+.heading-row {
+    display: flex;
+    margin-bottom: 10px;
+    gap:10px;
+    justify-content: space-evenly;
+
+}
+
+.heading-title {
+    flex: 0 0 25%; /* Fixed width for titles */
+    font-weight: bold;
+   
+}
+
+.heading-text {
+    flex: 1; /* Take remaining space */
+    font-size: 14px;
+    color: #555;
+}
+
+.offer-heading-list li {
+    margin-bottom: 15px;
+    
+}
+
+.form-row-offer-details {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.form-group-offer-details.input-label {
+    width:30%;
+}
+
+.form-group-offer-details.input-details {
+  width:70%;
+}
+
+.form-group-offer-details label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group-offer-details input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.rejected-status {
+    color: red;
+    font-weight: bold;
+}
+
+.reject-offer-content {
+    border: 2px solid red;
+}

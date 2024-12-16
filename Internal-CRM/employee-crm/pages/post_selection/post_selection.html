@@ -42,7 +42,7 @@
             font-size: 10px;
         }
 
-       
+
 
         #post_selction_candidateTable th,
         #post_selction_candidateTable td {
@@ -54,83 +54,83 @@
 
 
         .post_documents {
-padding: 5px;
-}
+            padding: 5px;
+        }
 
-/* Candidate Details Container */
-.post_candidate-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    color: #333;
-    line-height: 1.5;
-    padding: 8px;
-  
-  
-}
+        /* Candidate Details Container */
+        .post_candidate-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #333;
+            line-height: 1.5;
+            padding: 8px;
 
-/* Candidate Image */
-.candidate-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-/* Candidate Text Information */
-.post_candidate-details p {
-    margin: 4px 0;
-    word-wrap: break-word;
-}
+        }
 
-/* Candidate ID and Name Styling */
-.post_candidate-details p:first-of-type {
-    font-weight: bold;
-    color: #005f73;
-}
+        /* Candidate Image */
+        .candidate-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-/* Candidate Email Styling */
-.post_candidate-details p:nth-of-type(2) {
-    font-size: 13px;
-    color: #666;
-}
+        /* Candidate Text Information */
+        .post_candidate-details p {
+            margin: 4px 0;
+            word-wrap: break-word;
+        }
 
-/* Phone Number Styling */
-.post_candidate-details p:nth-of-type(3) {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+        /* Candidate ID and Name Styling */
+        .post_candidate-details p:first-of-type {
+            font-weight: bold;
+            color: #005f73;
+        }
 
-/* WhatsApp Icon */
-.post_candidate-details p:nth-of-type(3) svg {
-    width: 20px;
-    height: 20px;
-}
+        /* Candidate Email Styling */
+        .post_candidate-details p:nth-of-type(2) {
+            font-size: 13px;
+            color: #666;
+        }
 
-/* Placeholder Data */
-.post_candidate-details p:nth-of-type(4) {
-    font-size: 13px;
-    color: #999;
-    font-style: italic;
-}
+        /* Phone Number Styling */
+        .post_candidate-details p:nth-of-type(3) {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .post_candidate-details {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+        /* WhatsApp Icon */
+        .post_candidate-details p:nth-of-type(3) svg {
+            width: 20px;
+            height: 20px;
+        }
 
-    .candidate-image {
-        margin-bottom: 10px;
-    }
-}
+        /* Placeholder Data */
+        .post_candidate-details p:nth-of-type(4) {
+            font-size: 13px;
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .post_candidate-details {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .candidate-image {
+                margin-bottom: 10px;
+            }
+        }
 
 
         .document_row {
@@ -322,56 +322,194 @@ padding: 5px;
         .add-comment button:hover {
             background-color: #004d4d;
         }
+
         /* Container styling for the dropdowns */
-.status-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+        .status-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Styling for the dropdowns */
+        .status-container select {
+            padding: 6px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .status-container select:focus {
+            border-color: #005f73;
+            outline: none;
+        }
+
+        /* Offer details container */
+        .offer-details {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #005f73;
+            font-weight: 500;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        /* Info icon styling */
+        .offer-details .info-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background-color: #eaf7fa;
+            border-radius: 50%;
+        }
+
+        .offer-details .info-icon svg {
+            fill: #005f73;
+            width: 12px;
+            height: 12px;
+        }
+        /* Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-/* Styling for the dropdowns */
-.status-container select {
-    padding: 6px;
-    font-size: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background-color: #f9f9f9;
-    cursor: pointer;
-    transition: border-color 0.3s;
+/* Popup Content */
+.popup-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 700px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.status-container select:focus {
-    border-color: #005f73;
-    outline: none;
+/* Header */
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
 }
 
-/* Offer details container */
-.offer-details {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    font-size: 12px;
-    color: #005f73;
-    font-weight: 500;
-    gap: 6px;
-    cursor: pointer;
+.popup-title {
+  font-size: 1.5rem;
 }
 
-/* Info icon styling */
-.offer-details .info-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    background-color: #eaf7fa;
-    border-radius: 50%;
+.close-popup {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
-.offer-details .info-icon svg {
-    fill: #005f73;
-    width: 12px;
-    height: 12px;
+/* Candidate Name Section */
+.candidate-name-section {
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Table */
+.upload-documents-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.upload-documents-table th,
+.upload-documents-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.upload-documents-table th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+.document-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.document-item span {
+  margin-right: 10px;
+}
+
+.delete-document {
+  cursor: pointer;
+  color: red;
+  font-size: 1rem;
+}
+
+.document-name-input,
+.upload-input,
+.status-dropdown {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+/* Add Document */
+.add-document-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#addDocumentButton {
+  background: none;
+  color: teal;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Save Button */
+.popup-footer {
+  text-align: center;
+}
+.status-dropdown option[value="completed"] {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.status-dropdown option[value="in-progress"] {
+  background-color: #ffc107; /* Yellow */
+  color: black;
+}
+
+.status-dropdown option[value="not-started"] {
+  background-color: #dc3545; /* Red */
+  color: white;
+}
+.save-button {
+  background-color: teal;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
     </style>
@@ -736,39 +874,39 @@ padding: 5px;
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="post_candidate-details">
+                    </div>
+                    
+                    <tr>
+                        <td class="post_candidate-details">
 
-                                <img src="https://via.placeholder.com/50" class="candidate-image"> CAND001
+                            <img src="https://via.placeholder.com/50" class="candidate-image"> CAND001
 
-                                <!-- <p>1234567</p> -->
-                                <p>NameNameNameName</p>
-                                <p>candidateemail@gmail.com</p>
-                                <p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.99em" height="2em"
-                                        viewBox="0 0 256 258">
-                                        <defs>
-                                            <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
-                                                <stop offset="0%" stop-color="#1faf38" />
-                                                <stop offset="100%" stop-color="#60d669" />
-                                            </linearGradient>
-                                            <linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%">
-                                                <stop offset="0%" stop-color="#f9f9f9" />
-                                                <stop offset="100%" stop-color="#fff" />
-                                            </linearGradient>
-                                        </defs>
-                                        <path fill="url(#logosWhatsappIcon0)"
-                                            d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004" />
-                                        <path fill="url(#logosWhatsappIcon1)"
-                                            d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z" />
-                                        <path fill="#fff"
-                                            d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" />
-                                    </svg>+1 (555) 123-4567
-                                </p>
-                                <p>XXXXXXXX</p>
-                            </td>
-            </div>
-
+                            <!-- <p>1234567</p> -->
+                            <p>NameNameNameName</p>
+                            <p>candidateemail@gmail.com</p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.99em" height="2em"
+                                    viewBox="0 0 256 258">
+                                    <defs>
+                                        <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#1faf38" />
+                                            <stop offset="100%" stop-color="#60d669" />
+                                        </linearGradient>
+                                        <linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#f9f9f9" />
+                                            <stop offset="100%" stop-color="#fff" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="url(#logosWhatsappIcon0)"
+                                        d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004" />
+                                    <path fill="url(#logosWhatsappIcon1)"
+                                        d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z" />
+                                    <path fill="#fff"
+                                        d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" />
+                                </svg>+1 (555) 123-4567
+                            </p>
+                            <p>XXXXXXXX</p>
+                        </td>
             </td>
             <td class="post_documents">
                 <div class="document_row">
@@ -785,6 +923,48 @@ padding: 5px;
                     <span class="document red">Document 7</span>
                     <span class="document gray">Document 8</span>
                     <span class="document gray">Document 9</span>
+                </div>
+            </td>
+            <td class="post_status">
+                <div class="status-container">
+                    <select>
+                        <option value="successful">Successful</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="returned">Returned</option>
+                    </select>
+                    <select>
+                        <option value="drop">Drop</option>
+                        <option value="accepted">Accepted the Offer</option>
+                    </select>
+                    <select>
+                        <option value="">Dataflow status</option>
+                        <option value="">Accepted </option>
+                    </select>
+                    <select>
+                        <option value="drop">Licensing status</option>
+                        <option value="accepted">Accepted </option>
+                    </select>
+                </div>
+                <div class="offer-details accepted-offer-details-button  ">
+                    <span>Offer Details</span>
+                    <span class="info-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+                            <path fill="#005f73"
+                                d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm.75 15h-1.5v-6h1.5zm0-8h-1.5V7h1.5z">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+            </td>
+
+            <td class="post_comments">
+                <div id="commentsList" class="comments-container">
+                    <!-- Comments will be dynamically added here -->
+                </div>
+                <div class="add-comment">
+
+                    <input type="text" id="newComment" placeholder="Add a comment" />
+                    <button onclick="addComment()">Add</button>
                 </div>
             </td>
             <td class="post_important-dates">
@@ -805,47 +985,117 @@ padding: 5px;
                     <input type="date" id="returnDate">
                 </div>
             </td>
+
+            </tr>
+                    <tr>
+                        <td class="post_candidate-details">
+
+                            <img src="https://via.placeholder.com/50" class="candidate-image"> CAND001
+
+                            <!-- <p>1234567</p> -->
+                            <p>NameNameNameName</p>
+                            <p>candidateemail@gmail.com</p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.99em" height="2em"
+                                    viewBox="0 0 256 258">
+                                    <defs>
+                                        <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#1faf38" />
+                                            <stop offset="100%" stop-color="#60d669" />
+                                        </linearGradient>
+                                        <linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#f9f9f9" />
+                                            <stop offset="100%" stop-color="#fff" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="url(#logosWhatsappIcon0)"
+                                        d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004" />
+                                    <path fill="url(#logosWhatsappIcon1)"
+                                        d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z" />
+                                    <path fill="#fff"
+                                        d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" />
+                                </svg>+1 (555) 123-4567
+                            </p>
+                            <p>XXXXXXXX</p>
+                        </td>
+            </td>
+            <td class="post_documents">
+                <div class="document_row">
+                    <span class="document green">Document 1</span>
+                    <span class="document yellow">Document 2</span>
+                    <span class="document yellow">Document 3</span>
+                </div>
+                <div class="document_row">
+                    <span class="document red">Document 4</span>
+                    <span class="document red">Document 5</span>
+                    <span class="document red">Document 6</span>
+                </div>
+                <div class="document_row">
+                    <span class="document red">Document 7</span>
+                    <span class="document gray">Document 8</span>
+                    <span class="document gray">Document 9</span>
+                </div>
+            </td>
+            <td class="post_status">
+                <div class="status-container">
+                    <select>
+                        <option value="successful">Successful</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="returned">Returned</option>
+                    </select>
+                    <select>
+                        <option value="drop">Drop</option>
+                        <option value="accepted">Accepted the Offer</option>
+                    </select>
+                    <select>
+                        <option value="">Dataflow status</option>
+                        <option value="">Accepted </option>
+                    </select>
+                    <select>
+                        <option value="drop">Licensing status</option>
+                        <option value="accepted">Accepted </option>
+                    </select>
+                </div>
+                <div class="offer-details rejected-offer-details-button  ">
+                    <span>Offer Details</span>
+                    <span class="info-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+                            <path fill="#005f73"
+                                d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm.75 15h-1.5v-6h1.5zm0-8h-1.5V7h1.5z">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+            </td>
+
             <td class="post_comments">
                 <div id="commentsList" class="comments-container">
                     <!-- Comments will be dynamically added here -->
                 </div>
                 <div class="add-comment">
-                    <span class="history-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd"
-                                d="M5.079 5.069c3.795-3.79 9.965-3.75 13.783.069c3.82 3.82 3.86 9.993.064 13.788s-9.968 3.756-13.788-.064a9.81 9.81 0 0 1-2.798-8.28a.75.75 0 1 1 1.487.203a8.31 8.31 0 0 0 2.371 7.017c3.245 3.244 8.468 3.263 11.668.064c3.199-3.2 3.18-8.423-.064-11.668c-3.243-3.242-8.463-3.263-11.663-.068l.748.003a.75.75 0 1 1-.007 1.5l-2.546-.012a.75.75 0 0 1-.746-.747L3.575 4.33a.75.75 0 1 1 1.5-.008z"
-                                clip-rule="evenodd" />
-                            <path fill="currentColor"
-                                d="M12 7.25a.75.75 0 0 1 .75.75v3.69l2.28 2.28a.75.75 0 1 1-1.06 1.06l-2.427-2.426a1 1 0 0 1-.293-.708V8a.75.75 0 0 1 .75-.75"
-                                opacity="0.5" />
-                        </svg>
-                    </span>
+
                     <input type="text" id="newComment" placeholder="Add a comment" />
                     <button onclick="addComment()">Add</button>
                 </div>
             </td>
-<td class="post_status">
-    <div class="status-container">
-        <select>
-            <option value="successful">Successful</option>
-            <option value="in-progress">In Progress</option>
-            <option value="returned">Returned</option>
-        </select>
-        <select>
-            <option value="drop">Drop</option>
-            <option value="accepted">Accepted the Offer</option>
-        </select>
-    </div>
-    <div class="offer-details">
-        <span>Offer Details</span>
-        <span class="info-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-                <path fill="#005f73" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm.75 15h-1.5v-6h1.5zm0-8h-1.5V7h1.5z">
-                </path>
-            </svg>
-        </span>
-    </div>
-</td>
+            <td class="post_important-dates">
+                <div>
+                    <label for="tentativeDate">Tentative Date</label>
+                    <input type="date" id="tentativeDate">
+                </div>
+                <div>
+                    <label for="finalDate">Final Date</label>
+                    <input type="date" id="finalDate">
+                </div>
+                <div>
+                    <label for="joiningDate">Joining Date</label>
+                    <input type="date" id="joiningDate">
+                </div>
+                <div>
+                    <label for="returnDate">Return Date</label>
+                    <input type="date" id="returnDate">
+                </div>
+            </td>
 
             </tr>
             </tbody>
@@ -873,288 +1123,395 @@ padding: 5px;
             </div>
         </div>
     </div>
-    </div>
-    </div>
-    </div>
-    <div class="popup-overlay" id="reschedulePop">
-        <div class="popup-content reschedule-content">
+   
+
+
+    <div class="popup-overlay" id="acceptedOfferDetailsPopupOverlay">
+        <div class="popup-content add-new-reminder-content">
             <div class="popup-header">
-                <h2 class="popup-title">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C7.522 2 3.774 4.943 2.5 9H5"
-                            stroke="#005F6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M12 8V12L14 14M2 12C2 12.3367 2.015 12.67 2.045 13M9 22C8.65988 21.8873 8.32607 21.7565 8 21.608M3.21 17C3.01636 16.6255 2.84441 16.2402 2.695 15.846M4.831 19.306C5.13767 19.636 5.46333 19.9437 5.808 20.229"
-                            stroke="#005F6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg> RESCHEDULE
-                </h2>
-                <button class="popup-close" id="rescheduleClosePopup">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em">
-                        <path fill="currentColor"
-                            d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z" />
-                    </svg>
-                </button>
+                <h2 class="popup-title">OFFER DETAILS</h2>
+                <button class="popup-close" id="closeAcceptedOfferPopup">&#10005;</button>
             </div>
-
             <div class="popup-body">
-                <div class="form-group label-input">
-                    <label for="candidateName">Name of the Candidate</label>
-                    <input type="text" id="candidateName" placeholder="Name">
+                <!-- Candidate and Offer Status -->
+                <div class="offer-details-header">
+                    <p class="candidate-name"><strong>Name Of the Candidate</strong></p>
+                    <span class="offer-status accepted-status">Accepted the Offer</span>
                 </div>
 
-                <div class="form-group label-input">
-                    <label for="taskAssignee">Assign this task to</label>
-                    <select id="taskAssignee">
-                        <option>Choose the Employees</option>
-                        <!-- Add other options here -->
-                    </select>
+                <!-- Client Name -->
+                <div class="client-name-section">
+                    <p class="client-name"><strong>Client Name</strong></p>
                 </div>
 
-                <div class="form-group label-input">
-                    <label for="taskDescription">Task Description</label>
-                    <input type="text" id="taskDescription" placeholder="Status">
+                <!-- Heading Rows Section -->
+                <div class="offer-description">
+                    <ul class="offer-heading-list" id="offerHeadingList">
+                        <li>
+
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="form-group label-input">
-                    <label for="dueDate">Due Date</label>
-                    <input type="text" id="dueDate" placeholder="Choose the Date">
-                    <span class="date-picker-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z" />
-                        </svg>
-                    </span>
+                <!-- Additional Fields -->
+                <div class="additional-fields">
+                    <div class="form-row-offer-details">
+                        <div class="form-group-offer-details input-label">
+                            <label for="labelName">Label Name</label>
+                            <input type="text" id="labelName" placeholder="Heading 4">
+                        </div>
+                        <div class="form-group-offer-details input-details">
+                            <label for="details">Details</label>
+                            <input type="text" id="details" placeholder="Description">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group label-input">
-                    <label for="rescheduleDate">Reschedule Date</label>
-                    <input type="text" id="rescheduleDate" placeholder="Choose the Date">
-                    <span class="date-picker-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z" />
-                        </svg>
-                    </span>
-                </div>
-
+                <!-- Save Button -->
                 <div class="form-group">
-                    <button class="confirm-button">Confirm</button>
+                    <button class="confirm-button" id="saveButton">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reject Offer Popup -->
+    <div class="popup-overlay" id="rejectedOfferDetailsPopupOverlay">
+        <div class="popup-content reject-offer-content">
+            <div class="popup-header">
+                <h2 class="popup-title">REJECT OFFER DETAILS</h2>
+                <button class="popup-close" id="closeRejectedOfferPopup">&#10005;</button>
+            </div>
+            <div class="popup-body">
+                <!-- Candidate and Offer Status -->
+                <div class="offer-details-header">
+                    <p class="candidate-name"><strong>Name Of the Candidate</strong></p>
+                    <span class="offer-status rejected-status">Rejected the Offer</span>
+                </div>
+
+                <!-- Client Name -->
+                <div class="client-name-section">
+                    <p class="client-name"><strong>Client Name</strong></p>
+                </div>
+
+                <!-- Heading Rows Section -->
+                <div class="offer-description">
+                    <ul class="offer-heading-list" id="rejectedOfferHeadingList">
+                        <!-- Rejected Offer details will appear here -->
+                    </ul>
+                </div>
+
+                <!-- Additional Fields -->
+                <div class="additional-fields">
+                    <div class="form-row-offer-details">
+                        <div class="form-group-offer-details input-label">
+                            <label for="rejectedLabelName">Label Name</label>
+                            <input type="text" id="rejectedLabelName" placeholder="Heading 4">
+                        </div>
+                        <div class="form-group-offer-details input-details">
+                            <label for="rejectedDetails">Details</label>
+                            <input type="text" id="rejectedDetails" placeholder="Description">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Save Button -->
+                <div class="form-group">
+                    <button class="confirm-button" id="saveRejectedOfferButton">Save</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="popup-overlay" id="addNewTaskPopupOverlay">
-        <div class="popup-content">
-            <div class="popup-header">
-                <h2 class="popup-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-                    </svg> ADD NEW TASK
-                </h2>
-                <button class="popup-close" id="closeAddNewTaskPopup">&#10005;</button>
-            </div>
-            <div class="popup-body">
-                <div class="form-group">
-                    <label for="candidateName">Name of the Candidate</label>
-                    <input type="text" id="candidateName" placeholder="Name">
-                </div>
-                <div class="form-group">
-                    <label for="taskAssignee">Assign this task to</label>
-                    <select id="taskAssignee">
-                        <option value="">Choose the Employees</option>
-                        <!-- Add other options here -->
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="taskDescription">Task Description</label>
-                    <textarea id="taskDescription" placeholder="Status"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="dueDate">Due Date</label>
-                    <input type="text" id="dueDate" placeholder="Choose the Date" readonly>
-                    <span class="date-picker-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z" />
-                        </svg>
-                    </span>
-                </div>
-                <button class="confirm-button">Confirm</button>
-            </div>
+<!-- Upload Documents Popup -->
+<div class="popup-overlay" id="uploadDocumentsPopup">
+    <div class="popup-content">
+        <!-- Header -->
+        <div class="popup-header">
+            <h2 class="popup-title">UPLOAD DOCUMENTS</h2>
+            <button class="close-popup" id="closeUploadPopup">✖</button>
+        </div>
+
+        <!-- Candidate Name Input -->
+        <div class="candidate-name-section">
+            <label for="candidateName">Name of the Candidate</label>
+            <input type="text" id="candidateName" placeholder="Name (by default)" class="form-input" />
+        </div>
+
+        <!-- Document Upload Table -->
+        <table class="upload-documents-table">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Document Name</th>
+                    <th>Uploaded Files</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="documentRows">
+                <!-- Default Row -->
+            </tbody>
+        </table>
+
+        <!-- Add Other Documents -->
+        <div class="add-document-section">
+            <button id="addDocumentButton">+ Add Other Documents</button>
+        </div>
+
+        <!-- Save Button -->
+        <div class="popup-footer">
+            <button id="saveDocumentsButton" class="save-button">Save</button>
         </div>
     </div>
+</div>
+
 
     <script src="../../../../Internal-CRM/scripts.js"></script>
     <script>
-        function setupPopups() {
-            const commentsPopup = document.getElementById('commentsPopupOverlay');
-            const commentsCloseButton = document.getElementById('closeCommentsPopup');
-            const addNewTaskPopup = document.getElementById('addNewTaskPopupOverlay');
-            const closeAddNewTaskPopup = document.getElementById('closeAddNewTaskPopup');
-            const confirmButton = addNewTaskPopup.querySelector('.confirm-button');
+        // Popup Elements
+        const offerDetailsPopupOverlay = document.getElementById('acceptedOfferDetailsPopupOverlay');
+        const offerDetailsPopupCloseButton = document.getElementById('closeAcceptedOfferPopup');
 
-            if (commentsPopup && commentsCloseButton) {
-                // Use event delegation for opening the comments popup
-                document.addEventListener('click', function (event) {
-                    if (event.target.closest('.comments-button')) {
-                        commentsPopup.style.display = 'block';
-                    }
-                });
-
-                // Close button functionality
-                commentsCloseButton.addEventListener('click', () => commentsPopup.style.display = 'none');
-
-                // Close popup when clicking outside
-                commentsPopup.addEventListener('click', (event) => {
-                    if (event.target === commentsPopup) commentsPopup.style.display = 'none';
-                });
-
-                // Close popup when clicking the "Close" button in the footer
-                const closeButton = commentsPopup.querySelector('.close-button');
-                if (closeButton) {
-                    closeButton.addEventListener('click', () => commentsPopup.style.display = 'none');
+        // Check if popup elements exist
+        if (offerDetailsPopupOverlay && offerDetailsPopupCloseButton) {
+            // Open Popup Event
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.accepted-offer-details-button')) {
+                    offerDetailsPopupOverlay.style.display = 'block';
                 }
-            } else {
-                console.error('Comments popup elements not found');
-            }
-            if (addNewTaskPopup && closeAddNewTaskPopup) {
-                // Use event delegation for opening the add new task popup
-                document.addEventListener('click', function (event) {
-                    if (event.target.closest('.add-task-button')) {
-                        addNewTaskPopup.style.display = 'block';
-                    }
-                });
+            });
 
-                // Close button functionality
-                closeAddNewTaskPopup.addEventListener('click', () => addNewTaskPopup.style.display = 'none');
+            // Close Popup Event
+            offerDetailsPopupCloseButton.addEventListener('click', () => {
+                offerDetailsPopupOverlay.style.display = 'none';
+            });
 
-                // Close popup when clicking outside
-                addNewTaskPopup.addEventListener('click', (event) => {
-                    if (event.target === addNewTaskPopup) addNewTaskPopup.style.display = 'none';
-                });
-
-                // Close popup when clicking the "Close" button in the footer
-                const footerCloseButton = addNewTaskPopup.querySelector('.footer-close-button');
-                if (footerCloseButton) {
-                    footerCloseButton.addEventListener('click', () => addNewTaskPopup.style.display = 'none');
+            // Close Popup When Clicking Outside the Content
+            offerDetailsPopupOverlay.addEventListener('click', (event) => {
+                if (event.target === offerDetailsPopupOverlay) {
+                    offerDetailsPopupOverlay.style.display = 'none';
                 }
-            } else {
-                console.error('Add new task popup elements not found');
-            }
-
+            });
+        } else {
+            console.error('Offer Details Popup elements not found.');
         }
 
-        // Call the setup function when the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', setupPopups);
-        document.addEventListener('DOMContentLoaded', () => {
-            const reschedulePop = document.getElementById('reschedulePop');
-            const rescheduleClosePopup = document.getElementById('rescheduleClosePopup');
-            const confirmButton = document.querySelector('.confirm-button');
+        // Input and Save Button Elements
+        const saveOfferDetailsButton = document.querySelector('.confirm-button'); // Save Button
+        const offerDetailsHeadingList = document.querySelector('.offer-heading-list'); // List container
 
-            // Open Popup - Assuming there's a button with an ID 'openReschedulePopup'
-            document.getElementById('openReschedulePopup').addEventListener('click', () => {
-                reschedulePop.style.display = 'block';
-            });
+        // Ensure all elements exist
+        if (saveOfferDetailsButton && offerDetailsHeadingList) {
+            saveOfferDetailsButton.addEventListener('click', function () {
+                // Get input values
+                const inputLabelName = document.getElementById('labelName').value.trim();
+                const inputDetails = document.getElementById('details').value.trim();
 
-            // Close Popup functionality
-            rescheduleClosePopup.addEventListener('click', () => {
-                reschedulePop.style.display = 'none';
-            });
-
-            // Close popup when clicking outside of the popup content
-            reschedulePop.addEventListener('click', (event) => {
-                if (event.target === reschedulePop) {
-                    reschedulePop.style.display = 'none';
-                }
-            });
-
-            // Confirm button action
-            confirmButton.addEventListener('click', (event) => {
-                event.preventDefault();
-                // Process the form here
-                console.log('Processing form data...');
-                // Optionally, close the popup after processing
-                reschedulePop.style.display = 'none';
-            });
-
-            // Optional: Implement date pickers for date inputs
-            const dateInputs = reschedulePop.querySelectorAll('input[type="text"]');
-            dateInputs.forEach(input => {
-                // Assuming you are using a date picker library like Pikaday or flatpickr
-                new Pikaday({
-                    field: input
-                });
-            });
-        });
-
-        // Remember to include the library for the date picker in your HTML if you are using one.
-        document.addEventListener('DOMContentLoaded', () => {
-            const addNewTaskPopupOverlay = document.getElementById('addNewTaskPopupOverlay');
-            const closeAddNewTaskPopup = document.getElementById('closeAddNewTaskPopup');
-            const confirmButton = document.querySelector('.confirm-button');
-
-            // Function to open the popup
-            function openPopup() {
-                addNewTaskPopupOverlay.style.display = 'block';
-            }
-
-            // Function to close the popup
-            function closePopup() {
-                addNewTaskPopupOverlay.style.display = 'none';
-            }
-
-            // Close popup when the close button is clicked
-            closeAddNewTaskPopup.addEventListener('click', () => {
-                closePopup();
-            });
-
-            // Optional: Close popup when clicking outside the popup content
-            addNewTaskPopupOverlay.addEventListener('click', (event) => {
-                if (event.target === addNewTaskPopupOverlay) {
-                    closePopup();
-                }
-            });
-
-            // Handle the form submission
-            confirmButton.addEventListener('click', (event) => {
-                event.preventDefault(); // Prevents the default form submission
-
-                // Get the form data
-                const candidateName = document.getElementById('candidateName').value;
-                const taskAssignee = document.getElementById('taskAssignee').value;
-                const taskDescription = document.getElementById('taskDescription').value;
-                const dueDate = document.getElementById('dueDate').value;
-
-                // Simple validation (You can expand this)
-                if (!candidateName || !taskAssignee || !taskDescription || !dueDate) {
-                    alert('Please fill out all fields');
+                // Validate Inputs
+                if (inputLabelName === '' || inputDetails === '') {
+                    alert('Please fill in both Label Name and Details.');
                     return;
                 }
 
-                // Process the form data (Example: you can send the data to the server or display it)
-                console.log({
-                    candidateName,
-                    taskAssignee,
-                    taskDescription,
-                    dueDate
+                // Create New List Item
+                const newHeadingItem = document.createElement('li');
+                newHeadingItem.innerHTML = `
+            <div class="heading-row">
+                <p class="heading-title">${inputLabelName}:</p>
+                <p class="heading-text">${inputDetails}</p>
+            </div>
+        `;
+
+                // Append New Item to the List
+                offerDetailsHeadingList.appendChild(newHeadingItem);
+
+                // Clear Input Fields
+                document.getElementById('labelName').value = '';
+                document.getElementById('details').value = '';
+
+                // Make List Scrollable if More than 2 Items
+                if (offerDetailsHeadingList.children.length > 2) {
+                    offerDetailsHeadingList.style.maxHeight = '200px'; // Adjust as needed
+                    offerDetailsHeadingList.style.overflowY = 'auto';
+                }
+            });
+        } else {
+            console.error('Save button or Heading List not found.');
+        }
+        // Popup Elements for Reject Offer
+        const rejectedOfferDetailsPopupOverlay = document.getElementById('rejectedOfferDetailsPopupOverlay');
+        const rejectedOfferDetailsCloseButton = document.getElementById('closeRejectedOfferPopup');
+
+        // Check if popup elements exist
+        if (rejectedOfferDetailsPopupOverlay && rejectedOfferDetailsCloseButton) {
+            // Open Popup Event
+            document.addEventListener('click', function (event) {
+                if (event.target.closest('.rejected-offer-details-button')) {
+                    rejectedOfferDetailsPopupOverlay.style.display = 'block';
+                }
+            });
+
+            // Close Popup Event
+            rejectedOfferDetailsCloseButton.addEventListener('click', () => {
+                rejectedOfferDetailsPopupOverlay.style.display = 'none';
+            });
+
+            // Close Popup When Clicking Outside the Content
+            rejectedOfferDetailsPopupOverlay.addEventListener('click', (event) => {
+                if (event.target === rejectedOfferDetailsPopupOverlay) {
+                    rejectedOfferDetailsPopupOverlay.style.display = 'none';
+                }
+            });
+        } else {
+            console.error('Reject Offer Popup elements not found.');
+        }
+
+        // Input and Save Button Elements
+        const saveRejectedOfferButton = document.getElementById('saveRejectedOfferButton'); // Save Button
+        const rejectedOfferHeadingList = document.getElementById('rejectedOfferHeadingList'); // List container
+
+        // Ensure all elements exist
+        if (saveRejectedOfferButton && rejectedOfferHeadingList) {
+            saveRejectedOfferButton.addEventListener('click', function () {
+                // Get input values
+                const rejectedLabelName = document.getElementById('rejectedLabelName').value.trim();
+                const rejectedDetails = document.getElementById('rejectedDetails').value.trim();
+
+                // Validate Inputs
+                if (rejectedLabelName === '' || rejectedDetails === '') {
+                    alert('Please fill in both Label Name and Details.');
+                    return;
+                }
+
+                // Create New List Item
+                const newRejectedHeadingItem = document.createElement('li');
+                newRejectedHeadingItem.innerHTML = `
+            <div class="heading-row">
+                <p class="heading-title">${rejectedLabelName}:</p>
+                <p class="heading-text">${rejectedDetails}</p>
+            </div>
+        `;
+
+                // Append New Item to the List
+                rejectedOfferHeadingList.appendChild(newRejectedHeadingItem);
+
+                // Clear Input Fields
+                document.getElementById('rejectedLabelName').value = '';
+                document.getElementById('rejectedDetails').value = '';
+
+                // Make List Scrollable if More than 2 Items
+                if (rejectedOfferHeadingList.children.length > 2) {
+                    rejectedOfferHeadingList.style.maxHeight = '200px'; // Adjust as needed
+                    rejectedOfferHeadingList.style.overflowY = 'auto';
+                }
+            });
+        } else {
+            console.error('Save button or Rejected Heading List not found.');
+        }
+
+
+        // Elements
+            const uploadPopup = document.getElementById("uploadDocumentsPopup");
+            const closePopupButton = document.getElementById("closeUploadPopup");
+            const addDocumentButton = document.getElementById("addDocumentButton");
+            const documentRows = document.getElementById("documentRows");
+
+            // Function to Add New Row
+            function addDocumentRow() {
+                const newRow = document.createElement("tr");
+                newRow.className = "document-row";
+                newRow.innerHTML = `
+    <td>
+      <select class="status-dropdown">
+        <option value="completed" class="status-completed">Completed</option>
+        <option value="in-progress" class="status-in-progress">In Progress</option>
+        <option value="not-started" class="status-not-started">Not Started</option>
+      </select>
+    </td>
+    <td>
+  <input type="text" class="document-name-input" placeholder="Document Name" />
+</td>
+<td>
+  <div class="upload-files-section"></div>
+  <input type="file" class="upload-input" hidden />
+  <button class="upload-button">Choose File</button>
+</td>
+<td>
+  <button class="add-document-button">➕</button>
+  <button class="delete-row-button">🗑️</button>
+</td>
+`;
+
+            // Attach Event Listeners
+            const deleteButton = newRow.querySelector(".delete-row-button");
+            const uploadButton = newRow.querySelector(".upload-button");
+            const uploadInput = newRow.querySelector(".upload-input");
+            const uploadFilesSection = newRow.querySelector(".upload-files-section");
+            const addFileButton = newRow.querySelector(".add-document-button");
+
+            // Handle File Upload
+            uploadButton.addEventListener("click", () => uploadInput.click());
+            uploadInput.addEventListener("change", (e) => {
+                addUploadedFile(e.target, uploadFilesSection);
+            });
+
+            // Handle Deletion of Row
+            deleteButton.addEventListener("click", () => newRow.remove());
+
+            // Add Uploaded File Programmatically
+            addFileButton.addEventListener("click", () => uploadInput.click());
+
+            // Append the Row
+            documentRows.appendChild(newRow);
+        }
+
+        // Update Dropdown Color Dynamically
+        function updateDropdownColor(select) {
+            select.classList.remove("status-completed", "status-in-progress", "status-not-started");
+            switch (select.value) {
+                case "completed":
+                    select.classList.add("status-completed");
+                    break;
+                case "in-progress":
+                    select.classList.add("status-in-progress");
+                    break;
+                case "not-started":
+                    select.classList.add("status-not-started");
+                    break;
+            }
+        }
+
+        // Function to Add Uploaded File
+        function addUploadedFile(input, uploadFilesSection) {
+            if (input.files.length > 0) {
+                const fileName = input.files[0].name;
+                const fileItem = document.createElement("div");
+                fileItem.className = "uploaded-file-item";
+                fileItem.innerHTML = `
+      <span>${fileName}</span>
+      <button class="delete-file-button">✖</button>
+    `;
+
+                // Delete Uploaded File
+                fileItem.querySelector(".delete-file-button").addEventListener("click", () => {
+                    fileItem.remove();
+                    input.value = ""; // Reset the file input
                 });
+                uploadFilesSection.appendChild(fileItem);
+            }
+        }
 
-                // After processing, close the popup
-                closePopup();
-            });
-
-            // Add an event listener to open the popup, assuming you have a button somewhere
-            document.querySelector('.open-popup-button').addEventListener('click', openPopup);
-
-            // Handle date picker (assuming you're using a date picker library)
-            const datePickerIcon = document.querySelector('.date-picker-icon');
-            datePickerIcon.addEventListener('click', () => {
-                // Assuming you have a date picker setup
-                // Example with flatpickr: flatpickr('#dueDate', {});
-                alert("Open Date Picker here");
-            });
+        // Close Popup Logic
+        closePopupButton.addEventListener("click", () => {
+            uploadPopup.style.display = "none";
         });
+
+        // Add New Row on Button Click
+        addDocumentButton.addEventListener("click", addDocumentRow);
+
+        // Initial Setup: Add a Default Row
+        addDocumentRow();
+
+
         let comments = [];
 
         function renderComments() {
