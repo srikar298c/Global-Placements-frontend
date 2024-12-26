@@ -782,6 +782,21 @@
         </div>
         <div class="main-content-global-database">
             <div class="approvals-filter">
+                <button class="advanced-filter-button" id="advancedFilterBtn">
+                    <span class="button-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                            <rect width="24" height="24" fill="none" />
+                            <g fill="none" fill-rule="evenodd">
+                                <path
+                                    d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                <path fill="currentColor"
+                                    d="M3 4.5A1.5 1.5 0 0 1 4.5 3h15A1.5 1.5 0 0 1 21 4.5v2.086A2 2 0 0 1 20.414 8L15 13.414v7.424a1.1 1.1 0 0 1-1.592.984l-3.717-1.858A1.25 1.25 0 0 1 9 18.846v-5.432L3.586 8A2 2 0 0 1 3 6.586zM5 5v1.586l5.56 5.56a1.5 1.5 0 0 1 .44 1.061v5.175l2 1v-6.175c0-.398.158-.78.44-1.06L19 6.585V5z" />
+                            </g>
+                        </svg>
+                        Filter
+                    </span>
+                    <span class="filter-count">0</span>
+                </button>
                 <div class="approvals-filter__container">
                     <!-- Category Filter -->
                     <div class="approvals-filter__group">
@@ -892,7 +907,7 @@
                 <div class="document_row"></div>
                 <div class="document_row"></div>
                 <div class="document_row">
-                    <span class="document gray openUploadPopup">Upload Document</span>
+                    <span class="document gray openUploadPopup">Upload </span>
                 </div>
                 </td>
                 <td class="post_status">
@@ -991,7 +1006,7 @@
                     <div class="document_row"></div>
                     <div class="document_row"></div>
                     <div class="document_row">
-                        <span class="document gray openUploadPopup" >Upload Document</span>
+                        <span class="document gray openUploadPopup" >Upload </span>
                     </div>
                 </td>
                 <td class="post_status">
@@ -1184,7 +1199,7 @@
         <div class="popup-content">
 
             <div class="popup-header">
-                <h2 class="popup-title">UPLOAD DOCUMENTS</h2>
+                <h2 class="popup-title">UPLOAD </h2>
                 <button class="close-popup" id="closeUploadPopup">✖</button>
             </div>
 
@@ -1220,7 +1235,91 @@
         </div>
     </div>
 
+<div class="advanced-popup-overlay">
+    <div class="advanced-popup-container">
+        <div class="advanced-filter-popup" id="advancedFilterPopup">
+            <div class="advanced-filter-popup-content">
+                <div class="advanced-filter-sidebar">
+                    <ul>
+                        <li data-filter="leads" class="active">Dates</li>
+                        <li data-filter="country">status</li>
+                       
+                    </ul>
+                </div>
+                <div class="advanced-filter-content">
+                    <span class="advanced-close-popup" id="advancedClosePopup">&times;</span>
+                    <span class="advanced-filter-popup-title">Advanced Filters</span>
+                    <!-- Leads Section -->
+                    <div id="leadsFilter" class="advanced-filter-content-section">
+                      
+                        <form>
+                           
+                    <div class="form-group full-width">
+                        <label for="tentativeDate">Tentative Date</label>
+                        <div class="form-dates">
+                            <input type="date" id="tentativeFrom" class="form-input" placeholder="From">
+                            <input type="date" id="tentativeTo" class="form-input" placeholder="To">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="finalDate">Final Date</label>
+                         <div class="form-dates">
+            <input type="date" id="tentativeFrom" class="form-input" placeholder="From">
+            <input type="date" id="tentativeTo" class="form-input" placeholder="To">
+        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="joiningDate">Joining Date</label>
+                        <div class="form-dates">
+            <input type="date" id="tentativeFrom" class="form-input" placeholder="From">
+            <input type="date" id="tentativeTo" class="form-input" placeholder="To">
+        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="returnDate">Return Date</label>
+                    <div class="form-dates">
+            <input type="date" id="tentativeFrom" class="form-input" placeholder="From">
+            <input type="date" id="tentativeTo" class="form-input" placeholder="To">
+        </div>
+                    </div>
+                        </form>
+                    </div>
 
+                    <!-- Country Section -->
+                    <div id="countryFilter" class="advanced-filter-content-section">
+                        <form>
+                             <div class="status-container">
+                        <select>
+                            <option value="successful">Successful</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="returned">Returned</option>
+                        </select>
+                        <select>
+                            <option value="drop">Drop</option>
+                            <option value="accepted">Accepted the Offer</option>
+                        </select>
+                        <select>
+                            <option value="">Dataflow status</option>
+                            <option value="">Accepted </option>
+                        </select>
+                        <select>
+                            <option value="drop">Licensing status</option>
+                            <option value="accepted">Accepted </option>
+                        </select>
+                    </div>
+
+                        </form>
+                    </div>
+
+                    <!-- Clients Section -->
+                   
+                <button class="apply-filter">Apply</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
     <script src="../../../../Internal-CRM/scripts.js"></script>
   
     <script>
@@ -1400,6 +1499,68 @@
 
         // Initialize the system
         initializeUploadButtons();
+         const advancedFilterBtn = document.getElementById('advancedFilterBtn');
+            const advancedPopup = document.querySelector('.advanced-popup-overlay');
+            const advancedCloseButton = document.getElementById('advancedClosePopup');
+
+            if (advancedFilterBtn && advancedPopup && advancedCloseButton) {
+                setupPopup(advancedFilterBtn, advancedPopup, advancedCloseButton);
+            } else {
+                console.error('Advanced filter popup elements not found');
+            }
+
+            setupAdvancedFilterSidebar();
+
+
+            function setupPopup(openButton, popup, closeButton) {
+                openButton.addEventListener('click', () => {
+                    popup.style.display = 'block';
+                    if (popup.id === 'advancedPopupOverlay') {
+                        positionAdvancedPopup(openButton, popup);
+                    }
+                });
+
+                closeButton.addEventListener('click', () => popup.style.display = 'none');
+                popup.addEventListener('click', (event) => {
+                    if (event.target === popup) popup.style.display = 'none';
+                });
+            }
+
+            function setupAdvancedFilterSidebar() {
+                const sidebarItems = document.querySelectorAll('.advanced-filter-sidebar li');
+                const contentSections = document.querySelectorAll('.advanced-filter-content-section');
+
+                if (sidebarItems.length > 0 && contentSections.length > 0) {
+                    // Set the first sidebar item and corresponding content section as active by default
+                    sidebarItems[0].classList.add('active');
+                    contentSections[0].classList.add('active');
+
+                    sidebarItems.forEach(function (item, index) {
+                        item.addEventListener('click', function () {
+                            // Remove 'active' class from all content sections
+                            contentSections.forEach(function (section) {
+                                section.classList.remove('active');
+                            });
+
+                            // Add 'active' class to the clicked section
+                            const filterId = this.getAttribute('data-filter') + 'Filter';
+                            document.getElementById(filterId).classList.add('active');
+
+                            // Remove 'active' class from all sidebar items
+                            sidebarItems.forEach(function (li) {
+                                li.classList.remove('active');
+                            });
+
+                            // Add 'active' class to the clicked sidebar item
+                            this.classList.add('active');
+                        });
+                    });
+                } else {
+                    console.error('Sidebar items or content sections not found');
+                }
+            }
+        
+
     </script>
 
 

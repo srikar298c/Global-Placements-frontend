@@ -1819,7 +1819,10 @@ h3 {
 .form-group {
     margin-bottom: 10px;
 }
-
+.form-dates {
+    display: flex;
+    gap: 10px;
+}
 .advanced-filter-content .form-group input[type="date"],
 .form-group select {
     width: calc(50% - 5px);
