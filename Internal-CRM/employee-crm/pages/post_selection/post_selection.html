@@ -1611,14 +1611,37 @@
                     return;
                 }
 
-                // Create New List Item
-                const newHeadingItem = document.createElement('li');
+             const newHeadingItem = document.createElement('li');
+                newHeadingItem.style.padding = '10px 15px';
+                newHeadingItem.style.borderBottom = '1px solid #eee';
+                newHeadingItem.style.transition = 'background-color 0.2s ease';
+
+                // Add Hover Effect
+                newHeadingItem.addEventListener('mouseover', () => {
+                    newHeadingItem.style.backgroundColor = '#f5f5f5';
+                });
+                newHeadingItem.addEventListener('mouseout', () => {
+                    newHeadingItem.style.backgroundColor = 'transparent';
+                });
+
+                // Add Inner HTML
                 newHeadingItem.innerHTML = `
-            <div class="heading-row">
-                <p class="heading-title">${inputLabelName}:</p>
-                <p class="heading-text">${inputDetails}</p>
-            </div>
-        `;
+        <div class="heading-row" style="display: flex; flex-direction: column;">
+            <p class="heading-title" style="
+                font-weight: bold;
+                color: #333;
+                margin: 0;
+                font-size: 14px;
+            ">${inputLabelName}:</p>
+            <p class="heading-text" style="
+                font-size: 13px;
+                color: #555;
+                margin: 5px 0 0;
+                word-wrap: break-word;
+            ">${inputDetails}</p>
+        </div>
+    `;
+
 
                 // Append New Item to the List
                 offerDetailsHeadingList.appendChild(newHeadingItem);
@@ -1681,14 +1704,39 @@
                     return;
                 }
 
-                // Create New List Item
+              // Create New Rejected List Item
                 const newRejectedHeadingItem = document.createElement('li');
+
+                // Apply Styles Directly
+                newRejectedHeadingItem.style.padding = '10px 15px';
+                newRejectedHeadingItem.style.borderBottom = '1px solid #eee';
+                newRejectedHeadingItem.style.transition = 'background-color 0.2s ease';
+
+                // Add Hover Effect
+                newRejectedHeadingItem.addEventListener('mouseover', () => {
+                    newRejectedHeadingItem.style.backgroundColor = '#fce4e4'; // Light red background for hover
+                });
+                newRejectedHeadingItem.addEventListener('mouseout', () => {
+                    newRejectedHeadingItem.style.backgroundColor = 'transparent';
+                });
+
+                // Add Inner HTML with Inline Styles for Content
                 newRejectedHeadingItem.innerHTML = `
-            <div class="heading-row">
-                <p class="heading-title">${rejectedLabelName}:</p>
-                <p class="heading-text">${rejectedDetails}</p>
-            </div>
-        `;
+    <div class="heading-row" style="display: flex; flex-direction: column;">
+        <p class="heading-title" style="
+            font-weight: bold;
+            color: #d32f2f; /* Red for rejected items */
+            margin: 0;
+            font-size: 14px;
+        ">${rejectedLabelName}:</p>
+        <p class="heading-text" style="
+            font-size: 13px;
+            color: #666;
+            margin: 5px 0 0;
+            word-wrap: break-word;
+        ">${rejectedDetails}</p>
+    </div>
+`;
 
                 // Append New Item to the List
                 rejectedOfferHeadingList.appendChild(newRejectedHeadingItem);
