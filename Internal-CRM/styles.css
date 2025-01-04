@@ -2059,6 +2059,8 @@ input[type="radio"] {
     padding: 15px;
     border-top: 1px solid #eee;
     background-color: #fafafa;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000000;
 }
 
 .additional-info-row {
@@ -2156,16 +2158,18 @@ input[type="radio"] {
 
 .submissions.base-filters {
     display: flex;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
     background-color: white;
     color: #333;
-    padding: 5px;
+    padding: 10px;
     width: 100%;
     border-radius: 8px;
-    gap: 10px;
+    gap: 15px; /* Increased gap for better spacing */
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-between; /* Even distribution */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 .submissions-filter-select {
     padding: 8px;
@@ -2339,7 +2343,6 @@ input[type="radio"] {
 #candidateSubmissionTable td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #005f6b;
 }
 
 #candidateSubmissionTable th {
@@ -3759,6 +3762,25 @@ select:focus {
     margin-bottom: 5px;
 }
 
+.approvals-filter__input {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.approvals-filter__input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Optional hover effect */
+.approvals-filter__input:hover {
+    border-color: #0056b3;
+}
 
 /* Select inputs */
 
