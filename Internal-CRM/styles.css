@@ -2373,7 +2373,10 @@ input[type="radio"] {
     padding: 12px;
     text-align: left;
 }
-
+.submission-canditate-data{
+    border-bottom: 1px solid #7b7b7b;
+    margin-bottom: 5px;
+}
 #candidateSubmissionTable th {
     background-color: #e8e7e7;
     font-weight: bold;
@@ -5711,3 +5714,4 @@ input[type="checkbox"] {
     gap: 10px;
     /* border: 1px solid red; */
 }
+
