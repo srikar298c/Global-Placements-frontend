@@ -5384,10 +5384,12 @@ margin-bottom: 20px;
     margin-bottom: 20px;
 }
 .offer-status.accepted-status {
-    background-color: #a5e5a5;
+    background-color: #00796b;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
+    align-items: center;
+    display: inline-flex;
 }
 
 .offer-heading-list {
@@ -5432,6 +5434,7 @@ margin-bottom: 20px;
 
 .form-group-offer-details.input-details {
   width:70%;
+  
 }
 
 .form-group-offer-details label {
@@ -5447,8 +5450,12 @@ margin-bottom: 20px;
 }
 
 .rejected-status {
-    color: red;
-    font-weight: bold;
+     background-color: red;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    align-items: center;
+    display: inline-flex;
 }
 
 .reject-offer-content {
