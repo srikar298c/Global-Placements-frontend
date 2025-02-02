@@ -1556,6 +1556,30 @@ h3 {
 .tab-pane.active {
     display: block;
 }
+/* New container for the eligibility tab pane */
+.eligibility-container {
+    display: flex;
+    gap: 1rem; /* Optional gap between columns */
+    margin-bottom: 2rem;  /* Space below each vacancy */
+    padding-bottom: 1rem; /* Padding for visual breathing room */
+    border-bottom: 1px solid #c7c7c7;  /* Horizontal line separator */
+}
+
+/* Sidebar takes 30% of the width */
+.eligibility-sidebar {
+    flex: 0 0 30%;
+}
+.eligibility-sidebar h3 {
+    color: #006666;
+}
+
+/* Content area takes 70% of the width */
+.eligibility-content {
+    flex: 0 0 70%;
+}
+.eligibility-content h3 {
+    color: #006666;
+}
 
 .content-table {
     width: 100%;
@@ -1573,7 +1597,7 @@ h3 {
 
 .content-table th {
     background-color: #f4f4f4;
-    font-weight: bold;
+  
     color: #333;
 }
 
