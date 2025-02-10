@@ -484,7 +484,11 @@
                     <p>XXXXXXXX</p>
                 </td>
                 <td class="post_documents">
-                    <div class="document_row"></div>
+                    <div class="document_row">
+                        <div class="document green">Document 1 </div>
+                        <div class="document red">Document 2 </div>
+                        <div class="document yellow">Document 3 </div>
+                    </div>
                     <div class="document_row"></div>
                     <div class="document_row">
                         <span class="document gray openUploadPopup" >Upload </span>
@@ -588,37 +592,21 @@
             <div class="popup-body">
                 <!-- Candidate and Offer Status -->
                 <div class="offer-details-header">
-                    <p class="candidate-name"><strong>Name Of the Candidate</strong></p>
-                <!-- Hidden file input -->
-                 <div class=""><input type="file" id="documentUpload" style="display: none;" />
-
-                
+                    <p class="candidate-name"><strong>Name of the Candidate</strong></p>
                 </div>
-                
-                
-                <!-- Styled label acting as a button -->
-               
-
-                    <span class="offer-status accepted-status"><label for="documentUpload" class="upload-btn"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-                        <path fill="#fff"
-                            d="M6 20q-.825 0-1.412-.587T4 18v-2q0-.425.288-.712T5 15t.713.288T6 16v2h12v-2q0-.425.288-.712T19 15t.713.288T20 16v2q0 .825-.587 1.413T18 20zm5-12.15L9.125 9.725q-.3.3-.712.288T7.7 9.7q-.275-.3-.288-.7t.288-.7l3.6-3.6q.15-.15.325-.212T12 4.425t.375.063t.325.212l3.6 3.6q.3.3.288.7t-.288.7q-.3.3-.712.313t-.713-.288L13 7.85V15q0 .425-.288.713T12 16t-.712-.288T11 15z" />
-                    </svg></label> Accepted the Offer</span>
-                </div>
-
+    
+                <span class="offer-status accepted-status">Accepted the Offer</span>
+    
                 <!-- Client Name -->
                 <div class="client-name-section">
                     <p class="client-name"><strong>Client Name</strong></p>
                 </div>
-
+    
                 <!-- Heading Rows Section -->
                 <div class="offer-description">
-                    <ul class="offer-heading-list" id="offerHeadingList">
-                        <li>
-
-                        </li>
-                    </ul>
+                    <ul class="offer-heading-list" id="offerHeadingList"></ul>
                 </div>
-
+    
                 <!-- Additional Fields -->
                 <div class="additional-fields">
                     <div class="form-row-offer-details">
@@ -632,13 +620,23 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Save Button -->
-                <div class="form-group">
+    
+                <!-- File Upload Section -->
+                <div class="upload-section">
+                    <label class="upload-label">Upload Documents</label>
+                    <input type="file" id="uploadFile" class="file-input" multiple>
+                    <ul class="uploaded-files-list" id="uploadedFilesList"></ul>
+                </div>
+    
+                <!-- Buttons -->
+                <div class=" button-group">
                     <button class="confirm-button" id="saveButton">Save</button>
+                    <button class="upload-button" id="uploadButton">Upload</button>
                 </div>
             </div>
         </div>
+    </div>
+
     </div>
     <!-- Reject Offer Popup -->
     <div class="popup-overlay" id="rejectedOfferDetailsPopupOverlay">
@@ -651,17 +649,12 @@
                 <!-- Candidate and Offer Status -->
                 <div class="offer-details-header">
                     <p class="candidate-name"><strong>Name Of the Candidate</strong></p>
-                    <div class=""><input type="file" id="documentUpload" style="display: none;" />
-                    </div>
+                   
 
 
                     <span class="offer-status rejected-status">
                         
-                    <label for="documentUpload" class="upload-btn"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
-                            viewBox="0 0 24 24">
-                            <path fill="#fff"
-                                d="M6 20q-.825 0-1.412-.587T4 18v-2q0-.425.288-.712T5 15t.713.288T6 16v2h12v-2q0-.425.288-.712T19 15t.713.288T20 16v2q0 .825-.587 1.413T18 20zm5-12.15L9.125 9.725q-.3.3-.712.288T7.7 9.7q-.275-.3-.288-.7t.288-.7l3.6-3.6q.15-.15.325-.212T12 4.425t.375.063t.325.212l3.6 3.6q.3.3.288.7t-.288.7q-.3.3-.712.313t-.713-.288L13 7.85V15q0 .425-.288.713T12 16t-.712-.288T11 15z" />
-                        </svg></label>  Rejected the Offer</span>
+                    Rejected the Offer</span>
                 </div>
 
                 <!-- Client Name -->
@@ -689,10 +682,16 @@
                         </div>
                     </div>
                 </div>
-
+<!-- File Upload Section -->
+<div class="upload-section">
+    <label class="upload-label">Upload Documents</label>
+    <input type="file" id="uploadFile" class="file-input" multiple>
+    <ul class="uploaded-files-list" id="uploadedFilesList"></ul>
+</div>
                 <!-- Save Button -->
-                <div class="form-group">
-                    <button class="confirm-button" id="saveRejectedOfferButton">Save</button>
+                <div class=" button-group">
+                    <button class="confirm-button" id="saveButton">Save</button>
+                    <button class="upload-button" id="uploadButton">Upload</button>
                 </div>
             </div>
         </div>
@@ -1070,99 +1069,97 @@
 
 
     <script>
-        // Popup Elements
-        const offerDetailsPopupOverlay = document.getElementById('acceptedOfferDetailsPopupOverlay');
-        const offerDetailsPopupCloseButton = document.getElementById('closeAcceptedOfferPopup');
+     // Popup Elements
+        const offerDetailsPopupOverlay = document.getElementById("acceptedOfferDetailsPopupOverlay");
+        const offerDetailsPopupCloseButton = document.getElementById("closeAcceptedOfferPopup");
 
         // Check if popup elements exist
         if (offerDetailsPopupOverlay && offerDetailsPopupCloseButton) {
-            // Open Popup Event
-            document.addEventListener('click', function (event) {
-                if (event.target.closest('.accepted-offer-details-button')) {
-                    offerDetailsPopupOverlay.style.display = 'block';
+            document.addEventListener("click", function (event) {
+                if (event.target.closest(".accepted-offer-details-button")) {
+                    offerDetailsPopupOverlay.style.display = "block";
                 }
             });
 
-            // Close Popup Event
-            offerDetailsPopupCloseButton.addEventListener('click', () => {
-                offerDetailsPopupOverlay.style.display = 'none';
+            offerDetailsPopupCloseButton.addEventListener("click", () => {
+                offerDetailsPopupOverlay.style.display = "none";
             });
 
-            // Close Popup When Clicking Outside the Content
-            offerDetailsPopupOverlay.addEventListener('click', (event) => {
+            offerDetailsPopupOverlay.addEventListener("click", (event) => {
                 if (event.target === offerDetailsPopupOverlay) {
-                    offerDetailsPopupOverlay.style.display = 'none';
+                    offerDetailsPopupOverlay.style.display = "none";
                 }
             });
         } else {
-            console.error('Offer Details Popup elements not found.');
+            console.error("Offer Details Popup elements not found.");
         }
 
         // Input and Save Button Elements
-        const saveOfferDetailsButton = document.querySelector('.confirm-button'); // Save Button
-        const offerDetailsHeadingList = document.querySelector('.offer-heading-list'); // List container
+        const saveOfferDetailsButton = document.getElementById("saveButton");
+        const offerDetailsHeadingList = document.getElementById("offerHeadingList");
 
-        // Ensure all elements exist
         if (saveOfferDetailsButton && offerDetailsHeadingList) {
-            saveOfferDetailsButton.addEventListener('click', function () {
-                // Get input values
-                const inputLabelName = document.getElementById('labelName').value.trim();
-                const inputDetails = document.getElementById('details').value.trim();
+            saveOfferDetailsButton.addEventListener("click", function () {
+                const inputLabelName = document.getElementById("labelName").value.trim();
+                const inputDetails = document.getElementById("details").value.trim();
 
-                // Validate Inputs
-                if (inputLabelName === '' || inputDetails === '') {
-                    alert('Please fill in both Label Name and Details.');
+                if (inputLabelName === "" || inputDetails === "") {
+                    alert("Please fill in both Label Name and Details.");
                     return;
                 }
 
-             const newHeadingItem = document.createElement('li');
-                newHeadingItem.style.padding = '10px 15px';
-                newHeadingItem.style.borderBottom = '1px solid #eee';
-                newHeadingItem.style.transition = 'background-color 0.2s ease';
-
-                // Add Hover Effect
-                newHeadingItem.addEventListener('mouseover', () => {
-                    newHeadingItem.style.backgroundColor = '#f5f5f5';
-                });
-                newHeadingItem.addEventListener('mouseout', () => {
-                    newHeadingItem.style.backgroundColor = 'transparent';
-                });
-
-                // Add Inner HTML
+                const newHeadingItem = document.createElement("li");
+                newHeadingItem.classList.add("offer-item");
                 newHeadingItem.innerHTML = `
-        <div class="heading-row" style="display: flex; flex-direction: column;">
-            <p class="heading-title" style="
-                font-weight: bold;
-                color: #333;
-                margin: 0;
-                font-size: 14px;
-            ">${inputLabelName}:</p>
-            <p class="heading-text" style="
-                font-size: 13px;
-                color: #555;
-                margin: 5px 0 0;
-                word-wrap: break-word;
-            ">${inputDetails}</p>
-        </div>
-    `;
+            <div class="heading-row">
+                <p class="heading-title">${inputLabelName}:</p>
+                <p class="heading-text">${inputDetails}</p>
+            </div>
+        `;
 
-
-                // Append New Item to the List
                 offerDetailsHeadingList.appendChild(newHeadingItem);
 
-                // Clear Input Fields
-                document.getElementById('labelName').value = '';
-                document.getElementById('details').value = '';
+                document.getElementById("labelName").value = "";
+                document.getElementById("details").value = "";
 
-                // Make List Scrollable if More than 2 Items
                 if (offerDetailsHeadingList.children.length > 2) {
-                    offerDetailsHeadingList.style.maxHeight = '200px'; // Adjust as needed
-                    offerDetailsHeadingList.style.overflowY = 'auto';
+                    offerDetailsHeadingList.style.maxHeight = "200px";
+                    offerDetailsHeadingList.style.overflowY = "auto";
                 }
             });
         } else {
-            console.error('Save button or Heading List not found.');
+            console.error("Save button or Heading List not found.");
         }
+
+        // Upload Functionality
+        const uploadButton = document.getElementById("uploadButton");
+        const fileInput = document.getElementById("uploadFile");
+        const uploadedFilesList = document.getElementById("uploadedFilesList");
+
+        uploadButton.addEventListener("click", function () {
+            if (fileInput.files.length === 0) {
+                alert("Please select a file to upload.");
+                return;
+            }
+
+            Array.from(fileInput.files).forEach((file) => {
+                const listItem = document.createElement("li");
+                listItem.classList.add("uploaded-file-item");
+                listItem.innerHTML = `
+            <span class="file-name">${file.name}</span>
+            <button class="delete-file" onclick="deleteFile(this)">✖</button>
+        `;
+                uploadedFilesList.appendChild(listItem);
+            });
+
+            fileInput.value = ""; // Reset file input
+        });
+
+        // Delete File Function
+        function deleteFile(deleteButton) {
+            deleteButton.parentElement.remove();
+        }
+
         // Popup Elements for Reject Offer
         const rejectedOfferDetailsPopupOverlay = document.getElementById('rejectedOfferDetailsPopupOverlay');
         const rejectedOfferDetailsCloseButton = document.getElementById('closeRejectedOfferPopup');
