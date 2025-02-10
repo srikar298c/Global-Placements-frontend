@@ -428,37 +428,40 @@
                         <div class="eligibility-content">
                             <h3><strong>Eligibility Criteria</strong></h3>
                             <table class="content-table">
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Gender</strong></td>
-                                        <td>Male Required *</td>
-                                    </tr>
-                                    <!-- <tr>
-                            <td><strong>Age</strong></td>
-                            <td>21-45 years</td>
-                        </tr> -->
-                                    <tr>
-                                        <td><strong>Experience</strong></td>
-                                        <td>4-5 yrs</td>
-                                    </tr>
-                                    <!-- <tr>
-                            <td><strong>Education</strong></td>
-                            <td>Bachelor's degree or equivalent</td>
-                        </tr> -->
-                                    <tr>
-                                        <td><strong>Required Skils</strong></td>
-                                        <td>HTML, CSS Js</td>
-                                    </tr>
-                                    <!-- <tr>
-                            <td><strong>Experience</strong></td>
-                            <td>Minimum 2 years in related field</td>
-                        </tr> -->
-                                    <tr>
-                                        <td><strong>Qualification</strong></td>
-                                        <td>B.Tech</td>
-                                    </tr>
-                                </tbody>
+                            <tbody class="table-body">
+                                <!-- Always visible rows -->
+                                <tr>
+                                    <td><strong>Gender</strong></td>
+                                    <td>Male Required *</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Experience</strong></td>
+                                    <td>4-5 yrs</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Required Skills</strong></td>
+                                    <td>HTML, CSS, JS</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Qualification</strong></td>
+                                    <td>B.Tech</td>
+                                </tr>
+                                <!-- Additional table data (initially hidden) -->
+                                <tr class="additional-row">
+                                    <td><strong>Location</strong></td>
+                                    <td>Dubai</td>
+                                </tr>
+                                <tr class="additional-row">
+                                    <td><strong>Department</strong></td>
+                                    <td>IT</td>
+                                </tr>
+                                <tr class="additional-row">
+                                    <td><strong>Contract</strong></td>
+                                    <td>Full-Time</td>
+                                </tr>
+                            </tbody>
                             </table>
+                            <button class="view-more-btn">View More</button>
                         </div>
                     </div>
                     <div class="eligibility-container">
@@ -474,44 +477,56 @@
                         <div class="eligibility-content">
                            
                             <table class="content-table">
-                                <tbody>
+                                <tbody class="table-body">
+                                    <!-- Always visible rows -->
                                     <tr>
                                         <td><strong>Gender</strong></td>
                                         <td>Male Required *</td>
                                     </tr>
-                                    <!-- <tr>
-                            <td><strong>Age</strong></td>
-                            <td>21-45 years</td>
-                        </tr> -->
                                     <tr>
                                         <td><strong>Experience</strong></td>
                                         <td>4-5 yrs</td>
                                     </tr>
-                                    <!-- <tr>
-                            <td><strong>Education</strong></td>
-                            <td>Bachelor's degree or equivalent</td>
-                        </tr> -->
                                     <tr>
-                                        <td><strong>Required Skils</strong></td>
-                                        <td>HTML, CSS Js</td>
+                                        <td><strong>Required Skills</strong></td>
+                                        <td>HTML, CSS, JS</td>
                                     </tr>
-                                    <!-- <tr>
-                            <td><strong>Experience</strong></td>
-                            <td>Minimum 2 years in related field</td>
-                        </tr> -->
                                     <tr>
                                         <td><strong>Qualification</strong></td>
                                         <td>B.Tech</td>
                                     </tr>
+                                    <!-- Additional table data (initially hidden) -->
+                                    <tr class="additional-row">
+                                        <td><strong>Location</strong></td>
+                                        <td>Dubai</td>
+                                    </tr>
+                                    <tr class="additional-row">
+                                        <td><strong>Department</strong></td>
+                                        <td>IT</td>
+                                    </tr>
+                                    <tr class="additional-row">
+                                        <td><strong>Contract</strong></td>
+                                        <td>Full-Time</td>
+                                    </tr>
                                 </tbody>
                             </table>
+                            <button class="view-more-btn">View More</button>
                         </div>
                     </div>
                 </div>
             
                 <!-- Perks & Salary Tab Pane -->
-                <div id="perks-dubai-007" class="tab-pane">
-                    <h3>Perks & Salary</h3>
+        <div id="perks-dubai-007" class="tab-pane">
+            <div class="perks-container">
+                <!-- 30% Column: Role Section -->
+                <div class="perks-sidebar">
+                    <h3><strong>Role</strong></h3>
+                    <br><br><br>
+                    <h4>Frontend Developer</h4>
+                </div>
+                <!-- 70% Column: Perks & Salary Content -->
+                <div class="perks-content">
+                    <h3><strong>Perks & Salary</strong></h3>
                     <table class="content-table">
                         <tbody>
                             <tr>
@@ -529,6 +544,9 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </div>
+
                 <div id="procedure-dubai-007" class="tab-pane">
                     <h3>Standard Procedure</h3>
                     <table class="content-table">
@@ -1011,6 +1029,31 @@
                 if (event.target === popupOverlay) {
                     closeAddCandidatePopup();
                 }
+            });
+        });
+
+       document.addEventListener("DOMContentLoaded", () => {
+            // Listen for clicks on the "View More" button
+            document.querySelectorAll(".view-more-btn").forEach(button => {
+                button.addEventListener("click", function () {
+                    // Get the table body containing our rows
+                    const tableBody = this.previousElementSibling.querySelector(".table-body");
+                    // Select all additional rows (they are initially hidden)
+                    const additionalRows = tableBody.querySelectorAll("tr.additional-row");
+
+                    // Toggle the visibility of the additional rows
+                    if (this.textContent.trim() === "View More") {
+                        additionalRows.forEach(row => {
+                            row.style.display = "table-row";  // Show row
+                        });
+                        this.textContent = "View Less";
+                    } else {
+                        additionalRows.forEach(row => {
+                            row.style.display = "none";  // Hide row
+                        });
+                        this.textContent = "View More";
+                    }
+                });
             });
         });
         // Updated popup and functionality

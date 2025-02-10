@@ -1613,6 +1613,45 @@ h3 {
     background-color: #f0f0f0;
 }
 
+.perks-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Sidebar (30% Column) for the Role */
+.perks-sidebar {
+  flex: 0 0 30%;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.perks-sidebar h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+/* Content area (70% Column) for Perks & Salary */
+.perks-content {
+  flex: 0 0 70%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Table Styles */
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.content-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
 @media (max-width: 768px) {
     .popup-content {
         width: 95%;
