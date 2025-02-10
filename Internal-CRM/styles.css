@@ -2076,7 +2076,7 @@ input[type="radio"] {
     transition: transform 0.3s ease;
     cursor: pointer;
     margin-left: 1px;
-    color: #999;
+   
 }
 
 #candidateTable .caret-icon.open {
@@ -2425,10 +2425,10 @@ input[type="radio"] {
 }
 
 #candidateSubmissionTable .caret-icon {
-    font-size: 1em;
+   font-size: 1em;
     transition: transform 0.3s ease;
     cursor: pointer;
-    color: #999;
+    margin-left: 1px;
 }
 
 #candidateSubmissionTable .caret-icon.open {
