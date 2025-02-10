@@ -300,8 +300,8 @@
             </div>
         </div>
         <div class="main-content-global-database">
-            <div class="approvals-filter">
-                <button class="advanced-filter-button" id="advancedFilterBtn">
+            <div class="post-selection-filter">
+                <button class="post-selection-filter__button" id="advancedFilterBtn">
                     <span class="button-content">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
                             <rect width="24" height="24" fill="none" />
@@ -316,65 +316,27 @@
                     </span>
                     <span class="filter-count">0</span>
                 </button>
-                <div class="approvals-filter__container">
-                    <!-- Category Filter -->
-                    <div class="approvals-filter__group">
-                        <label for="" class="approvals-filter__label">Category</label>
-                        <select class="approvals-filter__select">
-                            <option value="">Nurses</option>
-                            <option>...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-
-                    <!-- Project Filter -->
-                    <div class="approvals-filter__group">
-                        <label for="" class="approvals-filter__label">Client Name</label>
-                        <select class="approvals-filter__select">
-                            <option value="">Choose the Cllient Name</option>
-                            <option>...</option>
-                            <option>...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-                    <div class="approvals-filter__group">
-                        <label for="" class="approvals-filter__label">Client Label</label>
-                        <select class="approvals-filter__select">
-                            <option value="">Choose the Cllient Label</option>
-                            <option>...</option>
-                            <option>...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-                    <div class="approvals-filter__group">
-                        <label for="" class="approvals-filter__label">Missing Documents</label>
-                        <select class="approvals-filter__select">
-                            <option value="">Multiselct DD</option>
-                            <option>...</option>
-                            <option>...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-                    <div class="approvals-filter__group">
-                        <label for="" class="approvals-filter__label">Submitted Documents</label>
-                        <select class="approvals-filter__select">
-                            <option value="">Multiselct DD</option>
-                            <option>...</option>
-                            <option>...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-
-                    <!-- Agency Filter -->
-                    <div class="approvals-filter__group">
-                        <label for="agencyNameFilter" class="approvals-filter__label">Candidate ID</label>
-                        <input class="approvals-filter__input" type="text" placeholder="Enter any Candidate ID">
-                    </div>
-
-                    <!-- Approve Button -->
-                </div>
-
+            
+                <select class="post-selection-filter__select">
+                    <option>Category</option>
+                </select>
+                <select class="post-selection-filter__select">
+                    <option>Client Name</option>
+                </select>
+                <select class="post-selection-filter__select">
+                    <option>Client Label</option>
+                </select>
+                <select class="post-selection-filter__select">
+                    <option>Missing Documents</option>
+                </select>
+                <select class="post-selection-filter__select">
+                    <option>Submitted Documents</option>
+                </select>
+                <input type="text" class="post-selection-filter__input" placeholder="Enter Candidate ID">
+                <button class="post-selection-filter__search">Search</button>
             </div>
+
+
 
             <div class="post_selection_candidate-table">
                 <table id="postSelectionCandidateTable">

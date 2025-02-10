@@ -5739,6 +5739,115 @@ input[type="checkbox"] {
     gap: 10px;
     /* border: 1px solid red; */
 }
+/* Main container styling, similar to .filter-section */
+.post-selection-filter {
+  display: flex;
+  padding: 5px;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  margin: 10px 0px 20px;
+  background-color: white;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Filter button styling */
+.post-selection-filter__button {
+  position: relative;
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 1px solid var(--boxshadow-edge);
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 40px;
+}
+
+.post-selection-filter__button:hover {
+  border: 2px solid var(--sidebar-bg);
+  background-color: #f8f9fa;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+}
+
+/* Filter count notification */
+.filter-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 50%;
+  padding: 3px 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1;
+  min-width: 20px;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdowns and inputs */
+.post-selection-filter__select,
+.post-selection-filter__input {
+  background-color: white;
+  color: #333;
+  border: 0.25px solid #c7c7c7;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 150px;
+  height: 40px;
+  flex: 1;
+}
+
+/* Search button */
+.post-selection-filter__search {
+  background-color: #006064;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  height: 40px;
+  transition: background-color 0.3s;
+}
+
+.post-selection-filter__search:hover {
+  background-color: #004d4d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .post-selection-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-selection-filter__select,
+  .post-selection-filter__input {
+    width: 100%;
+  }
+
+  .post-selection-filter__search {
+    width: 100%;
+    text-align: center;
+  }
+}
 
 
         #postSelectionCandidateTable {
