@@ -1049,17 +1049,38 @@
         </div>
     </div>
     <script>
-        function toggleAdditionalInfo(caretIcon) {
-            const row = caretIcon.closest('tr');
-            const additionalInfoRow = row.nextElementSibling;
+     function toggleAdditionalInfo(caretIcon) {
+            // Get the candidate row (with the flag and candidate data)
+            const candidateRow = caretIcon.closest('tr');
+            // The additional info row is assumed to be the next sibling row
+            const additionalInfoRow = candidateRow.nextElementSibling;
 
+            // Check if the next row is the additional info row
             if (additionalInfoRow && additionalInfoRow.classList.contains('additional-info')) {
-                additionalInfoRow.style.display = additionalInfoRow.style.display === 'none' ? 'table-row' : 'none';
+                // Determine if the additional info row is currently hidden.
+                const isHidden = additionalInfoRow.style.display === 'none' || additionalInfoRow.style.display === '';
+
+                if (isHidden) {
+                    // Show the additional info row
+                    additionalInfoRow.style.display = 'table-row';
+                    // Remove the border from the candidate row
+                    candidateRow.classList.add('no-border');
+                    // Add the border to the additional info row
+                    additionalInfoRow.classList.add('active');
+                } else {
+                    // Hide the additional info row
+                    additionalInfoRow.style.display = 'none';
+                    // Restore the candidate row's border
+                    candidateRow.classList.remove('no-border');
+                    // Remove the border from the additional info row
+                    additionalInfoRow.classList.remove('active');
+                }
+                // Toggle the caret icon state (if you use the 'open' class for visual rotation, etc.)
                 caretIcon.classList.toggle('open');
             }
         }
 
-        // Add click event listeners to all caret icons
+        // Attach click event listeners to all caret icons
         document.querySelectorAll('.caret-icon').forEach(caretIcon => {
             caretIcon.addEventListener('click', (e) => {
                 e.stopPropagation();

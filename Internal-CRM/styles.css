@@ -2010,6 +2010,30 @@ input[type="radio"] {
     text-align: center;
     border-bottom: 1px solid #e0e0e0;
 }
+/* Default: candidate rows have a border-bottom */
+.leads-candidate-data {
+  border-bottom: 2px solid #888;
+}
+
+/* When the additional info is open, remove border from candidate row */
+.leads-candidate-data.no-border {
+  border-bottom: none;
+}
+
+
+
+/* When active, the additional info row gets the border-bottom */
+.additional-info.active {
+  border-bottom: 2px solid #888;
+}
+
+.submission-canditate-data {
+    border-bottom: 2px solid #888;
+}
+
+.submission-canditate-data.no-border {
+    border-bottom: none;
+}
 
 #candidateTable th,
 #candidateTable td {
@@ -2373,10 +2397,7 @@ input[type="radio"] {
     padding: 12px;
     text-align: left;
 }
-.submission-canditate-data{
-    border-bottom: 1px solid #7b7b7b;
-    margin-bottom: 5px;
-}
+
 #candidateSubmissionTable th {
     background-color: #e8e7e7;
     font-weight: bold;
@@ -2753,10 +2774,11 @@ input[type="radio"] {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
-    position: absolute;
-    bottom: 8px;
-    left: 35%;
+    display: block;
+    margin: 20px auto 0;   
 }
+
+
 
 .form-group .extra-add {
     cursor: pointer;
@@ -5462,13 +5484,9 @@ margin-bottom: 20px;
     border: 2px solid red;
 }
 
-.global_database-border{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #000;
+.additional-info{
     border-bottom: 1px solid #000;
-    padding: 10px;
-    background-color: yellow;
+ 
 }
 
 .attendance-page-header {
