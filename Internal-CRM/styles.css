@@ -57,6 +57,10 @@ button {
     cursor: pointer;
 }
 
+a{
+    text-decoration: none;
+    
+}
 .sidebar-container {
     width: 250px;
     height: 100%;
@@ -2068,6 +2072,7 @@ input[type="radio"] {
 
 .submission-canditate-data {
     border-bottom: 2px solid #888;
+    background-color: #f9f9f9;
 }
 
 .submission-canditate-data.no-border {
@@ -5626,7 +5631,7 @@ margin-bottom: 20px;
 .attendance-page-header-right {
     display: flex;
     gap: 10px;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .attendance-page-date-dropdown {
@@ -5659,8 +5664,12 @@ margin-bottom: 20px;
 
 .attendance-page-twocards {
     display: flex;
-    flex-direction: row;
+    flex-direction:  column;
     gap: 20px;
+}
+.attendance-page-twocards a{
+    text-decoration: none;
+    color:#000;
 }
 
 .attendance-page-stat-card {
@@ -5797,6 +5806,27 @@ margin-bottom: 20px;
 
 .attendance-page-requests-table th {
     background-color: #f0f0f0;
+}
+.attendance-page-requests-table td:last-child {
+    width: 200px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* Add this CSS to your styles.css file */
+.attendance-page-requests-table td.reason-cell {
+    width: 200px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.attendance-page-requests-table td.reason-cell.expanded {
+    white-space: normal;
+    overflow: visible;
 }
 
 .attendance-page-action-button {
