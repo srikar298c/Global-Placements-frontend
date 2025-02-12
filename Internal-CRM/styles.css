@@ -3006,6 +3006,7 @@ input[type="radio"] {
     display: flex;
     flex-direction: row; 
     margin: 25px 0px 0px 0px;
+    
 }
 
 .profile-popup {
@@ -3019,6 +3020,7 @@ input[type="radio"] {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     background-color: #fff;
+    width: 100%;
 }
 
 .quick-links {
@@ -3226,12 +3228,121 @@ section {
     border-radius: 8px;
     /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
+#dataflow-details .form-container {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+} 
+
+#dataflow-details .stats-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+#dataflow-details.stats-card.active {
+  border-left: 4px solid #28a745; /* green */
+}
+#dataflow-details .stats-card.inactive {
+  border-left: 4px solid #dc3545; /* red */
+}
+#dataflow-details .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+#dataflow-details .status-badge {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #888; /* fallback color */
+}
+#dataflow-details .stats-card.active .status-badge {
+  background-color: #28a745;
+}
+#dataflow-details .stats-card.inactive .status-badge {
+  background-color: #dc3545;
+}
+
+#dataflow-details .project-name {
+  margin: 0 1rem;
+  font-size: 1rem;
+  flex: 1; /* pushes the timestamp to the right */
+}
+#dataflow-details .timestamp {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+#dataflow-details .card-body p {
+  margin: 0.3rem 0;
+}
+#dataflow-details .view-more-btn {
+  display: block;
+  margin: 1rem auto 0;
+  background-color: #005f6b;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+#dataflow-details .view-more-btn:hover {
+  background-color: #004851;
+}
+
 .form-group-container{
  background-color: #ffffff;
     width: 100%;
     border-radius: 8px;
 }
+#feedback .form-container {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
 
+/* Each feedback item (like a card) */
+#feedback .feedback-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#feedback .feedback-item p {
+  margin: 0;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Footer for manager name and timestamp */
+#feedback .feedback-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* Manager name & timestamp styling */
+#feedback .manager-name {
+  font-style: italic;
+}
+
+#feedback .timestamp {
+  font-weight: 400;
+}
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
