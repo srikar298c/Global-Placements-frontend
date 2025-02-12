@@ -347,15 +347,17 @@
                 <div class="attendance-page-twocards">
                     <div class="attendance-page-card">
                         <div class="attendance-page-headericons">
+                            <a href="#">
                             <i class="fa-solid fa-question"></i>
                         </div>
                         <div class="attendance-page-stat-card">
                             <div class="attendance-page-text">Requests</div>
                             <div class="attendance-page-number">452</div>
-                        </div>
+                        </div></a>
                     </div>
                     <div class="attendance-page-card">
                         <div class="attendance-page-headericons">
+                            <a href="#">
                             <i class="fa-solid fa-chart-line"></i>
                         </div>
                         <div class="attendance-page-stat-card">
@@ -367,12 +369,13 @@
                                 </div>
                             </div>
                         </div>
+                    </a>
                     </div>
                 </div>
                 <div class="attendance-page-twocards">
                     <div class="attendance-page-card"  >
-                        <a href="../../../../Internal-CRM/employee-crm/pages/global_team/approved_attendance.html">
                         <div class="attendance-page-headericons">
+                            <a href="../../../../Internal-CRM/employee-crm/pages/global_team/approved_attendance.html">
                             <i class="fa-solid fa-question"></i>
                         </div>
                         <div class="attendance-page-stat-card">
@@ -386,8 +389,8 @@
                     </div>
                 </a>
                     <div class="attendance-page-card">
-                        <a href="../../../../Internal-CRM/employee-crm/pages/global_team/rejected_attendance.html">
                         <div class="attendance-page-headericons">
+                            <a href="../../../../Internal-CRM/employee-crm/pages/global_team/rejected_attendance.html">
                             <i class="fa-solid fa-chart-line"></i>
                         </div>
                         <div class="attendance-page-stat-card">
@@ -474,6 +477,96 @@
             </table>
         </main>
     </div>
+    <!-- Apply Leave Popup -->
+    <div class="popup-overlay" id="applyLeavePopup">
+        <div class="popup-content apply-leave-content">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    APPLY LEAVE
+                </h2>
+                <button class="popup-close" id="closeApplyLeavePopup">&#10005;</button>
+            </div>
+            <div class="popup-body">
+    
+                <div class="form-container">
+                <!-- Example field: Employee Name -->
+                <div class="form-group label-input">
+                    <label for="employeeNameInput">Employee Name</label>
+                    <input type="text" id="employeeNameInput" value="">
+                </div>
+    
+                <!-- Example field: Leave Type -->
+                <div class="form-group label-input">
+                    <label for="leaveTypeInput">Leave Type</label>
+                    <input type="text" id="leaveTypeInput" value="">
+                </div>
+    
+                <!-- Example container for more complex fields -->
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="reasonInput">Reason</label>
+                            <div id="reasonContainer" class="country-container">
+                                <!-- Additional tags or info can be inserted dynamically here -->
+                            </div>
+                            <input type="text" id="reasonInput" placeholder="Reason for leave">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group label-input full-width">
+                                <label for="">Choose the Date </label>
+                                <input type="date" id="" value="">
+                            </div>
+                            <div class="form-group label-input full-width">
+                                <label for="">To</label>
+                                <input type="date" id="" value="">
+                            </div>
+                            <div class="form-group label-input full-width">
+                                <label for="">Days</label>
+                                <input type="number" id="" value="">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Confirm/Submit Button -->
+                
+                <div class="form-group">
+                    <button class="confirm-button">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="../../../../Internal-CRM/scripts.js"></script>
+    <script>
+        // Grab the "Apply Leave" popup overlay and close button by their IDs
+            const applyLeavePopup = document.getElementById('applyLeavePopup');
+            const closeApplyLeavePopup = document.getElementById('closeApplyLeavePopup');
+
+            if (applyLeavePopup && closeApplyLeavePopup) {
+                // Listen for clicks anywhere on the document
+                document.addEventListener('click', function (event) {
+                    // If the user clicked a button (or element) with .apply-leave-button
+                    if (event.target.closest('.attendance-page-filter-button')) {
+                        applyLeavePopup.style.display = 'block'; // Show the popup
+                    }
+                });
+
+                // Close the popup when the close button is clicked
+                closeApplyLeavePopup.addEventListener('click', () => {
+                    applyLeavePopup.style.display = 'none';
+                });
+
+                // Close the popup if user clicks outside the content area
+                applyLeavePopup.addEventListener('click', (event) => {
+                    if (event.target === applyLeavePopup) {
+                        applyLeavePopup.style.display = 'none';
+                    }
+                });
+            } else {
+                console.error('Apply Leave popup elements not found');
+            }
+
+    </script>
 </body>
 </html>

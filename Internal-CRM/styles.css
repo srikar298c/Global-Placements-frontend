@@ -2998,7 +2998,7 @@ input[type="radio"] {
 /* Profile page */
 .main-profile-section{
     display:grid;
-    grid-template-columns: 2fr 5fr 3fr;
+    grid-template-columns: 2fr 5fr 2fr;
     gap: 1rem; 
     width:100%;/* Optional: Add space between the columns */
 }
