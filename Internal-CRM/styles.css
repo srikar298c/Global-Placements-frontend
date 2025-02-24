@@ -2027,7 +2027,7 @@ input[type="radio"] {
 
 #candidateTable th {
     font-size: 12px;
-    background-color: #e8e7e7;
+    background-color: rgb(180, 179, 179);
 }
 
 #candidateTable th:first-child {
@@ -2045,6 +2045,9 @@ input[type="radio"] {
 
 #candidateTable td {
     font-size: 10px;
+}
+#candidateTable tr:nth-child(even) {
+    background-color: #e3e3e3;
 }
 
 #candidateTable th,
@@ -2416,9 +2419,6 @@ input[type="radio"] {
     background-color: #004957;
 }
 
-.submissions.candidate-table {
-    /* min-width: 1240px; */
-}
 
 #candidateSubmissionTable {
     width: 100%;
@@ -2459,8 +2459,8 @@ input[type="radio"] {
     font-weight: bold;
 }
 
-#candidateSubmissionTable tr:nth-child(even) {
-    background-color: #f9f9f9;
+#candidateSubmissionTable tr:nth-child(odd) {
+    background-color: #e3e3e3;
 }
 
 #candidateSubmissionTable tr:hover {
