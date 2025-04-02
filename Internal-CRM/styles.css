@@ -2024,6 +2024,9 @@ input[type="radio"] {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
+ #candidateTable tr:nth-child(odd){
+    background-color: #eee;
+ }
 
 #candidateTable th {
     font-size: 12px;
@@ -2049,6 +2052,9 @@ input[type="radio"] {
 #candidateTable tr:nth-child(even) {
     background-color: #e3e3e3;
 }
+#candidateTable tr:nth-child(odd) {
+    background-color: #fff;
+}
 
 #candidateTable th,
 #candidateTable td {
@@ -2057,9 +2063,8 @@ input[type="radio"] {
     border-bottom: 1px solid #e0e0e0;
 }
 /* Default: candidate rows have a border-bottom */
-.leads-candidate-data {
-  border-bottom: 2px solid #888;
-}
+
+
 
 /* When the additional info is open, remove border from candidate row */
 .leads-candidate-data.no-border {
@@ -2107,14 +2112,7 @@ input[type="radio"] {
     vertical-align: middle;
 }
 
-#candidateTable .status-select {
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #ccc;
-    /* padding: 5px; */
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
+
 
 .status-select:hover {
     background-color: #e0e0e0;
@@ -2127,19 +2125,59 @@ input[type="radio"] {
     color: #999;
     text-align: center;
 }
+.global-database-table-column{
+            align-items: flex-start;
+            text-align: left;
+            gap: 5px;
+            font-size: 12px;
+            color: #333;
+            line-height: 1.5;
+            padding: 8px;
+}
+.global-database-table-column .button-group{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+}
+.global-database-table-column .submit-button{
+    margin-top: 10px;
+    width: 100%;
+}
+.global-database-table-column p{
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.global-database-table-column .status-select {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    /* padding: 5px; */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
 
 .flag-outline {
     font-size: 20px;
     cursor: pointer;
-    margin-left: 1px;
+   
     color: #006d77;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
 .flag-filled {
     font-size: 20px;
     cursor: pointer;
-    margin-left: 1px;
     color: #006d77;
+    display: block;
+
 }
 
 #candidateTable .caret-icon {
@@ -2195,6 +2233,23 @@ input[type="radio"] {
     display: flex;
     gap: 10px;
     background-color: #fafafa;
+}
+
+.star-rating .icon-button{
+   padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #c7c7c7;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 5px;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    transition: color 0.3s ease; 
+    width: 80%;
+}
+.star-rating .icon-button svg{
+     height: 20px;
+    width: 20px;
 }
 
 .icon-button {
@@ -3546,6 +3601,7 @@ select:focus {
 
 .star-rating {
     display: flex;
+    
 }
 
 .star {
@@ -5971,8 +6027,7 @@ input[type="checkbox"] {
     /* Remove margin to prevent spacing issues */
     text-align: center;
     position: relative;
-    left: 12px;
-    top: 2px;
+    
 }
 
 .attendance-page-leavetype {
