@@ -375,10 +375,12 @@
                         <td class="global-database-table-column">
                         <div>
                             <input type="checkbox" class="checkbox">
-                              <button class="edit-toggle-btn" onclick="toggleEdit(this)" title="Toggle Edit">
-        
-        <svg class="edit-icon xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M21.455 5.416a.75.75 0 0 1-.096.943l-9.193 9.192a.75.75 0 0 1-.34.195l-3.829 1a.75.75 0 0 1-.915-.915l1-3.828a.8.8 0 0 1 .161-.312L17.47 2.47a.75.75 0 0 1 1.06 0l2.829 2.828a1 1 0 0 1 .096.118m-1.687.412L18 4.061l-8.518 8.518l-.625 2.393l2.393-.625z" clip-rule="evenodd"/><path fill="currentColor" d="M19.641 17.16a44.4 44.4 0 0 0 .261-7.04a.4.4 0 0 1 .117-.3l.984-.984a.198.198 0 0 1 .338.127a46 46 0 0 1-.21 8.372c-.236 2.022-1.86 3.607-3.873 3.832a47.8 47.8 0 0 1-10.516 0c-2.012-.225-3.637-1.81-3.873-3.832a46 46 0 0 1 0-10.67c.236-2.022 1.86-3.607 3.873-3.832a48 48 0 0 1 7.989-.213a.2.2 0 0 1 .128.34l-.993.992a.4.4 0 0 1-.297.117a46 46 0 0 0-6.66.255a2.89 2.89 0 0 0-2.55 2.516a44.4 44.4 0 0 0 0 10.32a2.89 2.89 0 0 0 2.55 2.516c3.355.375 6.827.375 10.183 0a2.89 2.89 0 0 0 2.55-2.516"/></svg>
-      </button>
+                            <button class="edit-toggle-btn" onclick="toggleEdit(this)" title="Toggle Edit">
+                                <svg class="edit-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                  <path fill="currentColor" fill-rule="evenodd" d="M21.455 5.416a.75.75 0 0 1-.096.943l-9.193 9.192a.75.75 0 0 1-.34.195l-3.829 1a.75.75 0 0 1-.915-.915l1-3.828a.8.8 0 0 1 .161-.312L17.47 2.47a.75.75 0 0 1 1.06 0l2.829 2.828a1 1 0 0 1 .096.118m-1.687.412L18 4.061l-8.518 8.518l-.625 2.393l2.393-.625z" clip-rule="evenodd"/>
+                                  <path fill="currentColor" d="M19.641 17.16a44.4 44.4 0 0 0 .261-7.04a.4.4 0 0 1 .117-.3l.984-.984a.198.198 0 0 1 .338.127a46 46 0 0 1-.21 8.372c-.236 2.022-1.86 3.607-3.873 3.832a47.8 47.8 0 0 1-10.516 0c-2.012-.225-3.637-1.81-3.873-3.832a46 46 0 0 1 0-10.67c.236-2.022 1.86-3.607 3.873-3.832a48 48 0 0 1 7.989-.213a.2.2 0 0 1 .128.34l-.993.992a.4.4 0 0 1-.297.117a46 46 0 0 0-6.66.255a2.89 2.89 0 0 0-2.55 2.516a44.4 44.4 0 0 0 0 10.32a2.89 2.89 0 0 0 2.55 2.516c3.355.375 6.827.375 10.183 0a2.89 2.89 0 0 0 2.55-2.516"/>
+                                </svg>
+                              </button>
                         </div>
                   
                  </td>
@@ -419,16 +421,44 @@
                        
               
                         <td  class="global-database-table-column">
-                            <input type="text" class="candidate-input" value="Gender" readonly>
+                            <select class="candidate-select" disabled>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                              </select>
     <input type="text" class="candidate-input" value="Passport" readonly>
-    <input type="text" class="candidate-input" value="Client Label" readonly>
-    <input type="text" class="candidate-input" value="Client Status" readonly>
-                            
+    <select class="candidate-select" disabled>
+        <option value="">Select Label</option>
+        <option value="label1">Label 1</option>
+        <option value="label2">Label 2</option>
+      </select>
+      <!-- Client Status as select -->
+      <select class="candidate-select" disabled>
+        <option value="">Select Status</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>    
                         </td>
                         <td class="global-database-table-column">
-                            <input type="text" class="candidate-input" value="Qualification" readonly>
-                            <input type="text" class="candidate-input" value="Department" readonly>
-                            <input type="text" class="candidate-input" value="YOE" readonly>
+                            <select class="candidate-select" disabled>
+                                <option value="">Select Qualification</option>
+                                <option value="qualification1">Qualification 1</option>
+                                <option value="qualification2">Qualification 2</option>
+                              </select>
+                              <!-- Department as select -->
+                              <select class="candidate-select" disabled>
+                                <option value="">Select Department</option>
+                                <option value="department1">Department 1</option>
+                                <option value="department2">Department 2</option>
+                              </select>
+                              <!-- YOE as select -->
+                              <select class="candidate-select" disabled>
+                                <option value="">Select Experience</option>
+                                <option value="yoe1">1-3 Years</option>
+                                <option value="yoe2">3-5 Years</option>
+                                <option value="yoe3">5+ Years</option>
+                              </select>
                             </td>
                     <td class="post_comments">
                         <div id="commentsList" class="comments-container">
@@ -519,7 +549,7 @@
                            
                         </div></td>
                         <td class="global-database-table-column">
-                            <select class="status-select">
+                            <select class="candidate-select">
                   <option value="active" selected>Active</option>
                   <option value="inactive">Inactive</option>
                 </select>
@@ -551,9 +581,12 @@
                         <td class="global-database-table-column">
                         <div>
                             <input type="checkbox" class="checkbox">
-                              <button class="edit-toggle-btn" onclick="toggleEdit(this)" title="Toggle Edit">
-       <svg class="edit-icon xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M21.455 5.416a.75.75 0 0 1-.096.943l-9.193 9.192a.75.75 0 0 1-.34.195l-3.829 1a.75.75 0 0 1-.915-.915l1-3.828a.8.8 0 0 1 .161-.312L17.47 2.47a.75.75 0 0 1 1.06 0l2.829 2.828a1 1 0 0 1 .096.118m-1.687.412L18 4.061l-8.518 8.518l-.625 2.393l2.393-.625z" clip-rule="evenodd"/><path fill="currentColor" d="M19.641 17.16a44.4 44.4 0 0 0 .261-7.04a.4.4 0 0 1 .117-.3l.984-.984a.198.198 0 0 1 .338.127a46 46 0 0 1-.21 8.372c-.236 2.022-1.86 3.607-3.873 3.832a47.8 47.8 0 0 1-10.516 0c-2.012-.225-3.637-1.81-3.873-3.832a46 46 0 0 1 0-10.67c.236-2.022 1.86-3.607 3.873-3.832a48 48 0 0 1 7.989-.213a.2.2 0 0 1 .128.34l-.993.992a.4.4 0 0 1-.297.117a46 46 0 0 0-6.66.255a2.89 2.89 0 0 0-2.55 2.516a44.4 44.4 0 0 0 0 10.32a2.89 2.89 0 0 0 2.55 2.516c3.355.375 6.827.375 10.183 0a2.89 2.89 0 0 0 2.55-2.516"/></svg>
-      </button>
+                            <button class="edit-toggle-btn" onclick="toggleEdit(this)" title="Toggle Edit">
+                                <svg class="edit-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                  <path fill="currentColor" fill-rule="evenodd" d="M21.455 5.416a.75.75 0 0 1-.096.943l-9.193 9.192a.75.75 0 0 1-.34.195l-3.829 1a.75.75 0 0 1-.915-.915l1-3.828a.8.8 0 0 1 .161-.312L17.47 2.47a.75.75 0 0 1 1.06 0l2.829 2.828a1 1 0 0 1 .096.118m-1.687.412L18 4.061l-8.518 8.518l-.625 2.393l2.393-.625z" clip-rule="evenodd"/>
+                                  <path fill="currentColor" d="M19.641 17.16a44.4 44.4 0 0 0 .261-7.04a.4.4 0 0 1 .117-.3l.984-.984a.198.198 0 0 1 .338.127a46 46 0 0 1-.21 8.372c-.236 2.022-1.86 3.607-3.873 3.832a47.8 47.8 0 0 1-10.516 0c-2.012-.225-3.637-1.81-3.873-3.832a46 46 0 0 1 0-10.67c.236-2.022 1.86-3.607 3.873-3.832a48 48 0 0 1 7.989-.213a.2.2 0 0 1 .128.34l-.993.992a.4.4 0 0 1-.297.117a46 46 0 0 0-6.66.255a2.89 2.89 0 0 0-2.55 2.516a44.4 44.4 0 0 0 0 10.32a2.89 2.89 0 0 0 2.55 2.516c3.355.375 6.827.375 10.183 0a2.89 2.89 0 0 0 2.55-2.516"/>
+                                </svg>
+                              </button>
                         </div>
                   
                  </td>
@@ -594,16 +627,44 @@
                        
               
                         <td  class="global-database-table-column">
-                            <input type="text" class="candidate-input" value="Gender" readonly>
+                            <select class="candidate-select" disabled>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                              </select>
     <input type="text" class="candidate-input" value="Passport" readonly>
-    <input type="text" class="candidate-input" value="Client Label" readonly>
-    <input type="text" class="candidate-input" value="Client Status" readonly>
-                            
+    <select class="candidate-select" disabled>
+        <option value="">Select Label</option>
+        <option value="label1">Label 1</option>
+        <option value="label2">Label 2</option>
+      </select>
+      <!-- Client Status as select -->
+      <select class="candidate-select" disabled>
+        <option value="">Select Status</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>    
                         </td>
                         <td class="global-database-table-column">
-                            <input type="text" class="candidate-input" value="Qualification" readonly>
-                            <input type="text" class="candidate-input" value="Department" readonly>
-                            <input type="text" class="candidate-input" value="YOE" readonly>
+                            <select class="candidate-select" disabled>
+                                <option value="">Select Qualification</option>
+                                <option value="qualification1">Qualification 1</option>
+                                <option value="qualification2">Qualification 2</option>
+                              </select>
+                              <!-- Department as select -->
+                              <select class="candidate-select" disabled>
+                                <option value="">Select Department</option>
+                                <option value="department1">Department 1</option>
+                                <option value="department2">Department 2</option>
+                              </select>
+                              <!-- YOE as select -->
+                              <select class="candidate-select" disabled>
+                                <option value="">Select Experience</option>
+                                <option value="yoe1">1-3 Years</option>
+                                <option value="yoe2">3-5 Years</option>
+                                <option value="yoe3">5+ Years</option>
+                              </select>
                             </td>
                     <td class="post_comments">
                         <div id="commentsList" class="comments-container">
@@ -694,7 +755,7 @@
                            
                         </div></td>
                         <td class="global-database-table-column">
-                            <select class="status-select">
+                            <select class="candidate-select">
                   <option value="active" selected>Active</option>
                   <option value="inactive">Inactive</option>
                 </select>
@@ -726,9 +787,12 @@
                         <td class="global-database-table-column">
                         <div>
                             <input type="checkbox" class="checkbox">
-                              <button class="edit-toggle-btn" onclick="toggleEdit(this)" title="Toggle Edit">
-       <svg class="edit-icon xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M21.455 5.416a.75.75 0 0 1-.096.943l-9.193 9.192a.75.75 0 0 1-.34.195l-3.829 1a.75.75 0 0 1-.915-.915l1-3.828a.8.8 0 0 1 .161-.312L17.47 2.47a.75.75 0 0 1 1.06 0l2.829 2.828a1 1 0 0 1 .096.118m-1.687.412L18 4.061l-8.518 8.518l-.625 2.393l2.393-.625z" clip-rule="evenodd"/><path fill="currentColor" d="M19.641 17.16a44.4 44.4 0 0 0 .261-7.04a.4.4 0 0 1 .117-.3l.984-.984a.198.198 0 0 1 .338.127a46 46 0 0 1-.21 8.372c-.236 2.022-1.86 3.607-3.873 3.832a47.8 47.8 0 0 1-10.516 0c-2.012-.225-3.637-1.81-3.873-3.832a46 46 0 0 1 0-10.67c.236-2.022 1.86-3.607 3.873-3.832a48 48 0 0 1 7.989-.213a.2.2 0 0 1 .128.34l-.993.992a.4.4 0 0 1-.297.117a46 46 0 0 0-6.66.255a2.89 2.89 0 0 0-2.55 2.516a44.4 44.4 0 0 0 0 10.32a2.89 2.89 0 0 0 2.55 2.516c3.355.375 6.827.375 10.183 0a2.89 2.89 0 0 0 2.55-2.516"/></svg>
-      </button>
+                            <button class="edit-toggle-btn" onclick="toggleEdit(this)" title="Toggle Edit">
+                                <svg class="edit-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                  <path fill="currentColor" fill-rule="evenodd" d="M21.455 5.416a.75.75 0 0 1-.096.943l-9.193 9.192a.75.75 0 0 1-.34.195l-3.829 1a.75.75 0 0 1-.915-.915l1-3.828a.8.8 0 0 1 .161-.312L17.47 2.47a.75.75 0 0 1 1.06 0l2.829 2.828a1 1 0 0 1 .096.118m-1.687.412L18 4.061l-8.518 8.518l-.625 2.393l2.393-.625z" clip-rule="evenodd"/>
+                                  <path fill="currentColor" d="M19.641 17.16a44.4 44.4 0 0 0 .261-7.04a.4.4 0 0 1 .117-.3l.984-.984a.198.198 0 0 1 .338.127a46 46 0 0 1-.21 8.372c-.236 2.022-1.86 3.607-3.873 3.832a47.8 47.8 0 0 1-10.516 0c-2.012-.225-3.637-1.81-3.873-3.832a46 46 0 0 1 0-10.67c.236-2.022 1.86-3.607 3.873-3.832a48 48 0 0 1 7.989-.213a.2.2 0 0 1 .128.34l-.993.992a.4.4 0 0 1-.297.117a46 46 0 0 0-6.66.255a2.89 2.89 0 0 0-2.55 2.516a44.4 44.4 0 0 0 0 10.32a2.89 2.89 0 0 0 2.55 2.516c3.355.375 6.827.375 10.183 0a2.89 2.89 0 0 0 2.55-2.516"/>
+                                </svg>
+                              </button>
                         </div>
                   
                  </td>
@@ -769,16 +833,44 @@
                        
               
                         <td  class="global-database-table-column">
-                            <input type="text" class="candidate-input" value="Gender" readonly>
+                            <select class="candidate-select" disabled>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                              </select>
     <input type="text" class="candidate-input" value="Passport" readonly>
-    <input type="text" class="candidate-input" value="Client Label" readonly>
-    <input type="text" class="candidate-input" value="Client Status" readonly>
-                            
+    <select class="candidate-select" disabled>
+        <option value="">Select Label</option>
+        <option value="label1">Label 1</option>
+        <option value="label2">Label 2</option>
+      </select>
+      <!-- Client Status as select -->
+      <select class="candidate-select" disabled>
+        <option value="">Select Status</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>    
                         </td>
                         <td class="global-database-table-column">
-                            <input type="text" class="candidate-input" value="Qualification" readonly>
-                            <input type="text" class="candidate-input" value="Department" readonly>
-                            <input type="text" class="candidate-input" value="YOE" readonly>
+                            <select class="candidate-select" disabled>
+                                <option value="">Select Qualification</option>
+                                <option value="qualification1">Qualification 1</option>
+                                <option value="qualification2">Qualification 2</option>
+                              </select>
+                              <!-- Department as select -->
+                              <select class="candidate-select" disabled>
+                                <option value="">Select Department</option>
+                                <option value="department1">Department 1</option>
+                                <option value="department2">Department 2</option>
+                              </select>
+                              <!-- YOE as select -->
+                              <select class="candidate-select" disabled>
+                                <option value="">Select Experience</option>
+                                <option value="yoe1">1-3 Years</option>
+                                <option value="yoe2">3-5 Years</option>
+                                <option value="yoe3">5+ Years</option>
+                              </select>
                             </td>
                     <td class="post_comments">
                         <div id="commentsList" class="comments-container">
@@ -869,7 +961,7 @@
                            
                         </div></td>
                         <td class="global-database-table-column">
-                            <select class="status-select">
+                            <select class="candidate-select">
                   <option value="active" selected>Active</option>
                   <option value="inactive">Inactive</option>
                 </select>
@@ -897,7 +989,9 @@
                           </div>
                         </td>
                       </tr>
-               
+                 
+                   
+                   
                   
                 </tbody>
             </table>
@@ -1502,19 +1596,31 @@
 
     <script>
 
-    function toggleEdit(button) {
+function toggleEdit(button) {
     // Get the candidate row from the clicked button
     const candidateRow = button.closest('tr');
-    // Toggle candidate inputs
+    // Toggle candidate text inputs
     const inputs = candidateRow.querySelectorAll('.candidate-input');
-    // Determine current state from the first input
-    const isReadOnly = inputs[0].readOnly;
+    // Toggle candidate selects
+    const selects = candidateRow.querySelectorAll('.candidate-select');
+    
+    // Determine current state (using the first text input if exists,
+    // otherwise check the first select)
+    const isReadOnly = inputs.length > 0 ? inputs[0].readOnly : selects[0].disabled;
+    
+    // Toggle inputs: update readOnly and background color
     inputs.forEach(input => {
       input.readOnly = !isReadOnly;
       input.style.backgroundColor = input.readOnly ? '#f9f9f9' : '#fff';
     });
-
-    // Also toggle the profile description textarea in the next row
+    
+    // Toggle selects: update disabled property and background color
+    selects.forEach(select => {
+      select.disabled = !isReadOnly;
+      select.style.backgroundColor = select.disabled ? '#f9f9f9' : '#fff';
+    });
+    
+    // Also toggle the profile description textarea in the next row, if any
     let profileRow = candidateRow.nextElementSibling;
     if (profileRow && profileRow.classList.contains('profile-description-row')) {
       const textarea = profileRow.querySelector('.profile-description-input');
@@ -1524,8 +1630,6 @@
       }
     }
   }
-
-    
         document.querySelectorAll('.star').forEach(star => {
             star.addEventListener('click', function() {
                 const value = parseInt(this.getAttribute('data-value'));
