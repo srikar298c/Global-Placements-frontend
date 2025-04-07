@@ -375,11 +375,15 @@
                         <td class="global-database-table-column">
                         <div>
                             <input type="checkbox" class="checkbox">
-                            <button class="edit-toggle-btn" onclick="toggleEdit(this)" title="Toggle Edit">
+                             <button class="edit-button" onclick="toggleEdit(this)" title="Toggle Edit">
                                 <svg class="edit-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                   <path fill="currentColor" fill-rule="evenodd" d="M21.455 5.416a.75.75 0 0 1-.096.943l-9.193 9.192a.75.75 0 0 1-.34.195l-3.829 1a.75.75 0 0 1-.915-.915l1-3.828a.8.8 0 0 1 .161-.312L17.47 2.47a.75.75 0 0 1 1.06 0l2.829 2.828a1 1 0 0 1 .096.118m-1.687.412L18 4.061l-8.518 8.518l-.625 2.393l2.393-.625z" clip-rule="evenodd"/>
                                   <path fill="currentColor" d="M19.641 17.16a44.4 44.4 0 0 0 .261-7.04a.4.4 0 0 1 .117-.3l.984-.984a.198.198 0 0 1 .338.127a46 46 0 0 1-.21 8.372c-.236 2.022-1.86 3.607-3.873 3.832a47.8 47.8 0 0 1-10.516 0c-2.012-.225-3.637-1.81-3.873-3.832a46 46 0 0 1 0-10.67c.236-2.022 1.86-3.607 3.873-3.832a48 48 0 0 1 7.989-.213a.2.2 0 0 1 .128.34l-.993.992a.4.4 0 0 1-.297.117a46 46 0 0 0-6.66.255a2.89 2.89 0 0 0-2.55 2.516a44.4 44.4 0 0 0 0 10.32a2.89 2.89 0 0 0 2.55 2.516c3.355.375 6.827.375 10.183 0a2.89 2.89 0 0 0 2.55-2.516"/>
                                 </svg>
+                              </button>
+
+                              <button class="save-button" onclick="toggleEdit(this)" title="Save" style="display: none; margin-top: 5px;">
+                                Save
                               </button>
                         </div>
                   
@@ -581,11 +585,15 @@
                         <td class="global-database-table-column">
                         <div>
                             <input type="checkbox" class="checkbox">
-                            <button class="edit-toggle-btn" onclick="toggleEdit(this)" title="Toggle Edit">
+                            <button class="edit-button" onclick="toggleEdit(this)" title="Toggle Edit">
                                 <svg class="edit-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                   <path fill="currentColor" fill-rule="evenodd" d="M21.455 5.416a.75.75 0 0 1-.096.943l-9.193 9.192a.75.75 0 0 1-.34.195l-3.829 1a.75.75 0 0 1-.915-.915l1-3.828a.8.8 0 0 1 .161-.312L17.47 2.47a.75.75 0 0 1 1.06 0l2.829 2.828a1 1 0 0 1 .096.118m-1.687.412L18 4.061l-8.518 8.518l-.625 2.393l2.393-.625z" clip-rule="evenodd"/>
                                   <path fill="currentColor" d="M19.641 17.16a44.4 44.4 0 0 0 .261-7.04a.4.4 0 0 1 .117-.3l.984-.984a.198.198 0 0 1 .338.127a46 46 0 0 1-.21 8.372c-.236 2.022-1.86 3.607-3.873 3.832a47.8 47.8 0 0 1-10.516 0c-2.012-.225-3.637-1.81-3.873-3.832a46 46 0 0 1 0-10.67c.236-2.022 1.86-3.607 3.873-3.832a48 48 0 0 1 7.989-.213a.2.2 0 0 1 .128.34l-.993.992a.4.4 0 0 1-.297.117a46 46 0 0 0-6.66.255a2.89 2.89 0 0 0-2.55 2.516a44.4 44.4 0 0 0 0 10.32a2.89 2.89 0 0 0 2.55 2.516c3.355.375 6.827.375 10.183 0a2.89 2.89 0 0 0 2.55-2.516"/>
                                 </svg>
+                              </button>
+
+                              <button class="save-button" onclick="toggleEdit(this)" title="Save" style="display: none; margin-top: 5px;">
+                                Save
                               </button>
                         </div>
                   
@@ -787,11 +795,15 @@
                         <td class="global-database-table-column">
                         <div>
                             <input type="checkbox" class="checkbox">
-                            <button class="edit-toggle-btn" onclick="toggleEdit(this)" title="Toggle Edit">
+                             <button class="edit-button" onclick="toggleEdit(this)" title="Toggle Edit">
                                 <svg class="edit-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                   <path fill="currentColor" fill-rule="evenodd" d="M21.455 5.416a.75.75 0 0 1-.096.943l-9.193 9.192a.75.75 0 0 1-.34.195l-3.829 1a.75.75 0 0 1-.915-.915l1-3.828a.8.8 0 0 1 .161-.312L17.47 2.47a.75.75 0 0 1 1.06 0l2.829 2.828a1 1 0 0 1 .096.118m-1.687.412L18 4.061l-8.518 8.518l-.625 2.393l2.393-.625z" clip-rule="evenodd"/>
                                   <path fill="currentColor" d="M19.641 17.16a44.4 44.4 0 0 0 .261-7.04a.4.4 0 0 1 .117-.3l.984-.984a.198.198 0 0 1 .338.127a46 46 0 0 1-.21 8.372c-.236 2.022-1.86 3.607-3.873 3.832a47.8 47.8 0 0 1-10.516 0c-2.012-.225-3.637-1.81-3.873-3.832a46 46 0 0 1 0-10.67c.236-2.022 1.86-3.607 3.873-3.832a48 48 0 0 1 7.989-.213a.2.2 0 0 1 .128.34l-.993.992a.4.4 0 0 1-.297.117a46 46 0 0 0-6.66.255a2.89 2.89 0 0 0-2.55 2.516a44.4 44.4 0 0 0 0 10.32a2.89 2.89 0 0 0 2.55 2.516c3.355.375 6.827.375 10.183 0a2.89 2.89 0 0 0 2.55-2.516"/>
                                 </svg>
+                              </button>
+
+                              <button class="save-button" onclick="toggleEdit(this)" title="Save" style="display: none; margin-top: 5px;">
+                                Save
                               </button>
                         </div>
                   
@@ -1597,39 +1609,52 @@
     <script>
 
 function toggleEdit(button) {
-    // Get the candidate row from the clicked button
-    const candidateRow = button.closest('tr');
-    
-    // Toggle candidate text inputs
-    const inputs = candidateRow.querySelectorAll('.candidate-input');
-    // Toggle candidate select elements
-    const selects = candidateRow.querySelectorAll('.candidate-select');
-    
-    // Determine current state: using the first text input if available
-    const isReadOnly = inputs.length > 0 ? inputs[0].readOnly : selects[0].disabled;
-    
-    // Toggle inputs: update readOnly property and background color
-    inputs.forEach(input => {
-      input.readOnly = !isReadOnly;
-      input.style.backgroundColor = input.readOnly ? '#f9f9f9' : '#fff';
-    });
-    
-    // Toggle selects: update disabled property and background color
-    selects.forEach(select => {
-      select.disabled = !isReadOnly;
-      select.style.backgroundColor = select.disabled ? '#f9f9f9' : '#fff';
-    });
-    
-    // Toggle profile description textarea if it exists in the next row
-    let profileRow = candidateRow.nextElementSibling;
-    if (profileRow && profileRow.classList.contains('profile-description-row')) {
-      const textarea = profileRow.querySelector('.profile-description-input');
-      if (textarea) {
-        textarea.readOnly = !isReadOnly;
-        textarea.style.backgroundColor = textarea.readOnly ? '#f9f9f9' : '#fff';
-      }
+  const candidateRow = button.closest('tr');
+  const inputs = candidateRow.querySelectorAll('.candidate-input');
+  const selects = candidateRow.querySelectorAll('.candidate-select');
+
+  const isReadOnly = inputs.length > 0 ? inputs[0].readOnly : selects[0].disabled;
+
+  // Toggle input and select fields
+  inputs.forEach(input => {
+    input.readOnly = !isReadOnly;
+    input.style.backgroundColor = input.readOnly ? '#f9f9f9' : '#fff';
+  });
+
+  selects.forEach(select => {
+    select.disabled = !isReadOnly;
+    select.style.backgroundColor = select.disabled ? '#f9f9f9' : '#fff';
+  });
+
+  // Toggle textarea in next row if exists
+  const profileRow = candidateRow.nextElementSibling;
+  if (profileRow?.classList.contains('profile-description-row')) {
+    const textarea = profileRow.querySelector('.profile-description-input');
+    if (textarea) {
+      textarea.readOnly = !isReadOnly;
+      textarea.style.backgroundColor = textarea.readOnly ? '#f9f9f9' : '#fff';
     }
   }
+
+  const saveButton = candidateRow.querySelector('.save-button');
+  const editButton = candidateRow.querySelector('.edit-button'); // assuming this class for the edit SVG/icon button
+
+  if (saveButton && editButton) {
+    if (isReadOnly) {
+      // Now entering edit mode
+      saveButton.style.display = 'inline-block';
+      editButton.style.display = 'none';
+    } else {
+      // Exiting edit mode
+      saveButton.style.display = 'none';
+      editButton.style.display = 'inline-block';
+    }
+  }
+}
+
+
+
+
         document.querySelectorAll('.star').forEach(star => {
             star.addEventListener('click', function() {
                 const value = parseInt(this.getAttribute('data-value'));
