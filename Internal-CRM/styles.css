@@ -2094,21 +2094,32 @@ select.candidate-select {
     border-color: #66afe9;
     background-color: #fff;
   }
-  .readonly input,
+  
+/* Default state - all form elements maintain their appearance but are non-interactive */
+.readonly input,
 .readonly select,
-.readonly textarea,
-input.readonly,
-select.readonly,
-textarea.readonly {
-  border: none;
+.readonly textarea {
   background-color: transparent;
   pointer-events: none;
+  border: none;
+  outline: none;
+  appearance: none;
 }
 
-textarea.readonly {
+.field-with-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  
+
+
+
+
+/* For next-row profiles */
+.readonly .profile-description-input {
   resize: none;
 }
-
 
   /* Container for checkbox and edit button */
   .checkbox-edit-container {
@@ -2226,13 +2237,7 @@ background-color: #25d2be;
     font-weight: bold;
 }
 
-#candidateTable .candidate-image {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
-    vertical-align: middle;
-}
+
 
 
 
@@ -5719,27 +5724,22 @@ margin-bottom: 20px;
         transform: translate(-50%, 0%);
     }
 }
+.candidate-image, .whatsapp-icon {
+    margin-right: 8px;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+   
+  }
 
-.whatsappIcon-number {
-    display: flex;
-    align-items: center; 
-}
+  .whatsapp-icon {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
 
-.whatsappIcon-number .icon-container {
-    display: flex;
-    align-items: center; 
-    gap: 3px; 
-}
-
-.whatsappIcon-number .whatsapp-icon {
-    width: 14px; /* Set icon width */
-    height: 14px; /* Set icon height */
-}
-
-.whatsappIcon-number .phone-number {
-    font-size: 10px; 
-    color: #333; 
-}
 .upload-section {
     margin-top: 15px;
 }
