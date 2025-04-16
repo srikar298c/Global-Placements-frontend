@@ -2094,7 +2094,22 @@ select.candidate-select {
     border-color: #66afe9;
     background-color: #fff;
   }
-  
+  .readonly input,
+.readonly select,
+.readonly textarea,
+input.readonly,
+select.readonly,
+textarea.readonly {
+  border: none;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+textarea.readonly {
+  resize: none;
+}
+
+
   /* Container for checkbox and edit button */
   .checkbox-edit-container {
     display: flex;
