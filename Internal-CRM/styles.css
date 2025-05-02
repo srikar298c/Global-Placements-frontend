@@ -2198,37 +2198,36 @@ select.candidate-select {
   
   
   /* Edit button and icon styling */
-  .edit-button {
-    background: none;
+  .edit-icon {
+    
+    background-color: var(--primary-color);
     border: none;
     padding: 0;
     cursor: pointer;
+    fill: white;
+    color: white;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 20px;
   }
   
-  .edit-icon {
-    fill: white;
-    transition: fill 0.2s ease;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    padding: 4px;
-}
+  .edit-button{
+    border: none;
+  }
+  
 
 .save-icon {
-    fill: white;
-    transition: fill 0.2s ease;
     background-color: var(--primary-color);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    fill: white;
+    color: white;
     border-radius: 50%;
     padding: 4px;
+    font-size: 20px;
 }
 
-.save-button:hover .save-icon {
-    fill: white;
-}
-
-.edit-button:hover .edit-icon {
-    fill: white;
-}
-  
   /* Profile description container styling */
   .profile-description-container {
     padding: 12px;
