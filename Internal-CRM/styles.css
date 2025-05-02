@@ -6585,7 +6585,9 @@ input[type="checkbox"] {
             overflow-y: auto;
             background-color: #fafafa;
         }
-
+#candidateTable .comments-container{
+    max-height: 100px;
+}
         /* Individual comment */
         .comment {
             border-bottom: 1px solid #eaeaea;
@@ -6639,7 +6641,7 @@ input[type="checkbox"] {
 
         .add-comment input {
             flex: 1;
-            max-height: 100px;
+           
             padding: 6px;
             font-size: 12px;
             border: 1px solid #ddd;
