@@ -2152,7 +2152,8 @@ select.candidate-select {
 }
 
 /* Default state - all form elements maintain their appearance but are non-interactive */
-.readonly input,
+.readonly input[type="text"],
+.readonly input[type="select"],
 .readonly select{
   background-color: transparent;
   pointer-events: none;
@@ -2163,10 +2164,15 @@ select.candidate-select {
 
 .readonly textarea {
 
+    background-color: transparent;
   pointer-events: none;
-
+  border: none;
+  outline: none;
+  appearance: none;
 }
-
+ .first-column input[type="checkbox"] {
+    display: inline-block !important;
+  }
 .field-with-icon {
     display: flex;
     align-items: center;
@@ -2329,13 +2335,24 @@ select.candidate-select {
     text-align: center;
 }
 .global-database-table-column{
-            align-items: flex;
+  
+            align-items: center;
             text-align: left;
             gap: 5px;
             font-size: 12px;
             color: #333;
             line-height: 1.5;
             padding: 8px ;
+}
+.global-database-table-column .first-column{
+  
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           gap: 5px;
+           
+
 }
 .global-database-table-column .button-group{
     display: grid;
@@ -6610,6 +6627,7 @@ input[type="checkbox"] {
         /* Add comment section */
         .add-comment {
             display: flex;
+            flex-direction: column;
             margin-top: 10px;
             align-items: center;
             gap: 10px;
