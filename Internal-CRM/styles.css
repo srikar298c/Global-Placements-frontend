@@ -2103,6 +2103,7 @@ select.candidate-select {
   background-color: #fff;
 }
 
+
 #candidateTable tr:nth-child(4n-1),
 #candidateTable tr:nth-child(4n) {
   background-color: var(--background-light);
@@ -2111,6 +2112,7 @@ select.candidate-select {
 /* Profile Description Row - full width styling */
 .profile-description-row td {
     padding: 0;  
+    border-bottom: 2px solid #c3c3c3 ;
   }
   
  
@@ -2132,16 +2134,37 @@ select.candidate-select {
     border-color: #66afe9;
     background-color: #fff;
   }
-  
+  #candidateTable .candidate-status,
+  #candidateTable .candidate-label{
+    font-size: 12px;
+    position: relative;
+    padding-left: 12px;  /* Increased padding to accommodate larger bullet */
+}
+
+#candidateTable .candidate-status::before,
+#candidateTable .candidate-label::before{
+    content: "•";
+    position: absolute;
+    left: 1px;
+    color: #005f6b;
+    font-size: 25px;  /* Increased font size for bigger bullet */
+    line-height: 15px;  /* Align with the text */
+}
+
 /* Default state - all form elements maintain their appearance but are non-interactive */
 .readonly input,
-.readonly select,
-.readonly textarea {
+.readonly select{
   background-color: transparent;
   pointer-events: none;
   border: none;
   outline: none;
   appearance: none;
+}
+
+.readonly textarea {
+
+  pointer-events: none;
+
 }
 
 .field-with-icon {
@@ -2204,7 +2227,6 @@ select.candidate-select {
   .profile-description-container {
     padding: 12px;
     background-color: var(--background-light);
-    border-bottom: 1px solid #ddd;
     width: 100%;
   }
   
@@ -2256,6 +2278,7 @@ select.candidate-select {
 .leads-candidate-data.no-border {
   border-bottom: none;
 }
+
 
 
 
@@ -6616,6 +6639,7 @@ input[type="checkbox"] {
 
         .add-comment input {
             flex: 1;
+            max-height: 100px;
             padding: 6px;
             font-size: 12px;
             border: 1px solid #ddd;
