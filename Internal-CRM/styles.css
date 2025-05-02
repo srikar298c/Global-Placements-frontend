@@ -2,18 +2,53 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 :root {
+    /* Primary Colors */
+    --primary-color: #008080;
+    --primary-dark: #005f6b;
+    --primary-light: #00798c;
+    
+    /* Secondary Colors */
+    --secondary-color: #006666;
+    --secondary-dark: #004d4d;
+    --secondary-light: #018091;
+    
+    /* Background Colors */
+    --background-color: #f5f5f5;
+    --background-light: #ffffff;
+    --background-dark: #e5e5e5;
+    
+    /* Text Colors */
+    --text-color: #ffffff;
+    --text-dark: #2d3748;
+    --text-light: #e5e5e5;
+    
+    /* UI Elements */
     --sidebar-bg: #005f6b;
     --sidebar-hover: #00798c;
-    --text-color: #ffffff;
-    --hover-text-color: #e5e5e5;
+    
+    /* Border Colors */
+    --border-color: #ddd;
+    --border-dark: #c7c7c7;
+    
+    /* Scrollbar Colors */
     --scrollbar-bg: #f1f1f1;
     --scrollbar-thumb: #888;
     --scrollbar-thumb-hover: #555;
+    
+    /* Box Shadow */
     --boxshadow-edge: #018091;
-    --primary-color: #008080;
-    --secondary-color: #006666;
-    --background-color: #f5f5f5;
-    --border-color: #ddd;
+
+
+    /* table */
+    --table-border: #005f6b;
+    --table-bg: #f5f5f5;
+    --table-row-bg: #ffffff;
+    --table-row-hover-bg: #e5e5e5;
+    --table-header-bg: #c7c7c7;
+    --table-header-text: #ffffff;
+    --table-row-bg: #ffffff;
+    --table-row-hover-bg: #e5e5e5;
+    
 }
 
 * {
@@ -2031,13 +2066,17 @@ input[type="radio"] {
 #candidateTable th {
     text-align: left;
     font-size: 12px;
-    background-color: rgb(180, 179, 179);
+    background-color: var(--table-header-bg) ;
 }
 select.candidate-select {
-    width: 80%;
-    padding: 5px;
+    width: 100%;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    font-size: 12px;
     border: 1px solid #ccc;
+    border-radius: 4px;
     background-color: #f9f9f9;
+    box-sizing: border-box;
   }
   select.candidate-select:enabled {
     background-color: #fff;
@@ -2050,7 +2089,8 @@ select.candidate-select {
     border-radius: 0px 10px 0px 0px;
 }
 
-#candidateTable th:nth-child(n+5):nth-child(-n+7) {
+#candidateTable th,
+#candidateTable td  {
     font-size: 12px;
     max-width: 180px;
 }
@@ -2065,7 +2105,7 @@ select.candidate-select {
 
 #candidateTable tr:nth-child(4n-1),
 #candidateTable tr:nth-child(4n) {
-  background-color: #f5f5f5;
+  background-color: var(--background-light);
 }
 
 /* Profile Description Row - full width styling */
@@ -2073,13 +2113,11 @@ select.candidate-select {
     padding: 0;  
   }
   
-  #candidateTable tr.profile-description-row {
-    border-bottom: 2px solid #ccc;
-  }
+ 
   /* Container to wrap the description input and timestamps */
  /* Candidate input styles */
 .candidate-input {
-    width: 80%;
+    width: 100%;
     padding: 4px 6px;
     margin-bottom: 4px;
     font-size: 12px;
@@ -2139,23 +2177,35 @@ select.candidate-select {
   }
   
   .edit-icon {
-    fill: #666;
+    fill: white;
     transition: fill 0.2s ease;
-background-color: #25d2be;
+    background-color: var(--primary-color);
     border-radius: 50%;
     padding: 4px;
-  }
-  
-  .edit-button:hover .edit-icon {
-    fill: #333;
-  }
+}
+
+.save-icon {
+    fill: white;
+    transition: fill 0.2s ease;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.save-button:hover .save-icon {
+    fill: white;
+}
+
+.edit-button:hover .edit-icon {
+    fill: white;
+}
   
   /* Profile description container styling */
   .profile-description-container {
     padding: 12px;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
+    background-color: var(--background-light);
+    border-bottom: 1px solid #ddd;
+    width: 100%;
   }
   
   /* Textarea styling */
@@ -2189,11 +2239,14 @@ background-color: #25d2be;
     margin-right: 8px;
   }
   
+  
+  
 #candidateTable th,
 #candidateTable td {
-    padding: 12px;
+    align-items: center;
+    padding:8px 12px;
     text-align: center;
-    border-bottom: 1px solid #e0e0e0;
+    
 }
 /* Default: candidate rows have a border-bottom */
 
@@ -2222,7 +2275,7 @@ background-color: #25d2be;
 
 #candidateTable th,
 #candidateTable td {
-    text-align: center;
+    text-align: left;
 }
 
 #candidateTable td input[type="checkbox"],
@@ -2253,13 +2306,13 @@ background-color: #25d2be;
     text-align: center;
 }
 .global-database-table-column{
-            align-items: flex-start;
+            align-items: flex;
             text-align: left;
             gap: 5px;
             font-size: 12px;
             color: #333;
             line-height: 1.5;
-            padding: 8px;
+            padding: 8px ;
 }
 .global-database-table-column .button-group{
     display: grid;
@@ -2286,20 +2339,7 @@ background-color: #25d2be;
     transition: background-color 0.3s ease;
     width: 100%;
 }
-.global-database-table-column .save-button {
-    background-color: #006d77;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 8px 14px;
-    font-size: 12px;
-    width: 100%;
-    margin-top: 10px;
-}
-.global-database-table-column .save-button:hover {
-    background-color: #005f6b;
-}
+
 .flag-outline {
     font-size: 20px;
     cursor: pointer;
@@ -3335,14 +3375,10 @@ section {
 }
 
 .save-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #008080;
-    color: white;
+    background: none;
     border: none;
-    border-radius: 5px;
+    padding: 0;
     cursor: pointer;
-    font-size: 16px;
 }
 
 .icon {
@@ -5727,8 +5763,8 @@ margin-bottom: 20px;
 .candidate-image, .whatsapp-icon {
     margin-right: 8px;
     flex-shrink: 0;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
    
   }
@@ -6354,8 +6390,8 @@ input[type="checkbox"] {
 
         /* Candidate Image */
         .candidate-image {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid #ccc;
@@ -6764,12 +6800,5 @@ input[type="checkbox"] {
             background-color: #ffe6e6;
         }
 
-        .save-button {
-            background-color: teal;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+   
     
