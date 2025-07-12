@@ -91,25 +91,22 @@ document.querySelectorAll('.config-main-section-sidebar ul li a').forEach(link =
 function toggleProfileMenu() {
     const profileDropdown = document.getElementById('profileDropdown');
     const caretIcon = document.querySelector('.caret-icon');
+
+    const isOpen = profileDropdown.classList.contains('open');
     
-    // Toggle the dropdown visibility
-    if (profileDropdown.style.display === 'none' || profileDropdown.style.display === '') {
-        profileDropdown.style.display = 'block';
-        caretIcon.classList.add('rotate'); // Rotate caret
-    } else {
-        profileDropdown.style.display = 'none';
-        caretIcon.classList.remove('rotate'); // Reset rotation
-    }
+    profileDropdown.classList.toggle('open');
+    caretIcon.classList.toggle('rotate', !isOpen); // Only add if dropdown is opening
 }
 
+
 // Close the dropdown when clicking outside
-window.onclick = function(event) {
-    if (!event.target.closest('.header-lastitem')) {
-        const profileDropdown = document.getElementById('profileDropdown');
-        const caretIcon = document.querySelector('.caret-icon');
-        if (profileDropdown.style.display === 'block') {
-            profileDropdown.style.display = 'none';
-            caretIcon.classList.remove('rotate'); // Reset rotation
-        }
+window.addEventListener('click', function(event) {
+    const dropdown = document.getElementById('profileDropdown');
+    const isClickInside = event.target.closest('.header-lastitem') || event.target.closest('#profileDropdown');
+
+    if (!isClickInside && dropdown.classList.contains('open')) {
+        dropdown.classList.remove('open');
+        document.querySelector('.caret-icon').classList.remove('rotate');
     }
-}
+});
+
