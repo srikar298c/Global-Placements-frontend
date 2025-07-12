@@ -805,9 +805,14 @@ h3 {
 
 .dashboard-section-02 .date-dropdown {
   position: relative;
+    display: inline-block;
 }
 
 .dashboard-section-02 .dropdown-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   background-color: #edf2f7;
   border: 1px solid #d1d5db;
   border-radius: 20px;
@@ -815,12 +820,20 @@ h3 {
   font-size: 14px;
   color: #2d3748;
   cursor: pointer;
+  min-width: 120px;
+}
+.caret-icon {
+  transition: transform 0.3s ease;
+  pointer-events: none; /* prevent SVG from capturing click */
+}
+
+.date-dropdown.active .caret-icon {
+  transform: rotate(180deg);
 }
 
 .dashboard-section-02 .dropdown-menu {
   display: none;
   position: absolute;
-  
   right: 0;
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
@@ -828,8 +841,43 @@ h3 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: max-content;
   margin-top: 5px;
-  z-index: 1;
+  z-index: 999;
 }
+
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+}
+
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 8px 35px 8px 15px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid #d1d5db;
+  background-color: #edf2f7;
+  color: #2d3748;
+  cursor: pointer;
+}
+
+.caret-icon-wrapper {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.caret-icon {
+  width: 1em;
+  height: 1em;
+  color: #2d3748;
+}
+
 
 .dashboard-section-02 .dropdown-menu li {
   padding: 10px 15px;

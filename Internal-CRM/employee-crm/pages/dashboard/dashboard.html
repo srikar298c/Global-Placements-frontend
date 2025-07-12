@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Internal Global Placements - Dashboard </title>
     <link rel="stylesheet" href="../../../../Internal-CRM/styles.css">
+<link rel="stylesheet" href="../../../../Internal-CRM/responsvie-styles.css"
     <link rel="icon" href="../../../../Internal-CRM/images/favicon.png" type="image/png">
 </head>
 
@@ -694,15 +695,21 @@
                     <div class="summary-card">
                         <div class="summary-header">
                             <h3>Summary</h3>
-                            <div class="date-dropdown">
-                                <button class="dropdown-btn" onclick="toggleDropdown()">Today</button>
-                                <ul class="dropdown-menu">
-                                    <li onclick="selectDateOption('Today')">Today</li>
-                                    <li onclick="selectDateOption('Yesterday')">Yesterday</li>
-                                    <li onclick="selectDateOption('Last 7 Days')">Last 7 Days</li>
-                                    <li onclick="selectDateOption('This Month')">This Month</li>
-                                </ul>
-                            </div>
+                           <div class="custom-select-wrapper">
+  <select class="custom-select" onchange="handleSelectChange(this)">
+    <option value="Today">Today</option>
+    <option value="Yesterday">Yesterday</option>
+    <option value="Last 7 Days">Last 7 Days</option>
+    <option value="This Month">This Month</option>
+  </select>
+  <div class="caret-icon-wrapper">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="caret-icon">
+      <path fill="currentColor"
+        d="M29.52 22.52L18 10.6L6.48 22.52a1.7 1.7 0 0 0 2.45 2.36L18 15.49l9.08 9.39a1.7 1.7 0 0 0 2.45-2.36Z" />
+    </svg>
+  </div>
+</div>
+
                         </div>
 
                         <div class="summary-item">
